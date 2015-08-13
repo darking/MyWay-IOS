@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		696692AE1B7C71D300EA0B56 /* DailyRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696692AD1B7C71D300EA0B56 /* DailyRoute.swift */; };
+		696692B01B7C739100EA0B56 /* DailyRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696692AF1B7C739100EA0B56 /* DailyRouteViewController.swift */; };
 		69A2F40E1B7B71AB00EC07D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A2F40D1B7B71AB00EC07D1 /* AppDelegate.swift */; };
 		69A2F4101B7B71AB00EC07D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A2F40F1B7B71AB00EC07D1 /* ViewController.swift */; };
 		69A2F4131B7B71AB00EC07D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A2F4111B7B71AB00EC07D1 /* Main.storyboard */; };
 		69A2F4151B7B71AB00EC07D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69A2F4141B7B71AB00EC07D1 /* Images.xcassets */; };
 		69A2F4181B7B71AB00EC07D1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69A2F4161B7B71AB00EC07D1 /* LaunchScreen.xib */; };
 		69A2F4241B7B71AC00EC07D1 /* MyWay_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A2F4231B7B71AC00EC07D1 /* MyWay_IOSTests.swift */; };
+		69A2F42E1B7C5BC300EC07D1 /* ManageDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A2F42D1B7C5BC300EC07D1 /* ManageDriver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +29,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		696692AD1B7C71D300EA0B56 /* DailyRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyRoute.swift; sourceTree = "<group>"; };
+		696692AF1B7C739100EA0B56 /* DailyRouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyRouteViewController.swift; sourceTree = "<group>"; };
 		69A2F4081B7B71AA00EC07D1 /* MyWay-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyWay-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69A2F40C1B7B71AB00EC07D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		69A2F40D1B7B71AB00EC07D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		69A2F40D1B7B71AB00EC07D1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69A2F40F1B7B71AB00EC07D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		69A2F4121B7B71AB00EC07D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		69A2F4141B7B71AB00EC07D1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -36,6 +41,7 @@
 		69A2F41D1B7B71AC00EC07D1 /* MyWay-IOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyWay-IOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69A2F4221B7B71AC00EC07D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69A2F4231B7B71AC00EC07D1 /* MyWay_IOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWay_IOSTests.swift; sourceTree = "<group>"; };
+		69A2F42D1B7C5BC300EC07D1 /* ManageDriver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageDriver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,9 @@
 				69A2F4141B7B71AB00EC07D1 /* Images.xcassets */,
 				69A2F4161B7B71AB00EC07D1 /* LaunchScreen.xib */,
 				69A2F40B1B7B71AB00EC07D1 /* Supporting Files */,
+				69A2F42D1B7C5BC300EC07D1 /* ManageDriver.swift */,
+				696692AD1B7C71D300EA0B56 /* DailyRoute.swift */,
+				696692AF1B7C739100EA0B56 /* DailyRouteViewController.swift */,
 			);
 			path = "MyWay-IOS";
 			sourceTree = "<group>";
@@ -213,7 +222,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				69A2F4101B7B71AB00EC07D1 /* ViewController.swift in Sources */,
+				696692AE1B7C71D300EA0B56 /* DailyRoute.swift in Sources */,
 				69A2F40E1B7B71AB00EC07D1 /* AppDelegate.swift in Sources */,
+				696692B01B7C739100EA0B56 /* DailyRouteViewController.swift in Sources */,
+				69A2F42E1B7C5BC300EC07D1 /* ManageDriver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +417,7 @@
 				69A2F4291B7B71AC00EC07D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		69A2F42A1B7B71AC00EC07D1 /* Build configuration list for PBXNativeTarget "MyWay-IOSTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +426,7 @@
 				69A2F42C1B7B71AC00EC07D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
