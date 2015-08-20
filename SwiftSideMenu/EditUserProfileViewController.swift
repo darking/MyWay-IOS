@@ -72,11 +72,15 @@ class EditUserProfileViewController: UIViewController, UIImagePickerControllerDe
         
         presentViewController(pickerController, animated: true, completion: nil)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         pickerController.delegate = self
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -90,7 +94,7 @@ class EditUserProfileViewController: UIViewController, UIImagePickerControllerDe
         username.text = user.getUsername()
         email.text = user.getEmail()
         phone.text = user.getPhone()
-        
+
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
@@ -102,4 +106,13 @@ class EditUserProfileViewController: UIViewController, UIImagePickerControllerDe
         
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    func keyboardWillShow(sender: NSNotification) {
+        self.view.frame.origin.y -= 80
+    }
+    
+    func keyboardWillHide(sender: NSNotification) {
+        self.view.frame.origin.y += 80
+    }
+    
 }

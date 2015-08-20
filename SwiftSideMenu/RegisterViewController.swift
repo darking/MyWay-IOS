@@ -8,11 +8,8 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController, ENSideMenuDelegate {
+class RegisterViewController: UIViewController {
     
-    @IBAction func toggle(sender: AnyObject) {
-        toggleSideMenuView();
-    }
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var confirmPassword: UITextField!
@@ -34,7 +31,7 @@ class RegisterViewController: UIViewController, ENSideMenuDelegate {
     @IBAction func registerAction(sender: AnyObject) {
         
         var manager = ConnectionManager()
-        
+                
         if password.text != confirmPassword.text || manager.isValidEmail(email.text) == false || usernameErrorLabel.hidden == false {
             
             let alertController = UIAlertController(title: "Warning", message: "Invalid data", preferredStyle: UIAlertControllerStyle.Alert)
@@ -57,6 +54,17 @@ class RegisterViewController: UIViewController, ENSideMenuDelegate {
         super.viewDidLoad()
         
         usernameErrorLabel.hidden = true
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
     }
     
+    func keyboardWillShow(sender: NSNotification) {
+        self.view.frame.origin.y -= 80
+    }
+    
+    func keyboardWillHide(sender: NSNotification) {
+        self.view.frame.origin.y += 80
+    }
+
 }
