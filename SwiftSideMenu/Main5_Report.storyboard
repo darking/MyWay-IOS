@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--SwiftSideMenu-->
+        <!--Monitor Report-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="SelectDriverReportVC" id="vXZ-lx-hvc" customClass="SelectDriverReportVC" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectDriverReportVC" title="Monitor Report" id="vXZ-lx-hvc" customClass="SelectDriverReportVC" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -69,8 +69,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="SwiftSideMenu" id="Jzv-Ie-LAJ">
-                        <barButtonItem key="leftBarButtonItem" title="Toggle" id="9Bm-2F-gbR">
+                    <navigationItem key="navigationItem" title="Monitor Reports" id="Jzv-Ie-LAJ">
+                        <barButtonItem key="leftBarButtonItem" image="side_menu_icon.png" id="9Bm-2F-gbR">
                             <connections>
                                 <action selector="toggleAction:" destination="vXZ-lx-hvc" id="Tbg-fM-uFC"/>
                             </connections>
@@ -111,7 +111,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="krQ-W9-bch">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="krQ-W9-bch" id="jSs-Bw-3EM">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -255,6 +255,9 @@
             <point key="canvasLocation" x="358" y="706"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="side_menu_icon.png" width="36" height="36"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

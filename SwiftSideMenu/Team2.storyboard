@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--SwiftSideMenu-->
+        <!--Login-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="LogIn" id="vXZ-lx-hvc" customClass="LoginViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogIn" title="Login" id="vXZ-lx-hvc" customClass="LoginViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -72,8 +72,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="SwiftSideMenu" id="A3g-k0-Mm1">
-                        <barButtonItem key="leftBarButtonItem" title="Toggle" id="2mO-vm-BqC">
+                    <navigationItem key="navigationItem" title="Login" id="A3g-k0-Mm1">
+                        <barButtonItem key="leftBarButtonItem" image="side_menu_icon.png" id="2mO-vm-BqC">
                             <connections>
                                 <action selector="toggle:" destination="vXZ-lx-hvc" id="S9e-Sb-JLq"/>
                             </connections>
@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="202" y="236"/>
         </scene>
-        <!--SwiftSideMenu-->
+        <!--Register-->
         <scene sceneID="MEt-oe-5OI">
             <objects>
-                <viewController id="BYW-IC-xV5" customClass="RegisterViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Register" id="BYW-IC-xV5" customClass="RegisterViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iCo-sh-gQ0"/>
                         <viewControllerLayoutGuide type="bottom" id="KNO-7U-IHg"/>
@@ -178,8 +178,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="SwiftSideMenu" id="9dc-RM-gcM">
-                        <barButtonItem key="leftBarButtonItem" title="Toggle" id="NeW-6b-uoR">
+                    <navigationItem key="navigationItem" title="Register" id="9dc-RM-gcM">
+                        <barButtonItem key="leftBarButtonItem" image="side_menu_icon.png" id="NeW-6b-uoR">
                             <connections>
                                 <action selector="toggle:" destination="BYW-IC-xV5" id="nVl-CV-vBz"/>
                             </connections>
@@ -261,10 +261,10 @@
             </objects>
             <point key="canvasLocation" x="604" y="236"/>
         </scene>
-        <!--SwiftSideMenu-->
+        <!--User Profile-->
         <scene sceneID="xa0-Ev-901">
             <objects>
-                <viewController storyboardIdentifier="UserProfile" id="0FT-Ks-Neg" customClass="UserProfileViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserProfile" title="User Profile" id="0FT-Ks-Neg" customClass="UserProfileViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bao-L1-ziJ"/>
                         <viewControllerLayoutGuide type="bottom" id="he8-gu-LwJ"/>
@@ -335,8 +335,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="SwiftSideMenu" id="hjy-br-0hM">
-                        <barButtonItem key="leftBarButtonItem" title="Toggle" id="Dyj-dk-CiN">
+                    <navigationItem key="navigationItem" title="User Profile" id="hjy-br-0hM">
+                        <barButtonItem key="leftBarButtonItem" image="side_menu_icon.png" id="Dyj-dk-CiN">
                             <connections>
                                 <action selector="toggle:" destination="0FT-Ks-Neg" id="bIv-Di-qEx"/>
                             </connections>
@@ -647,6 +647,7 @@
     </scenes>
     <resources>
         <image name="default.png" width="256" height="256"/>
+        <image name="side_menu_icon.png" width="36" height="36"/>
         <image name="street.png" width="1200" height="1200"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

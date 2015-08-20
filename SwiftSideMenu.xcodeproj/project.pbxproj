@@ -24,6 +24,7 @@
 		522B7EAA1B863609000A5678 /* SelectDriverReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E9F1B863609000A5678 /* SelectDriverReportVC.swift */; };
 		522B7EAC1B863626000A5678 /* Main5_Report.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522B7EAB1B863626000A5678 /* Main5_Report.storyboard */; };
 		526014461B81CB1600498D3F /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526014451B81CB1500498D3F /* MenuItem.swift */; };
+		52DE4A721B86680F0019999A /* side_menu_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 52DE4A711B86680F0019999A /* side_menu_icon.png */; };
 		52ECD6D71B8643DE00718350 /* AHKActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ECD6D01B8643DE00718350 /* AHKActionSheet.m */; };
 		52ECD6D81B8643DE00718350 /* AHKActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ECD6D21B8643DE00718350 /* AHKActionSheetViewController.m */; };
 		52ECD6D91B8643DE00718350 /* UIImage+AHKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ECD6D41B8643DE00718350 /* UIImage+AHKAdditions.m */; };
@@ -163,6 +164,7 @@
 		522B7E9F1B863609000A5678 /* SelectDriverReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDriverReportVC.swift; sourceTree = "<group>"; };
 		522B7EAB1B863626000A5678 /* Main5_Report.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main5_Report.storyboard; sourceTree = "<group>"; };
 		526014451B81CB1500498D3F /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		52DE4A711B86680F0019999A /* side_menu_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = side_menu_icon.png; path = ../../Downloads/Safari/side_menu_icon.png; sourceTree = "<group>"; };
 		52ECD6CE1B86438A00718350 /* SwiftSideMenu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftSideMenu-Bridging-Header.h"; sourceTree = "<group>"; };
 		52ECD6CF1B8643DE00718350 /* AHKActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHKActionSheet.h; sourceTree = "<group>"; };
 		52ECD6D01B8643DE00718350 /* AHKActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHKActionSheet.m; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 		14EAB63A19DD4E95006A90FC /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				52DE4A711B86680F0019999A /* side_menu_icon.png */,
 				522B7E901B86253C000A5678 /* ENSideMenu.swift */,
 				522B7E911B86253C000A5678 /* ENSideMenuNavigationController.swift */,
 			);
@@ -740,6 +743,7 @@
 				6CE9A2421B83A06000BE4004 /* street.png in Resources */,
 				6CE9A25F1B8474D200BE4004 /* cat.plist in Resources */,
 				6CE9A25C1B8474C300BE4004 /* placeDetails.plist in Resources */,
+				52DE4A721B86680F0019999A /* side_menu_icon.png in Resources */,
 				6CE9A2111B8382FE00BE4004 /* standstill.png in Resources */,
 				6CE9A1FA1B8382BD00BE4004 /* hazard2.png in Resources */,
 				6CE9A2411B83A06000BE4004 /* default.png in Resources */,

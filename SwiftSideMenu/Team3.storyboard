@@ -20,10 +20,10 @@
             </objects>
             <point key="canvasLocation" x="-351" y="665"/>
         </scene>
-        <!--SwiftSideMenu-->
+        <!--Point of Interest-->
         <scene sceneID="wPr-4Z-M7f">
             <objects>
-                <tableViewController storyboardIdentifier="CategorisView" id="riB-hx-WPY" customClass="TypesOfPOI" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CategorisView" title="Point of Interest" id="riB-hx-WPY" customClass="TypesOfPOI" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="eQS-Dn-W7V">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,8 +54,8 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="SwiftSideMenu" id="4Vh-fW-xyk">
-                        <barButtonItem key="leftBarButtonItem" title="Toggle" id="Au8-qd-SCm">
+                    <navigationItem key="navigationItem" title="Points of Interest" id="4Vh-fW-xyk">
+                        <barButtonItem key="leftBarButtonItem" image="side_menu_icon.png" id="Au8-qd-SCm">
                             <connections>
                                 <action selector="toggleAction:" destination="riB-hx-WPY" id="S4E-aZ-QRI"/>
                             </connections>
@@ -312,6 +312,9 @@
             <point key="canvasLocation" x="1064" y="1370"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="side_menu_icon.png" width="36" height="36"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

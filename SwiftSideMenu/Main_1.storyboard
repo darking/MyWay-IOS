@@ -34,7 +34,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="SwiftSideMenu" id="sst-xC-s2B">
-                        <barButtonItem key="rightBarButtonItem" title="Toggle" id="dKI-RO-t93">
+                        <barButtonItem key="rightBarButtonItem" image="side_menu_icon.png" id="dKI-RO-t93">
                             <connections>
                                 <action selector="menuButton:" destination="vXZ-lx-hvc" id="UEn-5V-s4I"/>
                             </connections>
@@ -51,6 +51,9 @@
             <point key="canvasLocation" x="99.5" y="243.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="side_menu_icon.png" width="36" height="36"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

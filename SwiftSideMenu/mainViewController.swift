@@ -328,7 +328,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
 //            NSLog(@"Test tapped");
 //        }];
 //        [actionSheet show];
-        
+        self.title = "My Way";
 
         actionSheet.addButtonWithTitle("Find Address", type: AHKActionSheetButtonType.Default, handler:{ (AHKActionSheet) -> Void in
             
@@ -1010,7 +1010,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     
     
     func displayRouteInfo() {
-        lblInfo.text = mapTasks.totalDistance + "\n" + mapTasks.totalDuration
+//        lblInfo.text = mapTasks.totalDistance + "\n" + mapTasks.totalDuration
     }
     
     

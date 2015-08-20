@@ -144,7 +144,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="SwiftSideMenu" id="8ma-1N-owp">
-                        <barButtonItem key="leftBarButtonItem" title="Toggle" id="9pP-Iq-5er">
+                        <barButtonItem key="leftBarButtonItem" image="side_menu_icon.png" id="9pP-Iq-5er">
                             <connections>
                                 <action selector="showMenu:" destination="hvk-Lc-yGT" id="ewF-gU-59Z"/>
                             </connections>
@@ -169,6 +169,9 @@
             <point key="canvasLocation" x="828" y="533"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="side_menu_icon.png" width="36" height="36"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

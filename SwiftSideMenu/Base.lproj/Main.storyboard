@@ -33,7 +33,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="SwiftSideMenu" id="xjt-8x-iNd">
-                        <barButtonItem key="leftBarButtonItem" title="Toggle" id="6yD-lK-pVO">
+                        <barButtonItem key="leftBarButtonItem" image="side_menu_icon.png" id="6yD-lK-pVO">
                             <connections>
                                 <action selector="menuButton:" destination="BYZ-38-t0r" id="8n1-2S-C93"/>
                             </connections>
@@ -65,6 +65,9 @@
             <point key="canvasLocation" x="-368.5333333333333" y="46.386666666666663"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="side_menu_icon.png" width="36" height="36"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
