@@ -33,6 +33,8 @@ class trafficVC:ViewController{
     @IBOutlet var commentTraffic: UITextField!
     
     
+    
+    
     @IBAction func moderateTraffic(sender: AnyObject) {
         moderateFlag = true;
         heavyFalg = false;
@@ -68,6 +70,20 @@ class trafficVC:ViewController{
         moderateLable.text="";
         heavyLable.text="";
         standLable.text="Selected";
+    }
+    
+    
+    
+    @IBAction func SetLocation(sender: AnyObject) {
+        
+        var getLocation:GetLocationVC = UIStoryboard(name: "GetLocation", bundle: nil).instantiateViewControllerWithIdentifier("GetLocationVC") as! GetLocationVC;
+        
+        NSUserDefaults.standardUserDefaults().setValue("0.0", forKey: "reportLat");
+        NSUserDefaults.standardUserDefaults().setValue("0.0", forKey: "reportLon");
+        getLocation.latKey = "reportLat";
+        getLocation.lngKey = "reportLon";
+        self.presentViewController(getLocation, animated: true, completion: {});
+        
     }
     
     

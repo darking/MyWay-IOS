@@ -36,6 +36,18 @@ class commentOther:UITableViewController{
         return cell;
     }
     
-
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var row:Int = indexPath.row;
+        var manager:addOtherReports = addOtherReports ();
+        var list:NSMutableArray = manager.showAllReports();
+        var values:NSDictionary = list.objectAtIndex(row) as! NSDictionary;
+        var report:CommentLocation = CommentLocation().objectFromDict(values);
+        
+        var showMap:ShowOnMapVC = UIStoryboard(name: "reqLocaiton", bundle: nil).instantiateViewControllerWithIdentifier("ShowOnMapVC") as! ShowOnMapVC;
+        showMap.title = "other";
+        showMap.message = report.comment;
+        showMap.location = report.reportLocation;
+        self.navigationController?.pushViewController(showMap, animated: true);
+    }
     
 }
