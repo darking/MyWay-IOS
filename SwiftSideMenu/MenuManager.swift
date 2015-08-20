@@ -34,8 +34,8 @@ class MenuManager {
         
         item = MenuItem();
         item.itemTitle = "Parent Monitor";
-        item.itemVCIdentifier = "ManageDriver";
-        item.storyBoardName = "Team5_m";
+        item.itemVCIdentifier = "SelectDriverReportVC";
+        item.storyBoardName = "Main5_Report";
         MenuItem.all.menuItems.addObject(item);
         
         item = MenuItem();

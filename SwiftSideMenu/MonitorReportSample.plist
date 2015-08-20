@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>rajo</key>
+	<dict>
+		<key>18-08-2015</key>
+		<dict>
+			<key>startlocation</key>
+			<string>0.0</string>
+			<key>endlocation</key>
+			<string>0.0</string>
+			<key>speed</key>
+			<string>80</string>
+		</dict>
+		<key>19-08-2015</key>
+		<dict>
+			<key>startlocation</key>
+			<string>0.0</string>
+			<key>endlocation</key>
+			<string>0.0</string>
+			<key>speed</key>
+			<string>120</string>
+		</dict>
+		<key>20-08-2015</key>
+		<dict>
+			<key>startlocation</key>
+			<string>0.0</string>
+			<key>endlocation</key>
+			<string>0.0</string>
+			<key>speed</key>
+			<string>100</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
