@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		1429137D19D97A4F0025188A /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1429137C19D97A4F0025188A /* MyMenuTableViewController.swift */; };
 		1429139319DA9F4D0025188A /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1429139219DA9F4D0025188A /* MyNavigationController.swift */; };
+		522B7E921B86253C000A5678 /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E901B86253C000A5678 /* ENSideMenu.swift */; };
+		522B7E931B86253C000A5678 /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E911B86253C000A5678 /* ENSideMenuNavigationController.swift */; };
 		526014461B81CB1600498D3F /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526014451B81CB1500498D3F /* MenuItem.swift */; };
-		52F57A701B853AB700A51E54 /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F57A6E1B853AB700A51E54 /* ENSideMenu.swift */; };
-		52F57A711B853AB700A51E54 /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F57A6F1B853AB700A51E54 /* ENSideMenuNavigationController.swift */; };
 		52F57A741B85E97100A51E54 /* GetLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F57A721B85E97100A51E54 /* GetLocation.storyboard */; };
 		52F57A751B85E97100A51E54 /* GetLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F57A731B85E97100A51E54 /* GetLocationVC.swift */; };
 		5C132589198E2A9A00CA49BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C132588198E2A9A00CA49BE /* AppDelegate.swift */; };
@@ -132,9 +132,9 @@
 		1429139219DA9F4D0025188A /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
 		2AC871D8CEADD3638C5B3256 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		46841B45243E82D10FE5A5F3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		522B7E901B86253C000A5678 /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ENSideMenu.swift; path = SwiftSideMenu/ENSideMenu.swift; sourceTree = SOURCE_ROOT; };
+		522B7E911B86253C000A5678 /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ENSideMenuNavigationController.swift; path = SwiftSideMenu/ENSideMenuNavigationController.swift; sourceTree = SOURCE_ROOT; };
 		526014451B81CB1500498D3F /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
-		52F57A6E1B853AB700A51E54 /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ENSideMenu.swift; path = "../../ENSwiftSideMenu-master/Library/ENSideMenu.swift"; sourceTree = "<group>"; };
-		52F57A6F1B853AB700A51E54 /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ENSideMenuNavigationController.swift; path = "../../ENSwiftSideMenu-master/Library/ENSideMenuNavigationController.swift"; sourceTree = "<group>"; };
 		52F57A721B85E97100A51E54 /* GetLocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GetLocation.storyboard; sourceTree = "<group>"; };
 		52F57A731B85E97100A51E54 /* GetLocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLocationVC.swift; sourceTree = "<group>"; };
 		5C132583198E2A9A00CA49BE /* SwiftSideMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSideMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,8 +288,8 @@
 		14EAB63A19DD4E95006A90FC /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				52F57A6E1B853AB700A51E54 /* ENSideMenu.swift */,
-				52F57A6F1B853AB700A51E54 /* ENSideMenuNavigationController.swift */,
+				522B7E901B86253C000A5678 /* ENSideMenu.swift */,
+				522B7E911B86253C000A5678 /* ENSideMenuNavigationController.swift */,
 			);
 			name = Library;
 			path = ../../Library;
@@ -731,6 +731,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				522B7E921B86253C000A5678 /* ENSideMenu.swift in Sources */,
 				6CE9A2581B8474A300BE4004 /* TypesOfPOI.swift in Sources */,
 				6CE9A1EA1B83828500BE4004 /* addTrafficJamReports.swift in Sources */,
 				6CE9A1CD1B8381F000BE4004 /* AllVC.swift in Sources */,
@@ -768,6 +769,7 @@
 				6CE9A2361B839F9100BE4004 /* ImageConversion.swift in Sources */,
 				6CE9A1D71B83825C00BE4004 /* addOtherReports.swift in Sources */,
 				6CE9A23D1B839FCB00BE4004 /* ConnectionManager.swift in Sources */,
+				522B7E931B86253C000A5678 /* ENSideMenuNavigationController.swift in Sources */,
 				6CE9A2181B83835A00BE4004 /* commentMinorAccident.swift in Sources */,
 				6CE9A1D61B83825C00BE4004 /* otherVC.swift in Sources */,
 				6CE9A2591B8474A300BE4004 /* TypeView.swift in Sources */,
@@ -782,7 +784,6 @@
 				6CE9A2331B839F9100BE4004 /* CodeVerificationViewController.swift in Sources */,
 				6CE9A1BA1B83322B00BE4004 /* AllpListController.swift in Sources */,
 				6CE9A1E01B83827700BE4004 /* commentConstruction.swift in Sources */,
-				52F57A711B853AB700A51E54 /* ENSideMenuNavigationController.swift in Sources */,
 				1429139319DA9F4D0025188A /* MyNavigationController.swift in Sources */,
 				6CE9A2381B839F9100BE4004 /* RegisterViewController.swift in Sources */,
 				6CE9A2631B848A1700BE4004 /* DriversListViewController.swift in Sources */,
@@ -792,7 +793,6 @@
 				6CE9A2531B8474A300BE4004 /* MoreInfoOfPOI.swift in Sources */,
 				6CE9A26F1B84AE2900BE4004 /* ShowOnMapVC.swift in Sources */,
 				6CE9A2551B8474A300BE4004 /* POIDataManager.swift in Sources */,
-				52F57A701B853AB700A51E54 /* ENSideMenu.swift in Sources */,
 				6CE9A2251B83910400BE4004 /* ManageDriverVC.swift in Sources */,
 				6CE9A2351B839F9100BE4004 /* ForgetPasswordViewController.swift in Sources */,
 				5C132589198E2A9A00CA49BE /* AppDelegate.swift in Sources */,
