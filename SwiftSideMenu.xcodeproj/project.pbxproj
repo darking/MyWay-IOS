@@ -24,6 +24,10 @@
 		522B7EAA1B863609000A5678 /* SelectDriverReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E9F1B863609000A5678 /* SelectDriverReportVC.swift */; };
 		522B7EAC1B863626000A5678 /* Main5_Report.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522B7EAB1B863626000A5678 /* Main5_Report.storyboard */; };
 		526014461B81CB1600498D3F /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526014451B81CB1500498D3F /* MenuItem.swift */; };
+		52ECD6D71B8643DE00718350 /* AHKActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ECD6D01B8643DE00718350 /* AHKActionSheet.m */; };
+		52ECD6D81B8643DE00718350 /* AHKActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ECD6D21B8643DE00718350 /* AHKActionSheetViewController.m */; };
+		52ECD6D91B8643DE00718350 /* UIImage+AHKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ECD6D41B8643DE00718350 /* UIImage+AHKAdditions.m */; };
+		52ECD6DA1B8643DE00718350 /* UIWindow+AHKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ECD6D61B8643DE00718350 /* UIWindow+AHKAdditions.m */; };
 		52F57A741B85E97100A51E54 /* GetLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F57A721B85E97100A51E54 /* GetLocation.storyboard */; };
 		52F57A751B85E97100A51E54 /* GetLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F57A731B85E97100A51E54 /* GetLocationVC.swift */; };
 		5C132589198E2A9A00CA49BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C132588198E2A9A00CA49BE /* AppDelegate.swift */; };
@@ -159,6 +163,15 @@
 		522B7E9F1B863609000A5678 /* SelectDriverReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDriverReportVC.swift; sourceTree = "<group>"; };
 		522B7EAB1B863626000A5678 /* Main5_Report.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main5_Report.storyboard; sourceTree = "<group>"; };
 		526014451B81CB1500498D3F /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		52ECD6CE1B86438A00718350 /* SwiftSideMenu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftSideMenu-Bridging-Header.h"; sourceTree = "<group>"; };
+		52ECD6CF1B8643DE00718350 /* AHKActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHKActionSheet.h; sourceTree = "<group>"; };
+		52ECD6D01B8643DE00718350 /* AHKActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHKActionSheet.m; sourceTree = "<group>"; };
+		52ECD6D11B8643DE00718350 /* AHKActionSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHKActionSheetViewController.h; sourceTree = "<group>"; };
+		52ECD6D21B8643DE00718350 /* AHKActionSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHKActionSheetViewController.m; sourceTree = "<group>"; };
+		52ECD6D31B8643DE00718350 /* UIImage+AHKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AHKAdditions.h"; sourceTree = "<group>"; };
+		52ECD6D41B8643DE00718350 /* UIImage+AHKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AHKAdditions.m"; sourceTree = "<group>"; };
+		52ECD6D51B8643DE00718350 /* UIWindow+AHKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+AHKAdditions.h"; sourceTree = "<group>"; };
+		52ECD6D61B8643DE00718350 /* UIWindow+AHKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+AHKAdditions.m"; sourceTree = "<group>"; };
 		52F57A721B85E97100A51E54 /* GetLocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GetLocation.storyboard; sourceTree = "<group>"; };
 		52F57A731B85E97100A51E54 /* GetLocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLocationVC.swift; sourceTree = "<group>"; };
 		5C132583198E2A9A00CA49BE /* SwiftSideMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSideMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -415,10 +428,19 @@
 		6CE9A1BB1B83517300BE4004 /* Team1 */ = {
 			isa = PBXGroup;
 			children = (
+				52ECD6CF1B8643DE00718350 /* AHKActionSheet.h */,
+				52ECD6D01B8643DE00718350 /* AHKActionSheet.m */,
+				52ECD6D11B8643DE00718350 /* AHKActionSheetViewController.h */,
+				52ECD6D21B8643DE00718350 /* AHKActionSheetViewController.m */,
+				52ECD6D31B8643DE00718350 /* UIImage+AHKAdditions.h */,
+				52ECD6D41B8643DE00718350 /* UIImage+AHKAdditions.m */,
+				52ECD6D51B8643DE00718350 /* UIWindow+AHKAdditions.h */,
+				52ECD6D61B8643DE00718350 /* UIWindow+AHKAdditions.m */,
 				6CE9A1C41B8364B000BE4004 /* Main_1.storyboard */,
 				6CE9A1BE1B8363D400BE4004 /* mainViewController.swift */,
 				6CE9A1BF1B8363D400BE4004 /* MapTasks.swift */,
 				6CE9A1C21B83641000BE4004 /* MainMapVC.swift */,
+				52ECD6CE1B86438A00718350 /* SwiftSideMenu-Bridging-Header.h */,
 			);
 			name = Team1;
 			sourceTree = "<group>";
@@ -780,6 +802,7 @@
 				522B7E921B86253C000A5678 /* ENSideMenu.swift in Sources */,
 				6CE9A2581B8474A300BE4004 /* TypesOfPOI.swift in Sources */,
 				6CE9A1EA1B83828500BE4004 /* addTrafficJamReports.swift in Sources */,
+				52ECD6D81B8643DE00718350 /* AHKActionSheetViewController.m in Sources */,
 				6CE9A1CD1B8381F000BE4004 /* AllVC.swift in Sources */,
 				6CE9A1C31B83641000BE4004 /* MainMapVC.swift in Sources */,
 				6CE9A1D81B83825C00BE4004 /* commentOther.swift in Sources */,
@@ -821,8 +844,10 @@
 				6CE9A23D1B839FCB00BE4004 /* ConnectionManager.swift in Sources */,
 				522B7E931B86253C000A5678 /* ENSideMenuNavigationController.swift in Sources */,
 				6CE9A2181B83835A00BE4004 /* commentMinorAccident.swift in Sources */,
+				52ECD6D91B8643DE00718350 /* UIImage+AHKAdditions.m in Sources */,
 				6CE9A1D61B83825C00BE4004 /* otherVC.swift in Sources */,
 				6CE9A2591B8474A300BE4004 /* TypeView.swift in Sources */,
+				52ECD6D71B8643DE00718350 /* AHKActionSheet.m in Sources */,
 				6CE9A2561B8474A300BE4004 /* PointOfInterest.swift in Sources */,
 				6CE9A2521B8474A300BE4004 /* ManagePoints.swift in Sources */,
 				522B7EA51B863609000A5678 /* MonitorDate.swift in Sources */,
@@ -830,6 +855,7 @@
 				6CE9A2391B839F9100BE4004 /* SetNewPasswordViewController.swift in Sources */,
 				6CE9A1E81B83828500BE4004 /* commentHeavyTraffic.swift in Sources */,
 				6CE9A1DD1B83827700BE4004 /* hazardVC.swift in Sources */,
+				52ECD6DA1B8643DE00718350 /* UIWindow+AHKAdditions.m in Sources */,
 				522B7EA01B863609000A5678 /* AddMonitorReport.swift in Sources */,
 				522B7EA91B863609000A5678 /* ReadReport.swift in Sources */,
 				6CE9A21B1B83849D00BE4004 /* ReportsMainVC.swift in Sources */,
@@ -973,10 +999,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftSideMenu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftSideMenu/SwiftSideMenu-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -986,10 +1015,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftSideMenu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftSideMenu/SwiftSideMenu-Bridging-Header.h";
 			};
 			name = Release;
 		};
