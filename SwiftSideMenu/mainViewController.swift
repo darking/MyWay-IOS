@@ -574,32 +574,32 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
        
       //  println(theLocation)
         
-        var circleCenter = CLLocationCoordinate2DMake(lat, lng)
-        var circ = GMSCircle(position: circleCenter, radius: 1000)
-        
-     //   println(circ.description)
-        
-        circ.fillColor = UIColor(red: 0.35, green: 0, blue: 0, alpha: 0.05)
-        circ.strokeColor = UIColor.redColor()
-        circ.strokeWidth = 5
-        circ.map = viewMap
-   
-        
-        var floor = 1
-        
-        // Implement GMSTileURLConstructor
-        // Returns a Tile based on the x,y,zoom coordinates, and the requested floor
-        var urls = { (x: UInt, y: UInt, zoom: UInt) -> NSURL in
-            var url = "http://www.example.com/floorplans/L\(floor)_\(zoom)_\(x)_\(y).png"
-            return NSURL(string: url)!
-        }
-        
-        // Create the GMSTileLayer
-        var layer = GMSURLTileLayer(URLConstructor: urls)
-        
-        // Display on the map at a specific zIndex
-        layer.zIndex = 100
-        layer.map = viewMap
+//        var circleCenter = CLLocationCoordinate2DMake(lat, lng)
+//        var circ = GMSCircle(position: circleCenter, radius: 1000)
+//        
+//     //   println(circ.description)
+//        
+//        circ.fillColor = UIColor(red: 0.35, green: 0, blue: 0, alpha: 0.05)
+//        circ.strokeColor = UIColor.redColor()
+//        circ.strokeWidth = 5
+//        circ.map = viewMap
+//   
+//        
+//        var floor = 1
+//        
+//        // Implement GMSTileURLConstructor
+//        // Returns a Tile based on the x,y,zoom coordinates, and the requested floor
+//        var urls = { (x: UInt, y: UInt, zoom: UInt) -> NSURL in
+//            var url = "http://www.example.com/floorplans/L\(floor)_\(zoom)_\(x)_\(y).png"
+//            return NSURL(string: url)!
+//        }
+//        
+//        // Create the GMSTileLayer
+//        var layer = GMSURLTileLayer(URLConstructor: urls)
+//        
+//        // Display on the map at a specific zIndex
+//        layer.zIndex = 100
+//        layer.map = viewMap
         
         
       //  randomPOI()
