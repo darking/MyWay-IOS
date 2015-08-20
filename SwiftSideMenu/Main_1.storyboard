@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--SwiftSideMenu-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="mainVC" id="vXZ-lx-hvc" customClass="mainViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jdn-4k-G1C"/>
+                        <viewControllerLayoutGuide type="bottom" id="UU7-wS-6yf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k9F-3t-QWf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WAZ-x0-6fa" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="506"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance Info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GU-nh-H3O">
+                                <rect key="frame" x="0.0" y="478" width="375" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8K-a2-Tge">
+                                <rect key="frame" x="282" y="486" width="74" height="30"/>
+                                <state key="normal" title="navigate">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="navigate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wCA-Wm-syU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qg7-07-PQq">
+                                <rect key="frame" x="11" y="486" width="73" height="30"/>
+                                <state key="normal" title="rout&amp;POI">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="routeANDpoi:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="P5d-Dy-M0j"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tmu-hS-dk2">
+                                <rect key="frame" x="4" y="526" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Search" id="wkg-y3-pOk">
+                                        <connections>
+                                            <action selector="findAddress:" destination="vXZ-lx-hvc" id="AU1-UX-9ZA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="directions" id="9GN-ep-xkl">
+                                        <connections>
+                                            <action selector="crtRoute:" destination="vXZ-lx-hvc" id="abp-Lo-4EY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="x9S-tH-ZHM">
+                                        <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="55i-RI-ole">
+                                            <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="toggleTraffic:" destination="vXZ-lx-hvc" eventType="valueChanged" id="0fQ-in-GnY"/>
+                                            </connections>
+                                        </switch>
+                                    </barButtonItem>
+                                    <barButtonItem title="Loc" id="E6U-55-Jof">
+                                        <connections>
+                                            <action selector="crtRouteFromMyLocation:" destination="vXZ-lx-hvc" id="zUJ-HD-QMB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Clear" id="3I7-xz-03K">
+                                        <connections>
+                                            <action selector="clrRoute:" destination="vXZ-lx-hvc" id="HlL-VA-CkY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Fav" id="FbZ-0E-DBt">
+                                        <connections>
+                                            <action selector="favBtn:" destination="vXZ-lx-hvc" id="Ifj-tj-dRz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="POI" id="laB-Bw-Go7">
+                                        <connections>
+                                            <action selector="POIbtn:" destination="vXZ-lx-hvc" id="aJL-x0-u7w"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="long and lat" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcW-Sy-Oqs">
+                                <rect key="frame" x="81" y="455" width="212" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SwiftSideMenu" id="sst-xC-s2B">
+                        <barButtonItem key="leftBarButtonItem" title="Toggle" id="dKI-RO-t93">
+                            <connections>
+                                <action selector="menuButton:" destination="vXZ-lx-hvc" id="UEn-5V-s4I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="lblInfo" destination="9GU-nh-H3O" id="lzu-fh-6jo"/>
+                        <outlet property="lblLongLat" destination="EcW-Sy-Oqs" id="iR3-M5-HQ4"/>
+                        <outlet property="toggleTraffic" destination="55i-RI-ole" id="7p7-WZ-u9e"/>
+                        <outlet property="viewMap" destination="WAZ-x0-6fa" id="kEE-se-UPZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301.5" y="256.5"/>
+        </scene>
+    </scenes>
+</document>

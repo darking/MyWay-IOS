@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="HCk-lu-DhC">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Reveal View Controller-->
+        <scene sceneID="A2e-wn-TT9">
+            <objects>
+                <viewController id="HCk-lu-DhC" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5t3-3n-sah"/>
+                        <viewControllerLayoutGuide type="bottom" id="1vS-DJ-lQb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lno-bI-7aM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="Pgd-8w-ZFF" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="cZy-mg-3nV"/>
+                        <segue destination="hvk-Lc-yGT" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="g7T-vJ-TNy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oc9-87-MxD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="391" y="186"/>
+        </scene>
+        <!--Sidebar Menu-->
+        <scene sceneID="Ho7-qy-dP7">
+            <objects>
+                <tableViewController id="Pgd-8w-ZFF" customClass="SidebarMenu" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="yvu-Ze-qc8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0Vu-IM-OGz">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Vu-IM-OGz" id="bgH-bO-vhY">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Pgd-8w-ZFF" id="ixx-zw-bMZ"/>
+                            <outlet property="delegate" destination="Pgd-8w-ZFF" id="9gf-Xm-q5S"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jxk-ua-lZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="-94"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="fhp-4q-tVG">
+            <objects>
+                <viewController storyboardIdentifier="Team5_Settings" title="Settings" id="hvk-Lc-yGT" customClass="UISettings" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="94X-tk-wLh"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Ja-WR-Abz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c76-6G-j6N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enable reports" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rA8-RU-ulU">
+                                <rect key="frame" x="16" y="124" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enable voice notifications" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DW-lH-hRt">
+                                <rect key="frame" x="16" y="168" width="196" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Voice notification language" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jz2-cb-xFZ">
+                                <rect key="frame" x="16" y="212" width="206" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d7p-6F-4o0">
+                                <rect key="frame" x="255" y="119" width="51" height="31"/>
+                                <connections>
+                                    <action selector="chkReports:" destination="hvk-Lc-yGT" eventType="valueChanged" id="gsQ-Xt-q5I"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nEM-pD-Fad">
+                                <rect key="frame" x="255" y="163" width="51" height="31"/>
+                                <connections>
+                                    <action selector="chkVoice:" destination="hvk-Lc-yGT" eventType="valueChanged" id="HVi-hr-QiY"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bva-Bb-VU6">
+                                <rect key="frame" x="252" y="208" width="54" height="30"/>
+                                <state key="normal" title="Change">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnChange:" destination="hvk-Lc-yGT" eventType="touchUpInside" id="EdX-YM-V5d"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HZR-Wm-S7D">
+                                <rect key="frame" x="255" y="251" width="51" height="31"/>
+                                <connections>
+                                    <action selector="chkNearbyPOI:" destination="hvk-Lc-yGT" eventType="valueChanged" id="q27-9x-7kR"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ti-Rf-kz2">
+                                <rect key="frame" x="255" y="295" width="51" height="31"/>
+                                <connections>
+                                    <action selector="chkOverspeed:" destination="hvk-Lc-yGT" eventType="valueChanged" id="Vt8-N8-Mz0"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enable nearby POI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loq-Ru-gpW">
+                                <rect key="frame" x="16" y="256" width="167" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enable Overspeed notification" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgZ-rL-wat">
+                                <rect key="frame" x="16" y="300" width="231" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qzI-6X-Iyr">
+                                <rect key="frame" x="16" y="405" width="288" height="62"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxC-FA-ioT">
+                                <rect key="frame" x="267" y="382" width="37" height="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnDone:" destination="hvk-Lc-yGT" eventType="touchUpInside" id="7ZS-CT-CvL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="SwiftSideMenu" id="8ma-1N-owp">
+                        <barButtonItem key="leftBarButtonItem" title="Toggle" id="9pP-Iq-5er">
+                            <connections>
+                                <action selector="showMenu:" destination="hvk-Lc-yGT" id="ewF-gU-59Z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="chkNearbyPOI" destination="HZR-Wm-S7D" id="ETZ-wE-2FN"/>
+                        <outlet property="chkOverspeed" destination="2ti-Rf-kz2" id="GC6-bI-pwb"/>
+                        <outlet property="chkReport" destination="d7p-6F-4o0" id="5e0-CG-ivz"/>
+                        <outlet property="lblChangeButton" destination="bva-Bb-VU6" id="vCV-R5-HLA"/>
+                        <outlet property="lblDoneButton" destination="vxC-FA-ioT" id="wcE-1t-tMg"/>
+                        <outlet property="lblVoiceLanguage" destination="jz2-cb-xFZ" id="T9B-4r-erE"/>
+                        <outlet property="pckLanguage" destination="qzI-6X-Iyr" id="42q-f3-hCa"/>
+                        <outlet property="showMenu" destination="9pP-Iq-5er" id="vkz-mK-Niw"/>
+                        <outlet property="voiceNotification" destination="nEM-pD-Fad" id="SNH-Pf-oUQ"/>
+                        <outlet property="voiceStatus" destination="nEM-pD-Fad" id="tka-Rc-TF3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OJ4-Dl-a2Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="533"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xKr-44-F3h">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--SwiftSideMenu-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="mainVC" id="BYZ-38-t0r" customClass="mainViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Ly-3z-uvT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EQC-IX-a4g" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="10" width="320" height="506"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="long and lat" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlX-Om-ga2">
+                                <rect key="frame" x="67" y="445" width="212" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance Info" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vy0-Vc-Kis">
+                                <rect key="frame" x="-14" y="468" width="375" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qxu-8A-8K9">
+                                <rect key="frame" x="239" y="476" width="74" height="30"/>
+                                <state key="normal" title="navigate">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="navigate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mBE-tP-VM4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07y-IE-w7u">
+                                <rect key="frame" x="21" y="476" width="73" height="30"/>
+                                <state key="normal" title="rout&amp;POI">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="routeANDpoi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rEy-ih-Rb9"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aTx-Zo-yKr">
+                                <rect key="frame" x="0.0" y="522" width="334" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <barButtonItem title="Search" id="nJH-0O-fBo">
+                                        <connections>
+                                            <action selector="findAddress:" destination="BYZ-38-t0r" id="HXP-nZ-aYt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="directions" id="3UD-gA-BFv">
+                                        <connections>
+                                            <action selector="crtRoute:" destination="BYZ-38-t0r" id="Utx-Kq-2rJ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="b1a-ck-XDT">
+                                        <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="qJg-T3-sy3">
+                                            <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="toggleTraffic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7mb-Ig-fDv"/>
+                                            </connections>
+                                        </switch>
+                                    </barButtonItem>
+                                    <barButtonItem title="Loc" id="myO-3C-al8"/>
+                                    <barButtonItem title="Clear" id="29V-Vt-tlg">
+                                        <connections>
+                                            <action selector="clrRoute:" destination="BYZ-38-t0r" id="MCw-lo-05r"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Fav" id="3cL-4v-T9D">
+                                        <connections>
+                                            <action selector="favBtn:" destination="BYZ-38-t0r" id="onj-qz-RyT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="POI" id="KV9-9z-AE8"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7Ly-3z-uvT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fhE-9Q-jbu"/>
+                            <constraint firstAttribute="trailing" secondItem="7Ly-3z-uvT" secondAttribute="trailing" id="mev-cc-V4P"/>
+                            <constraint firstItem="7Ly-3z-uvT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qaZ-In-9k5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7Ly-3z-uvT" secondAttribute="bottom" id="zGX-tT-cwe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="SwiftSideMenu" id="xjt-8x-iNd">
+                        <barButtonItem key="leftBarButtonItem" title="Toggle" id="6yD-lK-pVO">
+                            <connections>
+                                <action selector="menuButton:" destination="BYZ-38-t0r" id="8n1-2S-C93"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="lblInfo" destination="vy0-Vc-Kis" id="SZa-TL-CTF"/>
+                        <outlet property="lblLongLat" destination="TlX-Om-ga2" id="zPS-5M-KbQ"/>
+                        <outlet property="toggleTraffic" destination="qJg-T3-sy3" id="k25-4v-7B0"/>
+                        <outlet property="viewMap" destination="EQC-IX-a4g" id="KLY-ET-2D5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="46"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="cvg-r3-oiY">
+            <objects>
+                <navigationController id="xKr-44-F3h" customClass="MyNavigationController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="qnV-qS-iv7"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="j84-05-NcZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="N0Y-WT-BaU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KaR-FP-sVw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-368.5333333333333" y="46.386666666666663"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image.png" width="1174" height="1220"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
