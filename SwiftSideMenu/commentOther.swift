@@ -50,4 +50,5 @@ class commentOther:UITableViewController{
         self.navigationController?.pushViewController(showMap, animated: true);
     }
     
+
 }
