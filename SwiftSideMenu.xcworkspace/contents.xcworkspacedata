@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:kuwait.gpx">
+   </FileRef>
+   <FileRef
       location = "group:SwiftSideMenu.xcodeproj">
    </FileRef>
    <FileRef

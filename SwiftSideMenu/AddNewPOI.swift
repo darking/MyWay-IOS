@@ -1,5 +1,7 @@
 import UIKit
 
+
+// to add a new point to a plist
 class AddNewPOI: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
