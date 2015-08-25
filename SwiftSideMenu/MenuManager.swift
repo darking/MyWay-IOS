@@ -68,6 +68,14 @@ class MenuManager {
         item.storyBoardName = "Team3";
         MenuItem.all.menuItems.addObject(item);
         
+        //
+        item = MenuItem();
+        item.itemTitle = "Points of Interest 2";
+        item.itemVCIdentifier = "poiVC";
+        item.storyBoardName = "POI";
+        MenuItem.all.menuItems.addObject(item);
+        //
+        
         item = MenuItem();
         item.itemTitle = "Reports";
         item.itemVCIdentifier = "Report";

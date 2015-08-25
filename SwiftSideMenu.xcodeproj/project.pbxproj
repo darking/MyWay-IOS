@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141092691B8CB71F00CD3114 /* POI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141092681B8CB71F00CD3114 /* POI.storyboard */; };
+		141092721B8CB76300CD3114 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410926A1B8CB76300CD3114 /* MapViewController.swift */; };
+		141092731B8CB76300CD3114 /* TypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410926B1B8CB76300CD3114 /* TypesTableViewController.swift */; };
+		141092741B8CB76300CD3114 /* GoogleDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410926C1B8CB76300CD3114 /* GoogleDataProvider.swift */; };
+		141092751B8CB76300CD3114 /* GooglePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410926D1B8CB76300CD3114 /* GooglePlace.swift */; };
+		141092761B8CB76300CD3114 /* PlaceMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410926E1B8CB76300CD3114 /* PlaceMarker.swift */; };
+		141092771B8CB76300CD3114 /* MarkerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410926F1B8CB76300CD3114 /* MarkerInfoView.swift */; };
+		141092781B8CB76300CD3114 /* MarkerInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 141092701B8CB76300CD3114 /* MarkerInfoView.xib */; };
+		141092791B8CB76300CD3114 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141092711B8CB76300CD3114 /* UIViewExtension.swift */; };
 		1429137D19D97A4F0025188A /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1429137C19D97A4F0025188A /* MyMenuTableViewController.swift */; };
 		1429139319DA9F4D0025188A /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1429139219DA9F4D0025188A /* MyNavigationController.swift */; };
 		522B7E921B86253C000A5678 /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E901B86253C000A5678 /* ENSideMenu.swift */; };
@@ -24,7 +33,6 @@
 		522B7EAA1B863609000A5678 /* SelectDriverReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E9F1B863609000A5678 /* SelectDriverReportVC.swift */; };
 		522B7EAC1B863626000A5678 /* Main5_Report.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522B7EAB1B863626000A5678 /* Main5_Report.storyboard */; };
 		526014461B81CB1600498D3F /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526014451B81CB1500498D3F /* MenuItem.swift */; };
-		52DE4A721B86680F0019999A /* side_menu_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 52DE4A711B86680F0019999A /* side_menu_icon.png */; };
 		52ECD6D71B8643DE00718350 /* AHKActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ECD6D01B8643DE00718350 /* AHKActionSheet.m */; };
 		52ECD6D81B8643DE00718350 /* AHKActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ECD6D21B8643DE00718350 /* AHKActionSheetViewController.m */; };
 		52ECD6D91B8643DE00718350 /* UIImage+AHKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ECD6D41B8643DE00718350 /* UIImage+AHKAdditions.m */; };
@@ -145,6 +153,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		141092681B8CB71F00CD3114 /* POI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = POI.storyboard; sourceTree = "<group>"; };
+		1410926A1B8CB76300CD3114 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1410926B1B8CB76300CD3114 /* TypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypesTableViewController.swift; sourceTree = "<group>"; };
+		1410926C1B8CB76300CD3114 /* GoogleDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDataProvider.swift; sourceTree = "<group>"; };
+		1410926D1B8CB76300CD3114 /* GooglePlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlace.swift; sourceTree = "<group>"; };
+		1410926E1B8CB76300CD3114 /* PlaceMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceMarker.swift; sourceTree = "<group>"; };
+		1410926F1B8CB76300CD3114 /* MarkerInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerInfoView.swift; sourceTree = "<group>"; };
+		141092701B8CB76300CD3114 /* MarkerInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkerInfoView.xib; sourceTree = "<group>"; };
+		141092711B8CB76300CD3114 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		1429137C19D97A4F0025188A /* MyMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuTableViewController.swift; sourceTree = "<group>"; };
 		1429139219DA9F4D0025188A /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
 		2AC871D8CEADD3638C5B3256 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,7 +181,6 @@
 		522B7E9F1B863609000A5678 /* SelectDriverReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDriverReportVC.swift; sourceTree = "<group>"; };
 		522B7EAB1B863626000A5678 /* Main5_Report.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main5_Report.storyboard; sourceTree = "<group>"; };
 		526014451B81CB1500498D3F /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
-		52DE4A711B86680F0019999A /* side_menu_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = side_menu_icon.png; path = ../../Downloads/Safari/side_menu_icon.png; sourceTree = "<group>"; };
 		52ECD6CE1B86438A00718350 /* SwiftSideMenu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftSideMenu-Bridging-Header.h"; sourceTree = "<group>"; };
 		52ECD6CF1B8643DE00718350 /* AHKActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHKActionSheet.h; sourceTree = "<group>"; };
 		52ECD6D01B8643DE00718350 /* AHKActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHKActionSheet.m; sourceTree = "<group>"; };
@@ -302,6 +318,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1410927A1B8CB77200CD3114 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1410926A1B8CB76300CD3114 /* MapViewController.swift */,
+				1410926B1B8CB76300CD3114 /* TypesTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1410927B1B8CB77F00CD3114 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1410926C1B8CB76300CD3114 /* GoogleDataProvider.swift */,
+				1410926D1B8CB76300CD3114 /* GooglePlace.swift */,
+				1410926E1B8CB76300CD3114 /* PlaceMarker.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1410927C1B8CB7AB00CD3114 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1410926F1B8CB76300CD3114 /* MarkerInfoView.swift */,
+				141092701B8CB76300CD3114 /* MarkerInfoView.xib */,
+				141092711B8CB76300CD3114 /* UIViewExtension.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		1429137B19D979A50025188A /* Storyboard Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,7 +372,6 @@
 		14EAB63A19DD4E95006A90FC /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				52DE4A711B86680F0019999A /* side_menu_icon.png */,
 				522B7E901B86253C000A5678 /* ENSideMenu.swift */,
 				522B7E911B86253C000A5678 /* ENSideMenuNavigationController.swift */,
 			);
@@ -444,6 +488,10 @@
 				6CE9A1BF1B8363D400BE4004 /* MapTasks.swift */,
 				6CE9A1C21B83641000BE4004 /* MainMapVC.swift */,
 				52ECD6CE1B86438A00718350 /* SwiftSideMenu-Bridging-Header.h */,
+				141092681B8CB71F00CD3114 /* POI.storyboard */,
+				1410927A1B8CB77200CD3114 /* Controllers */,
+				1410927B1B8CB77F00CD3114 /* Model */,
+				1410927C1B8CB7AB00CD3114 /* Views */,
 			);
 			name = Team1;
 			sourceTree = "<group>";
@@ -727,6 +775,7 @@
 				6CE9A1AE1B832EA900BE4004 /* Team5_m.storyboard in Resources */,
 				6CE9A2651B848A2600BE4004 /* drivers.plist in Resources */,
 				6CE9A20B1B8382FE00BE4004 /* !other.png in Resources */,
+				141092691B8CB71F00CD3114 /* POI.storyboard in Resources */,
 				5C132590198E2A9A00CA49BE /* Images.xcassets in Resources */,
 				6CE9A1F71B8382BD00BE4004 /* !otherLabel.png in Resources */,
 				6CE9A2611B84751B00BE4004 /* Team3.storyboard in Resources */,
@@ -743,9 +792,9 @@
 				6CE9A2421B83A06000BE4004 /* street.png in Resources */,
 				6CE9A25F1B8474D200BE4004 /* cat.plist in Resources */,
 				6CE9A25C1B8474C300BE4004 /* placeDetails.plist in Resources */,
-				52DE4A721B86680F0019999A /* side_menu_icon.png in Resources */,
 				6CE9A2111B8382FE00BE4004 /* standstill.png in Resources */,
 				6CE9A1FA1B8382BD00BE4004 /* hazard2.png in Resources */,
+				141092781B8CB76300CD3114 /* MarkerInfoView.xib in Resources */,
 				6CE9A2411B83A06000BE4004 /* default.png in Resources */,
 				6CE9A2101B8382FE00BE4004 /* moderate.png in Resources */,
 				6CE9A20C1B8382FE00BE4004 /* !traffic.png in Resources */,
@@ -808,14 +857,17 @@
 				6CE9A1EA1B83828500BE4004 /* addTrafficJamReports.swift in Sources */,
 				52ECD6D81B8643DE00718350 /* AHKActionSheetViewController.m in Sources */,
 				6CE9A1CD1B8381F000BE4004 /* AllVC.swift in Sources */,
+				141092731B8CB76300CD3114 /* TypesTableViewController.swift in Sources */,
 				6CE9A1C31B83641000BE4004 /* MainMapVC.swift in Sources */,
 				6CE9A1D81B83825C00BE4004 /* commentOther.swift in Sources */,
+				141092771B8CB76300CD3114 /* MarkerInfoView.swift in Sources */,
 				6CE9A1B21B83305500BE4004 /* AddDailyRouteVC.swift in Sources */,
 				6CE9A2161B83835A00BE4004 /* accidentVC.swift in Sources */,
 				522B7EAA1B863609000A5678 /* SelectDriverReportVC.swift in Sources */,
 				6CE9A23B1B839F9100BE4004 /* UserProfileViewController.swift in Sources */,
 				6CE9A2321B839F9100BE4004 /* ChagePasswordViewController.swift in Sources */,
 				6CE9A2211B8390B500BE4004 /* ModifyDailyRouteVC.swift in Sources */,
+				141092751B8CB76300CD3114 /* GooglePlace.swift in Sources */,
 				6CE9A2511B8474A300BE4004 /* FileCopier.swift in Sources */,
 				6CE9A2501B8474A300BE4004 /* addNewPoint.swift in Sources */,
 				6CE9A24F1B8474A300BE4004 /* AddNewPOI.swift in Sources */,
@@ -846,6 +898,7 @@
 				6CE9A2361B839F9100BE4004 /* ImageConversion.swift in Sources */,
 				6CE9A1D71B83825C00BE4004 /* addOtherReports.swift in Sources */,
 				6CE9A23D1B839FCB00BE4004 /* ConnectionManager.swift in Sources */,
+				141092761B8CB76300CD3114 /* PlaceMarker.swift in Sources */,
 				522B7E931B86253C000A5678 /* ENSideMenuNavigationController.swift in Sources */,
 				6CE9A2181B83835A00BE4004 /* commentMinorAccident.swift in Sources */,
 				52ECD6D91B8643DE00718350 /* UIImage+AHKAdditions.m in Sources */,
@@ -872,15 +925,18 @@
 				6CE9A2381B839F9100BE4004 /* RegisterViewController.swift in Sources */,
 				6CE9A2631B848A1700BE4004 /* DriversListViewController.swift in Sources */,
 				6CE9A1C11B8363D400BE4004 /* MapTasks.swift in Sources */,
+				141092741B8CB76300CD3114 /* GoogleDataProvider.swift in Sources */,
 				6CE9A2741B84D25C00BE4004 /* MenuManager.swift in Sources */,
 				6CE9A2571B8474A300BE4004 /* SubTypesOfPOI.swift in Sources */,
 				6CE9A2531B8474A300BE4004 /* MoreInfoOfPOI.swift in Sources */,
 				6CE9A26F1B84AE2900BE4004 /* ShowOnMapVC.swift in Sources */,
+				141092791B8CB76300CD3114 /* UIViewExtension.swift in Sources */,
 				6CE9A2551B8474A300BE4004 /* POIDataManager.swift in Sources */,
 				6CE9A2251B83910400BE4004 /* ManageDriverVC.swift in Sources */,
 				6CE9A2351B839F9100BE4004 /* ForgetPasswordViewController.swift in Sources */,
 				522B7EA31B863609000A5678 /* DriversListVC.swift in Sources */,
 				5C132589198E2A9A00CA49BE /* AppDelegate.swift in Sources */,
+				141092721B8CB76300CD3114 /* MapViewController.swift in Sources */,
 				6CE9A1DE1B83827700BE4004 /* addHazardReport.swift in Sources */,
 				522B7EA21B863609000A5678 /* DaysListTVC.swift in Sources */,
 				6CE9A2191B83835A00BE4004 /* commentMajorAccident.swift in Sources */,
