@@ -547,7 +547,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
 
 //         self.clearBtn = UIBarButtonItem(image: UIImage(named: "icon_me"), style: UIBarButtonItemStyle.Plain, target: self, action: "clrRoute:")
         
-        self.clearBtn = UIBarButtonItem(title: "clear", style: UIBarButtonItemStyle.Plain, target: self, action: "clearRoute:")
+        self.clearBtn = UIBarButtonItem(title: "clear", style: UIBarButtonItemStyle.Plain, target: self, action: "clrRoute:")
         
         
         //
