@@ -221,7 +221,7 @@
 		6CE9A1BF1B8363D400BE4004 /* MapTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTasks.swift; sourceTree = "<group>"; };
 		6CE9A1C21B83641000BE4004 /* MainMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMapVC.swift; sourceTree = "<group>"; };
 		6CE9A1C41B8364B000BE4004 /* Main_1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_1.storyboard; sourceTree = "<group>"; };
-		6CE9A1C61B83674F00BE4004 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		6CE9A1C61B83674F00BE4004 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6CE9A1C91B83817700BE4004 /* Main_4.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_4.storyboard; sourceTree = "<group>"; };
 		6CE9A1CB1B8381F000BE4004 /* AllVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllVC.swift; sourceTree = "<group>"; };
 		6CE9A1CC1B8381F000BE4004 /* LocationFilteration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationFilteration.swift; sourceTree = "<group>"; };

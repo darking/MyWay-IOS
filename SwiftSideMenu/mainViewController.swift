@@ -13,10 +13,7 @@ import GoogleMaps
 
 class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate, ENSideMenuDelegate {
 
-    
-    ////////
-    //hi
-    //
+
     var actionSheet = AHKActionSheet()
     
     var clearBtn:UIBarButtonItem = UIBarButtonItem()
