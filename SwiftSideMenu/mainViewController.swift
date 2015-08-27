@@ -19,6 +19,8 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     //
     var actionSheet = AHKActionSheet()
     
+    var clearBtn:UIBarButtonItem = UIBarButtonItem()
+    
     var favBool:Bool = false
     var favString:String = "Toggle Fav"
     
@@ -210,6 +212,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     //Button for clearing route
     @IBAction func clrRoute(sender: AnyObject) {
     self.clrAllRoute()
+         clearBtn.enabled = false
     }
 
     //./Button for clearing route
@@ -532,13 +535,35 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         //
             })
         
-        actionSheet.addButtonWithTitle("clear", type: AHKActionSheetButtonType.Destructive, handler:  { (AHKActionSheet) -> Void in
-            
-            self.clrAllRoute()
-            
-        })
+        //////////// trying to add if statment for clear button 
+        
+        //map.getBounds().contains(marker.getPosition())
+        
+        
+        
+//        actionSheet.addButtonWithTitle("clear", type: AHKActionSheetButtonType.Destructive, handler:  { (AHKActionSheet) -> Void in
+//
+//            
+//            self.clrAllRoute()
+//            
+//        })
 
+//         self.clearBtn = UIBarButtonItem(image: UIImage(named: "icon_me"), style: UIBarButtonItemStyle.Plain, target: self, action: "clrRoute:")
+        
+        self.clearBtn = UIBarButtonItem(title: "clear", style: UIBarButtonItemStyle.Plain, target: self, action: "clearRoute:")
+        
+        
+        //
+       // self.navigationItem.rightBarButtonItems?.append(clearBtn)
+        
        
+        
+        self.navigationItem.setRightBarButtonItem(self.clearBtn, animated: true)
+       
+        
+         self.clearBtn.enabled=false
+        
+        ////////////./// trying to add if statment for clear button 
         
         placesClient = GMSPlacesClient()
         
@@ -611,6 +636,24 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     //./VIEW DID LOAD()
     
     
+    func mapView(mapView: GMSMapView!, didChangeCameraPosition position: GMSCameraPosition!) {
+        
+        
+        
+        if markersArray.count > 0 || originMarker != nil {
+            
+//            actionSheet.addButtonWithTitle("clear", type: AHKActionSheetButtonType.Destructive, handler:  { (AHKActionSheet) -> Void in
+//                
+//                self.clrAllRoute()
+//            
+//            })
+            
+            clearBtn.enabled = true
+            
+        }
+        
+    }
+    
     func retrieveMarkerInfo(var lat:Double, var lng:Double) {
         println("Marker lat: \(lat), Market lng: \(lng)")
         
@@ -626,7 +669,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     //testing
     
     
-    func mapView(mapView: GMSMapView!, didChangeCameraPosition position: GMSCameraPosition!) {
+  //  func mapView(mapView: GMSMapView!, didChangeCameraPosition position: GMSCameraPosition!) {
         
 //        var path = GMSMutablePath()
 //    
@@ -709,7 +752,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
 
         
       //  println("Camera postion did change: \(position.description)")
-    }
+ //   }
   
     
     
@@ -1000,13 +1043,13 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         println("\(self.mapTasks.destinationCoordinate.latitude) \(self.mapTasks.destinationCoordinate.longitude) ")
         
         var bounds:GMSCoordinateBounds = GMSCoordinateBounds()
-        println("initial bounds: (\(bounds.southWest.latitude), \(bounds.southWest.longitude)) - (\(bounds.northEast.latitude), \(bounds.northEast.longitude)) ")
+      //  println("initial bounds: (\(bounds.southWest.latitude), \(bounds.southWest.longitude)) - (\(bounds.northEast.latitude), \(bounds.northEast.longitude)) ")
         
         for (var i:UInt = 0; i < path.count(); i++){
             bounds = bounds.includingCoordinate(path.coordinateAtIndex(i))
-            println("updated bounds: (\(bounds.southWest.latitude), \(bounds.southWest.longitude)) - (\(bounds.northEast.latitude), \(bounds.northEast.longitude)) ")
+          //  println("updated bounds: (\(bounds.southWest.latitude), \(bounds.southWest.longitude)) - (\(bounds.northEast.latitude), \(bounds.northEast.longitude)) ")
         }
-        println("final bounds: (\(bounds.southWest.latitude), \(bounds.southWest.longitude)) - (\(bounds.northEast.latitude), \(bounds.northEast.longitude)) ")
+        //println("final bounds: (\(bounds.southWest.latitude), \(bounds.southWest.longitude)) - (\(bounds.northEast.latitude), \(bounds.northEast.longitude)) ")
         
         routePolyline = GMSPolyline(path: path)
         routePolyline.map = viewMap
@@ -1040,7 +1083,24 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     //clear all route
     func clrAllRoute() {
         
+//        originMarker.map = nil
+//        destinationMarker.map = nil
+//        routePolyline.map = nil
+        
+        originMarker = nil
+        destinationMarker = nil
+        routePolyline = nil
+        
+        if markersArray.count > 0 {
+            for marker in markersArray {
+                marker.map = nil
+            }
+            
+            markersArray.removeAll(keepCapacity: false)
+        }
+        
         viewMap.clear()
+        
         
     }
     
