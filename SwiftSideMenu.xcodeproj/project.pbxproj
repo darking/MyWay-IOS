@@ -24,6 +24,7 @@
 		1436156B1B8F1AC7003FD356 /* TypesOfPOI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1436156A1B8F1AC7003FD356 /* TypesOfPOI.swift */; };
 		1436156D1B8F1AD4003FD356 /* SubTypesOfPOI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1436156C1B8F1AD4003FD356 /* SubTypesOfPOI.swift */; };
 		1436156F1B8F1AF6003FD356 /* MoreInfoOfPOI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1436156E1B8F1AF6003FD356 /* MoreInfoOfPOI.swift */; };
+		143615711B8F1CC3003FD356 /* GetLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143615701B8F1CC3003FD356 /* GetLocationVC.swift */; };
 		522B7E921B86253C000A5678 /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E901B86253C000A5678 /* ENSideMenu.swift */; };
 		522B7E931B86253C000A5678 /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E911B86253C000A5678 /* ENSideMenuNavigationController.swift */; };
 		522B7EA01B863609000A5678 /* AddMonitorReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E951B863609000A5678 /* AddMonitorReport.swift */; };
@@ -44,7 +45,6 @@
 		52ECD6D91B8643DE00718350 /* UIImage+AHKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ECD6D41B8643DE00718350 /* UIImage+AHKAdditions.m */; };
 		52ECD6DA1B8643DE00718350 /* UIWindow+AHKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ECD6D61B8643DE00718350 /* UIWindow+AHKAdditions.m */; };
 		52F57A741B85E97100A51E54 /* GetLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F57A721B85E97100A51E54 /* GetLocation.storyboard */; };
-		52F57A751B85E97100A51E54 /* GetLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F57A731B85E97100A51E54 /* GetLocationVC.swift */; };
 		5C132589198E2A9A00CA49BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C132588198E2A9A00CA49BE /* AppDelegate.swift */; };
 		5C13258B198E2A9A00CA49BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C13258A198E2A9A00CA49BE /* ViewController.swift */; };
 		5C132590198E2A9A00CA49BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C13258F198E2A9A00CA49BE /* Images.xcassets */; };
@@ -170,6 +170,7 @@
 		1436156A1B8F1AC7003FD356 /* TypesOfPOI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypesOfPOI.swift; sourceTree = "<group>"; };
 		1436156C1B8F1AD4003FD356 /* SubTypesOfPOI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubTypesOfPOI.swift; sourceTree = "<group>"; };
 		1436156E1B8F1AF6003FD356 /* MoreInfoOfPOI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInfoOfPOI.swift; sourceTree = "<group>"; };
+		143615701B8F1CC3003FD356 /* GetLocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLocationVC.swift; sourceTree = "<group>"; };
 		2AC871D8CEADD3638C5B3256 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		46841B45243E82D10FE5A5F3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		522B7E901B86253C000A5678 /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ENSideMenu.swift; path = SwiftSideMenu/ENSideMenu.swift; sourceTree = SOURCE_ROOT; };
@@ -197,7 +198,6 @@
 		52ECD6D51B8643DE00718350 /* UIWindow+AHKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+AHKAdditions.h"; sourceTree = "<group>"; };
 		52ECD6D61B8643DE00718350 /* UIWindow+AHKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+AHKAdditions.m"; sourceTree = "<group>"; };
 		52F57A721B85E97100A51E54 /* GetLocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GetLocation.storyboard; sourceTree = "<group>"; };
-		52F57A731B85E97100A51E54 /* GetLocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLocationVC.swift; sourceTree = "<group>"; };
 		5C132583198E2A9A00CA49BE /* SwiftSideMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSideMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C132587198E2A9A00CA49BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C132588198E2A9A00CA49BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -629,7 +629,7 @@
 			isa = PBXGroup;
 			children = (
 				52F57A721B85E97100A51E54 /* GetLocation.storyboard */,
-				52F57A731B85E97100A51E54 /* GetLocationVC.swift */,
+				143615701B8F1CC3003FD356 /* GetLocationVC.swift */,
 				6CE9A26D1B84AE2900BE4004 /* ShowOnMapVC.swift */,
 				6CE9A26E1B84AE2900BE4004 /* reqLocaiton.storyboard */,
 			);
@@ -866,7 +866,6 @@
 				6CE9A23A1B839F9100BE4004 /* UserInfo.swift in Sources */,
 				5C13258B198E2A9A00CA49BE /* ViewController.swift in Sources */,
 				6CE9A1C01B8363D400BE4004 /* mainViewController.swift in Sources */,
-				52F57A751B85E97100A51E54 /* GetLocationVC.swift in Sources */,
 				522B7EA61B863609000A5678 /* MonitorReport.swift in Sources */,
 				522B7EA41B863609000A5678 /* MoniterReportViewController.swift in Sources */,
 				6CE9A2691B848D6500BE4004 /* DriverDetailsViewController.swift in Sources */,
@@ -877,6 +876,7 @@
 				1429137D19D97A4F0025188A /* MyMenuTableViewController.swift in Sources */,
 				6CE9A2371B839F9100BE4004 /* LoginViewController.swift in Sources */,
 				6CE9A1E71B83828500BE4004 /* commentModerateTraffic.swift in Sources */,
+				143615711B8F1CC3003FD356 /* GetLocationVC.swift in Sources */,
 				6CE9A1DF1B83827700BE4004 /* commentOnRoad.swift in Sources */,
 				1436156D1B8F1AD4003FD356 /* SubTypesOfPOI.swift in Sources */,
 				6CE9A1CE1B8381F000BE4004 /* LocationFilteration.swift in Sources */,

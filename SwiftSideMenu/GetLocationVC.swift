@@ -91,13 +91,16 @@ class GetLocationVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDele
     
     func retrieveMarkerInfo(var lat:Double, var lng:Double) {
         println("Marker lat: \(lat), Market lng: \(lng)")
-        
         var coor:CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, lng)
         
         self.setupLocationMarker(coor)
-        
+    
+    
         let settings = NSUserDefaults.standardUserDefaults()
         settings.setValue(lat, forKey: "coor")
+        
+//        settings.setValue(lat, forKey: "coorLat");
+//        settings.setValue(lng, forKey: "coorLng");
         
     }
     
@@ -135,6 +138,10 @@ class GetLocationVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDele
         
         NSUserDefaults.standardUserDefaults().setValue(String(format:"%f", markerCoorLat), forKey: latKey)
         NSUserDefaults.standardUserDefaults().setValue(String(format:"%f", markerCoorLng), forKey: lngKey)
+        
+        AddNewPOI.holder.pointLat = String(format:"%f", markerCoorLat);
+        AddNewPOI.holder.pointLong = String(format:"%f", markerCoorLng);
+        
         self.dismissViewControllerAnimated(true, completion: {})
 
         if let polyline = routePolyline {
