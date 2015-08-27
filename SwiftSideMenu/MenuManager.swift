@@ -63,14 +63,14 @@ class MenuManager {
     }
     func addRemaining () {
         item = MenuItem();
-        item.itemTitle = "Points of Interest";
+        item.itemTitle = "MyWay Interests";
         item.itemVCIdentifier = "CategorisView";
         item.storyBoardName = "Team3";
         MenuItem.all.menuItems.addObject(item);
         
         //
         item = MenuItem();
-        item.itemTitle = "Points of Interest 2";
+        item.itemTitle = "Points of Interest";
         item.itemVCIdentifier = "poiVC";
         item.storyBoardName = "POI";
         MenuItem.all.menuItems.addObject(item);

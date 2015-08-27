@@ -138,9 +138,10 @@ class GetLocationVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDele
         
         NSUserDefaults.standardUserDefaults().setValue(String(format:"%f", markerCoorLat), forKey: latKey)
         NSUserDefaults.standardUserDefaults().setValue(String(format:"%f", markerCoorLng), forKey: lngKey)
-        
+        //setting the coordinates in the static vars in addnewpoi class
         AddNewPOI.holder.pointLat = String(format:"%f", markerCoorLat);
         AddNewPOI.holder.pointLong = String(format:"%f", markerCoorLng);
+        println("static var set, lat: " + AddNewPOI.holder.pointLat + " long: " + AddNewPOI.holder.pointLong);
         
         self.dismissViewControllerAnimated(true, completion: {})
 
