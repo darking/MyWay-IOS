@@ -26,11 +26,11 @@ class MoreInfoOfPOI:UIViewController{
         // code to redirect to the map (must send the object of the place im on, of the type PointOfInterest)
         var mapVC:ShowOnMapVC = UIStoryboard(name: "reqLocaiton", bundle: nil).instantiateViewControllerWithIdentifier("ShowOnMapVC") as! ShowOnMapVC;
         mapVC.title = placeName;
-        mapVC.message = place.objectForKey("description") as! String;
+        mapVC.message = place.objectForKey("description") as? String;
         let lat:String = place.objectForKey("lat") as! String;
         let lng:String = place.objectForKey("long") as! String;
         
-        let location = CLLocation(latitude: (lat as NSString).doubleValue, longitude: (lat as NSString).doubleValue)
+        let location = CLLocation(latitude: (lat as NSString).doubleValue, longitude: (lng as NSString).doubleValue)
         mapVC.location = location;
         self.navigationController?.pushViewController(mapVC, animated: true);
         
@@ -50,8 +50,12 @@ class MoreInfoOfPOI:UIViewController{
         
         // yossef - poi - use image name instead of image path
         let firstImageName = imageNames.firstObject as! String;
+        
+        //to check if there is an image by the user.. it would set it, else it would leave it as the default image that is already set on the storyboard
+        if firstImageName != ""{
         var fileUtils = FileUtils(fileName: firstImageName);
         imageOut.image = imageConv.readImageAtPath(fileUtils.docsPath()) ;
+        }
         
     }
 }

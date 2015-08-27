@@ -98,19 +98,21 @@ class SubTypesOfPOI:UITableViewController, UITableViewDataSource, UITableViewDel
         else {
             let sendToMap = UITableViewRowAction(style: .Normal, title: "Send To Map") { action, index in
                 println("send button tapped")
+                
+                // code to redirect to the map (must send the object of the place im on, of the type PointOfInterest)
                 var mapVC:ShowOnMapVC = UIStoryboard(name: "reqLocaiton", bundle: nil).instantiateViewControllerWithIdentifier("ShowOnMapVC") as! ShowOnMapVC;
+                //get the info of the location in the swiped row
+                var DataManagement:POIDataManager = POIDataManager();
+                var place:NSDictionary = DataManagement.getDetailsOFPlace(self.locations[indexPath.row]) as NSDictionary;
                 
-//                let placeName = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0))?.textLabel?.text;
-//                var place = self.DataManagement.getDetailsOFPlace(placeName!) as NSDictionary;
-//                mapVC.title = place.objectForKey("name") as! String;
-//                mapVC.message = place.objectForKey("description") as! String;
-//                let lat:String = place.objectForKey("lat") as! String;
-//                let lng:String = place.objectForKey("long") as! String;
-//                
-//                let location = CLLocation(latitude: (lat as NSString).doubleValue, longitude: (lat as NSString).doubleValue)
-//                mapVC.location = location;
-//                self.navigationController?.pushViewController(mapVC, animated: true);
+                mapVC.title = place.objectForKey("name") as! NSString as String;
+                mapVC.message = place.objectForKey("description") as? String;
+                let lat:String = place.objectForKey("lat") as! String;
+                let lng:String = place.objectForKey("long") as! String;
                 
+                let location = CLLocation(latitude: (lat as NSString).doubleValue, longitude: (lng as NSString).doubleValue)
+                mapVC.location = location;
+                self.navigationController?.pushViewController(mapVC, animated: true);
             }
             
             sendToMap.backgroundColor = UIColor.orangeColor()

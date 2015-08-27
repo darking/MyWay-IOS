@@ -15,29 +15,21 @@ class TypesOfPOI:UITableViewController {
         toggleSideMenuView();
     }
     
-    @IBAction func AddNewButton(sender: AnyObject) {
-        
-        
-        
-    }
     
-    //checks if user is registered before going to the suggest screen
+    @IBOutlet var SuggestNewButton: UIButton!
+    
+    
+    //checks if user is registered before going to the suggest new point screen
+    //restricts access to un-registered users
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
         if NSUserDefaults.standardUserDefaults().boolForKey("isLoggedin"){
             return true;
         }
         else {
-//            var alert : UIAlertView = UIAlertView(title: "Access Denied!", message: "Please log in or register to suggest a point.",
-//                delegate: nil, cancelButtonTitle: "OK");
-//            alert.show();
-            
+
             return false;
         }
     }
-    
-    
-    //    var poiTypesNames:[String] = ["Malls","Gas stations","Hospitals"];
-    //    var poiTypes:[String:[String]] = ["Malls":["360","Ave."], "Gas stations":["alfa","Oula"], "Hospitals":["AlSalam", "AlHady", "Royal"]];
     
     
     var DataManagement:POIDataManager = POIDataManager();
@@ -73,6 +65,19 @@ class TypesOfPOI:UITableViewController {
         println(poiTypes[row]);
         self.navigationController?.pushViewController(nextScreen, animated: true);
         
+        
+    }
+    
+    //to change the text of the suggest new point button to indicate logging in is needed.
+    override func viewDidAppear(animated: Bool) {
+        
+            if NSUserDefaults.standardUserDefaults().boolForKey("isLoggedin"){
+                SuggestNewButton.setTitle("Suggest New Point", forState: UIControlState.Normal);
+            }
+            else {
+                SuggestNewButton.setTitle("Suggest New Point (Log in needed!)", forState: UIControlState.Normal);
+                
+            }
         
     }
     

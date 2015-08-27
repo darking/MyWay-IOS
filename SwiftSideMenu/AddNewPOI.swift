@@ -11,18 +11,37 @@ class AddNewPOI: UIViewController, UIImagePickerControllerDelegate, UINavigation
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var textArea: UITextView!
     
-    
     var selectedImage:UIImage = UIImage();
     var didSelectImage:Bool = false;
     
+    let settings = NSUserDefaults.standardUserDefaults()
+    
     struct holder {
         static var typeName:String = "";
+        static var pointLat:String = "";
+        static var pointLong:String = "";
     }
     
     var imgConv:ImageConversion = ImageConversion();
     
-    @IBAction func uploadButtonTapped(sender: AnyObject) {
+    
+    @IBAction func setLocationButton(sender: AnyObject) {
         
+        
+        var getLocation:GetLocationVC = UIStoryboard(name: "GetLocation", bundle: nil).instantiateViewControllerWithIdentifier("GetLocationVC") as! GetLocationVC;
+//        
+//        NSUserDefaults.standardUserDefaults().setValue("0.0", forKey: "pointLat");
+//        NSUserDefaults.standardUserDefaults().setValue("0.0", forKey: "pointLon");
+//        getLocation.latKey = "pointLat";
+//        getLocation.lngKey = "pointLon";
+        self.presentViewController(getLocation, animated: true, completion: {});
+        
+    }
+    
+  
+    
+    @IBAction func uploadButtonTapped(sender: AnyObject) {
+
         //myImageUploadRequest()
         if (validateSuggestForm()){
             var alert : UIAlertView = UIAlertView(title: "ALERT!!", message: "Cannot leave mandatory fields empty.",
@@ -35,8 +54,12 @@ class AddNewPOI: UIViewController, UIImagePickerControllerDelegate, UINavigation
             point.name = nameText.text;
             point.description = textArea.text;
             point.type = typeText.text;
-            point.long = "00.00";
-            point.lat = "00.00";
+            point.lat = holder.pointLat;
+            point.long = holder.pointLong;
+            
+            
+//            point.long = NSUserDefaults.standardUserDefaults().valueForKey("pointLon") as! String;
+//            point.lat = NSUserDefaults.standardUserDefaults().valueForKey("pointLat") as! String;
             
             if didSelectImage{
                 var fileName = "suggestedImage"+NSDate().description;
@@ -50,23 +73,58 @@ class AddNewPOI: UIViewController, UIImagePickerControllerDelegate, UINavigation
 //                point.images.addObject(fileUtils.docsPath())
             }
             else {
-                point.images.addObject(NSBundle.mainBundle().pathForResource("default", ofType: "jpg")!);
+                //if image is not set by the user the path for the default image is stored in the plist
+                point.images.addObject("");
+                
+                
+//            point.images.addObject(NSBundle.mainBundle().pathForResource("defaultPoint", ofType: "jpg")!);
+//                point.images.addObject(UIImage(named: "defaultPoint")!);
             }
             mpoi.addpointii(point);
             
-            AddNewPOI.holder.typeName = "";
+            println("lat: " + AddNewPOI.holder.pointLat + " long: " + AddNewPOI.holder.pointLong);
             
+            AddNewPOI.holder.typeName = "";
+            AddNewPOI.holder.pointLat = "";
+            AddNewPOI.holder.pointLong = "";
+//            settings.setValue(nil, forKey: "pointLat");
+//            settings.setValue(nil, forKey: "pointLon");
+            println("lat: " + AddNewPOI.holder.pointLat + " long: " + AddNewPOI.holder.pointLong);
+            
+            var tempCor2: AnyObject? = NSUserDefaults.standardUserDefaults().valueForKey("pointLat");
+            println(tempCor2);
             let viewControllers: [UIViewController] = self.navigationController!.viewControllers as! [UIViewController];
             self.navigationController!.popToViewController(viewControllers[viewControllers.count - 2], animated: true);
         }
         
     }
     
+//    var tempCor: AnyObject? = NSUserDefaults.standardUserDefaults().valueForKey("pointLat");
+//    
+
+    
     func validateSuggestForm() -> Bool{
-        if nameText.text == "" || typeText.text == "" || textArea.text == "" {
+        
+//        if let ayshy = tempCor {
+//            print("We have a coordinates\(tempCor)")
+//        } else {
+//            
+//            println("We don't have coordinates")
+//            
+//        }
+    
+//        println(tempCor);
+        if nameText.text == "" || typeText.text == "" || textArea.text == ""{
             return true;
         }
+        
         else{
+            if holder.pointLong == "" || holder.pointLat == "" {
+                return true;
+            }
+//            if tempCor == nil {
+//                return true;
+//            }
             return false;
         }
         
@@ -106,6 +164,8 @@ class AddNewPOI: UIViewController, UIImagePickerControllerDelegate, UINavigation
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        settings.setValue("", forKey: "coorLat");
+//        settings.setValue("", forKey: "coorLng");
         // Do any additional setup after loading the view, typically from a nib.
         
         //myImageUploadRequest()
@@ -256,6 +316,14 @@ class AddNewPOI: UIViewController, UIImagePickerControllerDelegate, UINavigation
         return "Boundary-\(NSUUID().UUIDString)"
     }
     
+    //method to hide keyboard when tapping anywhere
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+        
+    }
+
     
     
 }

@@ -28,6 +28,13 @@ class RegisterViewController: UIViewController {
         
     }
     
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+        
+    }
+    
     @IBAction func registerAction(sender: AnyObject) {
         
         var manager = ConnectionManager()
