@@ -26,7 +26,9 @@ class otherVC:ViewController{
         otherFlag = true;
         settings.setBool(true , forKey: "other");
     }
-   
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        self.view.endEditing(true);
+    }
     
     @IBAction func sendReport(sender: AnyObject) {
 //        var manager:addOtherReports = addOtherReports();

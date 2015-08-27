@@ -35,6 +35,11 @@ class accidentVC:ViewController{
         majorLable.text="";
     }
 
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        self.view.endEditing(true);
+    }
+    
     @IBAction func lo(sender: AnyObject) {
         
         var getLocation:GetLocationVC = UIStoryboard(name: "GetLocation", bundle: nil).instantiateViewControllerWithIdentifier("GetLocationVC") as! GetLocationVC;

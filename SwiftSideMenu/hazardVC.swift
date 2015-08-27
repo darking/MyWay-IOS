@@ -23,6 +23,10 @@ class hazardVC:ViewController{
     
     var currentLocation:CLLocation = CLLocation();
     let settings = NSUserDefaults.standardUserDefaults();
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        self.view.endEditing(true);
+    }
    
     @IBOutlet var commentHazard: UITextField!
     

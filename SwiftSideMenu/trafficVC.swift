@@ -32,7 +32,9 @@ class trafficVC:ViewController{
     
     @IBOutlet var commentTraffic: UITextField!
     
-    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        self.view.endEditing(true);
+    }
     
     
     @IBAction func moderateTraffic(sender: AnyObject) {
