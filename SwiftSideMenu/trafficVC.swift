@@ -132,7 +132,8 @@ class trafficVC:ViewController{
         moderateLable.text="";
         heavyLable.text="";
         standLable.text="";
-        locationManager.requestAlwaysAuthorization();
+        //locationManager.requestAlwaysAuthorization();
+        locationManager.requestWhenInUseAuthorization()
         locationManager.location;
         NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.latitude.description, forKey: "lat");
         NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.longitude.description, forKey: "lon");

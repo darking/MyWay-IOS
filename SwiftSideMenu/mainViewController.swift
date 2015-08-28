@@ -569,7 +569,13 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
 //        var camera = GMSCameraPosition.cameraWithLatitude(29.3760648,
 //            longitude: 47.9818853, zoom: 18)
         
-        var camera = GMSCameraPosition.cameraWithLatitude(29.363, longitude: 47.984, zoom: 12)
+        
+        var myDoubLat = 29.2786584
+        var myDoubLng = 48.0681507
+        
+
+        
+        var camera = GMSCameraPosition.cameraWithLatitude(29.2786584, longitude: 48.0681507, zoom: 12)
 //          mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
        
         var lat = 29.363
