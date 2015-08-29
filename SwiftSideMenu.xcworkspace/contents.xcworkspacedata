@@ -2,10 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:KeyboardViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:kuwait.gpx">
    </FileRef>
    <FileRef
-      location = "group:/Users/darky/Forked/MyWay-IOS/SwiftSideMenu.xcodeproj">
+      location = "group:SwiftSideMenu.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

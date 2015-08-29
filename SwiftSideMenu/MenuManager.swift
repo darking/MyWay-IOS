@@ -74,6 +74,12 @@ class MenuManager {
         item.itemVCIdentifier = "poiVC";
         item.storyBoardName = "POI";
         MenuItem.all.menuItems.addObject(item);
+        
+        item = MenuItem();
+        item.itemTitle = "Keyboard";
+        item.itemVCIdentifier = "keyboard";
+        item.storyBoardName = "keyboard";
+        MenuItem.all.menuItems.addObject(item);
         //
         
         item = MenuItem();

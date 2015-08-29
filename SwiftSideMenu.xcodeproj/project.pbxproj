@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -133,8 +133,11 @@
 		6CEAC5021B81EB5900E63813 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEAC4FF1B81EB5900E63813 /* AppSettings.swift */; };
 		6CEAC5031B81EB5900E63813 /* UISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEAC5001B81EB5900E63813 /* UISettings.swift */; };
 		6CEAC5041B81EB5900E63813 /* Team5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CEAC5011B81EB5900E63813 /* Team5.storyboard */; };
-		81C33F7ACAF72838C8D5309F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC871D8CEADD3638C5B3256 /* libPods.a */; };
 		9E4766FC19DDBCE900FCEACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C13258C198E2A9A00CA49BE /* Main.storyboard */; };
+		C3EBDD691B921E86009237A8 /* Main2_4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EBDD681B921E86009237A8 /* Main2_4.storyboard */; };
+		C3EBDD6B1B9242AC009237A8 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD6A1B9242AC009237A8 /* KeyboardViewController.swift */; };
+		C3EBDD6D1B924798009237A8 /* keyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EBDD6C1B924798009237A8 /* keyboard.storyboard */; };
+		F64995383B682C2C1458FDEF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ECB30476522E7E3E69E4B3C /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,7 +169,6 @@
 		1436156C1B8F1AD4003FD356 /* SubTypesOfPOI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubTypesOfPOI.swift; sourceTree = "<group>"; };
 		1436156E1B8F1AF6003FD356 /* MoreInfoOfPOI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInfoOfPOI.swift; sourceTree = "<group>"; };
 		143615701B8F1CC3003FD356 /* GetLocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLocationVC.swift; sourceTree = "<group>"; };
-		2AC871D8CEADD3638C5B3256 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		46841B45243E82D10FE5A5F3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		522B7E901B86253C000A5678 /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ENSideMenu.swift; path = SwiftSideMenu/ENSideMenu.swift; sourceTree = SOURCE_ROOT; };
 		522B7E911B86253C000A5678 /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ENSideMenuNavigationController.swift; path = SwiftSideMenu/ENSideMenuNavigationController.swift; sourceTree = SOURCE_ROOT; };
@@ -287,6 +289,10 @@
 		6CEAC4FF1B81EB5900E63813 /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		6CEAC5001B81EB5900E63813 /* UISettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISettings.swift; sourceTree = "<group>"; };
 		6CEAC5011B81EB5900E63813 /* Team5.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Team5.storyboard; sourceTree = "<group>"; };
+		6ECB30476522E7E3E69E4B3C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3EBDD681B921E86009237A8 /* Main2_4.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main2_4.storyboard; sourceTree = "<group>"; };
+		C3EBDD6A1B9242AC009237A8 /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		C3EBDD6C1B924798009237A8 /* keyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = keyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,7 +300,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81C33F7ACAF72838C8D5309F /* libPods.a in Frameworks */,
+				F64995383B682C2C1458FDEF /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +524,7 @@
 				6CE9A1CB1B8381F000BE4004 /* AllVC.swift */,
 				6CE9A1CC1B8381F000BE4004 /* LocationFilteration.swift */,
 				6CE9A1C91B83817700BE4004 /* Main_4.storyboard */,
+				C3EBDD681B921E86009237A8 /* Main2_4.storyboard */,
 				6CE9A21A1B83849D00BE4004 /* ReportsMainVC.swift */,
 			);
 			name = Team4;
@@ -536,6 +543,8 @@
 		6CE9A1D01B83823F00BE4004 /* Hazard */ = {
 			isa = PBXGroup;
 			children = (
+				C3EBDD6C1B924798009237A8 /* keyboard.storyboard */,
+				C3EBDD6A1B9242AC009237A8 /* KeyboardViewController.swift */,
 				6CE9A1D91B83827700BE4004 /* hazardVC.swift */,
 				6CE9A1DA1B83827700BE4004 /* addHazardReport.swift */,
 				6CE9A1DB1B83827700BE4004 /* commentOnRoad.swift */,
@@ -665,7 +674,7 @@
 		98773EA61C9F326D030ED433 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2AC871D8CEADD3638C5B3256 /* libPods.a */,
+				6ECB30476522E7E3E69E4B3C /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -718,7 +727,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0600;
-				ORGANIZATIONNAME = "Evgeny Nazarov";
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					5C132582198E2A9A00CA49BE = {
 						CreatedOnToolsVersion = 6.0;
@@ -730,7 +739,7 @@
 				};
 			};
 			buildConfigurationList = 5C13257E198E2A9A00CA49BE /* Build configuration list for PBXProject "SwiftSideMenu" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -756,6 +765,7 @@
 				6CE9A1F91B8382BD00BE4004 /* hazard1.png in Resources */,
 				6CE9A2701B84AE2900BE4004 /* reqLocaiton.storyboard in Resources */,
 				6CE9A1FC1B8382BD00BE4004 /* TrafficJamModerate.png in Resources */,
+				C3EBDD6D1B924798009237A8 /* keyboard.storyboard in Resources */,
 				6CE9A20F1B8382FE00BE4004 /* heavy.png in Resources */,
 				6CE9A2091B8382FE00BE4004 /* !Caution.png in Resources */,
 				9E4766FC19DDBCE900FCEACC /* Main.storyboard in Resources */,
@@ -775,6 +785,7 @@
 				6CE9A20E1B8382FE00BE4004 /* accidentMinor.png in Resources */,
 				522B7EA71B863609000A5678 /* MonitorReportSample.plist in Resources */,
 				6CE9A1F51B8382BD00BE4004 /* !accidentLabel.png in Resources */,
+				C3EBDD691B921E86009237A8 /* Main2_4.storyboard in Resources */,
 				6CE9A1C51B8364B000BE4004 /* Main_1.storyboard in Resources */,
 				52F57A741B85E97100A51E54 /* GetLocation.storyboard in Resources */,
 				6CE9A1F81B8382BD00BE4004 /* !trafficLabel.png in Resources */,
@@ -913,6 +924,7 @@
 				6C46744F1B8F45AF007582FB /* AllpListController.swift in Sources */,
 				6CE9A2631B848A1700BE4004 /* DriversListViewController.swift in Sources */,
 				6CE9A1C11B8363D400BE4004 /* MapTasks.swift in Sources */,
+				C3EBDD6B1B9242AC009237A8 /* KeyboardViewController.swift in Sources */,
 				141092741B8CB76300CD3114 /* GoogleDataProvider.swift in Sources */,
 				6CE9A2741B84D25C00BE4004 /* MenuManager.swift in Sources */,
 				6CE9A26F1B84AE2900BE4004 /* ShowOnMapVC.swift in Sources */,
@@ -1049,11 +1061,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftSideMenu/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = SwiftSideMenu;
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftSideMenu/SwiftSideMenu-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1065,10 +1078,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftSideMenu/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = SwiftSideMenu;
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftSideMenu/SwiftSideMenu-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
