@@ -10,11 +10,11 @@ import UIKit
 
 class DriverDetailsViewController: UIViewController {
 
-    @IBOutlet weak var lblDtiverName: UILabel!
+    @IBOutlet weak var lblDriverName: UILabel!
     var driverName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        lblDtiverName.text = driverName
+        lblDriverName.text = driverName
     }
 }

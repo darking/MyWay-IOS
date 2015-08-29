@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dBE-at-uKa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dBE-at-uKa">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -148,7 +148,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnSubmitTouched:" destination="tX2-Bc-mWO" eventType="touchUpInside" id="Dh8-XB-XHy"/>
+                                    <action selector="sumbitBTN:" destination="tX2-Bc-mWO" eventType="touchUpInside" id="fyo-9L-iBK"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2lX-VM-2c8">
@@ -166,8 +166,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Z1m-pp-mJl"/>
                     <connections>
-                        <outlet property="txtPairNo" destination="Nr0-CD-WJg" id="HKw-BG-wt9"/>
-                        <outlet property="txtUserName" destination="2lX-VM-2c8" id="yaU-yX-MjB"/>
+                        <outlet property="PairCodeTF" destination="Nr0-CD-WJg" id="v73-kk-yJz"/>
+                        <outlet property="UserNameTF" destination="2lX-VM-2c8" id="SRW-dr-vaJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fwr-MH-ed9" userLabel="First Responder" sceneMemberID="firstResponder"/>

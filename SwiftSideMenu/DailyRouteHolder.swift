@@ -8,20 +8,25 @@
 
 import Foundation
 
+
 class DailyRouteHolder{
+
+    
     var name:String = ""
     var startDate:String = ""
     var endDate:String = ""
     var fromLocation:String = ""
     var toLocation:String = ""
     
+    
     init (values:NSDictionary){
         self.name = values.valueForKey("name") as! String;
         self.startDate = values.valueForKey("startDate") as! String;
-        self.endDate = values.valueForKey("endDate") as! String;
-        self.fromLocation = values.valueForKey("fromLocation") as! String;
-        //self.toLocation = values.valueForKey("toLocation") as String;
+        self.endDate = values.valueForKey("endDate")as! String;
+        self.fromLocation = values.valueForKey("fromLocation")as! String;
+//        self.toLocation = values.valueForKey("toLocation") as String;
     }
+    
     init(){
         
     }
@@ -33,5 +38,8 @@ class DailyRouteHolder{
         values.setValue(fromLocation, forKey: "fromLocation");
         values.setValue(toLocation, forKey: "toLocation");
         return values;
+        
+        
     }
+    
 }

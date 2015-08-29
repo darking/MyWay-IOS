@@ -40,8 +40,8 @@ class MenuManager {
         
         item = MenuItem();
         item.itemTitle = "Daily Route";
-        item.itemVCIdentifier = "Daily_Route_Team5";
-        item.storyBoardName = "Team5_m";
+        item.itemVCIdentifier = "DailyRouteVC";
+        item.storyBoardName = "EmanStory";
         MenuItem.all.menuItems.addObject(item);
         
         //Here goes the Logout button
