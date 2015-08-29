@@ -5,7 +5,7 @@
       location = "group:kuwait.gpx">
    </FileRef>
    <FileRef
-      location = "group:/Users/darky/Forked/MyWay-IOS/SwiftSideMenuForked.xcodeproj">
+      location = "group:/Users/darky/Forked/MyWay-IOS/SwiftSideMenu.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

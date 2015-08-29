@@ -188,13 +188,13 @@
 		52ECD6D51B8643DE00718350 /* UIWindow+AHKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+AHKAdditions.h"; sourceTree = "<group>"; };
 		52ECD6D61B8643DE00718350 /* UIWindow+AHKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+AHKAdditions.m"; sourceTree = "<group>"; };
 		52F57A721B85E97100A51E54 /* GetLocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GetLocation.storyboard; sourceTree = "<group>"; };
-		5C132583198E2A9A00CA49BE /* SwiftSideMenuForked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSideMenuForked.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C132583198E2A9A00CA49BE /* SwiftSideMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSideMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C132587198E2A9A00CA49BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C132588198E2A9A00CA49BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C13258A198E2A9A00CA49BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5C13258D198E2A9A00CA49BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C13258F198E2A9A00CA49BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5C132595198E2A9A00CA49BE /* SwiftSideMenuForkedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSideMenuForkedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C132595198E2A9A00CA49BE /* SwiftSideMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSideMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C13259A198E2A9A00CA49BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C13259B198E2A9A00CA49BE /* SwiftSideMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSideMenuTests.swift; sourceTree = "<group>"; };
 		5C1325A7198E2AB300CA49BE /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
@@ -407,8 +407,8 @@
 		5C132584198E2A9A00CA49BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5C132583198E2A9A00CA49BE /* SwiftSideMenuForked.app */,
-				5C132595198E2A9A00CA49BE /* SwiftSideMenuForkedTests.xctest */,
+				5C132583198E2A9A00CA49BE /* SwiftSideMenu.app */,
+				5C132595198E2A9A00CA49BE /* SwiftSideMenuTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -673,9 +673,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5C132582198E2A9A00CA49BE /* SwiftSideMenuForked */ = {
+		5C132582198E2A9A00CA49BE /* SwiftSideMenu */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5C13259F198E2A9A00CA49BE /* Build configuration list for PBXNativeTarget "SwiftSideMenuForked" */;
+			buildConfigurationList = 5C13259F198E2A9A00CA49BE /* Build configuration list for PBXNativeTarget "SwiftSideMenu" */;
 			buildPhases = (
 				164750626FBF4818545295CB /* Check Pods Manifest.lock */,
 				5C13257F198E2A9A00CA49BE /* Sources */,
@@ -687,14 +687,14 @@
 			);
 			dependencies = (
 			);
-			name = SwiftSideMenuForked;
+			name = SwiftSideMenu;
 			productName = SwiftSideMenu;
-			productReference = 5C132583198E2A9A00CA49BE /* SwiftSideMenuForked.app */;
+			productReference = 5C132583198E2A9A00CA49BE /* SwiftSideMenu.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5C132594198E2A9A00CA49BE /* SwiftSideMenuForkedTests */ = {
+		5C132594198E2A9A00CA49BE /* SwiftSideMenuTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5C1325A2198E2A9A00CA49BE /* Build configuration list for PBXNativeTarget "SwiftSideMenuForkedTests" */;
+			buildConfigurationList = 5C1325A2198E2A9A00CA49BE /* Build configuration list for PBXNativeTarget "SwiftSideMenuTests" */;
 			buildPhases = (
 				5C132591198E2A9A00CA49BE /* Sources */,
 				5C132592198E2A9A00CA49BE /* Frameworks */,
@@ -705,9 +705,9 @@
 			dependencies = (
 				5C132597198E2A9A00CA49BE /* PBXTargetDependency */,
 			);
-			name = SwiftSideMenuForkedTests;
+			name = SwiftSideMenuTests;
 			productName = SwiftSideMenuTests;
-			productReference = 5C132595198E2A9A00CA49BE /* SwiftSideMenuForkedTests.xctest */;
+			productReference = 5C132595198E2A9A00CA49BE /* SwiftSideMenuTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -729,7 +729,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5C13257E198E2A9A00CA49BE /* Build configuration list for PBXProject "SwiftSideMenuForked" */;
+			buildConfigurationList = 5C13257E198E2A9A00CA49BE /* Build configuration list for PBXProject "SwiftSideMenu" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -742,8 +742,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5C132582198E2A9A00CA49BE /* SwiftSideMenuForked */,
-				5C132594198E2A9A00CA49BE /* SwiftSideMenuForkedTests */,
+				5C132582198E2A9A00CA49BE /* SwiftSideMenu */,
+				5C132594198E2A9A00CA49BE /* SwiftSideMenuTests */,
 			);
 		};
 /* End PBXProject section */
@@ -945,7 +945,7 @@
 /* Begin PBXTargetDependency section */
 		5C132597198E2A9A00CA49BE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5C132582198E2A9A00CA49BE /* SwiftSideMenuForked */;
+			target = 5C132582198E2A9A00CA49BE /* SwiftSideMenu */;
 			targetProxy = 5C132596198E2A9A00CA49BE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1051,7 +1051,7 @@
 				INFOPLIST_FILE = SwiftSideMenu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = SwiftSideMenuForked;
+				PRODUCT_NAME = SwiftSideMenu;
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftSideMenu/SwiftSideMenu-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1067,7 +1067,7 @@
 				INFOPLIST_FILE = SwiftSideMenu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = SwiftSideMenuForked;
+				PRODUCT_NAME = SwiftSideMenu;
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftSideMenu/SwiftSideMenu-Bridging-Header.h";
 			};
 			name = Release;
@@ -1086,7 +1086,7 @@
 				);
 				INFOPLIST_FILE = SwiftSideMenuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = SwiftSideMenuForkedTests;
+				PRODUCT_NAME = SwiftSideMenuTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -1101,7 +1101,7 @@
 				);
 				INFOPLIST_FILE = SwiftSideMenuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = SwiftSideMenuForkedTests;
+				PRODUCT_NAME = SwiftSideMenuTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -1109,7 +1109,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5C13257E198E2A9A00CA49BE /* Build configuration list for PBXProject "SwiftSideMenuForked" */ = {
+		5C13257E198E2A9A00CA49BE /* Build configuration list for PBXProject "SwiftSideMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5C13259D198E2A9A00CA49BE /* Debug */,
@@ -1118,7 +1118,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5C13259F198E2A9A00CA49BE /* Build configuration list for PBXNativeTarget "SwiftSideMenuForked" */ = {
+		5C13259F198E2A9A00CA49BE /* Build configuration list for PBXNativeTarget "SwiftSideMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5C1325A0198E2A9A00CA49BE /* Debug */,
@@ -1127,7 +1127,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5C1325A2198E2A9A00CA49BE /* Build configuration list for PBXNativeTarget "SwiftSideMenuForkedTests" */ = {
+		5C1325A2198E2A9A00CA49BE /* Build configuration list for PBXNativeTarget "SwiftSideMenuTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5C1325A3198E2A9A00CA49BE /* Debug */,
