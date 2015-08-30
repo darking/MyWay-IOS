@@ -74,4 +74,5 @@ class LoginViewController: UIViewController, ENSideMenuDelegate {
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
             return true
     }
+    
 }
