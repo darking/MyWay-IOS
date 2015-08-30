@@ -7,7 +7,7 @@
         <!--Login-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="LogIn" title="Login" id="vXZ-lx-hvc" customClass="LoginViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogIn" title="Login" id="vXZ-lx-hvc" customClass="LoginViewController" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -20,13 +20,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmv-6k-q9z">
-                                <rect key="frame" x="128" y="60" width="79" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5jO-AU-iNa">
-                                <rect key="frame" x="107" y="89" width="120" height="30"/>
+                                <rect key="frame" x="107" y="112" width="120" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -69,6 +64,11 @@
                                     <segue destination="eSU-vP-pLB" kind="modal" id="qHi-M2-IgO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmv-6k-q9z">
+                                <rect key="frame" x="128" y="83" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -91,7 +91,7 @@
         <!--Register-->
         <scene sceneID="MEt-oe-5OI">
             <objects>
-                <viewController title="Register" id="BYW-IC-xV5" customClass="RegisterViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Register" id="BYW-IC-xV5" customClass="RegisterViewController" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iCo-sh-gQ0"/>
                         <viewControllerLayoutGuide type="bottom" id="KNO-7U-IHg"/>
@@ -200,7 +200,7 @@
         <!--Forget Password View Controller-->
         <scene sceneID="wns-bf-fsn">
             <objects>
-                <viewController id="eSU-vP-pLB" customClass="ForgetPasswordViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eSU-vP-pLB" customClass="ForgetPasswordViewController" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ffd-gL-O7W"/>
                         <viewControllerLayoutGuide type="bottom" id="8DD-Zx-OW4"/>
@@ -264,7 +264,7 @@
         <!--User Profile-->
         <scene sceneID="xa0-Ev-901">
             <objects>
-                <viewController storyboardIdentifier="UserProfile" title="User Profile" id="0FT-Ks-Neg" customClass="UserProfileViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserProfile" title="User Profile" id="0FT-Ks-Neg" customClass="UserProfileViewController" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bao-L1-ziJ"/>
                         <viewControllerLayoutGuide type="bottom" id="he8-gu-LwJ"/>
@@ -293,13 +293,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pea-6p-Xaf">
-                                <rect key="frame" x="16" y="60" width="288" height="21"/>
+                                <rect key="frame" x="16" y="65" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6Y-41-kEM">
-                                <rect key="frame" x="229" y="51" width="75" height="30"/>
+                                <rect key="frame" x="229" y="65" width="75" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Edit Profile">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -357,7 +357,7 @@
         <!--Edit User Profile View Controller-->
         <scene sceneID="ugj-0X-PCC">
             <objects>
-                <viewController id="Amc-rb-PrF" customClass="EditUserProfileViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Amc-rb-PrF" customClass="EditUserProfileViewController" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2rz-6G-Ku1"/>
                         <viewControllerLayoutGuide type="bottom" id="EJj-HE-HyH"/>
@@ -443,7 +443,7 @@
         <!--Chage Password View Controller-->
         <scene sceneID="aAt-H6-vKi">
             <objects>
-                <viewController id="KXz-Q6-Tad" customClass="ChagePasswordViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KXz-Q6-Tad" customClass="ChagePasswordViewController" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cv0-ft-HNr"/>
                         <viewControllerLayoutGuide type="bottom" id="nfV-7Q-gOj"/>
@@ -523,7 +523,7 @@
         <!--Code Verification View Controller-->
         <scene sceneID="QdA-ac-tT7">
             <objects>
-                <viewController id="dul-cH-fpo" customClass="CodeVerificationViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dul-cH-fpo" customClass="CodeVerificationViewController" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e6f-8K-Dbn"/>
                         <viewControllerLayoutGuide type="bottom" id="g56-F3-R19"/>
@@ -579,7 +579,7 @@
         <!--Set New Password View Controller-->
         <scene sceneID="Kx1-hH-tPR">
             <objects>
-                <viewController id="d4m-YJ-xzM" customClass="SetNewPasswordViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="d4m-YJ-xzM" customClass="SetNewPasswordViewController" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="E8z-Ve-sJ5"/>
                         <viewControllerLayoutGuide type="bottom" id="3mS-kO-EJF"/>
