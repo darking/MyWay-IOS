@@ -10,6 +10,8 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
+    private var isKeyboardVisible = false
+    
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var confirmPassword: UITextField!
@@ -69,13 +71,26 @@ class RegisterViewController: UIViewController {
     
     func keyboardWillShow(sender: NSNotification) {
         
-        //NSNotification.
+        if isKeyboardVisible == false {
+            
+            self.view.frame.origin.y -= 80
+            
+            isKeyboardVisible = true
+        }
         
-        self.view.frame.origin.y -= 80
+        
     }
     
     func keyboardWillHide(sender: NSNotification) {
-        self.view.frame.origin.y += 80
+        
+        if isKeyboardVisible == true {
+            
+            self.view.frame.origin.y += 80
+            
+            isKeyboardVisible = false
+            
+        }
+        
     }
 
 }
