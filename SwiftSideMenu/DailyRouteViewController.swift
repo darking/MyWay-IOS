@@ -29,7 +29,7 @@ class DailyRouteViewController:UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var row:Int = indexPath.row;
-        var mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+        var mainStoryboard:UIStoryboard = UIStoryboard(name: "EmanStory", bundle: nil);
         var vc : ModifyDailyRouteVC = mainStoryboard.instantiateViewControllerWithIdentifier("MDRVC") as! ModifyDailyRouteVC;
         vc.index = row;
         self.navigationController?.pushViewController( vc, animated: true)

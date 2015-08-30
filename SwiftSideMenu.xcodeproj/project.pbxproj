@@ -183,7 +183,7 @@
 		52ECD6D51B8643DE00718350 /* UIWindow+AHKAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+AHKAdditions.h"; sourceTree = "<group>"; };
 		52ECD6D61B8643DE00718350 /* UIWindow+AHKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+AHKAdditions.m"; sourceTree = "<group>"; };
 		52F57A721B85E97100A51E54 /* GetLocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GetLocation.storyboard; sourceTree = "<group>"; };
-		5C132583198E2A9A00CA49BE /* SwiftSideMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSideMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C132583198E2A9A00CA49BE /* MyWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C132587198E2A9A00CA49BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C132588198E2A9A00CA49BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C13258A198E2A9A00CA49BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -413,7 +413,7 @@
 		5C132584198E2A9A00CA49BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5C132583198E2A9A00CA49BE /* SwiftSideMenu.app */,
+				5C132583198E2A9A00CA49BE /* MyWay.app */,
 				5C132595198E2A9A00CA49BE /* SwiftSideMenuTests.xctest */,
 			);
 			name = Products;
@@ -698,7 +698,7 @@
 			);
 			name = SwiftSideMenu;
 			productName = SwiftSideMenu;
-			productReference = 5C132583198E2A9A00CA49BE /* SwiftSideMenu.app */;
+			productReference = 5C132583198E2A9A00CA49BE /* MyWay.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5C132594198E2A9A00CA49BE /* SwiftSideMenuTests */ = {
@@ -1066,7 +1066,7 @@
 				INFOPLIST_FILE = SwiftSideMenu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = SwiftSideMenu;
+				PRODUCT_NAME = MyWay;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftSideMenu/SwiftSideMenu-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1086,7 +1086,7 @@
 				INFOPLIST_FILE = SwiftSideMenu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = SwiftSideMenu;
+				PRODUCT_NAME = MyWay;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftSideMenu/SwiftSideMenu-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
