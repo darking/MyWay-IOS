@@ -35,12 +35,12 @@ class DaysListTVC:UITableViewController, ENSideMenuDelegate {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
        
         var row:Int = indexPath.row;
-        var mainStoryboard:UIStoryboard = UIStoryboard(name: "Main5_Report", bundle: nil);
+        var mainStoryboard:UIStoryboard = UIStoryboard(name: "Team5_m", bundle: nil);
         var vc : MonitorReportVC = mainStoryboard.instantiateViewControllerWithIdentifier("MR") as! MonitorReportVC;
         vc.index = row;
         //self.navigationController?.pushViewController( vc, animated: true)
         
-        self.presentViewController(vc, animated: true, completion: {});
+        self.navigationController?.pushViewController(vc, animated: true);
     }
     override func viewDidLoad(){
         super.viewDidLoad();

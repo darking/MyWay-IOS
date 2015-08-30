@@ -118,14 +118,12 @@
 		C3EBDD751B92D529009237A8 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD701B92D529009237A8 /* AppSettings.swift */; };
 		C3EBDD761B92D529009237A8 /* Team5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EBDD711B92D529009237A8 /* Team5.storyboard */; };
 		C3EBDD771B92D529009237A8 /* UISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD721B92D529009237A8 /* UISettings.swift */; };
-		C3EBDD7F1B92D56E009237A8 /* Main5_Report.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EBDD781B92D56E009237A8 /* Main5_Report.storyboard */; };
 		C3EBDD801B92D56E009237A8 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD791B92D56E009237A8 /* Data.swift */; };
 		C3EBDD811B92D56E009237A8 /* DaysListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD7A1B92D56E009237A8 /* DaysListTVC.swift */; };
 		C3EBDD821B92D56E009237A8 /* MonitorReportSample.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3EBDD7B1B92D56E009237A8 /* MonitorReportSample.plist */; };
 		C3EBDD831B92D56E009237A8 /* MonitorReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD7C1B92D56E009237A8 /* MonitorReportVC.swift */; };
 		C3EBDD841B92D56E009237A8 /* ReadReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD7D1B92D56E009237A8 /* ReadReport.swift */; };
 		C3EBDD851B92D56E009237A8 /* SelectDriverReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD7E1B92D56E009237A8 /* SelectDriverReportVC.swift */; };
-		C3EBDD8E1B92D586009237A8 /* EmanStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EBDD861B92D586009237A8 /* EmanStory.storyboard */; };
 		C3EBDD8F1B92D586009237A8 /* AddDailyRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD871B92D586009237A8 /* AddDailyRouteVC.swift */; };
 		C3EBDD901B92D586009237A8 /* AllpListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD881B92D586009237A8 /* AllpListController.swift */; };
 		C3EBDD911B92D586009237A8 /* CommentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD891B92D586009237A8 /* CommentLocation.swift */; };
@@ -274,14 +272,12 @@
 		C3EBDD701B92D529009237A8 /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		C3EBDD711B92D529009237A8 /* Team5.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Team5.storyboard; sourceTree = "<group>"; };
 		C3EBDD721B92D529009237A8 /* UISettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISettings.swift; sourceTree = "<group>"; };
-		C3EBDD781B92D56E009237A8 /* Main5_Report.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main5_Report.storyboard; sourceTree = "<group>"; };
 		C3EBDD791B92D56E009237A8 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		C3EBDD7A1B92D56E009237A8 /* DaysListTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysListTVC.swift; sourceTree = "<group>"; };
 		C3EBDD7B1B92D56E009237A8 /* MonitorReportSample.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MonitorReportSample.plist; sourceTree = "<group>"; };
 		C3EBDD7C1B92D56E009237A8 /* MonitorReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorReportVC.swift; sourceTree = "<group>"; };
 		C3EBDD7D1B92D56E009237A8 /* ReadReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadReport.swift; sourceTree = "<group>"; };
 		C3EBDD7E1B92D56E009237A8 /* SelectDriverReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDriverReportVC.swift; sourceTree = "<group>"; };
-		C3EBDD861B92D586009237A8 /* EmanStory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EmanStory.storyboard; sourceTree = "<group>"; };
 		C3EBDD871B92D586009237A8 /* AddDailyRouteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDailyRouteVC.swift; sourceTree = "<group>"; };
 		C3EBDD881B92D586009237A8 /* AllpListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllpListController.swift; sourceTree = "<group>"; };
 		C3EBDD891B92D586009237A8 /* CommentLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentLocation.swift; sourceTree = "<group>"; };
@@ -387,7 +383,6 @@
 		522B7E941B8635B2000A5678 /* MonitorReports */ = {
 			isa = PBXGroup;
 			children = (
-				C3EBDD781B92D56E009237A8 /* Main5_Report.storyboard */,
 				C3EBDD791B92D56E009237A8 /* Data.swift */,
 				C3EBDD7A1B92D56E009237A8 /* DaysListTVC.swift */,
 				C3EBDD7B1B92D56E009237A8 /* MonitorReportSample.plist */,
@@ -466,7 +461,6 @@
 		6C4674431B8F449C007582FB /* EmansWork */ = {
 			isa = PBXGroup;
 			children = (
-				C3EBDD861B92D586009237A8 /* EmanStory.storyboard */,
 				C3EBDD871B92D586009237A8 /* AddDailyRouteVC.swift */,
 				C3EBDD881B92D586009237A8 /* AllpListController.swift */,
 				C3EBDD891B92D586009237A8 /* CommentLocation.swift */,
@@ -792,7 +786,6 @@
 				6CE9A2081B8382FE00BE4004 /* !accident.png in Resources */,
 				5C1325AA198E2AB300CA49BE /* image.png in Resources */,
 				6CE9A1C71B83674F00BE4004 /* Podfile in Resources */,
-				C3EBDD8E1B92D586009237A8 /* EmanStory.storyboard in Resources */,
 				6CE9A2421B83A06000BE4004 /* street.png in Resources */,
 				6CE9A25F1B8474D200BE4004 /* cat.plist in Resources */,
 				6CE9A25C1B8474C300BE4004 /* placeDetails.plist in Resources */,
@@ -803,7 +796,6 @@
 				6CE9A2101B8382FE00BE4004 /* moderate.png in Resources */,
 				6CE9A20C1B8382FE00BE4004 /* !traffic.png in Resources */,
 				6CE9A25D1B8474C300BE4004 /* places.plist in Resources */,
-				C3EBDD7F1B92D56E009237A8 /* Main5_Report.storyboard in Resources */,
 				6CE9A1FD1B8382BD00BE4004 /* TrafficJamStandstill.png in Resources */,
 				C3EBDD741B92D529009237A8 /* Team5_m.storyboard in Resources */,
 				6CE9A2721B84B98300BE4004 /* Team2.storyboard in Resources */,

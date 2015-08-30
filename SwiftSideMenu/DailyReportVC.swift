@@ -36,11 +36,10 @@ class DailyReportVC:UIViewController{
     @IBAction func btnDone(sender: AnyObject) {
         if startTimeFlag == true {
             lblStartTime.text = self.dataPickerChanged(DatePiker);
-            doneBtn.hidden = true;
         } else if endTimeFlag == true {
             lblEndTime.text = self.dataPickerChanged(DatePiker);
-            doneBtn.hidden = true;
         }
+        doneBtn.hidden = true;
     }
     
     var DailyFlag = false;

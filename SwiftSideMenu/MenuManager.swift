@@ -41,7 +41,7 @@ class MenuManager {
         item = MenuItem();
         item.itemTitle = "Daily Route";
         item.itemVCIdentifier = "DailyRouteVC";
-        item.storyBoardName = "EmanStory";
+        item.storyBoardName = "Team5_m";
         MenuItem.all.menuItems.addObject(item);
         
         item = MenuItem();

@@ -30,7 +30,7 @@
         <!--Sidebar Menu-->
         <scene sceneID="Ho7-qy-dP7">
             <objects>
-                <tableViewController id="Pgd-8w-ZFF" customClass="SidebarMenu" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Pgd-8w-ZFF" customClass="SidebarMenu" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="yvu-Ze-qc8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +59,7 @@
         <!--Settings-->
         <scene sceneID="fhp-4q-tVG">
             <objects>
-                <viewController storyboardIdentifier="Team5_Settings" title="Settings" id="hvk-Lc-yGT" customClass="UISettings" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Team5_Settings" title="Settings" id="hvk-Lc-yGT" customClass="UISettings" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="94X-tk-wLh"/>
                         <viewControllerLayoutGuide type="bottom" id="0Ja-WR-Abz"/>

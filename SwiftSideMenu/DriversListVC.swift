@@ -57,10 +57,12 @@ class DriversListVC: UITableViewController , UITableViewDataSource {
         return cell;
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let index = indexPath.row;
-        var redirect:DriverDetailsVC = UIStoryboard(name: "Team5_m", bundle: nil).instantiateViewControllerWithIdentifier("DDVC") as! DriverDetailsVC;
-        SelectDriverReportVC.holder.driverName = (drivers[indexPath.row] as! String);
-        redirect.driverName = SelectDriverReportVC.holder.driverName!;
-        self.presentViewController(redirect, animated: true, completion: {})
+        if drivers.count > 0 {
+            let index = indexPath.row;
+            var redirect:DriverDetailsVC = UIStoryboard(name: "Team5_m", bundle: nil).instantiateViewControllerWithIdentifier("DDVC") as! DriverDetailsVC;
+            SelectDriverReportVC.holder.driverName = (drivers[indexPath.row] as! String);
+            redirect.driverName = SelectDriverReportVC.holder.driverName!;
+            self.navigationController?.pushViewController(redirect, animated: true)        }
+       
     }
 }

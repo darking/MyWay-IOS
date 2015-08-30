@@ -14,9 +14,9 @@ class DriverDetailsVC: UIViewController {
     var driverName = "";
     
     @IBAction func btnViewReports(sender: AnyObject) {
-        var dayListVC:DaysListTVC = UIStoryboard(name: "Main5_Report", bundle: nil).instantiateViewControllerWithIdentifier("DL") as! DaysListTVC;
+        var dayListVC:DaysListTVC = UIStoryboard(name: "Team5_m", bundle: nil).instantiateViewControllerWithIdentifier("DL") as! DaysListTVC;
         
-        self.presentViewController(dayListVC, animated: true, completion: {});
+        self.navigationController?.pushViewController(dayListVC, animated: true);
         
     }
     

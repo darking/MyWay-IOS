@@ -25,8 +25,8 @@ class ModifyDailyRouteVC:UIViewController{
         
         DailyRouteLabel.text = values.name;
         DetailLabel.numberOfLines = 5;
-        DetailLabel.text = "from \(values.startDate)                                To \(values.endDate)"
-        
+        DetailLabel.text = "From \(values.startDate)\nTo \(values.endDate)"
+        println("The value you're looking for is \(values.endDate)");
     }
     
     @IBAction func DeleteBTN(sender: AnyObject) {
