@@ -26,11 +26,11 @@ class MenuManager {
         MenuItem.all.menuItems.addObject(item);
         
         // Everything goes between this to the Logout button
-        item = MenuItem();
-        item.itemTitle = "Settings";
-        item.itemVCIdentifier = "Team5_Settings";
-        item.storyBoardName = "Team5";
-        MenuItem.all.menuItems.addObject(item);
+//        item = MenuItem();
+//        item.itemTitle = "Settings";
+//        item.itemVCIdentifier = "Team5_Settings";
+//        item.storyBoardName = "Team5";
+//        MenuItem.all.menuItems.addObject(item);
         
         item = MenuItem();
         item.itemTitle = "Parent Monitor";
@@ -44,6 +44,11 @@ class MenuManager {
         item.storyBoardName = "EmanStory";
         MenuItem.all.menuItems.addObject(item);
         
+        item = MenuItem();
+        item.itemTitle = "Reports";
+        item.itemVCIdentifier = "Report";
+        item.storyBoardName = "Main_4";
+        MenuItem.all.menuItems.addObject(item);
         //Here goes the Logout button
         //            item = MenuItem();
         //            item.itemTitle = "Logout";
@@ -82,10 +87,6 @@ class MenuManager {
 //        MenuItem.all.menuItems.addObject(item);
         //
         
-        item = MenuItem();
-        item.itemTitle = "Reports";
-        item.itemVCIdentifier = "Report";
-        item.storyBoardName = "Main_4";
-        MenuItem.all.menuItems.addObject(item);
+       
     }
 }

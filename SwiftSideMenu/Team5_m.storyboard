@@ -106,7 +106,13 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
+                <navigationItem title="SwiftSideMenu" id="F9W-cW-tHW">
+                    <barButtonItem key="leftBarButtonItem" image="side_menu_icon.png" id="Xxy-aN-kgw"/>
+                </navigationItem>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rkP-S9-XYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationItem title="SwiftSideMenu" id="Qcp-kq-YGu">
+                    <barButtonItem key="leftBarButtonItem" image="side_menu_icon.png" id="Zih-Yi-XSq"/>
+                </navigationItem>
             </objects>
             <point key="canvasLocation" x="-1525" y="-484"/>
         </scene>
@@ -223,6 +229,9 @@
             <point key="canvasLocation" x="-1129" y="171"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="side_menu_icon.png" width="36" height="36"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
