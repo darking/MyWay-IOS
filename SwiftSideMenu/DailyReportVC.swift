@@ -13,11 +13,36 @@ import CoreLocation
 class DailyReportVC:UIViewController{
     
     @IBOutlet weak var DailyRouteNameTF: UITextField!
-    @IBOutlet weak var EndDatePiker: UIDatePicker!
     @IBOutlet weak var DatePiker: UIDatePicker!
     @IBOutlet weak var StartLocationTF: UITextField!
     @IBOutlet weak var EndLocationTF: UITextField!
+    @IBOutlet weak var lblStartTime: UILabel!
+    @IBOutlet weak var lblEndTime: UILabel!
+    var startTimeFlag:Bool = false;
+    var endTimeFlag:Bool = false;
+    @IBAction func showEndPicker(sender: AnyObject) {
+        DatePiker.hidden = false;
+        startTimeFlag = false;
+        endTimeFlag = true;
+        doneBtn.hidden = false;
+    }
   
+    @IBAction func showStartPicker(sender: AnyObject) {
+        DatePiker.hidden = false;
+        startTimeFlag = true;
+        endTimeFlag = false;
+        doneBtn.hidden = false;
+    }
+    @IBAction func btnDone(sender: AnyObject) {
+        if startTimeFlag == true {
+            lblStartTime.text = self.dataPickerChanged(DatePiker);
+            doneBtn.hidden = true;
+        } else if endTimeFlag == true {
+            lblEndTime.text = self.dataPickerChanged(DatePiker);
+            doneBtn.hidden = true;
+        }
+    }
+    
     var DailyFlag = false;
     var locationManager = CLLocationManager();
     var currentLocation:CLLocation = CLLocation();
@@ -30,12 +55,10 @@ class DailyReportVC:UIViewController{
         }
         else{
             var date:String = dataPickerChanged(DatePiker);
-            var endDate:String = dataPickerChanged(EndDatePiker);
             var manager:AddDailyRouteVC = AddDailyRouteVC();
             var dr:DailyRouteHolder = DailyRouteHolder();
             dr.name = "\(DailyRouteNameTF.text)";
             dr.startDate = "\(date)";
-            dr.endDate = "\(endDate)";
             dr.fromLocation = NSUserDefaults.standardUserDefaults().valueForKey("Current") as! String;
 //            println(dr.fromLocation)
             manager.addDailyRoute(dr);
@@ -49,13 +72,16 @@ class DailyReportVC:UIViewController{
     
     func dataPickerChanged(DatePiker:UIDatePicker) ->String {
         var dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "dd-yyyy HH:mm"
+        dateFormatter.dateFormat = "HH:mm"
         var strDate = "\(dateFormatter.stringFromDate(DatePiker.date))"
         return strDate;
     }
     
+    @IBOutlet weak var doneBtn: UIButton!
  override func viewDidLoad() {
     super.viewDidLoad();
+    DatePiker.hidden = true;
+    doneBtn.hidden = true;
     locationManager.requestAlwaysAuthorization();
     locationManager.location;
     NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.latitude.description, forKey: "lat");
