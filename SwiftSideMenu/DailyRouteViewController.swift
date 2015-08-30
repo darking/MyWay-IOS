@@ -9,11 +9,14 @@
 import Foundation
 import UIKit
 import CoreMotion
-class DailyRouteViewController:UITableViewController { 
+class DailyRouteViewController:UITableViewController, ENSideMenuDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    @IBAction func toggle(sender: AnyObject) {
+        toggleSideMenuView();
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

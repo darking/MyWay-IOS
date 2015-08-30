@@ -21,15 +21,22 @@ class DaysListTVC:UITableViewController, ENSideMenuDelegate {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return daysArray.count;
+        if daysArray.count == 0{
+            return 1;
+        } else {
+            return daysArray.count;
+        }
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = UITableViewCell();
-    
-        var dayValue:Data = daysArray.objectAtIndex(indexPath.row) as! Data;
-        cell.textLabel?.text = dayValue.day;
         
+        if daysArray.count == 0 {
+            cell.textLabel?.text = "No available reports.";
+        } else {
+            var dayValue:Data = daysArray.objectAtIndex(indexPath.row) as! Data;
+            cell.textLabel?.text = dayValue.day;
+        }
         return cell;
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

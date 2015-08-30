@@ -8,12 +8,11 @@
 
 import UIKit
 
-class DriversListVC: UITableViewController , UITableViewDataSource {
-    @IBOutlet weak var table: UITableView!
-    @IBAction func addDriver(sender: AnyObject) {
-        
-    }
+class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDelegate {
     
+    @IBAction func toggle(sender: AnyObject) {
+        toggleSideMenuView();
+    }
     var userName = ""
     var drivers:NSArray = NSArray();
     override func viewDidLoad() {

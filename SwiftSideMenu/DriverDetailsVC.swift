@@ -20,6 +20,7 @@ class DriverDetailsVC: UIViewController {
         
     }
     
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         lblDriverName.text = SelectDriverReportVC.holder.driverName;

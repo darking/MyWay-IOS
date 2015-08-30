@@ -57,7 +57,8 @@ class DailyReportVC:UIViewController{
             var manager:AddDailyRouteVC = AddDailyRouteVC();
             var dr:DailyRouteHolder = DailyRouteHolder();
             dr.name = "\(DailyRouteNameTF.text)";
-            dr.startDate = "\(date)";
+            dr.startDate = "\(lblStartTime.text!)";
+            dr.endDate = "\(lblEndTime.text!)";
             dr.fromLocation = NSUserDefaults.standardUserDefaults().valueForKey("Current") as! String;
 //            println(dr.fromLocation)
             manager.addDailyRoute(dr);

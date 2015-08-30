@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--SwiftSideMenu-->
+        <!--Manage Drivers-->
         <scene sceneID="jXh-z3-S5T">
             <objects>
                 <tableViewController storyboardIdentifier="DLVC" id="RFm-WH-NRZ" customClass="DriversListVC" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
@@ -12,6 +12,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jZW-Cd-IAX">
+                            <rect key="frame" x="-23" y="-15" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="New Driver">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <segue destination="tX2-Bc-mWO" kind="push" id="eLS-wp-2Ff"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" id="5pu-DN-WnJ">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
@@ -30,24 +40,13 @@
                             <outlet property="delegate" destination="RFm-WH-NRZ" id="3bK-BB-rfI"/>
                         </connections>
                     </tableView>
-                    <toolbarItems>
-                        <barButtonItem style="plain" id="Ul3-rj-RAS">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iUr-DI-a5k">
-                                <rect key="frame" x="16" y="11" width="34" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="30"/>
-                                <state key="normal" title="+">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Manage Drivers" id="Qcp-kq-YGu">
+                        <barButtonItem key="leftBarButtonItem" image="side_menu_icon.png" id="Zih-Yi-XSq">
                             <connections>
-                                <segue destination="tX2-Bc-mWO" kind="push" id="6pk-gM-c8T"/>
+                                <action selector="toggle:" destination="RFm-WH-NRZ" id="9gh-Mm-NoE"/>
                             </connections>
                         </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="SwiftSideMenu" id="Qcp-kq-YGu">
-                        <barButtonItem key="leftBarButtonItem" image="side_menu_icon.png" id="Zih-Yi-XSq"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wlx-BF-56x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -167,7 +166,6 @@
                                 </state>
                                 <connections>
                                     <action selector="btnViewReports:" destination="2YO-0z-Ce8" eventType="touchUpInside" id="kiM-cH-SZM"/>
-                                    <segue destination="VTy-zd-pAK" kind="push" id="dLI-0d-pJ8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4w-hN-94J">
@@ -220,9 +218,10 @@
             </objects>
             <point key="canvasLocation" x="-1109" y="169"/>
         </scene>
-        <!--SwiftSideMenu-->
+        <!--View Report-->
         <scene sceneID="bVu-wN-k3i">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oP2-ew-dr7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="MR" id="qve-kG-c7D" customClass="MonitorReportVC" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tsu-8N-kf3"/>
@@ -282,22 +281,10 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Report" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJJ-SY-mpH">
-                                <rect key="frame" x="134" y="72" width="53" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="SwiftSideMenu" id="z0n-jN-7qd">
-                        <barButtonItem key="leftBarButtonItem" image="side_menu_icon.png" id="6Ag-4U-WGb">
-                            <connections>
-                                <action selector="toggle:" destination="qve-kG-c7D" id="zpj-5O-ZjT"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="View Report" id="z0n-jN-7qd"/>
                     <connections>
                         <outlet property="DayTF" destination="6ob-jy-lnB" id="poR-jt-S0F"/>
                         <outlet property="EndLTF" destination="rGc-01-eTV" id="zUV-Vm-c72"/>
@@ -306,7 +293,6 @@
                         <outlet property="lblDriverName" destination="nG7-Gy-W5O" id="yU5-yb-AI0"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oP2-ew-dr7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-714" y="169"/>
         </scene>
@@ -362,7 +348,7 @@
             </objects>
             <point key="canvasLocation" x="-714" y="813"/>
         </scene>
-        <!--DailyRoute-->
+        <!--Daily Route-->
         <scene sceneID="HRM-fR-3Qw">
             <objects>
                 <tableViewController storyboardIdentifier="DailyRouteVC" id="8rh-6R-gJK" customClass="DailyRouteViewController" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
@@ -370,6 +356,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9l6-Uz-Rad">
+                            <rect key="frame" x="0.0" y="174" width="320" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="New Route">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <segue destination="2cQ-X6-gOF" kind="push" id="6O4-uP-PaS"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tj6-u4-byR">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -383,23 +379,25 @@
                             <outlet property="delegate" destination="8rh-6R-gJK" id="jyt-tb-ZWU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="DailyRoute" id="cHa-Wc-cOr">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="WPD-CW-KTm">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="a4x-jH-mJf">
-                                <rect key="frame" x="-23" y="-15" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="+">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="2cQ-X6-gOF" kind="push" id="WIR-B6-k9I"/>
-                                </connections>
-                            </button>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Daily Route" id="jey-ZI-9mv">
+                        <barButtonItem key="leftBarButtonItem" image="side_menu_icon.png" id="WfE-pV-HfJ">
+                            <connections>
+                                <action selector="toggle:" destination="8rh-6R-gJK" id="ugc-HD-dg4"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nCi-OE-5HC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="T9b-j2-9CI">
+                    <rect key="frame" x="0.0" y="0.0" width="71" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                    <state key="normal" title="+">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </objects>
             <point key="canvasLocation" x="-1551" y="813"/>
         </scene>
