@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4Cm-iD-bKl">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Title-->
@@ -126,18 +125,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Point:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jG4-Tv-f0c">
-                                <rect key="frame" x="24" y="393" width="95" height="26"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="26" id="dJe-iu-SZa"/>
-                                    <constraint firstAttribute="width" constant="95" id="ukP-Ox-Jqf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuM-BJ-2Xr">
-                                <rect key="frame" x="230" y="528" width="49" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuM-BJ-2Xr">
+                                <rect key="frame" x="136" y="528" width="49" height="30"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -145,94 +134,78 @@
                                     <action selector="submit:" destination="bd5-LH-vPj" eventType="touchUpInside" id="I0i-tf-iCi"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Point:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gZ-mD-vhz">
-                                <rect key="frame" x="24" y="461" width="80" height="21"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End point location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DLS-yM-nd1">
+                                <rect key="frame" x="64" y="490" width="192" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start point location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ekW-Dx-JDA">
+                                <rect key="frame" x="64" y="448" width="192" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter daily route name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lrR-EO-Hvi">
+                                <rect key="frame" x="58" y="91" width="205" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipy-zm-jVx">
+                                <rect key="frame" x="217" y="182" width="30" height="30"/>
+                                <state key="normal" title="Set">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showStartPicker:" destination="bd5-LH-vPj" eventType="touchUpInside" id="ROV-Fo-H0k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xND-c2-ZVM">
+                                <rect key="frame" x="217" y="232" width="30" height="30"/>
+                                <state key="normal" title="Set">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showEndPicker:" destination="bd5-LH-vPj" eventType="touchUpInside" id="JXH-MU-1H4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start time not set" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Neg-uu-7Dm">
+                                <rect key="frame" x="42" y="186" width="160" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DLS-yM-nd1">
-                                <rect key="frame" x="111" y="486" width="192" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ekW-Dx-JDA">
-                                <rect key="frame" x="112" y="423" width="192" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x00-5y-dlp">
-                                <rect key="frame" x="24" y="490" width="72" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End time not set" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8x-NV-khh">
+                                <rect key="frame" x="42" y="236" width="139" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Daily Route Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVz-ji-y8W">
-                                <rect key="frame" x="16" y="20" width="143" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lrR-EO-Hvi">
-                                <rect key="frame" x="64" y="42" width="192" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="rfY-DS-ib7">
-                                <rect key="frame" x="0.0" y="73" width="320" height="162"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciT-lk-r2G">
+                                <rect key="frame" x="255" y="260" width="37" height="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnDone:" destination="bd5-LH-vPj" eventType="touchUpInside" id="34G-lV-RcY"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="rfY-DS-ib7">
+                                <rect key="frame" x="0.0" y="298" width="320" height="93"/>
                                 <date key="date" timeIntervalSinceReferenceDate="461529373.762968">
                                     <!--2015-08-17 18:36:13 +0000-->
                                 </date>
                             </datePicker>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="CcO-RI-RnA">
-                                <rect key="frame" x="0.0" y="233" width="320" height="162"/>
-                                <date key="date" timeIntervalSinceReferenceDate="461569821.87404603">
-                                    <!--2015-08-18 05:50:21 +0000-->
-                                </date>
-                            </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5h-SL-hrm">
-                                <rect key="frame" x="24" y="427" width="72" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="x00-5y-dlp" firstAttribute="top" secondItem="3gZ-mD-vhz" secondAttribute="bottom" constant="8" symbolic="YES" id="4hR-Fh-xuq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="DLS-yM-nd1" secondAttribute="trailing" constant="1" id="7Zo-wc-yJ3"/>
-                            <constraint firstItem="x5h-SL-hrm" firstAttribute="leading" secondItem="jG4-Tv-f0c" secondAttribute="leading" id="8BG-dC-0ki"/>
-                            <constraint firstItem="ekW-Dx-JDA" firstAttribute="top" secondItem="CcO-RI-RnA" secondAttribute="bottom" constant="28" id="A6V-nM-aWR"/>
-                            <constraint firstItem="jG4-Tv-f0c" firstAttribute="leading" secondItem="LOP-0S-G85" secondAttribute="leadingMargin" constant="8" id="Fwb-CD-66I"/>
-                            <constraint firstItem="3gZ-mD-vhz" firstAttribute="top" secondItem="x5h-SL-hrm" secondAttribute="bottom" constant="13" id="Gwh-Gp-BuF"/>
-                            <constraint firstItem="rfY-DS-ib7" firstAttribute="leading" secondItem="LOP-0S-G85" secondAttribute="leading" id="JQL-kn-Hd2"/>
-                            <constraint firstItem="x5h-SL-hrm" firstAttribute="top" secondItem="jG4-Tv-f0c" secondAttribute="bottom" constant="8" symbolic="YES" id="MSo-1Z-ODF"/>
-                            <constraint firstItem="lrR-EO-Hvi" firstAttribute="leading" secondItem="LOP-0S-G85" secondAttribute="leadingMargin" constant="48" id="Na6-E7-2tY"/>
-                            <constraint firstItem="aVz-ji-y8W" firstAttribute="leading" secondItem="LOP-0S-G85" secondAttribute="leadingMargin" id="SQz-Lk-X58"/>
-                            <constraint firstItem="lrR-EO-Hvi" firstAttribute="top" secondItem="aVz-ji-y8W" secondAttribute="bottom" constant="1" id="XuG-Ky-fcK"/>
-                            <constraint firstItem="HuM-BJ-2Xr" firstAttribute="top" secondItem="DLS-yM-nd1" secondAttribute="bottom" constant="12" id="ZFG-sC-UxZ"/>
-                            <constraint firstItem="3gZ-mD-vhz" firstAttribute="leading" secondItem="x00-5y-dlp" secondAttribute="leading" id="aZw-Nm-vCC"/>
-                            <constraint firstItem="uBr-1A-KPd" firstAttribute="top" secondItem="HuM-BJ-2Xr" secondAttribute="bottom" constant="10" id="avk-8t-9ZZ"/>
-                            <constraint firstItem="aVz-ji-y8W" firstAttribute="top" secondItem="YmZ-Fq-6ql" secondAttribute="bottom" id="cRD-yB-psw"/>
-                            <constraint firstItem="rfY-DS-ib7" firstAttribute="leading" secondItem="CcO-RI-RnA" secondAttribute="leading" id="dgE-ug-lob"/>
-                            <constraint firstItem="ekW-Dx-JDA" firstAttribute="top" secondItem="jG4-Tv-f0c" secondAttribute="bottom" constant="4" id="ePd-Tc-VPq"/>
-                            <constraint firstItem="DLS-yM-nd1" firstAttribute="leading" secondItem="x00-5y-dlp" secondAttribute="trailing" constant="15" id="ece-QL-w23"/>
-                            <constraint firstItem="ekW-Dx-JDA" firstAttribute="leading" secondItem="x5h-SL-hrm" secondAttribute="trailing" constant="16" id="oCt-kD-Lnj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HuM-BJ-2Xr" secondAttribute="trailing" constant="25" id="ovb-tT-LfF"/>
-                            <constraint firstItem="lrR-EO-Hvi" firstAttribute="centerX" secondItem="rfY-DS-ib7" secondAttribute="centerX" id="qF0-xz-k9B"/>
-                            <constraint firstItem="DLS-yM-nd1" firstAttribute="top" secondItem="ekW-Dx-JDA" secondAttribute="bottom" constant="33" id="qS5-4F-PWJ"/>
-                            <constraint firstItem="rfY-DS-ib7" firstAttribute="top" secondItem="lrR-EO-Hvi" secondAttribute="bottom" constant="1" id="qlD-JP-Qtr"/>
-                            <constraint firstItem="ekW-Dx-JDA" firstAttribute="trailing" secondItem="LOP-0S-G85" secondAttribute="trailingMargin" id="vbw-KQ-m0z"/>
-                            <constraint firstItem="3gZ-mD-vhz" firstAttribute="leading" secondItem="x5h-SL-hrm" secondAttribute="leading" id="yyl-fX-wK3"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ga2-EA-17c"/>
                     <connections>
                         <outlet property="DailyRouteNameTF" destination="lrR-EO-Hvi" id="sng-96-L1q"/>
                         <outlet property="DatePiker" destination="rfY-DS-ib7" id="iiT-Qd-aRZ"/>
-                        <outlet property="EndDatePiker" destination="CcO-RI-RnA" id="sjI-gs-LS9"/>
                         <outlet property="EndLocationTF" destination="DLS-yM-nd1" id="9n3-RG-DYO"/>
                         <outlet property="StartLocationTF" destination="ekW-Dx-JDA" id="ss1-7D-SWo"/>
+                        <outlet property="doneBtn" destination="ciT-lk-r2G" id="bAg-59-kTz"/>
+                        <outlet property="lblEndTime" destination="w8x-NV-khh" id="bYz-wd-uzd"/>
+                        <outlet property="lblStartTime" destination="Neg-uu-7Dm" id="dCX-dF-qy4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zhs-h5-xOw" userLabel="First Responder" sceneMemberID="firstResponder"/>
