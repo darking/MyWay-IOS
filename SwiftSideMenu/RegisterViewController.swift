@@ -68,6 +68,9 @@ class RegisterViewController: UIViewController {
     }
     
     func keyboardWillShow(sender: NSNotification) {
+        
+        //NSNotification.
+        
         self.view.frame.origin.y -= 80
     }
     
