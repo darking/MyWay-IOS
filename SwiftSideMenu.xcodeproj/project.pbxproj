@@ -27,13 +27,6 @@
 		143615711B8F1CC3003FD356 /* GetLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143615701B8F1CC3003FD356 /* GetLocationVC.swift */; };
 		522B7E921B86253C000A5678 /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E901B86253C000A5678 /* ENSideMenu.swift */; };
 		522B7E931B86253C000A5678 /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E911B86253C000A5678 /* ENSideMenuNavigationController.swift */; };
-		522B7EA11B863609000A5678 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E961B863609000A5678 /* Data.swift */; };
-		522B7EA21B863609000A5678 /* DaysListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E971B863609000A5678 /* DaysListTVC.swift */; };
-		522B7EA71B863609000A5678 /* MonitorReportSample.plist in Resources */ = {isa = PBXBuildFile; fileRef = 522B7E9C1B863609000A5678 /* MonitorReportSample.plist */; };
-		522B7EA81B863609000A5678 /* MonitorReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E9D1B863609000A5678 /* MonitorReportVC.swift */; };
-		522B7EA91B863609000A5678 /* ReadReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E9E1B863609000A5678 /* ReadReport.swift */; };
-		522B7EAA1B863609000A5678 /* SelectDriverReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E9F1B863609000A5678 /* SelectDriverReportVC.swift */; };
-		522B7EAC1B863626000A5678 /* Main5_Report.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522B7EAB1B863626000A5678 /* Main5_Report.storyboard */; };
 		526014461B81CB1600498D3F /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526014451B81CB1500498D3F /* MenuItem.swift */; };
 		52ECD6D71B8643DE00718350 /* AHKActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ECD6D01B8643DE00718350 /* AHKActionSheet.m */; };
 		52ECD6D81B8643DE00718350 /* AHKActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ECD6D21B8643DE00718350 /* AHKActionSheetViewController.m */; };
@@ -46,17 +39,6 @@
 		5C13259C198E2A9A00CA49BE /* SwiftSideMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C13259B198E2A9A00CA49BE /* SwiftSideMenuTests.swift */; };
 		5C1325AA198E2AB300CA49BE /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C1325A7198E2AB300CA49BE /* image.png */; };
 		5C6D6A271A7E26380047FE0D /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6D6A261A7E26380047FE0D /* ViewController2.swift */; };
-		6C46744E1B8F45AF007582FB /* AddDailyRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4674441B8F45AF007582FB /* AddDailyRouteVC.swift */; };
-		6C46744F1B8F45AF007582FB /* AllpListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4674451B8F45AF007582FB /* AllpListController.swift */; };
-		6C4674501B8F45AF007582FB /* CommentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4674461B8F45AF007582FB /* CommentLocation.swift */; };
-		6C4674511B8F45AF007582FB /* DailyReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4674471B8F45AF007582FB /* DailyReportVC.swift */; };
-		6C4674521B8F45AF007582FB /* DailyRouteHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4674481B8F45AF007582FB /* DailyRouteHolder.swift */; };
-		6C4674531B8F45AF007582FB /* DailyRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4674491B8F45AF007582FB /* DailyRouteViewController.swift */; };
-		6C4674571B8F45AF007582FB /* ModifyDailyRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C46744D1B8F45AF007582FB /* ModifyDailyRouteVC.swift */; };
-		6C4674591B8F45C1007582FB /* EmanStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C4674581B8F45C1007582FB /* EmanStory.storyboard */; };
-		6C46745F1B8F61B1007582FB /* AddDriverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C46745C1B8F61B1007582FB /* AddDriverVC.swift */; };
-		6CE9A1AE1B832EA900BE4004 /* Team5_m.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A1AD1B832EA900BE4004 /* Team5_m.storyboard */; };
-		6CE9A1B61B83311900BE4004 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1B51B83311900BE4004 /* FileUtils.swift */; };
 		6CE9A1C01B8363D400BE4004 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1BE1B8363D400BE4004 /* mainViewController.swift */; };
 		6CE9A1C11B8363D400BE4004 /* MapTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1BF1B8363D400BE4004 /* MapTasks.swift */; };
 		6CE9A1C31B83641000BE4004 /* MainMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1C21B83641000BE4004 /* MainMapVC.swift */; };
@@ -123,20 +105,38 @@
 		6CE9A25C1B8474C300BE4004 /* placeDetails.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A25A1B8474C300BE4004 /* placeDetails.plist */; };
 		6CE9A25D1B8474C300BE4004 /* places.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A25B1B8474C300BE4004 /* places.plist */; };
 		6CE9A25F1B8474D200BE4004 /* cat.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A25E1B8474D200BE4004 /* cat.plist */; };
-		6CE9A2631B848A1700BE4004 /* DriversListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A2621B848A1700BE4004 /* DriversListViewController.swift */; };
-		6CE9A2651B848A2600BE4004 /* drivers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A2641B848A2600BE4004 /* drivers.plist */; };
-		6CE9A2691B848D6500BE4004 /* DriverDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A2681B848D6500BE4004 /* DriverDetailsViewController.swift */; };
 		6CE9A26F1B84AE2900BE4004 /* ShowOnMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A26D1B84AE2900BE4004 /* ShowOnMapVC.swift */; };
 		6CE9A2701B84AE2900BE4004 /* reqLocaiton.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A26E1B84AE2900BE4004 /* reqLocaiton.storyboard */; };
 		6CE9A2721B84B98300BE4004 /* Team2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A2711B84B98300BE4004 /* Team2.storyboard */; };
 		6CE9A2741B84D25C00BE4004 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A2731B84D25C00BE4004 /* MenuManager.swift */; };
-		6CEAC5021B81EB5900E63813 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEAC4FF1B81EB5900E63813 /* AppSettings.swift */; };
-		6CEAC5031B81EB5900E63813 /* UISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEAC5001B81EB5900E63813 /* UISettings.swift */; };
-		6CEAC5041B81EB5900E63813 /* Team5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CEAC5011B81EB5900E63813 /* Team5.storyboard */; };
 		9E4766FC19DDBCE900FCEACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C13258C198E2A9A00CA49BE /* Main.storyboard */; };
 		C3EBDD691B921E86009237A8 /* Main2_4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EBDD681B921E86009237A8 /* Main2_4.storyboard */; };
 		C3EBDD6B1B9242AC009237A8 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD6A1B9242AC009237A8 /* KeyboardViewController.swift */; };
 		C3EBDD6D1B924798009237A8 /* keyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EBDD6C1B924798009237A8 /* keyboard.storyboard */; };
+		C3EBDD731B92D529009237A8 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD6E1B92D529009237A8 /* FileUtils.swift */; };
+		C3EBDD741B92D529009237A8 /* Team5_m.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EBDD6F1B92D529009237A8 /* Team5_m.storyboard */; };
+		C3EBDD751B92D529009237A8 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD701B92D529009237A8 /* AppSettings.swift */; };
+		C3EBDD761B92D529009237A8 /* Team5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EBDD711B92D529009237A8 /* Team5.storyboard */; };
+		C3EBDD771B92D529009237A8 /* UISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD721B92D529009237A8 /* UISettings.swift */; };
+		C3EBDD7F1B92D56E009237A8 /* Main5_Report.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EBDD781B92D56E009237A8 /* Main5_Report.storyboard */; };
+		C3EBDD801B92D56E009237A8 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD791B92D56E009237A8 /* Data.swift */; };
+		C3EBDD811B92D56E009237A8 /* DaysListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD7A1B92D56E009237A8 /* DaysListTVC.swift */; };
+		C3EBDD821B92D56E009237A8 /* MonitorReportSample.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3EBDD7B1B92D56E009237A8 /* MonitorReportSample.plist */; };
+		C3EBDD831B92D56E009237A8 /* MonitorReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD7C1B92D56E009237A8 /* MonitorReportVC.swift */; };
+		C3EBDD841B92D56E009237A8 /* ReadReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD7D1B92D56E009237A8 /* ReadReport.swift */; };
+		C3EBDD851B92D56E009237A8 /* SelectDriverReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD7E1B92D56E009237A8 /* SelectDriverReportVC.swift */; };
+		C3EBDD8E1B92D586009237A8 /* EmanStory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EBDD861B92D586009237A8 /* EmanStory.storyboard */; };
+		C3EBDD8F1B92D586009237A8 /* AddDailyRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD871B92D586009237A8 /* AddDailyRouteVC.swift */; };
+		C3EBDD901B92D586009237A8 /* AllpListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD881B92D586009237A8 /* AllpListController.swift */; };
+		C3EBDD911B92D586009237A8 /* CommentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD891B92D586009237A8 /* CommentLocation.swift */; };
+		C3EBDD921B92D586009237A8 /* DailyReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD8A1B92D586009237A8 /* DailyReportVC.swift */; };
+		C3EBDD931B92D586009237A8 /* DailyRouteHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD8B1B92D586009237A8 /* DailyRouteHolder.swift */; };
+		C3EBDD941B92D586009237A8 /* DailyRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD8C1B92D586009237A8 /* DailyRouteViewController.swift */; };
+		C3EBDD951B92D586009237A8 /* ModifyDailyRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD8D1B92D586009237A8 /* ModifyDailyRouteVC.swift */; };
+		C3EBDD9A1B92D59A009237A8 /* AddDriverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD961B92D59A009237A8 /* AddDriverVC.swift */; };
+		C3EBDD9B1B92D59A009237A8 /* DriversListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD971B92D59A009237A8 /* DriversListVC.swift */; };
+		C3EBDD9C1B92D59A009237A8 /* drivers.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3EBDD981B92D59A009237A8 /* drivers.plist */; };
+		C3EBDD9D1B92D59A009237A8 /* DriverDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD991B92D59A009237A8 /* DriverDetailsVC.swift */; };
 		F64995383B682C2C1458FDEF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ECB30476522E7E3E69E4B3C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -172,13 +172,6 @@
 		46841B45243E82D10FE5A5F3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		522B7E901B86253C000A5678 /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ENSideMenu.swift; path = SwiftSideMenu/ENSideMenu.swift; sourceTree = SOURCE_ROOT; };
 		522B7E911B86253C000A5678 /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ENSideMenuNavigationController.swift; path = SwiftSideMenu/ENSideMenuNavigationController.swift; sourceTree = SOURCE_ROOT; };
-		522B7E961B863609000A5678 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		522B7E971B863609000A5678 /* DaysListTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysListTVC.swift; sourceTree = "<group>"; };
-		522B7E9C1B863609000A5678 /* MonitorReportSample.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MonitorReportSample.plist; sourceTree = "<group>"; };
-		522B7E9D1B863609000A5678 /* MonitorReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorReportVC.swift; sourceTree = "<group>"; };
-		522B7E9E1B863609000A5678 /* ReadReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadReport.swift; sourceTree = "<group>"; };
-		522B7E9F1B863609000A5678 /* SelectDriverReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDriverReportVC.swift; sourceTree = "<group>"; };
-		522B7EAB1B863626000A5678 /* Main5_Report.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main5_Report.storyboard; sourceTree = "<group>"; };
 		526014451B81CB1500498D3F /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		52ECD6CE1B86438A00718350 /* SwiftSideMenu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftSideMenu-Bridging-Header.h"; sourceTree = "<group>"; };
 		52ECD6CF1B8643DE00718350 /* AHKActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHKActionSheet.h; sourceTree = "<group>"; };
@@ -202,17 +195,6 @@
 		5C1325A7198E2AB300CA49BE /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		5C6D6A261A7E26380047FE0D /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		645C7FC34CC5E01A1D5C9ED1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		6C4674441B8F45AF007582FB /* AddDailyRouteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDailyRouteVC.swift; sourceTree = "<group>"; };
-		6C4674451B8F45AF007582FB /* AllpListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllpListController.swift; sourceTree = "<group>"; };
-		6C4674461B8F45AF007582FB /* CommentLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentLocation.swift; sourceTree = "<group>"; };
-		6C4674471B8F45AF007582FB /* DailyReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyReportVC.swift; sourceTree = "<group>"; };
-		6C4674481B8F45AF007582FB /* DailyRouteHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyRouteHolder.swift; sourceTree = "<group>"; };
-		6C4674491B8F45AF007582FB /* DailyRouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyRouteViewController.swift; sourceTree = "<group>"; };
-		6C46744D1B8F45AF007582FB /* ModifyDailyRouteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyDailyRouteVC.swift; sourceTree = "<group>"; };
-		6C4674581B8F45C1007582FB /* EmanStory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EmanStory.storyboard; sourceTree = "<group>"; };
-		6C46745C1B8F61B1007582FB /* AddDriverVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDriverVC.swift; sourceTree = "<group>"; };
-		6CE9A1AD1B832EA900BE4004 /* Team5_m.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Team5_m.storyboard; sourceTree = "<group>"; };
-		6CE9A1B51B83311900BE4004 /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		6CE9A1BE1B8363D400BE4004 /* mainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		6CE9A1BF1B8363D400BE4004 /* MapTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTasks.swift; sourceTree = "<group>"; };
 		6CE9A1C21B83641000BE4004 /* MainMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMapVC.swift; sourceTree = "<group>"; };
@@ -279,20 +261,38 @@
 		6CE9A25A1B8474C300BE4004 /* placeDetails.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = placeDetails.plist; sourceTree = "<group>"; };
 		6CE9A25B1B8474C300BE4004 /* places.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = places.plist; sourceTree = "<group>"; };
 		6CE9A25E1B8474D200BE4004 /* cat.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cat.plist; sourceTree = "<group>"; };
-		6CE9A2621B848A1700BE4004 /* DriversListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriversListViewController.swift; sourceTree = "<group>"; };
-		6CE9A2641B848A2600BE4004 /* drivers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = drivers.plist; sourceTree = "<group>"; };
-		6CE9A2681B848D6500BE4004 /* DriverDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverDetailsViewController.swift; sourceTree = "<group>"; };
 		6CE9A26D1B84AE2900BE4004 /* ShowOnMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOnMapVC.swift; sourceTree = "<group>"; };
 		6CE9A26E1B84AE2900BE4004 /* reqLocaiton.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = reqLocaiton.storyboard; sourceTree = "<group>"; };
 		6CE9A2711B84B98300BE4004 /* Team2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Team2.storyboard; sourceTree = "<group>"; };
 		6CE9A2731B84D25C00BE4004 /* MenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
-		6CEAC4FF1B81EB5900E63813 /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
-		6CEAC5001B81EB5900E63813 /* UISettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISettings.swift; sourceTree = "<group>"; };
-		6CEAC5011B81EB5900E63813 /* Team5.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Team5.storyboard; sourceTree = "<group>"; };
 		6ECB30476522E7E3E69E4B3C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3EBDD681B921E86009237A8 /* Main2_4.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main2_4.storyboard; sourceTree = "<group>"; };
 		C3EBDD6A1B9242AC009237A8 /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		C3EBDD6C1B924798009237A8 /* keyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = keyboard.storyboard; sourceTree = "<group>"; };
+		C3EBDD6E1B92D529009237A8 /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
+		C3EBDD6F1B92D529009237A8 /* Team5_m.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Team5_m.storyboard; sourceTree = "<group>"; };
+		C3EBDD701B92D529009237A8 /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		C3EBDD711B92D529009237A8 /* Team5.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Team5.storyboard; sourceTree = "<group>"; };
+		C3EBDD721B92D529009237A8 /* UISettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISettings.swift; sourceTree = "<group>"; };
+		C3EBDD781B92D56E009237A8 /* Main5_Report.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main5_Report.storyboard; sourceTree = "<group>"; };
+		C3EBDD791B92D56E009237A8 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		C3EBDD7A1B92D56E009237A8 /* DaysListTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysListTVC.swift; sourceTree = "<group>"; };
+		C3EBDD7B1B92D56E009237A8 /* MonitorReportSample.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MonitorReportSample.plist; sourceTree = "<group>"; };
+		C3EBDD7C1B92D56E009237A8 /* MonitorReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorReportVC.swift; sourceTree = "<group>"; };
+		C3EBDD7D1B92D56E009237A8 /* ReadReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadReport.swift; sourceTree = "<group>"; };
+		C3EBDD7E1B92D56E009237A8 /* SelectDriverReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDriverReportVC.swift; sourceTree = "<group>"; };
+		C3EBDD861B92D586009237A8 /* EmanStory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EmanStory.storyboard; sourceTree = "<group>"; };
+		C3EBDD871B92D586009237A8 /* AddDailyRouteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDailyRouteVC.swift; sourceTree = "<group>"; };
+		C3EBDD881B92D586009237A8 /* AllpListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllpListController.swift; sourceTree = "<group>"; };
+		C3EBDD891B92D586009237A8 /* CommentLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentLocation.swift; sourceTree = "<group>"; };
+		C3EBDD8A1B92D586009237A8 /* DailyReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyReportVC.swift; sourceTree = "<group>"; };
+		C3EBDD8B1B92D586009237A8 /* DailyRouteHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyRouteHolder.swift; sourceTree = "<group>"; };
+		C3EBDD8C1B92D586009237A8 /* DailyRouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyRouteViewController.swift; sourceTree = "<group>"; };
+		C3EBDD8D1B92D586009237A8 /* ModifyDailyRouteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyDailyRouteVC.swift; sourceTree = "<group>"; };
+		C3EBDD961B92D59A009237A8 /* AddDriverVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDriverVC.swift; sourceTree = "<group>"; };
+		C3EBDD971B92D59A009237A8 /* DriversListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriversListVC.swift; sourceTree = "<group>"; };
+		C3EBDD981B92D59A009237A8 /* drivers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = drivers.plist; sourceTree = "<group>"; };
+		C3EBDD991B92D59A009237A8 /* DriverDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,13 +387,13 @@
 		522B7E941B8635B2000A5678 /* MonitorReports */ = {
 			isa = PBXGroup;
 			children = (
-				522B7EAB1B863626000A5678 /* Main5_Report.storyboard */,
-				522B7E961B863609000A5678 /* Data.swift */,
-				522B7E971B863609000A5678 /* DaysListTVC.swift */,
-				522B7E9C1B863609000A5678 /* MonitorReportSample.plist */,
-				522B7E9D1B863609000A5678 /* MonitorReportVC.swift */,
-				522B7E9E1B863609000A5678 /* ReadReport.swift */,
-				522B7E9F1B863609000A5678 /* SelectDriverReportVC.swift */,
+				C3EBDD781B92D56E009237A8 /* Main5_Report.storyboard */,
+				C3EBDD791B92D56E009237A8 /* Data.swift */,
+				C3EBDD7A1B92D56E009237A8 /* DaysListTVC.swift */,
+				C3EBDD7B1B92D56E009237A8 /* MonitorReportSample.plist */,
+				C3EBDD7C1B92D56E009237A8 /* MonitorReportVC.swift */,
+				C3EBDD7D1B92D56E009237A8 /* ReadReport.swift */,
+				C3EBDD7E1B92D56E009237A8 /* SelectDriverReportVC.swift */,
 			);
 			name = MonitorReports;
 			sourceTree = "<group>";
@@ -466,14 +466,14 @@
 		6C4674431B8F449C007582FB /* EmansWork */ = {
 			isa = PBXGroup;
 			children = (
-				6C4674581B8F45C1007582FB /* EmanStory.storyboard */,
-				6C4674441B8F45AF007582FB /* AddDailyRouteVC.swift */,
-				6C4674451B8F45AF007582FB /* AllpListController.swift */,
-				6C4674461B8F45AF007582FB /* CommentLocation.swift */,
-				6C4674471B8F45AF007582FB /* DailyReportVC.swift */,
-				6C4674481B8F45AF007582FB /* DailyRouteHolder.swift */,
-				6C4674491B8F45AF007582FB /* DailyRouteViewController.swift */,
-				6C46744D1B8F45AF007582FB /* ModifyDailyRouteVC.swift */,
+				C3EBDD861B92D586009237A8 /* EmanStory.storyboard */,
+				C3EBDD871B92D586009237A8 /* AddDailyRouteVC.swift */,
+				C3EBDD881B92D586009237A8 /* AllpListController.swift */,
+				C3EBDD891B92D586009237A8 /* CommentLocation.swift */,
+				C3EBDD8A1B92D586009237A8 /* DailyReportVC.swift */,
+				C3EBDD8B1B92D586009237A8 /* DailyRouteHolder.swift */,
+				C3EBDD8C1B92D586009237A8 /* DailyRouteViewController.swift */,
+				C3EBDD8D1B92D586009237A8 /* ModifyDailyRouteVC.swift */,
 			);
 			name = EmansWork;
 			sourceTree = "<group>";
@@ -481,10 +481,10 @@
 		6C46745A1B8F60AD007582FB /* OmYasser */ = {
 			isa = PBXGroup;
 			children = (
-				6C46745C1B8F61B1007582FB /* AddDriverVC.swift */,
-				6CE9A2621B848A1700BE4004 /* DriversListViewController.swift */,
-				6CE9A2681B848D6500BE4004 /* DriverDetailsViewController.swift */,
-				6CE9A2641B848A2600BE4004 /* drivers.plist */,
+				C3EBDD961B92D59A009237A8 /* AddDriverVC.swift */,
+				C3EBDD971B92D59A009237A8 /* DriversListVC.swift */,
+				C3EBDD981B92D59A009237A8 /* drivers.plist */,
+				C3EBDD991B92D59A009237A8 /* DriverDetailsVC.swift */,
 			);
 			name = OmYasser;
 			sourceTree = "<group>";
@@ -659,14 +659,14 @@
 		6CEAC4FE1B81EB4200E63813 /* Team5 */ = {
 			isa = PBXGroup;
 			children = (
+				C3EBDD6E1B92D529009237A8 /* FileUtils.swift */,
+				C3EBDD6F1B92D529009237A8 /* Team5_m.storyboard */,
+				C3EBDD701B92D529009237A8 /* AppSettings.swift */,
+				C3EBDD711B92D529009237A8 /* Team5.storyboard */,
+				C3EBDD721B92D529009237A8 /* UISettings.swift */,
 				6C46745A1B8F60AD007582FB /* OmYasser */,
 				6C4674431B8F449C007582FB /* EmansWork */,
 				522B7E941B8635B2000A5678 /* MonitorReports */,
-				6CE9A1B51B83311900BE4004 /* FileUtils.swift */,
-				6CE9A1AD1B832EA900BE4004 /* Team5_m.storyboard */,
-				6CEAC4FF1B81EB5900E63813 /* AppSettings.swift */,
-				6CEAC5011B81EB5900E63813 /* Team5.storyboard */,
-				6CEAC5001B81EB5900E63813 /* UISettings.swift */,
 			);
 			name = Team5;
 			sourceTree = "<group>";
@@ -773,26 +773,25 @@
 				6CE9A1FB1B8382BD00BE4004 /* TrafficJamHeavy.png in Resources */,
 				6CE9A1F61B8382BD00BE4004 /* !hazardLabel.png in Resources */,
 				6CE9A20D1B8382FE00BE4004 /* AccidentMajor.png in Resources */,
-				6C4674591B8F45C1007582FB /* EmanStory.storyboard in Resources */,
-				522B7EAC1B863626000A5678 /* Main5_Report.storyboard in Resources */,
-				6CE9A1AE1B832EA900BE4004 /* Team5_m.storyboard in Resources */,
-				6CE9A2651B848A2600BE4004 /* drivers.plist in Resources */,
 				6CE9A20B1B8382FE00BE4004 /* !other.png in Resources */,
 				141092691B8CB71F00CD3114 /* POI.storyboard in Resources */,
 				5C132590198E2A9A00CA49BE /* Images.xcassets in Resources */,
 				143615651B8F1A34003FD356 /* defaultPoint.jpg in Resources */,
 				6CE9A1F71B8382BD00BE4004 /* !otherLabel.png in Resources */,
+				C3EBDD821B92D56E009237A8 /* MonitorReportSample.plist in Resources */,
 				6CE9A20E1B8382FE00BE4004 /* accidentMinor.png in Resources */,
-				522B7EA71B863609000A5678 /* MonitorReportSample.plist in Resources */,
 				6CE9A1F51B8382BD00BE4004 /* !accidentLabel.png in Resources */,
+				C3EBDD9C1B92D59A009237A8 /* drivers.plist in Resources */,
 				C3EBDD691B921E86009237A8 /* Main2_4.storyboard in Resources */,
 				6CE9A1C51B8364B000BE4004 /* Main_1.storyboard in Resources */,
+				C3EBDD761B92D529009237A8 /* Team5.storyboard in Resources */,
 				52F57A741B85E97100A51E54 /* GetLocation.storyboard in Resources */,
 				6CE9A1F81B8382BD00BE4004 /* !trafficLabel.png in Resources */,
 				6CE9A20A1B8382FE00BE4004 /* !hazard.png in Resources */,
 				6CE9A2081B8382FE00BE4004 /* !accident.png in Resources */,
 				5C1325AA198E2AB300CA49BE /* image.png in Resources */,
 				6CE9A1C71B83674F00BE4004 /* Podfile in Resources */,
+				C3EBDD8E1B92D586009237A8 /* EmanStory.storyboard in Resources */,
 				6CE9A2421B83A06000BE4004 /* street.png in Resources */,
 				6CE9A25F1B8474D200BE4004 /* cat.plist in Resources */,
 				6CE9A25C1B8474C300BE4004 /* placeDetails.plist in Resources */,
@@ -803,8 +802,9 @@
 				6CE9A2101B8382FE00BE4004 /* moderate.png in Resources */,
 				6CE9A20C1B8382FE00BE4004 /* !traffic.png in Resources */,
 				6CE9A25D1B8474C300BE4004 /* places.plist in Resources */,
-				6CEAC5041B81EB5900E63813 /* Team5.storyboard in Resources */,
+				C3EBDD7F1B92D56E009237A8 /* Main5_Report.storyboard in Resources */,
 				6CE9A1FD1B8382BD00BE4004 /* TrafficJamStandstill.png in Resources */,
+				C3EBDD741B92D529009237A8 /* Team5_m.storyboard in Resources */,
 				6CE9A2721B84B98300BE4004 /* Team2.storyboard in Resources */,
 				143615691B8F1A8F003FD356 /* Team3.storyboard in Resources */,
 			);
@@ -864,65 +864,70 @@
 				141092731B8CB76300CD3114 /* TypesTableViewController.swift in Sources */,
 				1436156B1B8F1AC7003FD356 /* TypesOfPOI.swift in Sources */,
 				6CE9A1C31B83641000BE4004 /* MainMapVC.swift in Sources */,
+				C3EBDD9B1B92D59A009237A8 /* DriversListVC.swift in Sources */,
 				6CE9A1D81B83825C00BE4004 /* commentOther.swift in Sources */,
 				141092771B8CB76300CD3114 /* MarkerInfoView.swift in Sources */,
+				C3EBDD941B92D586009237A8 /* DailyRouteViewController.swift in Sources */,
 				6CE9A2161B83835A00BE4004 /* accidentVC.swift in Sources */,
-				522B7EAA1B863609000A5678 /* SelectDriverReportVC.swift in Sources */,
 				6CE9A23B1B839F9100BE4004 /* UserProfileViewController.swift in Sources */,
 				6CE9A2321B839F9100BE4004 /* ChagePasswordViewController.swift in Sources */,
+				C3EBDD911B92D586009237A8 /* CommentLocation.swift in Sources */,
+				C3EBDD8F1B92D586009237A8 /* AddDailyRouteVC.swift in Sources */,
 				143615671B8F1A62003FD356 /* AddNewPOI.swift in Sources */,
+				C3EBDD771B92D529009237A8 /* UISettings.swift in Sources */,
 				141092751B8CB76300CD3114 /* GooglePlace.swift in Sources */,
 				6CE9A2511B8474A300BE4004 /* FileCopier.swift in Sources */,
 				6CE9A2501B8474A300BE4004 /* addNewPoint.swift in Sources */,
 				6CE9A23A1B839F9100BE4004 /* UserInfo.swift in Sources */,
+				C3EBDD921B92D586009237A8 /* DailyReportVC.swift in Sources */,
+				C3EBDD9D1B92D59A009237A8 /* DriverDetailsVC.swift in Sources */,
+				C3EBDD751B92D529009237A8 /* AppSettings.swift in Sources */,
 				5C13258B198E2A9A00CA49BE /* ViewController.swift in Sources */,
 				6CE9A1C01B8363D400BE4004 /* mainViewController.swift in Sources */,
-				6CE9A2691B848D6500BE4004 /* DriverDetailsViewController.swift in Sources */,
+				C3EBDD841B92D56E009237A8 /* ReadReport.swift in Sources */,
+				C3EBDD951B92D586009237A8 /* ModifyDailyRouteVC.swift in Sources */,
+				C3EBDD831B92D56E009237A8 /* MonitorReportVC.swift in Sources */,
 				6CE9A1E61B83828500BE4004 /* trafficVC.swift in Sources */,
-				6C4674571B8F45AF007582FB /* ModifyDailyRouteVC.swift in Sources */,
-				522B7EA11B863609000A5678 /* Data.swift in Sources */,
+				C3EBDD851B92D56E009237A8 /* SelectDriverReportVC.swift in Sources */,
+				C3EBDD931B92D586009237A8 /* DailyRouteHolder.swift in Sources */,
 				1429137D19D97A4F0025188A /* MyMenuTableViewController.swift in Sources */,
 				6CE9A2371B839F9100BE4004 /* LoginViewController.swift in Sources */,
 				6CE9A1E71B83828500BE4004 /* commentModerateTraffic.swift in Sources */,
 				143615711B8F1CC3003FD356 /* GetLocationVC.swift in Sources */,
 				6CE9A1DF1B83827700BE4004 /* commentOnRoad.swift in Sources */,
 				1436156D1B8F1AD4003FD356 /* SubTypesOfPOI.swift in Sources */,
-				6C4674521B8F45AF007582FB /* DailyRouteHolder.swift in Sources */,
+				C3EBDD801B92D56E009237A8 /* Data.swift in Sources */,
+				C3EBDD9A1B92D59A009237A8 /* AddDriverVC.swift in Sources */,
 				6CE9A1CE1B8381F000BE4004 /* LocationFilteration.swift in Sources */,
 				6CE9A1E91B83828500BE4004 /* commentStandstillTraffic.swift in Sources */,
 				5C6D6A271A7E26380047FE0D /* ViewController2.swift in Sources */,
-				6CE9A1B61B83311900BE4004 /* FileUtils.swift in Sources */,
 				1436156F1B8F1AF6003FD356 /* MoreInfoOfPOI.swift in Sources */,
 				6CE9A2171B83835A00BE4004 /* addAccidentsReport.swift in Sources */,
 				526014461B81CB1600498D3F /* MenuItem.swift in Sources */,
-				6CEAC5031B81EB5900E63813 /* UISettings.swift in Sources */,
 				6CE9A2361B839F9100BE4004 /* ImageConversion.swift in Sources */,
+				C3EBDD901B92D586009237A8 /* AllpListController.swift in Sources */,
 				6CE9A1D71B83825C00BE4004 /* addOtherReports.swift in Sources */,
 				6CE9A23D1B839FCB00BE4004 /* ConnectionManager.swift in Sources */,
 				141092761B8CB76300CD3114 /* PlaceMarker.swift in Sources */,
 				522B7E931B86253C000A5678 /* ENSideMenuNavigationController.swift in Sources */,
 				6CE9A2181B83835A00BE4004 /* commentMinorAccident.swift in Sources */,
+				C3EBDD731B92D529009237A8 /* FileUtils.swift in Sources */,
 				52ECD6D91B8643DE00718350 /* UIImage+AHKAdditions.m in Sources */,
 				6CE9A1D61B83825C00BE4004 /* otherVC.swift in Sources */,
 				6CE9A2591B8474A300BE4004 /* TypeView.swift in Sources */,
 				52ECD6D71B8643DE00718350 /* AHKActionSheet.m in Sources */,
 				6CE9A2561B8474A300BE4004 /* PointOfInterest.swift in Sources */,
 				6CE9A2521B8474A300BE4004 /* ManagePoints.swift in Sources */,
-				6CEAC5021B81EB5900E63813 /* AppSettings.swift in Sources */,
 				6CE9A2391B839F9100BE4004 /* SetNewPasswordViewController.swift in Sources */,
-				6C4674501B8F45AF007582FB /* CommentLocation.swift in Sources */,
 				6CE9A1E81B83828500BE4004 /* commentHeavyTraffic.swift in Sources */,
 				6CE9A1DD1B83827700BE4004 /* hazardVC.swift in Sources */,
 				52ECD6DA1B8643DE00718350 /* UIWindow+AHKAdditions.m in Sources */,
-				522B7EA91B863609000A5678 /* ReadReport.swift in Sources */,
 				6CE9A21B1B83849D00BE4004 /* ReportsMainVC.swift in Sources */,
 				6CE9A2331B839F9100BE4004 /* CodeVerificationViewController.swift in Sources */,
-				522B7EA81B863609000A5678 /* MonitorReportVC.swift in Sources */,
+				C3EBDD811B92D56E009237A8 /* DaysListTVC.swift in Sources */,
 				6CE9A1E01B83827700BE4004 /* commentConstruction.swift in Sources */,
 				1429139319DA9F4D0025188A /* MyNavigationController.swift in Sources */,
 				6CE9A2381B839F9100BE4004 /* RegisterViewController.swift in Sources */,
-				6C46744F1B8F45AF007582FB /* AllpListController.swift in Sources */,
-				6CE9A2631B848A1700BE4004 /* DriversListViewController.swift in Sources */,
 				6CE9A1C11B8363D400BE4004 /* MapTasks.swift in Sources */,
 				C3EBDD6B1B9242AC009237A8 /* KeyboardViewController.swift in Sources */,
 				141092741B8CB76300CD3114 /* GoogleDataProvider.swift in Sources */,
@@ -930,15 +935,10 @@
 				6CE9A26F1B84AE2900BE4004 /* ShowOnMapVC.swift in Sources */,
 				141092791B8CB76300CD3114 /* UIViewExtension.swift in Sources */,
 				6CE9A2551B8474A300BE4004 /* POIDataManager.swift in Sources */,
-				6C4674531B8F45AF007582FB /* DailyRouteViewController.swift in Sources */,
-				6C4674511B8F45AF007582FB /* DailyReportVC.swift in Sources */,
-				6C46745F1B8F61B1007582FB /* AddDriverVC.swift in Sources */,
 				6CE9A2351B839F9100BE4004 /* ForgetPasswordViewController.swift in Sources */,
 				5C132589198E2A9A00CA49BE /* AppDelegate.swift in Sources */,
-				6C46744E1B8F45AF007582FB /* AddDailyRouteVC.swift in Sources */,
 				141092721B8CB76300CD3114 /* MapViewController.swift in Sources */,
 				6CE9A1DE1B83827700BE4004 /* addHazardReport.swift in Sources */,
-				522B7EA21B863609000A5678 /* DaysListTVC.swift in Sources */,
 				6CE9A2191B83835A00BE4004 /* commentMajorAccident.swift in Sources */,
 				6CE9A2341B839F9100BE4004 /* EditUserProfileViewController.swift in Sources */,
 			);

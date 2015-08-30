@@ -35,7 +35,8 @@ class DaysListTVC:UITableViewController{
         var mainStoryboard:UIStoryboard = UIStoryboard(name: "Main5_Report", bundle: nil);
         var vc : MonitorReportVC = mainStoryboard.instantiateViewControllerWithIdentifier("MR") as! MonitorReportVC;
         vc.index = row;
-        self.navigationController?.pushViewController( vc, animated: true)
+        //self.navigationController?.pushViewController( vc, animated: true)
+        self.presentViewController(vc, animated: true, completion: {});
     }
     override func viewDidLoad(){
         super.viewDidLoad();

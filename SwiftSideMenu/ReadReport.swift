@@ -13,7 +13,9 @@ class ReadReport{
    
     func getDriverInfo()->NSDictionary{
          var list:NSDictionary = NSDictionary(contentsOfFile: path!)!;
-        return list.objectForKey("rajo") as! NSDictionary;
+        //return list.objectForKey("Kumar") as! NSDictionary;
+        
+        return list.objectForKey(SelectDriverReportVC.holder.driverName!) as! NSDictionary;
     }
     func getDays()->NSArray{
         var dayGetter:NSDictionary = self.getDriverInfo();

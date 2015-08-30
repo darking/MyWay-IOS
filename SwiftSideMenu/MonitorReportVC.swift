@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 class MonitorReportVC:UIViewController{
-    @IBOutlet weak var DriverNameTF: UITextField!
     
+    @IBOutlet weak var lblDriverName: UILabel!
     @IBOutlet weak var DayTF: UITextField!
     @IBOutlet weak var StartLTF: UITextField!
     @IBOutlet weak var EndLTF: UITextField!
@@ -25,7 +25,7 @@ class MonitorReportVC:UIViewController{
         StartLTF.text = dayValue.startlocation;
         EndLTF.text = dayValue.endlocation;
         SpeedTF.text = dayValue.speed;
-        DriverNameTF.text = SelectDriverReportVC.holder.driverName;
+        lblDriverName.text = SelectDriverReportVC.holder.driverName;
     }
     
     

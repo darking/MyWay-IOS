@@ -101,12 +101,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="VcB-x3-016">
-                                <rect key="frame" x="150" y="122" width="154" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="GLA-dL-AWY">
                                 <rect key="frame" x="150" y="331" width="154" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -126,7 +120,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GpU-iu-jwG">
-                                <rect key="frame" x="16" y="126" width="46" height="21"/>
+                                <rect key="frame" x="137" y="103" width="46" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -138,10 +132,10 @@
                     <navigationItem key="navigationItem" id="MBP-eM-N4T"/>
                     <connections>
                         <outlet property="DayTF" destination="MIB-QU-leh" id="aTB-iD-Ho7"/>
-                        <outlet property="DriverNameTF" destination="VcB-x3-016" id="cye-Kw-v4f"/>
                         <outlet property="EndLTF" destination="GLA-dL-AWY" id="R3E-8I-Z0O"/>
                         <outlet property="SpeedTF" destination="AUN-2m-GQx" id="mM5-hq-9yS"/>
                         <outlet property="StartLTF" destination="70u-w9-hzl" id="jtr-I6-7Uf"/>
+                        <outlet property="lblDriverName" destination="GpU-iu-jwG" id="197-Cq-cRW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L29-Pl-Ti8" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -10,6 +10,8 @@
 	<string>SwiftSideMenu</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>E8B3778570FD88A94456CE991B35D84F81EDC95E</key>
+		<string>https://github.com/darking/MyWay-IOS</string>
 		<key>F2ED4528A64DB14287802483DFDB9B02F401A643</key>
 		<string>https://github.com/BaderABehbehani/MyWay-IOS.git</string>
 	</dict>
@@ -17,15 +19,17 @@
 	<string>SwiftSideMenu.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F2ED4528A64DB14287802483DFDB9B02F401A643</key>
+		<key>E8B3778570FD88A94456CE991B35D84F81EDC95E</key>
 		<string>..</string>
+		<key>F2ED4528A64DB14287802483DFDB9B02F401A643</key>
+		<string>../../MyWay-IOS</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/BaderABehbehani/MyWay-IOS.git</string>
+	<string>https://github.com/darking/MyWay-IOS</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F2ED4528A64DB14287802483DFDB9B02F401A643</string>
+	<string>E8B3778570FD88A94456CE991B35D84F81EDC95E</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>F2ED4528A64DB14287802483DFDB9B02F401A643</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MyWay-IOS</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E8B3778570FD88A94456CE991B35D84F81EDC95E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MyWay-IOS-adnan</string>
 		</dict>
 	</array>
 </dict>
