@@ -13,6 +13,8 @@ import CoreLocation
 class accidentVC:ViewController{
     
     
+    private var isKeyboardVisible = false
+    
     @IBOutlet weak var minorLable: UILabel!
     
     @IBOutlet weak var majorLable: UILabel!
@@ -111,6 +113,9 @@ class accidentVC:ViewController{
         
         locationManager.startUpdatingLocation();
         println("current location is \(currentLocation.description)");
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
@@ -129,6 +134,31 @@ class accidentVC:ViewController{
     override func viewDidAppear(animated: Bool) {
         locationManager.startUpdatingLocation();
     }
+    
+    func keyboardWillShow(sender: NSNotification) {
+        
+        if isKeyboardVisible == false {
+            
+            self.view.frame.origin.y -= 80
+            
+            isKeyboardVisible = true
+        }
+        
+        
+    }
+    
+    func keyboardWillHide(sender: NSNotification) {
+        
+        if isKeyboardVisible == true {
+            
+            self.view.frame.origin.y += 80
+            
+            isKeyboardVisible = false
+            
+        }
+        
+    }
+
 
 }
 

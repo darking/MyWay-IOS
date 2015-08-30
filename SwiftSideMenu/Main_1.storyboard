@@ -7,7 +7,7 @@
         <!--SwiftSideMenu-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="mainVC" id="vXZ-lx-hvc" customClass="mainViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainVC" id="vXZ-lx-hvc" customClass="mainViewController" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jdn-4k-G1C"/>
                         <viewControllerLayoutGuide type="bottom" id="UU7-wS-6yf"/>
@@ -24,7 +24,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8c-JT-TqB">
                                 <rect key="frame" x="97" y="533" width="127" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Show ActionSheet">
+                                <state key="normal" title="Menu">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>

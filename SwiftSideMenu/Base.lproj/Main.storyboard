@@ -7,7 +7,7 @@
         <!--SwiftSideMenu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="mainVC" id="BYZ-38-t0r" customClass="mainViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainVC" id="BYZ-38-t0r" customClass="mainViewController" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -24,7 +24,8 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yP2-nZ-F3R">
                                 <rect key="frame" x="97" y="525" width="127" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Show ActionSheet">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Menu">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -53,7 +54,7 @@
         <!--Item-->
         <scene sceneID="cvg-r3-oiY">
             <objects>
-                <navigationController id="xKr-44-F3h" customClass="MyNavigationController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="xKr-44-F3h" customClass="MyNavigationController" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="qnV-qS-iv7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="j84-05-NcZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

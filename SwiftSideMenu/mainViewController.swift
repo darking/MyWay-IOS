@@ -376,7 +376,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
         
         
-        actionSheet.addButtonWithTitle("Go to address", type: AHKActionSheetButtonType.Default, handler:  { (AHKActionSheet) -> Void in
+        actionSheet.addButtonWithTitle("Get Direction from Current Location", type: AHKActionSheetButtonType.Default, handler:  { (AHKActionSheet) -> Void in
             
             let addressAlert = UIAlertController(title: "Create Route", message: "Connect locations with a route:", preferredStyle: UIAlertControllerStyle.Alert)
             
@@ -418,7 +418,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         })
         
         
-        actionSheet.addButtonWithTitle("From to address", type: AHKActionSheetButtonType.Default, handler:  { (AHKActionSheet) -> Void in
+        actionSheet.addButtonWithTitle("Get Direction", type: AHKActionSheetButtonType.Default, handler:  { (AHKActionSheet) -> Void in
             
             let addressAlert = UIAlertController(title: "Create Route", message: "Connect locations with a route:", preferredStyle: UIAlertControllerStyle.Alert)
             
@@ -467,39 +467,39 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             
         }
         
-        actionSheet.addButtonWithTitle("On/Off Favourite", type: AHKActionSheetButtonType.Default, handler:  { (AHKActionSheet) -> Void in
-            
-
-            var myDoubLat = 29.2786584
-            var myDoubLng = 48.0681507
-            
-            
-            var myCoor:CLLocationCoordinate2D = CLLocationCoordinate2DMake(myDoubLat, myDoubLng)
-            
-            self.viewMap.camera = GMSCameraPosition.cameraWithTarget(myCoor, zoom: 12.0)
-            
-            // originMarker = GMSMarker(position: self.mapTasks.originCoordinate)
-            self.originMarker = GMSMarker(position: myCoor)
-            self.originMarker.map = self.viewMap
-            self.originMarker.icon = GMSMarker.markerImageWithColor(UIColor.yellowColor())
-            self.originMarker.title = "My Fav"
-
-           // println("did enter showFav()")
-            
-            if self.waypointsArray.count > 0 {
-                for waypoint in self.waypointsArray {
-                    let lat: Double = (waypoint.componentsSeparatedByString(",")[0] as NSString).doubleValue
-                    let lng: Double = (waypoint.componentsSeparatedByString(",")[1] as NSString).doubleValue
-                    
-                    let marker = GMSMarker(position: CLLocationCoordinate2DMake(lat, lng))
-                    marker.map = self.viewMap
-                    marker.icon = GMSMarker.markerImageWithColor(UIColor.purpleColor())
-                    
-                    self.markersArray.append(marker)
-                }
-            }
-            
-        })
+//        actionSheet.addButtonWithTitle("On/Off Favourite", type: AHKActionSheetButtonType.Default, handler:  { (AHKActionSheet) -> Void in
+//            
+//
+//            var myDoubLat = 29.2786584
+//            var myDoubLng = 48.0681507
+//            
+//            
+//            var myCoor:CLLocationCoordinate2D = CLLocationCoordinate2DMake(myDoubLat, myDoubLng)
+//            
+//            self.viewMap.camera = GMSCameraPosition.cameraWithTarget(myCoor, zoom: 12.0)
+//            
+//            // originMarker = GMSMarker(position: self.mapTasks.originCoordinate)
+//            self.originMarker = GMSMarker(position: myCoor)
+//            self.originMarker.map = self.viewMap
+//            self.originMarker.icon = GMSMarker.markerImageWithColor(UIColor.yellowColor())
+//            self.originMarker.title = "My Fav"
+//
+//           // println("did enter showFav()")
+//            
+//            if self.waypointsArray.count > 0 {
+//                for waypoint in self.waypointsArray {
+//                    let lat: Double = (waypoint.componentsSeparatedByString(",")[0] as NSString).doubleValue
+//                    let lng: Double = (waypoint.componentsSeparatedByString(",")[1] as NSString).doubleValue
+//                    
+//                    let marker = GMSMarker(position: CLLocationCoordinate2DMake(lat, lng))
+//                    marker.map = self.viewMap
+//                    marker.icon = GMSMarker.markerImageWithColor(UIColor.purpleColor())
+//                    
+//                    self.markersArray.append(marker)
+//                }
+//            }
+//            
+//        })
         
         actionSheet.addButtonWithTitle("On/Off Traffic", type: AHKActionSheetButtonType.Default, handler:  { (AHKActionSheet) -> Void in
             
