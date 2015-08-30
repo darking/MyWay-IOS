@@ -8,10 +8,13 @@
 
 
 import UIKit
-class DaysListTVC:UITableViewController{
+class DaysListTVC:UITableViewController, ENSideMenuDelegate {
     var read:ReadReport = ReadReport();
     var daysArray:NSArray = [];
     
+    @IBAction func menuButton(sender: AnyObject) {
+        toggleSideMenuView();
+    }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -36,6 +39,7 @@ class DaysListTVC:UITableViewController{
         var vc : MonitorReportVC = mainStoryboard.instantiateViewControllerWithIdentifier("MR") as! MonitorReportVC;
         vc.index = row;
         //self.navigationController?.pushViewController( vc, animated: true)
+        
         self.presentViewController(vc, animated: true, completion: {});
     }
     override func viewDidLoad(){
