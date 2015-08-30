@@ -8,8 +8,11 @@
 
 import Foundation
 import UIKit
-class MonitorReportVC:UIViewController{
+class MonitorReportVC:UIViewController, ENSideMenuDelegate{
     
+    @IBAction func toggle(sender: AnyObject) {
+        toggleSideMenuView();
+    }
     @IBOutlet weak var lblDriverName: UILabel!
     @IBOutlet weak var DayTF: UITextField!
     @IBOutlet weak var StartLTF: UITextField!
@@ -18,7 +21,10 @@ class MonitorReportVC:UIViewController{
     var index = 0;
     var read:ReadReport = ReadReport();
     var daysArray:NSArray = [];
+    //Add Back button
+    var backButton:UIBarButtonItem = UIBarButtonItem();
     override func viewDidLoad() {
+//        self.backButton = UIBarButtonItem(title: "Back", style: , target: <#AnyObject?#>, action: "back")
         daysArray = read.getDays();
         var dayValue:Data = daysArray.objectAtIndex(index) as! Data;
         DayTF.text = dayValue.day;
@@ -27,7 +33,9 @@ class MonitorReportVC:UIViewController{
         SpeedTF.text = dayValue.speed;
         lblDriverName.text = SelectDriverReportVC.holder.driverName;
     }
-    
+    func back() {
+//        var goBack:DaysListTVC = UIStoryboard(name: "", bundle: nil)
+    }
     
     
 }
