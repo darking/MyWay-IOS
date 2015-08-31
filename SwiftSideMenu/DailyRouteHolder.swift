@@ -24,7 +24,7 @@ class DailyRouteHolder{
         self.startDate = values.valueForKey("startDate") as! String;
         self.endDate = values.valueForKey("endDate")as! String;
         self.fromLocation = values.valueForKey("fromLocation")as! String;
-//        self.toLocation = values.valueForKey("toLocation") as String;
+        self.toLocation = values.valueForKey("toLocation") as! String;
     }
     
     init(){

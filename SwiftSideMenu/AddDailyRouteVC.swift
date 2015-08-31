@@ -44,10 +44,10 @@ class AddDailyRouteVC{
         let newSetting = NSUserDefaults.standardUserDefaults();
         let myUtil3:FileUtils = FileUtils(fileName: fileName33);
         let filePath:String = myUtil3.docsPath();
-       println(filePath);
         myUtil3.createIfNotExistUnderDocs();
         var list:NSMutableArray = NSMutableArray(contentsOfFile: filePath)!;
-        
+        //prints it a lot of times to be checked later
+//         println(filePath);
         return list;
     }
 
