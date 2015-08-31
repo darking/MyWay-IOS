@@ -12,6 +12,8 @@ import CoreLocation
 
 class DailyReportVC:UIViewController{
     
+    private var isKeyboardVisible = false
+    
     @IBOutlet weak var DailyRouteNameTF: UITextField!
     @IBOutlet weak var DatePiker: UIDatePicker!
     @IBOutlet weak var StartLocationTF: UITextField!
@@ -96,6 +98,9 @@ class DailyReportVC:UIViewController{
     
     
     DatePiker.addTarget(self, action: Selector("dataPickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+    
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
 }
     
 func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!){
@@ -113,4 +118,36 @@ override func viewDidDisappear(animated: Bool) {
 override func viewDidAppear(animated: Bool) {
     locationManager.startUpdatingLocation();
 }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+        
+    }
+    
+    func keyboardWillShow(sender: NSNotification) {
+        
+        if isKeyboardVisible == false {
+            
+            self.view.frame.origin.y -= 220
+            
+            isKeyboardVisible = true
+        }
+        
+        
+    }
+    
+    func keyboardWillHide(sender: NSNotification) {
+        
+        if isKeyboardVisible == true {
+            
+            self.view.frame.origin.y += 220
+            
+            isKeyboardVisible = false
+            
+        }
+        
+    }
+    
 }

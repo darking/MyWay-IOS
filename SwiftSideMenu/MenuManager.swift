@@ -12,7 +12,7 @@ class MenuManager {
     var item:MenuItem = MenuItem();
     func reloadPublicMenu() {
         item = MenuItem();
-        item.itemTitle = "Log In";
+        item.itemTitle = "Login";
         item.itemVCIdentifier = "LogIn";
         item.storyBoardName = "Team2";
         MenuItem.all.menuItems.addObject(item);
@@ -45,7 +45,7 @@ class MenuManager {
         MenuItem.all.menuItems.addObject(item);
         
         item = MenuItem();
-        item.itemTitle = "Reports";
+        item.itemTitle = "Post Report";
         item.itemVCIdentifier = "Report";
         item.storyBoardName = "Main_4";
         MenuItem.all.menuItems.addObject(item);

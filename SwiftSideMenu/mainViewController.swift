@@ -332,7 +332,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
 //            NSLog(@"Test tapped");
 //        }];
 //        [actionSheet show];
-        self.title = "My Way";
+        self.title = "MyWay";
 
         actionSheet.addButtonWithTitle("Find Address", type: AHKActionSheetButtonType.Default, handler:{ (AHKActionSheet) -> Void in
             
@@ -500,7 +500,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
 //            }
 //            
 //        })
-        
+                
         actionSheet.addButtonWithTitle("On/Off Traffic", type: AHKActionSheetButtonType.Default, handler:  { (AHKActionSheet) -> Void in
             
             
@@ -875,7 +875,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         locationMarker.opacity = 0.75
         
         locationMarker.flat = true
-        locationMarker.snippet = "The best place on earth."
+        //locationMarker.snippet = ""
     }
     
     //////////
