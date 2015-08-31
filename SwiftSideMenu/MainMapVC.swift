@@ -257,7 +257,7 @@ class MainMapVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate
         locationMarker.opacity = 0.75
         
         locationMarker.flat = true
-        locationMarker.snippet = "The best place on earth."
+        //locationMarker.snippet = "The best place on earth."
     }
     
     
