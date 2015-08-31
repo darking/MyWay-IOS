@@ -12,7 +12,7 @@ class MenuManager {
     var item:MenuItem = MenuItem();
     func reloadPublicMenu() {
         item = MenuItem();
-        item.itemTitle = "Log In";
+        item.itemTitle = "Login";
         item.itemVCIdentifier = "LogIn";
         item.storyBoardName = "Team2";
         MenuItem.all.menuItems.addObject(item);

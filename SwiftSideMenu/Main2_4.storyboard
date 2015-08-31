@@ -26,7 +26,7 @@
         <!--All Comments-->
         <scene sceneID="MMT-FQ-Cl2">
             <objects>
-                <tableViewController storyboardIdentifier="DetailsVC" id="ErU-IG-vUA" customClass="TableVc" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DetailsVC" id="ErU-IG-vUA" customClass="TableVc" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="KsL-Kr-hHJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,7 +56,7 @@
         <!--Road Reports-->
         <scene sceneID="Ab2-xr-4JS">
             <objects>
-                <viewController storyboardIdentifier="Report" title="Road Reports" id="fER-EW-fF5" customClass="ReportsMainVC" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Report" title="Road Reports" id="fER-EW-fF5" customClass="ReportsMainVC" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bfU-Bw-rvA"/>
                         <viewControllerLayoutGuide type="bottom" id="oWa-UR-Upa"/>
@@ -152,7 +152,7 @@
         <!--Accident-->
         <scene sceneID="wKq-U2-ae6">
             <objects>
-                <viewController id="GFU-3c-g6B" customClass="accidentVC" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GFU-3c-g6B" customClass="accidentVC" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wYu-iX-Ya1"/>
                         <viewControllerLayoutGuide type="bottom" id="oZP-G0-uJf"/>
@@ -278,7 +278,7 @@
         <!--Hazard-->
         <scene sceneID="j02-BW-Nom">
             <objects>
-                <viewController id="9jK-jN-88h" customClass="hazardVC" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9jK-jN-88h" customClass="hazardVC" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NO9-sh-14F"/>
                         <viewControllerLayoutGuide type="bottom" id="2xb-LI-AYj"/>
@@ -473,7 +473,7 @@
         <!--Other-->
         <scene sceneID="Oth-Lu-ivY">
             <objects>
-                <viewController id="a2b-wt-yBJ" customClass="otherVC" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="a2b-wt-yBJ" customClass="otherVC" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nff-YW-u30"/>
                         <viewControllerLayoutGuide type="bottom" id="Sby-w9-prv"/>
@@ -559,7 +559,7 @@
         <!--Hazard-->
         <scene sceneID="BpI-TB-7Ub">
             <objects>
-                <tableViewController id="ZCa-2b-1SR" customClass="commentConstruction" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ZCa-2b-1SR" customClass="commentConstruction" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="KY0-a7-3Kl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -589,7 +589,7 @@
         <!--Comment Other-->
         <scene sceneID="ROC-ux-v08">
             <objects>
-                <tableViewController id="Ak6-NZ-Nfl" customClass="commentOther" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Ak6-NZ-Nfl" customClass="commentOther" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="55D-4f-Dqz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -619,7 +619,7 @@
         <!--Accident-->
         <scene sceneID="omS-Kw-Puv">
             <objects>
-                <tableViewController id="nvm-Vf-4lR" customClass="commentMinorAccident" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="nvm-Vf-4lR" customClass="commentMinorAccident" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="SAj-Q4-rEF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -649,7 +649,7 @@
         <!--Traffic Jam-->
         <scene sceneID="uRZ-Q0-OII">
             <objects>
-                <tableViewController id="rV4-UJ-1ro" customClass="commentModerateTraffic" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="rV4-UJ-1ro" customClass="commentModerateTraffic" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="w22-gA-Zs7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -679,7 +679,7 @@
         <!--Traffic Jam-->
         <scene sceneID="k6A-hp-Gcs">
             <objects>
-                <viewController id="elh-9W-J0Q" customClass="trafficVC" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="elh-9W-J0Q" customClass="trafficVC" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HQO-97-SIH"/>
                         <viewControllerLayoutGuide type="bottom" id="9sf-RS-vPn"/>

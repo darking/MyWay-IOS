@@ -500,7 +500,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
 //            }
 //            
 //        })
-        
+                
         actionSheet.addButtonWithTitle("On/Off Traffic", type: AHKActionSheetButtonType.Default, handler:  { (AHKActionSheet) -> Void in
             
             
