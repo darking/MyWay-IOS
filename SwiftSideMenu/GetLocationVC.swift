@@ -195,5 +195,13 @@ class GetLocationVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDele
         }
     }
     
+  func getCurrentLocation() -> String {
+  
+         let myLoc: String = "\(self.locationManager.location.coordinate.latitude),\(self.locationManager.location.coordinate.longitude)"
+    
+    println("my current location is: \(myLoc)")
+    
+        return myLoc
+    }
     
 }
