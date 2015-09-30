@@ -9,7 +9,35 @@
 
 import UIKit
 import GoogleMaps
- 
+//import Reachability
+import SystemConfiguration
+
+
+public class Reachability {
+    
+    class func isConnectedToNetwork() -> Bool {
+        
+        var zeroAddress = sockaddr_in(sin_len: 0, sin_family: 0, sin_port: 0, sin_addr: in_addr(s_addr: 0), sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))
+        zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
+        zeroAddress.sin_family = sa_family_t(AF_INET)
+        
+        let defaultRouteReachability = withUnsafePointer(&zeroAddress) {
+            SCNetworkReachabilityCreateWithAddress(nil, UnsafePointer($0)).takeRetainedValue()
+        }
+        
+        var flags: SCNetworkReachabilityFlags = 0
+        if SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags) == 0 {
+            return false
+        }
+        
+        let isReachable = (flags & UInt32(kSCNetworkFlagsReachable)) != 0
+        let needsConnection = (flags & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
+        
+        return isReachable && !needsConnection
+    }
+    
+}
+
 
 class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate, ENSideMenuDelegate {
 
@@ -325,37 +353,27 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     
    
     
-    class func hasConnectivity() -> Bool {
-        let reachability: Reachability = Reachability.reachabilityForInternetConnection()
-        let networkStatus: Int = reachability.currentReachabilityStatus().rawValue
-        return networkStatus != 0
-    }
+//    class func hasConnectivity() -> Bool {
+//        let reachability: Reachability = Reachability.reachabilityForInternetConnection()
+//        let networkStatus: Int = reachability.currentReachabilityStatus().rawValue
+//        return networkStatus != 0
+//    }
     
     //VIEW DID LOAD()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-<<<<<<< HEAD
-//        Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
-//        NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
-//        if (networkStatus == NotReachable) {
-//            NSLog(@"There IS NO internet connection");
-//        } else {
-//            NSLog(@"There IS internet connection");
-//        }
-
+        if !Reachability.isConnectedToNetwork(){
+            println("Please Connect to Internet")
+            
+            var alert = UIAlertController(title: "Turn On WiFi", message: "Please Connect to Internet", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+        }
         
-        
-        
-        self.title = "My Way";
-=======
-//        [actionSheet addButtonWithTitle:@"Test" type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *as) {
-//            NSLog(@"Test tapped");
-//        }];
-//        [actionSheet show];
         self.title = "MyWay";
->>>>>>> 45d071bec6098f55e4fdadf7e147b4edeb4970a5
 
         actionSheet.addButtonWithTitle("Find Address", type: AHKActionSheetButtonType.Default, handler:{ (AHKActionSheet) -> Void in
             

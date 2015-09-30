@@ -26,6 +26,7 @@
 		1436156F1B8F1AF6003FD356 /* MoreInfoOfPOI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1436156E1B8F1AF6003FD356 /* MoreInfoOfPOI.swift */; };
 		143615711B8F1CC3003FD356 /* GetLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143615701B8F1CC3003FD356 /* GetLocationVC.swift */; };
 		14674B711BBBCFEE00D20067 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14674B701BBBCFEE00D20067 /* SystemConfiguration.framework */; };
+		32191EFE8EFCE992E9D9178C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4E2AEDC55097B276774D67 /* libPods.a */; };
 		522B7E921B86253C000A5678 /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E901B86253C000A5678 /* ENSideMenu.swift */; };
 		522B7E931B86253C000A5678 /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E911B86253C000A5678 /* ENSideMenuNavigationController.swift */; };
 		526014461B81CB1600498D3F /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526014451B81CB1500498D3F /* MenuItem.swift */; };
@@ -136,7 +137,6 @@
 		C3EBDD9B1B92D59A009237A8 /* DriversListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD971B92D59A009237A8 /* DriversListVC.swift */; };
 		C3EBDD9C1B92D59A009237A8 /* drivers.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3EBDD981B92D59A009237A8 /* drivers.plist */; };
 		C3EBDD9D1B92D59A009237A8 /* DriverDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD991B92D59A009237A8 /* DriverDetailsVC.swift */; };
-		F64995383B682C2C1458FDEF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ECB30476522E7E3E69E4B3C /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,7 +169,7 @@
 		1436156E1B8F1AF6003FD356 /* MoreInfoOfPOI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInfoOfPOI.swift; sourceTree = "<group>"; };
 		143615701B8F1CC3003FD356 /* GetLocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLocationVC.swift; sourceTree = "<group>"; };
 		14674B701BBBCFEE00D20067 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		2AC871D8CEADD3638C5B3256 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A4E2AEDC55097B276774D67 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		46841B45243E82D10FE5A5F3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		522B7E901B86253C000A5678 /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ENSideMenu.swift; path = SwiftSideMenu/ENSideMenu.swift; sourceTree = SOURCE_ROOT; };
 		522B7E911B86253C000A5678 /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ENSideMenuNavigationController.swift; path = SwiftSideMenu/ENSideMenuNavigationController.swift; sourceTree = SOURCE_ROOT; };
@@ -266,7 +266,6 @@
 		6CE9A26E1B84AE2900BE4004 /* reqLocaiton.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = reqLocaiton.storyboard; sourceTree = "<group>"; };
 		6CE9A2711B84B98300BE4004 /* Team2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Team2.storyboard; sourceTree = "<group>"; };
 		6CE9A2731B84D25C00BE4004 /* MenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
-		6ECB30476522E7E3E69E4B3C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3EBDD681B921E86009237A8 /* Main2_4.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main2_4.storyboard; sourceTree = "<group>"; };
 		C3EBDD6A1B9242AC009237A8 /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		C3EBDD6C1B924798009237A8 /* keyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = keyboard.storyboard; sourceTree = "<group>"; };
@@ -300,7 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14674B711BBBCFEE00D20067 /* SystemConfiguration.framework in Frameworks */,
-				81C33F7ACAF72838C8D5309F /* libPods.a in Frameworks */,
+				32191EFE8EFCE992E9D9178C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,7 +672,7 @@
 			isa = PBXGroup;
 			children = (
 				14674B701BBBCFEE00D20067 /* SystemConfiguration.framework */,
-				2AC871D8CEADD3638C5B3256 /* libPods.a */,
+				3A4E2AEDC55097B276774D67 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
