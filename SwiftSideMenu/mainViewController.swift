@@ -676,6 +676,8 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
         
       //  randomPOI()
+        
+        GetLocationVC().getCurrentLocation()
     }
     //./VIEW DID LOAD()
     
