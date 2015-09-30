@@ -15,6 +15,28 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
     }
     var userName = ""
     var drivers:NSArray = NSArray();
+    @IBAction func addDriver(sender: AnyObject) {
+        var addUserAlert:UIAlertController = UIAlertController(title: "Add Driver", message: "Please specify driver username/email", preferredStyle: .Alert);
+        //Create and add the Cancel action
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
+            //Do some stuff
+        }
+        addUserAlert.addAction(cancelAction)
+        //Create and an option action
+        let sendToDriver: UIAlertAction = UIAlertAction(title: "Submit", style: .Default) { action -> Void in
+            //Do some other stuff
+        }
+        addUserAlert.addAction(sendToDriver)
+        //Add a text field
+        addUserAlert.addTextFieldWithConfigurationHandler { textField -> Void in
+            //TextField configuration
+            textField.textColor = UIColor.blueColor()
+        }
+        
+        //Present the AlertController
+        self.presentViewController(addUserAlert, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
