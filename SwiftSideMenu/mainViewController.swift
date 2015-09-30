@@ -9,7 +9,7 @@
 
 import UIKit
 import GoogleMaps
-
+ 
 
 class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate, ENSideMenuDelegate {
 
@@ -323,15 +323,30 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
     }
     
+   
+    
+    class func hasConnectivity() -> Bool {
+        let reachability: Reachability = Reachability.reachabilityForInternetConnection()
+        let networkStatus: Int = reachability.currentReachabilityStatus().rawValue
+        return networkStatus != 0
+    }
+    
     //VIEW DID LOAD()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-//        [actionSheet addButtonWithTitle:@"Test" type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *as) {
-//            NSLog(@"Test tapped");
-//        }];
-//        [actionSheet show];
+//        Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
+//        NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
+//        if (networkStatus == NotReachable) {
+//            NSLog(@"There IS NO internet connection");
+//        } else {
+//            NSLog(@"There IS internet connection");
+//        }
+
+        
+        
+        
         self.title = "My Way";
 
         actionSheet.addButtonWithTitle("Find Address", type: AHKActionSheetButtonType.Default, handler:{ (AHKActionSheet) -> Void in
@@ -632,6 +647,15 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     }
     //./VIEW DID LOAD()
     
+    //Check if location is turned on
+    
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+        println("please turn on Location")
+    }
+    
+    
+    
+    //.///Check if location is turned on
     
     func mapView(mapView: GMSMapView!, didChangeCameraPosition position: GMSCameraPosition!) {
         

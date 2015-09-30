@@ -25,6 +25,7 @@
 		1436156D1B8F1AD4003FD356 /* SubTypesOfPOI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1436156C1B8F1AD4003FD356 /* SubTypesOfPOI.swift */; };
 		1436156F1B8F1AF6003FD356 /* MoreInfoOfPOI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1436156E1B8F1AF6003FD356 /* MoreInfoOfPOI.swift */; };
 		143615711B8F1CC3003FD356 /* GetLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143615701B8F1CC3003FD356 /* GetLocationVC.swift */; };
+		14674B711BBBCFEE00D20067 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14674B701BBBCFEE00D20067 /* SystemConfiguration.framework */; };
 		522B7E921B86253C000A5678 /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E901B86253C000A5678 /* ENSideMenu.swift */; };
 		522B7E931B86253C000A5678 /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E911B86253C000A5678 /* ENSideMenuNavigationController.swift */; };
 		522B7EA01B863609000A5678 /* AddMonitorReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E951B863609000A5678 /* AddMonitorReport.swift */; };
@@ -171,6 +172,7 @@
 		1436156C1B8F1AD4003FD356 /* SubTypesOfPOI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubTypesOfPOI.swift; sourceTree = "<group>"; };
 		1436156E1B8F1AF6003FD356 /* MoreInfoOfPOI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInfoOfPOI.swift; sourceTree = "<group>"; };
 		143615701B8F1CC3003FD356 /* GetLocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLocationVC.swift; sourceTree = "<group>"; };
+		14674B701BBBCFEE00D20067 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2AC871D8CEADD3638C5B3256 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		46841B45243E82D10FE5A5F3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		522B7E901B86253C000A5678 /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ENSideMenu.swift; path = SwiftSideMenu/ENSideMenu.swift; sourceTree = SOURCE_ROOT; };
@@ -304,6 +306,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14674B711BBBCFEE00D20067 /* SystemConfiguration.framework in Frameworks */,
 				81C33F7ACAF72838C8D5309F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -664,6 +667,7 @@
 		98773EA61C9F326D030ED433 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				14674B701BBBCFEE00D20067 /* SystemConfiguration.framework */,
 				2AC871D8CEADD3638C5B3256 /* libPods.a */,
 			);
 			name = Frameworks;
