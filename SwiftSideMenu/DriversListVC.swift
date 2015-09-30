@@ -30,7 +30,7 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
         //Add a text field
         addUserAlert.addTextFieldWithConfigurationHandler { textField -> Void in
             //TextField configuration
-            textField.textColor = UIColor.blueColor()
+            //textField.textColor = UIColor.blueColor()
         }
         
         //Present the AlertController
@@ -47,6 +47,8 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
 //        let path = NSBundle.mainBundle().pathForResource("drivers", ofType: "plist")
 //        let data = NSDictionary(contentsOfFile: path!)!
 //        drivers = data[userName] as! [String]
+        var nib = UINib(nibName: "DriverCustomCell", bundle: nil);
+        tableView.registerNib(nib, forCellReuseIdentifier: "driverCustomCell");
     }
     func read()->NSMutableArray{
         
@@ -67,13 +69,20 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-//        let cell = tableView.dequeueReusableCellWithIdentifier("c", forIndexPath: indexPath) as! UITableViewCell
-        let cell:UITableViewCell = UITableViewCell();
+//        let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("driverCustomCell") as! UITableViewCell
+        //let cell:UITableViewCell = UITableViewCell();
+        //let cell:DriverCustomCell = DriverCustomCell();
+        var cell:DriverCustomCell = self.tableView.dequeueReusableCellWithIdentifier("driverCustomCell") as! DriverCustomCell;
         if drivers.count == 0 {
             cell.textLabel?.text = "No drivers found";
         }
         else {
-            cell.textLabel?.text = (drivers[indexPath.row] as! String);
+            //cell.textLabel?.text = (drivers[indexPath.row] as! String);
+            cell.driverName?.text = "AdnanQaz";
+            cell.driverName?.sizeToFit();
+            cell.driverUsername?.text = "@AdnanQaz";
+            cell.driverUsername?.sizeToFit();
+            cell.driverImage?.image = UIImage(named: "chauffer.png");
         }
         return cell;
     }
