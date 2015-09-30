@@ -3,7 +3,7 @@
 //  IOSProject
 //
 //  Created by trn22 on 8/20/15.
-//  Copyright (c) 2015 mashael. All rights reserved.
+//  Copyright (c) 2015. All rights reserved.
 //
 
 import Foundation
@@ -16,7 +16,7 @@ class SelectDriverReportVC:UIViewController, ENSideMenuDelegate{
     var daysArray:NSArray = [];
     var index = 0;
     struct holder {
-        static var driverName:String = "";
+        static var driverName:String?;
     }
     
     @IBAction func toggleAction(sender: AnyObject) {

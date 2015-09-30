@@ -11,6 +11,8 @@ import UIKit
 import CoreLocation
 class trafficVC:ViewController{
     
+    private var isKeyboardVisible = false
+    
     
     @IBOutlet weak var moderateLable: UILabel!
     
@@ -132,7 +134,8 @@ class trafficVC:ViewController{
         moderateLable.text="";
         heavyLable.text="";
         standLable.text="";
-        locationManager.requestAlwaysAuthorization();
+        //locationManager.requestAlwaysAuthorization();
+        locationManager.requestWhenInUseAuthorization()
         locationManager.location;
         NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.latitude.description, forKey: "lat");
         NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.longitude.description, forKey: "lon");
@@ -147,7 +150,8 @@ class trafficVC:ViewController{
         var dis=9.0;
         lo.filterLocations(objectsArray, currentLocation: currentLocation, distance: dis)
         
-        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
@@ -165,4 +169,29 @@ class trafficVC:ViewController{
     override func viewDidAppear(animated: Bool) {
         locationManager.startUpdatingLocation();
     }
+    
+    func keyboardWillShow(sender: NSNotification) {
+        
+        if isKeyboardVisible == false {
+            
+            self.view.frame.origin.y -= 80
+            
+            isKeyboardVisible = true
+        }
+        
+        
+    }
+    
+    func keyboardWillHide(sender: NSNotification) {
+        
+        if isKeyboardVisible == true {
+            
+            self.view.frame.origin.y += 80
+            
+            isKeyboardVisible = false
+            
+        }
+        
+    }
+
 }

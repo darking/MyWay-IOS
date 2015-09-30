@@ -9,8 +9,12 @@
 import Foundation
 import UIKit
 import CoreLocation
-class hazardVC:ViewController{
+
+
+
+class hazardVC: UIViewController ,UITextFieldDelegate {
     
+    private var isKeyboardVisible = false
     
     @IBOutlet weak var constructionLable: UILabel!
     
@@ -23,6 +27,122 @@ class hazardVC:ViewController{
     
     var currentLocation:CLLocation = CLLocation();
     let settings = NSUserDefaults.standardUserDefaults();
+
+  //***********************
+    
+     @IBOutlet weak var scrollView: UIScrollView!
+    
+//    var scrollView: UIScrollView!
+    
+//    func textViewDidBeginEditing(textView: UITextView) {
+//        self.scrollView.setContentOffset(CGPointMake(0, textView.frame.origin.y-75), animated: true)
+//    }
+//    
+//    func textViewDidEndEditing(textView: UITextView) {
+//        self.scrollView.setContentOffset(CGPointMake(0, -textView.frame.origin.y+75), animated: true)
+//    }
+    
+    
+//    func textFieldShouldReturn(textField: UITextField) -> Bool {
+//        commentHazard.resignFirstResponder()
+//        return true
+//    }
+//    
+//    func handleKeyboardWillShow(notification: NSNotification){
+//        
+//        let userInfo = notification.userInfo
+//        
+//        if let info = userInfo{
+//            /* Get the duration of the animation of the keyboard for when it
+//            gets displayed on the screen. We will animate our contents using
+//            the same animation duration */
+//            let animationDurationObject =
+//            info[UIKeyboardAnimationDurationUserInfoKey] as! NSValue
+//            
+//            let keyboardEndRectObject =
+//            info[UIKeyboardFrameEndUserInfoKey] as! NSValue
+//            
+//            var animationDuration = 0.0
+//            var keyboardEndRect = CGRectZero
+//            
+//            animationDurationObject.getValue(&animationDuration)
+//            keyboardEndRectObject.getValue(&keyboardEndRect)
+//            
+//            let window = UIApplication.sharedApplication().keyWindow
+//            
+//            /* Convert the frame from window's coordinate system to
+//            our view's coordinate system */
+//            keyboardEndRect = view.convertRect(keyboardEndRect, fromView: window)
+//            
+//            /* Find out how much of our view is being covered by the keyboard */
+//            let intersectionOfKeyboardRectAndWindowRect =
+//            CGRectIntersection(view.frame, keyboardEndRect);
+//            
+//            /* Scroll the scroll view up to show the full contents of our view */
+//            UIView.animateWithDuration(animationDuration, animations: {[weak self] in
+//                
+//                self!.scrollView.contentInset = UIEdgeInsets(top: 0,
+//                    left: 0,
+//                    bottom: intersectionOfKeyboardRectAndWindowRect.size.height,
+//                    right: 0)
+//                
+//                self!.scrollView.scrollRectToVisible(self!.commentHazard.frame,
+//                    animated: false)
+//                
+//                })
+//        }
+//        
+//    }
+//    
+//    func handleKeyboardWillHide(sender: NSNotification){
+//        
+//        let userInfo = sender.userInfo
+//        
+//        if let info = userInfo{
+//            let animationDurationObject =
+//            info[UIKeyboardAnimationDurationUserInfoKey]
+//                as! NSValue
+//            
+//            var animationDuration = 0.0;
+//            
+//            animationDurationObject.getValue(&animationDuration)
+//            
+//            UIView.animateWithDuration(animationDuration, animations: {
+//                [weak self] in
+//                self!.scrollView.contentInset = UIEdgeInsetsZero
+//                })
+//        }
+//        
+//    }
+//    
+//    override func viewDidAppear(animated: Bool) {
+//        
+//        super.viewDidAppear(animated)
+//        
+//        let center = NSNotificationCenter.defaultCenter()
+//        
+//        center.addObserver(self,
+//            selector: "handleKeyboardWillShow:",
+//            name: UIKeyboardWillShowNotification,
+//            object: nil)
+//        
+//        center.addObserver(self,
+//            selector: "handleKeyboardWillHide:",
+//            name: UIKeyboardWillHideNotification,
+//            object: nil)
+//        
+//        locationManager.startUpdatingLocation();
+//    }
+//    
+//    override func viewWillDisappear(animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        
+//        NSNotificationCenter.defaultCenter().removeObserver(self)
+//        
+//    }
+    
+    /***************************/
+    
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         self.view.endEditing(true);
@@ -100,13 +220,17 @@ class hazardVC:ViewController{
          super.viewDidLoad();
         constructionLable.text="";
         onRoadLable.text="";
-        locationManager.requestAlwaysAuthorization();
+        //locationManager.requestAlwaysAuthorization();
+        locationManager.requestWhenInUseAuthorization()
         locationManager.location;
         NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.latitude.description, forKey: "lat");
         NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.longitude.description, forKey: "lon");
         
         locationManager.startUpdatingLocation();
         println("current location is \(currentLocation.description)");
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
     }
     
     
@@ -124,7 +248,33 @@ class hazardVC:ViewController{
     override func viewDidDisappear(animated: Bool) {
         locationManager.stopUpdatingLocation();
     }
-    override func viewDidAppear(animated: Bool) {
-        locationManager.startUpdatingLocation();
+//    override func viewDidAppear(animated: Bool) {
+//        locationManager.startUpdatingLocation();
+//    }
+    
+    func keyboardWillShow(sender: NSNotification) {
+        
+        if isKeyboardVisible == false {
+            
+            self.view.frame.origin.y -= 80
+            
+            isKeyboardVisible = true
+        }
+        
+        
     }
+    
+    func keyboardWillHide(sender: NSNotification) {
+        
+        if isKeyboardVisible == true {
+            
+            self.view.frame.origin.y += 80
+            
+            isKeyboardVisible = false
+            
+        }
+        
+    }
+
 }
+

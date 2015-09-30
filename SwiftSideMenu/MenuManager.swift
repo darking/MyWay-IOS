@@ -12,7 +12,7 @@ class MenuManager {
     var item:MenuItem = MenuItem();
     func reloadPublicMenu() {
         item = MenuItem();
-        item.itemTitle = "Log In";
+        item.itemTitle = "Login";
         item.itemVCIdentifier = "LogIn";
         item.storyBoardName = "Team2";
         MenuItem.all.menuItems.addObject(item);
@@ -26,24 +26,29 @@ class MenuManager {
         MenuItem.all.menuItems.addObject(item);
         
         // Everything goes between this to the Logout button
-        item = MenuItem();
-        item.itemTitle = "Settings";
-        item.itemVCIdentifier = "Team5_Settings";
-        item.storyBoardName = "Team5";
-        MenuItem.all.menuItems.addObject(item);
+//        item = MenuItem();
+//        item.itemTitle = "Settings";
+//        item.itemVCIdentifier = "Team5_Settings";
+//        item.storyBoardName = "Team5";
+//        MenuItem.all.menuItems.addObject(item);
         
         item = MenuItem();
         item.itemTitle = "Parent Monitor";
-        item.itemVCIdentifier = "SelectDriverReportVC";
-        item.storyBoardName = "Main5_Report";
+        item.itemVCIdentifier = "DLVC";
+        item.storyBoardName = "Team5_m";
         MenuItem.all.menuItems.addObject(item);
         
         item = MenuItem();
         item.itemTitle = "Daily Route";
-        item.itemVCIdentifier = "Daily_Route_Team5";
+        item.itemVCIdentifier = "DailyRouteVC";
         item.storyBoardName = "Team5_m";
         MenuItem.all.menuItems.addObject(item);
         
+        item = MenuItem();
+        item.itemTitle = "Post Report";
+        item.itemVCIdentifier = "Report";
+        item.storyBoardName = "Main_4";
+        MenuItem.all.menuItems.addObject(item);
         //Here goes the Logout button
         //            item = MenuItem();
         //            item.itemTitle = "Logout";
@@ -74,12 +79,14 @@ class MenuManager {
         item.itemVCIdentifier = "poiVC";
         item.storyBoardName = "POI";
         MenuItem.all.menuItems.addObject(item);
+        
+//        item = MenuItem();
+//        item.itemTitle = "Keyboard";
+//        item.itemVCIdentifier = "keyboard";
+//        item.storyBoardName = "keyboard";
+//        MenuItem.all.menuItems.addObject(item);
         //
         
-        item = MenuItem();
-        item.itemTitle = "Reports";
-        item.itemVCIdentifier = "Report";
-        item.storyBoardName = "Main_4";
-        MenuItem.all.menuItems.addObject(item);
+       
     }
 }

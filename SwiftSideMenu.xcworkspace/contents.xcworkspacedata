@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:KeyboardViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:kuwait.gpx">
    </FileRef>
    <FileRef

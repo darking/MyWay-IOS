@@ -10,20 +10,26 @@ import Foundation
 
 class AddDailyRouteVC{
     let fileName33  = "DailyReports.plist";
+    
     var Daily:DailyReportVC = DailyReportVC();
+    
     var location:DailyReportVC=DailyReportVC();
+    
     func dailyFilePath()->String{
         let myUtil3:FileUtils = FileUtils(fileName: fileName33);
         let filePath:String = myUtil3.docsPath();
         return filePath;
     }
+    
     func addDailyRoute(newR: DailyRouteHolder){
         let myUtil3:FileUtils = FileUtils(fileName: fileName33);
         let filePath:String = myUtil3.docsPath();
+        
         var currentList:NSMutableArray = self.showAllReports();
         currentList.addObject(newR.toDictionary());
         currentList.writeToFile(filePath, atomically: true);
     }
+
     func showAllObjects() ->NSMutableArray{
         var allDicts = self.showAllReports();
         var allObjects:NSMutableArray = NSMutableArray();
@@ -34,12 +40,15 @@ class AddDailyRouteVC{
         return allObjects;
     }
     func showAllReports()->NSMutableArray{
+        
         let newSetting = NSUserDefaults.standardUserDefaults();
         let myUtil3:FileUtils = FileUtils(fileName: fileName33);
         let filePath:String = myUtil3.docsPath();
-        println(filePath);
         myUtil3.createIfNotExistUnderDocs();
         var list:NSMutableArray = NSMutableArray(contentsOfFile: filePath)!;
+        //prints it a lot of times to be checked later
+//         println(filePath);
         return list;
     }
+
 }

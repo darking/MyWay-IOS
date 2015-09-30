@@ -3,7 +3,7 @@
 //  IOSProject
 //
 //  Created by Latifa Bourisli on 8/18/15.
-//  Copyright (c) 2015 mashael. All rights reserved.
+//  Copyright (c) 2015. All rights reserved.
 //
 
 import Foundation

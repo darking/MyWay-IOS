@@ -11,6 +11,7 @@ import UIKit
 class EditUserProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     private var userDidPickImage = false
+    private var isKeyboardVisible = false
     private var pickedImage = UIImage()
     
     private let pickerController:UIImagePickerController = UIImagePickerController()
@@ -108,11 +109,34 @@ class EditUserProfileViewController: UIViewController, UIImagePickerControllerDe
     }
     
     func keyboardWillShow(sender: NSNotification) {
-        self.view.frame.origin.y -= 80
+        
+        if isKeyboardVisible == false {
+            
+            self.view.frame.origin.y -= 80
+            
+            isKeyboardVisible = true
+        }
+        
+        
     }
     
     func keyboardWillHide(sender: NSNotification) {
-        self.view.frame.origin.y += 80
+        
+        if isKeyboardVisible == true {
+            
+            self.view.frame.origin.y += 80
+            
+            isKeyboardVisible = false
+            
+        }
+        
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+        
     }
     
 }

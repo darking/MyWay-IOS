@@ -11,7 +11,10 @@ import UIKit
 class ModifyDailyRouteVC:UIViewController{
     @IBOutlet weak var DailyRouteLabel: UILabel!
     @IBOutlet weak var DetailLabel: UILabel!
+    
     var index = 0;
+    
+    
     override func viewDidLoad() {
 //        AddDailyRouteVC().showAllObjects();
         var row:Int = index;
@@ -22,14 +25,18 @@ class ModifyDailyRouteVC:UIViewController{
         
         DailyRouteLabel.text = values.name;
         DetailLabel.numberOfLines = 5;
-        DetailLabel.text = "from \(values.startDate) \n To \(values.endDate)";
+        DetailLabel.text = "From \(values.startDate)\nTo \(values.endDate)"
+        println("The value you're looking for is \(values.endDate)");
     }
+    
     @IBAction func DeleteBTN(sender: AnyObject) {
         //        AddDailyRouteVC().showAllObjects();
         var row:Int = index;
         var manager:AddDailyRouteVC = AddDailyRouteVC();
         var list:NSMutableArray = manager.showAllReports();
         list.removeObjectAtIndex(index);
+        
         list.writeToFile(manager.dailyFilePath(), atomically: true);
+        
     }
 }

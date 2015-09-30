@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5C132582198E2A9A00CA49BE"
-               BuildableName = "SwiftSideMenu.app"
+               BuildableName = "MyWay.app"
                BlueprintName = "SwiftSideMenu"
                ReferencedContainer = "container:SwiftSideMenu.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5C132582198E2A9A00CA49BE"
-            BuildableName = "SwiftSideMenu.app"
+            BuildableName = "MyWay.app"
             BlueprintName = "SwiftSideMenu"
             ReferencedContainer = "container:SwiftSideMenu.xcodeproj">
          </BuildableReference>
@@ -77,7 +77,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5C132582198E2A9A00CA49BE"
-            BuildableName = "SwiftSideMenu.app"
+            BuildableName = "MyWay.app"
             BlueprintName = "SwiftSideMenu"
             ReferencedContainer = "container:SwiftSideMenu.xcodeproj">
          </BuildableReference>
@@ -100,7 +100,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5C132582198E2A9A00CA49BE"
-            BuildableName = "SwiftSideMenu.app"
+            BuildableName = "MyWay.app"
             BlueprintName = "SwiftSideMenu"
             ReferencedContainer = "container:SwiftSideMenu.xcodeproj">
          </BuildableReference>
