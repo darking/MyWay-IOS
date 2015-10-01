@@ -804,11 +804,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
       //  randomPOI()
         
-<<<<<<< HEAD
-//        GetLocationVC().getCurrentLocation()
-=======
 
->>>>>>> bee47f4bac161678039b3013c144e9feea67efd2
     }
     //./VIEW DID LOAD()
     

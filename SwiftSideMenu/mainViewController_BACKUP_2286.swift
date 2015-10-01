@@ -349,13 +349,10 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
         
         self.title = "My Way";
-=======
-//        [actionSheet addButtonWithTitle:@"Test" type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *as) {
-//            NSLog(@"Test tapped");
-//        }];
-//        [actionSheet show];
-        self.title = "MyWay";
->>>>>>> 45d071bec6098f55e4fdadf7e147b4edeb4970a5
+
+
+
+
 
         actionSheet.addButtonWithTitle("Find Address", type: AHKActionSheetButtonType.Default, handler:{ (AHKActionSheet) -> Void in
             
