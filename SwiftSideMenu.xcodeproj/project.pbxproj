@@ -7,6 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		077919321BBBF41900AB0DB1 /* AllVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779192E1BBBF41900AB0DB1 /* AllVC.swift */; };
+		077919331BBBF41900AB0DB1 /* LocationFilteration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779192F1BBBF41900AB0DB1 /* LocationFilteration.swift */; };
+		077919341BBBF41900AB0DB1 /* Main_4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 077919301BBBF41900AB0DB1 /* Main_4.storyboard */; };
+		077919351BBBF41900AB0DB1 /* ReportsMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077919311BBBF41900AB0DB1 /* ReportsMainVC.swift */; };
+		0779194A1BBBF46200AB0DB1 /* OnRoad.png in Resources */ = {isa = PBXBuildFile; fileRef = 077919371BBBF46200AB0DB1 /* OnRoad.png */; };
+		0779194B1BBBF46200AB0DB1 /* OnRoadG.png in Resources */ = {isa = PBXBuildFile; fileRef = 077919381BBBF46200AB0DB1 /* OnRoadG.png */; };
+		0779194C1BBBF46200AB0DB1 /* Major.png in Resources */ = {isa = PBXBuildFile; fileRef = 077919391BBBF46200AB0DB1 /* Major.png */; };
+		0779194D1BBBF46200AB0DB1 /* MajorG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0779193A1BBBF46200AB0DB1 /* MajorG.png */; };
+		0779194E1BBBF46200AB0DB1 /* Minor.png in Resources */ = {isa = PBXBuildFile; fileRef = 0779193B1BBBF46200AB0DB1 /* Minor.png */; };
+		0779194F1BBBF46200AB0DB1 /* MinorG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0779193C1BBBF46200AB0DB1 /* MinorG.png */; };
+		077919501BBBF46200AB0DB1 /* accidents.png in Resources */ = {isa = PBXBuildFile; fileRef = 0779193D1BBBF46200AB0DB1 /* accidents.png */; };
+		077919511BBBF46200AB0DB1 /* construction.png in Resources */ = {isa = PBXBuildFile; fileRef = 0779193E1BBBF46200AB0DB1 /* construction.png */; };
+		077919521BBBF46200AB0DB1 /* constructionG.png in Resources */ = {isa = PBXBuildFile; fileRef = 0779193F1BBBF46200AB0DB1 /* constructionG.png */; };
+		077919531BBBF46200AB0DB1 /* hazard.png in Resources */ = {isa = PBXBuildFile; fileRef = 077919401BBBF46200AB0DB1 /* hazard.png */; };
+		077919541BBBF46200AB0DB1 /* heavy.png in Resources */ = {isa = PBXBuildFile; fileRef = 077919411BBBF46200AB0DB1 /* heavy.png */; };
+		077919551BBBF46200AB0DB1 /* heavyG.png in Resources */ = {isa = PBXBuildFile; fileRef = 077919421BBBF46200AB0DB1 /* heavyG.png */; };
+		077919561BBBF46200AB0DB1 /* moderate.png in Resources */ = {isa = PBXBuildFile; fileRef = 077919431BBBF46200AB0DB1 /* moderate.png */; };
+		077919571BBBF46200AB0DB1 /* moderateG.png in Resources */ = {isa = PBXBuildFile; fileRef = 077919441BBBF46200AB0DB1 /* moderateG.png */; };
+		077919581BBBF46200AB0DB1 /* other.png in Resources */ = {isa = PBXBuildFile; fileRef = 077919451BBBF46200AB0DB1 /* other.png */; };
+		077919591BBBF46200AB0DB1 /* otherG.png in Resources */ = {isa = PBXBuildFile; fileRef = 077919461BBBF46200AB0DB1 /* otherG.png */; };
+		0779195A1BBBF46200AB0DB1 /* standStill.png in Resources */ = {isa = PBXBuildFile; fileRef = 077919471BBBF46200AB0DB1 /* standStill.png */; };
+		0779195B1BBBF46200AB0DB1 /* standStillG.png in Resources */ = {isa = PBXBuildFile; fileRef = 077919481BBBF46200AB0DB1 /* standStillG.png */; };
+		0779195C1BBBF46200AB0DB1 /* traffic.png in Resources */ = {isa = PBXBuildFile; fileRef = 077919491BBBF46200AB0DB1 /* traffic.png */; };
+		077919621BBBF48400AB0DB1 /* accidentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779195E1BBBF48400AB0DB1 /* accidentVC.swift */; };
+		077919631BBBF48400AB0DB1 /* addAccidentsReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779195F1BBBF48400AB0DB1 /* addAccidentsReport.swift */; };
+		077919641BBBF48400AB0DB1 /* commentMinorAccident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077919601BBBF48400AB0DB1 /* commentMinorAccident.swift */; };
+		077919651BBBF48400AB0DB1 /* commentMajorAccident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077919611BBBF48400AB0DB1 /* commentMajorAccident.swift */; };
+		0779196C1BBBF4B100AB0DB1 /* trafficVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077919671BBBF4B100AB0DB1 /* trafficVC.swift */; };
+		0779196D1BBBF4B100AB0DB1 /* commentModerateTraffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077919681BBBF4B100AB0DB1 /* commentModerateTraffic.swift */; };
+		0779196E1BBBF4B100AB0DB1 /* commentHeavyTraffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077919691BBBF4B100AB0DB1 /* commentHeavyTraffic.swift */; };
+		0779196F1BBBF4B100AB0DB1 /* commentStandstillTraffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779196A1BBBF4B100AB0DB1 /* commentStandstillTraffic.swift */; };
+		077919701BBBF4B100AB0DB1 /* addTrafficJamReports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779196B1BBBF4B100AB0DB1 /* addTrafficJamReports.swift */; };
+		077919761BBBF4CD00AB0DB1 /* hazardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077919721BBBF4CD00AB0DB1 /* hazardVC.swift */; };
+		077919771BBBF4CD00AB0DB1 /* addHazardReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077919731BBBF4CD00AB0DB1 /* addHazardReport.swift */; };
+		077919781BBBF4CD00AB0DB1 /* commentOnRoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077919741BBBF4CD00AB0DB1 /* commentOnRoad.swift */; };
+		077919791BBBF4CD00AB0DB1 /* commentConstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077919751BBBF4CD00AB0DB1 /* commentConstruction.swift */; };
+		0779197E1BBBF4EB00AB0DB1 /* otherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779197B1BBBF4EB00AB0DB1 /* otherVC.swift */; };
+		0779197F1BBBF4EB00AB0DB1 /* addOtherReports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779197C1BBBF4EB00AB0DB1 /* addOtherReports.swift */; };
+		077919801BBBF4EB00AB0DB1 /* commentOther.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779197D1BBBF4EB00AB0DB1 /* commentOther.swift */; };
+		078780061BBCFB6D00B7CF93 /* getCommentDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078780051BBCFB6D00B7CF93 /* getCommentDetails.swift */; };
 		141092691B8CB71F00CD3114 /* POI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141092681B8CB71F00CD3114 /* POI.storyboard */; };
 		141092721B8CB76300CD3114 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410926A1B8CB76300CD3114 /* MapViewController.swift */; };
 		141092731B8CB76300CD3114 /* TypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410926B1B8CB76300CD3114 /* TypesTableViewController.swift */; };
@@ -46,45 +86,6 @@
 		6CE9A1C31B83641000BE4004 /* MainMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1C21B83641000BE4004 /* MainMapVC.swift */; };
 		6CE9A1C51B8364B000BE4004 /* Main_1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A1C41B8364B000BE4004 /* Main_1.storyboard */; };
 		6CE9A1C71B83674F00BE4004 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A1C61B83674F00BE4004 /* Podfile */; };
-		6CE9A1CA1B83817700BE4004 /* Main_4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A1C91B83817700BE4004 /* Main_4.storyboard */; };
-		6CE9A1CD1B8381F000BE4004 /* AllVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1CB1B8381F000BE4004 /* AllVC.swift */; };
-		6CE9A1CE1B8381F000BE4004 /* LocationFilteration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1CC1B8381F000BE4004 /* LocationFilteration.swift */; };
-		6CE9A1D61B83825C00BE4004 /* otherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1D31B83825C00BE4004 /* otherVC.swift */; };
-		6CE9A1D71B83825C00BE4004 /* addOtherReports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1D41B83825C00BE4004 /* addOtherReports.swift */; };
-		6CE9A1D81B83825C00BE4004 /* commentOther.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1D51B83825C00BE4004 /* commentOther.swift */; };
-		6CE9A1DD1B83827700BE4004 /* hazardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1D91B83827700BE4004 /* hazardVC.swift */; };
-		6CE9A1DE1B83827700BE4004 /* addHazardReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1DA1B83827700BE4004 /* addHazardReport.swift */; };
-		6CE9A1DF1B83827700BE4004 /* commentOnRoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1DB1B83827700BE4004 /* commentOnRoad.swift */; };
-		6CE9A1E01B83827700BE4004 /* commentConstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1DC1B83827700BE4004 /* commentConstruction.swift */; };
-		6CE9A1E61B83828500BE4004 /* trafficVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1E11B83828500BE4004 /* trafficVC.swift */; };
-		6CE9A1E71B83828500BE4004 /* commentModerateTraffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1E21B83828500BE4004 /* commentModerateTraffic.swift */; };
-		6CE9A1E81B83828500BE4004 /* commentHeavyTraffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1E31B83828500BE4004 /* commentHeavyTraffic.swift */; };
-		6CE9A1E91B83828500BE4004 /* commentStandstillTraffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1E41B83828500BE4004 /* commentStandstillTraffic.swift */; };
-		6CE9A1EA1B83828500BE4004 /* addTrafficJamReports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1E51B83828500BE4004 /* addTrafficJamReports.swift */; };
-		6CE9A1F51B8382BD00BE4004 /* !accidentLabel.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A1EC1B8382BD00BE4004 /* !accidentLabel.png */; };
-		6CE9A1F61B8382BD00BE4004 /* !hazardLabel.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A1ED1B8382BD00BE4004 /* !hazardLabel.png */; };
-		6CE9A1F71B8382BD00BE4004 /* !otherLabel.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A1EE1B8382BD00BE4004 /* !otherLabel.png */; };
-		6CE9A1F81B8382BD00BE4004 /* !trafficLabel.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A1EF1B8382BD00BE4004 /* !trafficLabel.png */; };
-		6CE9A1F91B8382BD00BE4004 /* hazard1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A1F01B8382BD00BE4004 /* hazard1.png */; };
-		6CE9A1FA1B8382BD00BE4004 /* hazard2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A1F11B8382BD00BE4004 /* hazard2.png */; };
-		6CE9A1FB1B8382BD00BE4004 /* TrafficJamHeavy.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A1F21B8382BD00BE4004 /* TrafficJamHeavy.png */; };
-		6CE9A1FC1B8382BD00BE4004 /* TrafficJamModerate.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A1F31B8382BD00BE4004 /* TrafficJamModerate.png */; };
-		6CE9A1FD1B8382BD00BE4004 /* TrafficJamStandstill.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A1F41B8382BD00BE4004 /* TrafficJamStandstill.png */; };
-		6CE9A2081B8382FE00BE4004 /* !accident.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A1FE1B8382FE00BE4004 /* !accident.png */; };
-		6CE9A2091B8382FE00BE4004 /* !Caution.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A1FF1B8382FE00BE4004 /* !Caution.png */; };
-		6CE9A20A1B8382FE00BE4004 /* !hazard.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A2001B8382FE00BE4004 /* !hazard.png */; };
-		6CE9A20B1B8382FE00BE4004 /* !other.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A2011B8382FE00BE4004 /* !other.png */; };
-		6CE9A20C1B8382FE00BE4004 /* !traffic.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A2021B8382FE00BE4004 /* !traffic.png */; };
-		6CE9A20D1B8382FE00BE4004 /* AccidentMajor.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A2031B8382FE00BE4004 /* AccidentMajor.png */; };
-		6CE9A20E1B8382FE00BE4004 /* accidentMinor.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A2041B8382FE00BE4004 /* accidentMinor.png */; };
-		6CE9A20F1B8382FE00BE4004 /* heavy.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A2051B8382FE00BE4004 /* heavy.png */; };
-		6CE9A2101B8382FE00BE4004 /* moderate.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A2061B8382FE00BE4004 /* moderate.png */; };
-		6CE9A2111B8382FE00BE4004 /* standstill.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A2071B8382FE00BE4004 /* standstill.png */; };
-		6CE9A2161B83835A00BE4004 /* accidentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A2121B83835A00BE4004 /* accidentVC.swift */; };
-		6CE9A2171B83835A00BE4004 /* addAccidentsReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A2131B83835A00BE4004 /* addAccidentsReport.swift */; };
-		6CE9A2181B83835A00BE4004 /* commentMinorAccident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A2141B83835A00BE4004 /* commentMinorAccident.swift */; };
-		6CE9A2191B83835A00BE4004 /* commentMajorAccident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A2151B83835A00BE4004 /* commentMajorAccident.swift */; };
-		6CE9A21B1B83849D00BE4004 /* ReportsMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A21A1B83849D00BE4004 /* ReportsMainVC.swift */; };
 		6CE9A2321B839F9100BE4004 /* ChagePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A2281B839F9100BE4004 /* ChagePasswordViewController.swift */; };
 		6CE9A2331B839F9100BE4004 /* CodeVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A2291B839F9100BE4004 /* CodeVerificationViewController.swift */; };
 		6CE9A2341B839F9100BE4004 /* EditUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A22A1B839F9100BE4004 /* EditUserProfileViewController.swift */; };
@@ -112,9 +113,6 @@
 		6CE9A2721B84B98300BE4004 /* Team2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CE9A2711B84B98300BE4004 /* Team2.storyboard */; };
 		6CE9A2741B84D25C00BE4004 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A2731B84D25C00BE4004 /* MenuManager.swift */; };
 		9E4766FC19DDBCE900FCEACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C13258C198E2A9A00CA49BE /* Main.storyboard */; };
-		C3EBDD691B921E86009237A8 /* Main2_4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EBDD681B921E86009237A8 /* Main2_4.storyboard */; };
-		C3EBDD6B1B9242AC009237A8 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD6A1B9242AC009237A8 /* KeyboardViewController.swift */; };
-		C3EBDD6D1B924798009237A8 /* keyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EBDD6C1B924798009237A8 /* keyboard.storyboard */; };
 		C3EBDD731B92D529009237A8 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD6E1B92D529009237A8 /* FileUtils.swift */; };
 		C3EBDD741B92D529009237A8 /* Team5_m.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EBDD6F1B92D529009237A8 /* Team5_m.storyboard */; };
 		C3EBDD751B92D529009237A8 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EBDD701B92D529009237A8 /* AppSettings.swift */; };
@@ -150,6 +148,46 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0779192E1BBBF41900AB0DB1 /* AllVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllVC.swift; sourceTree = "<group>"; };
+		0779192F1BBBF41900AB0DB1 /* LocationFilteration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationFilteration.swift; sourceTree = "<group>"; };
+		077919301BBBF41900AB0DB1 /* Main_4.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_4.storyboard; sourceTree = "<group>"; };
+		077919311BBBF41900AB0DB1 /* ReportsMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportsMainVC.swift; sourceTree = "<group>"; };
+		077919371BBBF46200AB0DB1 /* OnRoad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OnRoad.png; sourceTree = "<group>"; };
+		077919381BBBF46200AB0DB1 /* OnRoadG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OnRoadG.png; sourceTree = "<group>"; };
+		077919391BBBF46200AB0DB1 /* Major.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Major.png; sourceTree = "<group>"; };
+		0779193A1BBBF46200AB0DB1 /* MajorG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MajorG.png; sourceTree = "<group>"; };
+		0779193B1BBBF46200AB0DB1 /* Minor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Minor.png; sourceTree = "<group>"; };
+		0779193C1BBBF46200AB0DB1 /* MinorG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MinorG.png; sourceTree = "<group>"; };
+		0779193D1BBBF46200AB0DB1 /* accidents.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accidents.png; sourceTree = "<group>"; };
+		0779193E1BBBF46200AB0DB1 /* construction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = construction.png; sourceTree = "<group>"; };
+		0779193F1BBBF46200AB0DB1 /* constructionG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = constructionG.png; sourceTree = "<group>"; };
+		077919401BBBF46200AB0DB1 /* hazard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hazard.png; sourceTree = "<group>"; };
+		077919411BBBF46200AB0DB1 /* heavy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heavy.png; sourceTree = "<group>"; };
+		077919421BBBF46200AB0DB1 /* heavyG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heavyG.png; sourceTree = "<group>"; };
+		077919431BBBF46200AB0DB1 /* moderate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moderate.png; sourceTree = "<group>"; };
+		077919441BBBF46200AB0DB1 /* moderateG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moderateG.png; sourceTree = "<group>"; };
+		077919451BBBF46200AB0DB1 /* other.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = other.png; sourceTree = "<group>"; };
+		077919461BBBF46200AB0DB1 /* otherG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = otherG.png; sourceTree = "<group>"; };
+		077919471BBBF46200AB0DB1 /* standStill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = standStill.png; sourceTree = "<group>"; };
+		077919481BBBF46200AB0DB1 /* standStillG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = standStillG.png; sourceTree = "<group>"; };
+		077919491BBBF46200AB0DB1 /* traffic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = traffic.png; sourceTree = "<group>"; };
+		0779195E1BBBF48400AB0DB1 /* accidentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accidentVC.swift; sourceTree = "<group>"; };
+		0779195F1BBBF48400AB0DB1 /* addAccidentsReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addAccidentsReport.swift; sourceTree = "<group>"; };
+		077919601BBBF48400AB0DB1 /* commentMinorAccident.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentMinorAccident.swift; sourceTree = "<group>"; };
+		077919611BBBF48400AB0DB1 /* commentMajorAccident.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentMajorAccident.swift; sourceTree = "<group>"; };
+		077919671BBBF4B100AB0DB1 /* trafficVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trafficVC.swift; sourceTree = "<group>"; };
+		077919681BBBF4B100AB0DB1 /* commentModerateTraffic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentModerateTraffic.swift; sourceTree = "<group>"; };
+		077919691BBBF4B100AB0DB1 /* commentHeavyTraffic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentHeavyTraffic.swift; sourceTree = "<group>"; };
+		0779196A1BBBF4B100AB0DB1 /* commentStandstillTraffic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentStandstillTraffic.swift; sourceTree = "<group>"; };
+		0779196B1BBBF4B100AB0DB1 /* addTrafficJamReports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addTrafficJamReports.swift; sourceTree = "<group>"; };
+		077919721BBBF4CD00AB0DB1 /* hazardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hazardVC.swift; sourceTree = "<group>"; };
+		077919731BBBF4CD00AB0DB1 /* addHazardReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addHazardReport.swift; sourceTree = "<group>"; };
+		077919741BBBF4CD00AB0DB1 /* commentOnRoad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentOnRoad.swift; sourceTree = "<group>"; };
+		077919751BBBF4CD00AB0DB1 /* commentConstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentConstruction.swift; sourceTree = "<group>"; };
+		0779197B1BBBF4EB00AB0DB1 /* otherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = otherVC.swift; sourceTree = "<group>"; };
+		0779197C1BBBF4EB00AB0DB1 /* addOtherReports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addOtherReports.swift; sourceTree = "<group>"; };
+		0779197D1BBBF4EB00AB0DB1 /* commentOther.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentOther.swift; sourceTree = "<group>"; };
+		078780051BBCFB6D00B7CF93 /* getCommentDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getCommentDetails.swift; sourceTree = "<group>"; };
 		141092681B8CB71F00CD3114 /* POI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = POI.storyboard; sourceTree = "<group>"; };
 		1410926A1B8CB76300CD3114 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1410926B1B8CB76300CD3114 /* TypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypesTableViewController.swift; sourceTree = "<group>"; };
@@ -201,45 +239,6 @@
 		6CE9A1C21B83641000BE4004 /* MainMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMapVC.swift; sourceTree = "<group>"; };
 		6CE9A1C41B8364B000BE4004 /* Main_1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_1.storyboard; sourceTree = "<group>"; };
 		6CE9A1C61B83674F00BE4004 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		6CE9A1C91B83817700BE4004 /* Main_4.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_4.storyboard; sourceTree = "<group>"; };
-		6CE9A1CB1B8381F000BE4004 /* AllVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllVC.swift; sourceTree = "<group>"; };
-		6CE9A1CC1B8381F000BE4004 /* LocationFilteration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationFilteration.swift; sourceTree = "<group>"; };
-		6CE9A1D31B83825C00BE4004 /* otherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = otherVC.swift; sourceTree = "<group>"; };
-		6CE9A1D41B83825C00BE4004 /* addOtherReports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addOtherReports.swift; sourceTree = "<group>"; };
-		6CE9A1D51B83825C00BE4004 /* commentOther.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentOther.swift; sourceTree = "<group>"; };
-		6CE9A1D91B83827700BE4004 /* hazardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hazardVC.swift; sourceTree = "<group>"; };
-		6CE9A1DA1B83827700BE4004 /* addHazardReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addHazardReport.swift; sourceTree = "<group>"; };
-		6CE9A1DB1B83827700BE4004 /* commentOnRoad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentOnRoad.swift; sourceTree = "<group>"; };
-		6CE9A1DC1B83827700BE4004 /* commentConstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentConstruction.swift; sourceTree = "<group>"; };
-		6CE9A1E11B83828500BE4004 /* trafficVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trafficVC.swift; sourceTree = "<group>"; };
-		6CE9A1E21B83828500BE4004 /* commentModerateTraffic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentModerateTraffic.swift; sourceTree = "<group>"; };
-		6CE9A1E31B83828500BE4004 /* commentHeavyTraffic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentHeavyTraffic.swift; sourceTree = "<group>"; };
-		6CE9A1E41B83828500BE4004 /* commentStandstillTraffic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentStandstillTraffic.swift; sourceTree = "<group>"; };
-		6CE9A1E51B83828500BE4004 /* addTrafficJamReports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addTrafficJamReports.swift; sourceTree = "<group>"; };
-		6CE9A1EC1B8382BD00BE4004 /* !accidentLabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "!accidentLabel.png"; sourceTree = "<group>"; };
-		6CE9A1ED1B8382BD00BE4004 /* !hazardLabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "!hazardLabel.png"; sourceTree = "<group>"; };
-		6CE9A1EE1B8382BD00BE4004 /* !otherLabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "!otherLabel.png"; sourceTree = "<group>"; };
-		6CE9A1EF1B8382BD00BE4004 /* !trafficLabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "!trafficLabel.png"; sourceTree = "<group>"; };
-		6CE9A1F01B8382BD00BE4004 /* hazard1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hazard1.png; sourceTree = "<group>"; };
-		6CE9A1F11B8382BD00BE4004 /* hazard2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hazard2.png; sourceTree = "<group>"; };
-		6CE9A1F21B8382BD00BE4004 /* TrafficJamHeavy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TrafficJamHeavy.png; sourceTree = "<group>"; };
-		6CE9A1F31B8382BD00BE4004 /* TrafficJamModerate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TrafficJamModerate.png; sourceTree = "<group>"; };
-		6CE9A1F41B8382BD00BE4004 /* TrafficJamStandstill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TrafficJamStandstill.png; sourceTree = "<group>"; };
-		6CE9A1FE1B8382FE00BE4004 /* !accident.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "!accident.png"; sourceTree = "<group>"; };
-		6CE9A1FF1B8382FE00BE4004 /* !Caution.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "!Caution.png"; sourceTree = "<group>"; };
-		6CE9A2001B8382FE00BE4004 /* !hazard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "!hazard.png"; sourceTree = "<group>"; };
-		6CE9A2011B8382FE00BE4004 /* !other.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "!other.png"; sourceTree = "<group>"; };
-		6CE9A2021B8382FE00BE4004 /* !traffic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "!traffic.png"; sourceTree = "<group>"; };
-		6CE9A2031B8382FE00BE4004 /* AccidentMajor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AccidentMajor.png; sourceTree = "<group>"; };
-		6CE9A2041B8382FE00BE4004 /* accidentMinor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accidentMinor.png; sourceTree = "<group>"; };
-		6CE9A2051B8382FE00BE4004 /* heavy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heavy.png; sourceTree = "<group>"; };
-		6CE9A2061B8382FE00BE4004 /* moderate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moderate.png; sourceTree = "<group>"; };
-		6CE9A2071B8382FE00BE4004 /* standstill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = standstill.png; sourceTree = "<group>"; };
-		6CE9A2121B83835A00BE4004 /* accidentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accidentVC.swift; sourceTree = "<group>"; };
-		6CE9A2131B83835A00BE4004 /* addAccidentsReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addAccidentsReport.swift; sourceTree = "<group>"; };
-		6CE9A2141B83835A00BE4004 /* commentMinorAccident.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentMinorAccident.swift; sourceTree = "<group>"; };
-		6CE9A2151B83835A00BE4004 /* commentMajorAccident.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentMajorAccident.swift; sourceTree = "<group>"; };
-		6CE9A21A1B83849D00BE4004 /* ReportsMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportsMainVC.swift; sourceTree = "<group>"; };
 		6CE9A2281B839F9100BE4004 /* ChagePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChagePasswordViewController.swift; sourceTree = "<group>"; };
 		6CE9A2291B839F9100BE4004 /* CodeVerificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeVerificationViewController.swift; sourceTree = "<group>"; };
 		6CE9A22A1B839F9100BE4004 /* EditUserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditUserProfileViewController.swift; sourceTree = "<group>"; };
@@ -266,9 +265,6 @@
 		6CE9A26E1B84AE2900BE4004 /* reqLocaiton.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = reqLocaiton.storyboard; sourceTree = "<group>"; };
 		6CE9A2711B84B98300BE4004 /* Team2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Team2.storyboard; sourceTree = "<group>"; };
 		6CE9A2731B84D25C00BE4004 /* MenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
-		C3EBDD681B921E86009237A8 /* Main2_4.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main2_4.storyboard; sourceTree = "<group>"; };
-		C3EBDD6A1B9242AC009237A8 /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
-		C3EBDD6C1B924798009237A8 /* keyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = keyboard.storyboard; sourceTree = "<group>"; };
 		C3EBDD6E1B92D529009237A8 /* FileUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		C3EBDD6F1B92D529009237A8 /* Team5_m.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Team5_m.storyboard; sourceTree = "<group>"; };
 		C3EBDD701B92D529009237A8 /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
@@ -313,6 +309,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0779192D1BBBF3EE00AB0DB1 /* Team4 */ = {
+			isa = PBXGroup;
+			children = (
+				0779197A1BBBF4DB00AB0DB1 /* Other */,
+				077919711BBBF4C100AB0DB1 /* Hazard */,
+				077919661BBBF4A400AB0DB1 /* Traffic */,
+				0779195D1BBBF47500AB0DB1 /* Accident */,
+				077919361BBBF43000AB0DB1 /* Icon */,
+				0779192E1BBBF41900AB0DB1 /* AllVC.swift */,
+				0779192F1BBBF41900AB0DB1 /* LocationFilteration.swift */,
+				077919301BBBF41900AB0DB1 /* Main_4.storyboard */,
+				077919311BBBF41900AB0DB1 /* ReportsMainVC.swift */,
+				078780051BBCFB6D00B7CF93 /* getCommentDetails.swift */,
+			);
+			name = Team4;
+			sourceTree = "<group>";
+		};
+		077919361BBBF43000AB0DB1 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Icon;
+			sourceTree = "<group>";
+		};
+		0779195D1BBBF47500AB0DB1 /* Accident */ = {
+			isa = PBXGroup;
+			children = (
+				0779195E1BBBF48400AB0DB1 /* accidentVC.swift */,
+				0779195F1BBBF48400AB0DB1 /* addAccidentsReport.swift */,
+				077919601BBBF48400AB0DB1 /* commentMinorAccident.swift */,
+				077919611BBBF48400AB0DB1 /* commentMajorAccident.swift */,
+			);
+			name = Accident;
+			sourceTree = "<group>";
+		};
+		077919661BBBF4A400AB0DB1 /* Traffic */ = {
+			isa = PBXGroup;
+			children = (
+				077919671BBBF4B100AB0DB1 /* trafficVC.swift */,
+				077919681BBBF4B100AB0DB1 /* commentModerateTraffic.swift */,
+				077919691BBBF4B100AB0DB1 /* commentHeavyTraffic.swift */,
+				0779196A1BBBF4B100AB0DB1 /* commentStandstillTraffic.swift */,
+				0779196B1BBBF4B100AB0DB1 /* addTrafficJamReports.swift */,
+			);
+			name = Traffic;
+			sourceTree = "<group>";
+		};
+		077919711BBBF4C100AB0DB1 /* Hazard */ = {
+			isa = PBXGroup;
+			children = (
+				077919721BBBF4CD00AB0DB1 /* hazardVC.swift */,
+				077919731BBBF4CD00AB0DB1 /* addHazardReport.swift */,
+				077919741BBBF4CD00AB0DB1 /* commentOnRoad.swift */,
+				077919751BBBF4CD00AB0DB1 /* commentConstruction.swift */,
+			);
+			name = Hazard;
+			sourceTree = "<group>";
+		};
+		0779197A1BBBF4DB00AB0DB1 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				0779197B1BBBF4EB00AB0DB1 /* otherVC.swift */,
+				0779197C1BBBF4EB00AB0DB1 /* addOtherReports.swift */,
+				0779197D1BBBF4EB00AB0DB1 /* commentOther.swift */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
 		1410927A1B8CB77200CD3114 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,10 +484,10 @@
 		5C132585198E2A9A00CA49BE /* SwiftSideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				0779192D1BBBF3EE00AB0DB1 /* Team4 */,
 				6CE9A26C1B84AE1D00BE4004 /* MapIntegration */,
 				6CE9A21D1B83863100BE4004 /* Team2 */,
 				6CE9A21C1B83861200BE4004 /* Team3 */,
-				6CE9A1C81B83814C00BE4004 /* Team4 */,
 				6CE9A1BB1B83517300BE4004 /* Team1 */,
 				6CEAC4FE1B81EB4200E63813 /* Team5 */,
 				14EAB63A19DD4E95006A90FC /* Library */,
@@ -431,6 +495,25 @@
 				5C1325A7198E2AB300CA49BE /* image.png */,
 				5C13258C198E2A9A00CA49BE /* Main.storyboard */,
 				5C13258F198E2A9A00CA49BE /* Images.xcassets */,
+				077919371BBBF46200AB0DB1 /* OnRoad.png */,
+				077919381BBBF46200AB0DB1 /* OnRoadG.png */,
+				077919391BBBF46200AB0DB1 /* Major.png */,
+				0779193A1BBBF46200AB0DB1 /* MajorG.png */,
+				0779193B1BBBF46200AB0DB1 /* Minor.png */,
+				0779193C1BBBF46200AB0DB1 /* MinorG.png */,
+				0779193D1BBBF46200AB0DB1 /* accidents.png */,
+				0779193E1BBBF46200AB0DB1 /* construction.png */,
+				0779193F1BBBF46200AB0DB1 /* constructionG.png */,
+				077919401BBBF46200AB0DB1 /* hazard.png */,
+				077919411BBBF46200AB0DB1 /* heavy.png */,
+				077919421BBBF46200AB0DB1 /* heavyG.png */,
+				077919431BBBF46200AB0DB1 /* moderate.png */,
+				077919441BBBF46200AB0DB1 /* moderateG.png */,
+				077919451BBBF46200AB0DB1 /* other.png */,
+				077919461BBBF46200AB0DB1 /* otherG.png */,
+				077919471BBBF46200AB0DB1 /* standStill.png */,
+				077919481BBBF46200AB0DB1 /* standStillG.png */,
+				077919491BBBF46200AB0DB1 /* traffic.png */,
 				5C132586198E2A9A00CA49BE /* Supporting Files */,
 			);
 			path = SwiftSideMenu;
@@ -508,95 +591,6 @@
 				1410927C1B8CB7AB00CD3114 /* Views */,
 			);
 			name = Team1;
-			sourceTree = "<group>";
-		};
-		6CE9A1C81B83814C00BE4004 /* Team4 */ = {
-			isa = PBXGroup;
-			children = (
-				6CE9A1EB1B8382B000BE4004 /* Images */,
-				6CE9A1D21B83824D00BE4004 /* Accident */,
-				6CE9A1D11B83824500BE4004 /* Traffic */,
-				6CE9A1D01B83823F00BE4004 /* Hazard */,
-				6CE9A1CF1B83822600BE4004 /* Other */,
-				6CE9A1CB1B8381F000BE4004 /* AllVC.swift */,
-				6CE9A1CC1B8381F000BE4004 /* LocationFilteration.swift */,
-				6CE9A1C91B83817700BE4004 /* Main_4.storyboard */,
-				C3EBDD681B921E86009237A8 /* Main2_4.storyboard */,
-				6CE9A21A1B83849D00BE4004 /* ReportsMainVC.swift */,
-			);
-			name = Team4;
-			sourceTree = "<group>";
-		};
-		6CE9A1CF1B83822600BE4004 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				6CE9A1D31B83825C00BE4004 /* otherVC.swift */,
-				6CE9A1D41B83825C00BE4004 /* addOtherReports.swift */,
-				6CE9A1D51B83825C00BE4004 /* commentOther.swift */,
-			);
-			name = Other;
-			sourceTree = "<group>";
-		};
-		6CE9A1D01B83823F00BE4004 /* Hazard */ = {
-			isa = PBXGroup;
-			children = (
-				C3EBDD6C1B924798009237A8 /* keyboard.storyboard */,
-				C3EBDD6A1B9242AC009237A8 /* KeyboardViewController.swift */,
-				6CE9A1D91B83827700BE4004 /* hazardVC.swift */,
-				6CE9A1DA1B83827700BE4004 /* addHazardReport.swift */,
-				6CE9A1DB1B83827700BE4004 /* commentOnRoad.swift */,
-				6CE9A1DC1B83827700BE4004 /* commentConstruction.swift */,
-			);
-			name = Hazard;
-			sourceTree = "<group>";
-		};
-		6CE9A1D11B83824500BE4004 /* Traffic */ = {
-			isa = PBXGroup;
-			children = (
-				6CE9A1E11B83828500BE4004 /* trafficVC.swift */,
-				6CE9A1E21B83828500BE4004 /* commentModerateTraffic.swift */,
-				6CE9A1E31B83828500BE4004 /* commentHeavyTraffic.swift */,
-				6CE9A1E41B83828500BE4004 /* commentStandstillTraffic.swift */,
-				6CE9A1E51B83828500BE4004 /* addTrafficJamReports.swift */,
-			);
-			name = Traffic;
-			sourceTree = "<group>";
-		};
-		6CE9A1D21B83824D00BE4004 /* Accident */ = {
-			isa = PBXGroup;
-			children = (
-				6CE9A2121B83835A00BE4004 /* accidentVC.swift */,
-				6CE9A2131B83835A00BE4004 /* addAccidentsReport.swift */,
-				6CE9A2141B83835A00BE4004 /* commentMinorAccident.swift */,
-				6CE9A2151B83835A00BE4004 /* commentMajorAccident.swift */,
-			);
-			name = Accident;
-			sourceTree = "<group>";
-		};
-		6CE9A1EB1B8382B000BE4004 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				6CE9A1FE1B8382FE00BE4004 /* !accident.png */,
-				6CE9A1FF1B8382FE00BE4004 /* !Caution.png */,
-				6CE9A2001B8382FE00BE4004 /* !hazard.png */,
-				6CE9A2011B8382FE00BE4004 /* !other.png */,
-				6CE9A2021B8382FE00BE4004 /* !traffic.png */,
-				6CE9A2031B8382FE00BE4004 /* AccidentMajor.png */,
-				6CE9A2041B8382FE00BE4004 /* accidentMinor.png */,
-				6CE9A2051B8382FE00BE4004 /* heavy.png */,
-				6CE9A2061B8382FE00BE4004 /* moderate.png */,
-				6CE9A2071B8382FE00BE4004 /* standstill.png */,
-				6CE9A1EC1B8382BD00BE4004 /* !accidentLabel.png */,
-				6CE9A1ED1B8382BD00BE4004 /* !hazardLabel.png */,
-				6CE9A1EE1B8382BD00BE4004 /* !otherLabel.png */,
-				6CE9A1EF1B8382BD00BE4004 /* !trafficLabel.png */,
-				6CE9A1F01B8382BD00BE4004 /* hazard1.png */,
-				6CE9A1F11B8382BD00BE4004 /* hazard2.png */,
-				6CE9A1F21B8382BD00BE4004 /* TrafficJamHeavy.png */,
-				6CE9A1F31B8382BD00BE4004 /* TrafficJamModerate.png */,
-				6CE9A1F41B8382BD00BE4004 /* TrafficJamStandstill.png */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 		6CE9A21C1B83861200BE4004 /* Team3 */ = {
@@ -761,49 +755,47 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CE9A1F91B8382BD00BE4004 /* hazard1.png in Resources */,
 				6CE9A2701B84AE2900BE4004 /* reqLocaiton.storyboard in Resources */,
-				6CE9A1FC1B8382BD00BE4004 /* TrafficJamModerate.png in Resources */,
-				C3EBDD6D1B924798009237A8 /* keyboard.storyboard in Resources */,
-				6CE9A20F1B8382FE00BE4004 /* heavy.png in Resources */,
-				6CE9A2091B8382FE00BE4004 /* !Caution.png in Resources */,
 				9E4766FC19DDBCE900FCEACC /* Main.storyboard in Resources */,
-				6CE9A1CA1B83817700BE4004 /* Main_4.storyboard in Resources */,
-				6CE9A1FB1B8382BD00BE4004 /* TrafficJamHeavy.png in Resources */,
-				6CE9A1F61B8382BD00BE4004 /* !hazardLabel.png in Resources */,
-				6CE9A20D1B8382FE00BE4004 /* AccidentMajor.png in Resources */,
-				6CE9A20B1B8382FE00BE4004 /* !other.png in Resources */,
 				141092691B8CB71F00CD3114 /* POI.storyboard in Resources */,
+				0779195B1BBBF46200AB0DB1 /* standStillG.png in Resources */,
 				5C132590198E2A9A00CA49BE /* Images.xcassets in Resources */,
+				077919581BBBF46200AB0DB1 /* other.png in Resources */,
+				0779194A1BBBF46200AB0DB1 /* OnRoad.png in Resources */,
+				0779194F1BBBF46200AB0DB1 /* MinorG.png in Resources */,
+				077919341BBBF41900AB0DB1 /* Main_4.storyboard in Resources */,
+				0779195C1BBBF46200AB0DB1 /* traffic.png in Resources */,
 				143615651B8F1A34003FD356 /* defaultPoint.jpg in Resources */,
-				6CE9A1F71B8382BD00BE4004 /* !otherLabel.png in Resources */,
 				C3EBDD821B92D56E009237A8 /* MonitorReportSample.plist in Resources */,
-				6CE9A20E1B8382FE00BE4004 /* accidentMinor.png in Resources */,
-				6CE9A1F51B8382BD00BE4004 /* !accidentLabel.png in Resources */,
+				0779194C1BBBF46200AB0DB1 /* Major.png in Resources */,
+				077919511BBBF46200AB0DB1 /* construction.png in Resources */,
+				0779195A1BBBF46200AB0DB1 /* standStill.png in Resources */,
+				077919551BBBF46200AB0DB1 /* heavyG.png in Resources */,
+				0779194B1BBBF46200AB0DB1 /* OnRoadG.png in Resources */,
 				C3EBDD9C1B92D59A009237A8 /* drivers.plist in Resources */,
-				C3EBDD691B921E86009237A8 /* Main2_4.storyboard in Resources */,
 				6CE9A1C51B8364B000BE4004 /* Main_1.storyboard in Resources */,
 				C3EBDD761B92D529009237A8 /* Team5.storyboard in Resources */,
 				52F57A741B85E97100A51E54 /* GetLocation.storyboard in Resources */,
-				6CE9A1F81B8382BD00BE4004 /* !trafficLabel.png in Resources */,
-				6CE9A20A1B8382FE00BE4004 /* !hazard.png in Resources */,
-				6CE9A2081B8382FE00BE4004 /* !accident.png in Resources */,
+				077919541BBBF46200AB0DB1 /* heavy.png in Resources */,
 				5C1325AA198E2AB300CA49BE /* image.png in Resources */,
 				6CE9A1C71B83674F00BE4004 /* Podfile in Resources */,
+				077919571BBBF46200AB0DB1 /* moderateG.png in Resources */,
 				6CE9A2421B83A06000BE4004 /* street.png in Resources */,
 				6CE9A25F1B8474D200BE4004 /* cat.plist in Resources */,
+				0779194E1BBBF46200AB0DB1 /* Minor.png in Resources */,
+				077919521BBBF46200AB0DB1 /* constructionG.png in Resources */,
 				6CE9A25C1B8474C300BE4004 /* placeDetails.plist in Resources */,
-				6CE9A2111B8382FE00BE4004 /* standstill.png in Resources */,
-				6CE9A1FA1B8382BD00BE4004 /* hazard2.png in Resources */,
+				077919531BBBF46200AB0DB1 /* hazard.png in Resources */,
 				141092781B8CB76300CD3114 /* MarkerInfoView.xib in Resources */,
 				6CE9A2411B83A06000BE4004 /* default.png in Resources */,
-				6CE9A2101B8382FE00BE4004 /* moderate.png in Resources */,
-				6CE9A20C1B8382FE00BE4004 /* !traffic.png in Resources */,
 				6CE9A25D1B8474C300BE4004 /* places.plist in Resources */,
-				6CE9A1FD1B8382BD00BE4004 /* TrafficJamStandstill.png in Resources */,
 				C3EBDD741B92D529009237A8 /* Team5_m.storyboard in Resources */,
+				077919591BBBF46200AB0DB1 /* otherG.png in Resources */,
 				6CE9A2721B84B98300BE4004 /* Team2.storyboard in Resources */,
+				077919501BBBF46200AB0DB1 /* accidents.png in Resources */,
+				077919561BBBF46200AB0DB1 /* moderate.png in Resources */,
 				143615691B8F1A8F003FD356 /* Team3.storyboard in Resources */,
+				0779194D1BBBF46200AB0DB1 /* MajorG.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -855,19 +847,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				522B7E921B86253C000A5678 /* ENSideMenu.swift in Sources */,
-				6CE9A1EA1B83828500BE4004 /* addTrafficJamReports.swift in Sources */,
 				52ECD6D81B8643DE00718350 /* AHKActionSheetViewController.m in Sources */,
-				6CE9A1CD1B8381F000BE4004 /* AllVC.swift in Sources */,
 				141092731B8CB76300CD3114 /* TypesTableViewController.swift in Sources */,
 				1436156B1B8F1AC7003FD356 /* TypesOfPOI.swift in Sources */,
+				0779197F1BBBF4EB00AB0DB1 /* addOtherReports.swift in Sources */,
 				6CE9A1C31B83641000BE4004 /* MainMapVC.swift in Sources */,
 				C3EBDD9B1B92D59A009237A8 /* DriversListVC.swift in Sources */,
-				6CE9A1D81B83825C00BE4004 /* commentOther.swift in Sources */,
 				141092771B8CB76300CD3114 /* MarkerInfoView.swift in Sources */,
 				C3EBDD941B92D586009237A8 /* DailyRouteViewController.swift in Sources */,
-				6CE9A2161B83835A00BE4004 /* accidentVC.swift in Sources */,
 				6CE9A23B1B839F9100BE4004 /* UserProfileViewController.swift in Sources */,
 				6CE9A2321B839F9100BE4004 /* ChagePasswordViewController.swift in Sources */,
+				0779196C1BBBF4B100AB0DB1 /* trafficVC.swift in Sources */,
+				077919651BBBF48400AB0DB1 /* commentMajorAccident.swift in Sources */,
 				C3EBDD911B92D586009237A8 /* CommentLocation.swift in Sources */,
 				C3EBDD8F1B92D586009237A8 /* AddDailyRouteVC.swift in Sources */,
 				143615671B8F1A62003FD356 /* AddNewPOI.swift in Sources */,
@@ -877,6 +868,7 @@
 				6CE9A2501B8474A300BE4004 /* addNewPoint.swift in Sources */,
 				6CE9A23A1B839F9100BE4004 /* UserInfo.swift in Sources */,
 				C3EBDD921B92D586009237A8 /* DailyReportVC.swift in Sources */,
+				0779196E1BBBF4B100AB0DB1 /* commentHeavyTraffic.swift in Sources */,
 				C3EBDD9D1B92D59A009237A8 /* DriverDetailsVC.swift in Sources */,
 				C3EBDD751B92D529009237A8 /* AppSettings.swift in Sources */,
 				5C13258B198E2A9A00CA49BE /* ViewController.swift in Sources */,
@@ -884,60 +876,60 @@
 				C3EBDD841B92D56E009237A8 /* ReadReport.swift in Sources */,
 				C3EBDD951B92D586009237A8 /* ModifyDailyRouteVC.swift in Sources */,
 				C3EBDD831B92D56E009237A8 /* MonitorReportVC.swift in Sources */,
-				6CE9A1E61B83828500BE4004 /* trafficVC.swift in Sources */,
 				C3EBDD851B92D56E009237A8 /* SelectDriverReportVC.swift in Sources */,
 				C3EBDD931B92D586009237A8 /* DailyRouteHolder.swift in Sources */,
 				1429137D19D97A4F0025188A /* MyMenuTableViewController.swift in Sources */,
 				6CE9A2371B839F9100BE4004 /* LoginViewController.swift in Sources */,
-				6CE9A1E71B83828500BE4004 /* commentModerateTraffic.swift in Sources */,
 				143615711B8F1CC3003FD356 /* GetLocationVC.swift in Sources */,
-				6CE9A1DF1B83827700BE4004 /* commentOnRoad.swift in Sources */,
+				077919791BBBF4CD00AB0DB1 /* commentConstruction.swift in Sources */,
+				0779197E1BBBF4EB00AB0DB1 /* otherVC.swift in Sources */,
 				1436156D1B8F1AD4003FD356 /* SubTypesOfPOI.swift in Sources */,
 				C3EBDD801B92D56E009237A8 /* Data.swift in Sources */,
 				C3EBDD9A1B92D59A009237A8 /* AddDriverVC.swift in Sources */,
-				6CE9A1CE1B8381F000BE4004 /* LocationFilteration.swift in Sources */,
-				6CE9A1E91B83828500BE4004 /* commentStandstillTraffic.swift in Sources */,
 				5C6D6A271A7E26380047FE0D /* ViewController2.swift in Sources */,
 				1436156F1B8F1AF6003FD356 /* MoreInfoOfPOI.swift in Sources */,
-				6CE9A2171B83835A00BE4004 /* addAccidentsReport.swift in Sources */,
 				526014461B81CB1600498D3F /* MenuItem.swift in Sources */,
 				6CE9A2361B839F9100BE4004 /* ImageConversion.swift in Sources */,
+				077919631BBBF48400AB0DB1 /* addAccidentsReport.swift in Sources */,
 				C3EBDD901B92D586009237A8 /* AllpListController.swift in Sources */,
-				6CE9A1D71B83825C00BE4004 /* addOtherReports.swift in Sources */,
+				077919621BBBF48400AB0DB1 /* accidentVC.swift in Sources */,
+				078780061BBCFB6D00B7CF93 /* getCommentDetails.swift in Sources */,
 				6CE9A23D1B839FCB00BE4004 /* ConnectionManager.swift in Sources */,
 				141092761B8CB76300CD3114 /* PlaceMarker.swift in Sources */,
 				522B7E931B86253C000A5678 /* ENSideMenuNavigationController.swift in Sources */,
-				6CE9A2181B83835A00BE4004 /* commentMinorAccident.swift in Sources */,
+				077919761BBBF4CD00AB0DB1 /* hazardVC.swift in Sources */,
 				C3EBDD731B92D529009237A8 /* FileUtils.swift in Sources */,
+				0779196F1BBBF4B100AB0DB1 /* commentStandstillTraffic.swift in Sources */,
 				52ECD6D91B8643DE00718350 /* UIImage+AHKAdditions.m in Sources */,
-				6CE9A1D61B83825C00BE4004 /* otherVC.swift in Sources */,
 				6CE9A2591B8474A300BE4004 /* TypeView.swift in Sources */,
 				52ECD6D71B8643DE00718350 /* AHKActionSheet.m in Sources */,
+				0779196D1BBBF4B100AB0DB1 /* commentModerateTraffic.swift in Sources */,
 				6CE9A2561B8474A300BE4004 /* PointOfInterest.swift in Sources */,
 				6CE9A2521B8474A300BE4004 /* ManagePoints.swift in Sources */,
 				6CE9A2391B839F9100BE4004 /* SetNewPasswordViewController.swift in Sources */,
-				6CE9A1E81B83828500BE4004 /* commentHeavyTraffic.swift in Sources */,
-				6CE9A1DD1B83827700BE4004 /* hazardVC.swift in Sources */,
 				52ECD6DA1B8643DE00718350 /* UIWindow+AHKAdditions.m in Sources */,
-				6CE9A21B1B83849D00BE4004 /* ReportsMainVC.swift in Sources */,
 				6CE9A2331B839F9100BE4004 /* CodeVerificationViewController.swift in Sources */,
 				C3EBDD811B92D56E009237A8 /* DaysListTVC.swift in Sources */,
-				6CE9A1E01B83827700BE4004 /* commentConstruction.swift in Sources */,
 				1429139319DA9F4D0025188A /* MyNavigationController.swift in Sources */,
 				6CE9A2381B839F9100BE4004 /* RegisterViewController.swift in Sources */,
 				6CE9A1C11B8363D400BE4004 /* MapTasks.swift in Sources */,
-				C3EBDD6B1B9242AC009237A8 /* KeyboardViewController.swift in Sources */,
 				141092741B8CB76300CD3114 /* GoogleDataProvider.swift in Sources */,
+				077919331BBBF41900AB0DB1 /* LocationFilteration.swift in Sources */,
+				077919701BBBF4B100AB0DB1 /* addTrafficJamReports.swift in Sources */,
 				6CE9A2741B84D25C00BE4004 /* MenuManager.swift in Sources */,
 				6CE9A26F1B84AE2900BE4004 /* ShowOnMapVC.swift in Sources */,
 				141092791B8CB76300CD3114 /* UIViewExtension.swift in Sources */,
 				6CE9A2551B8474A300BE4004 /* POIDataManager.swift in Sources */,
+				077919321BBBF41900AB0DB1 /* AllVC.swift in Sources */,
 				6CE9A2351B839F9100BE4004 /* ForgetPasswordViewController.swift in Sources */,
 				5C132589198E2A9A00CA49BE /* AppDelegate.swift in Sources */,
+				077919641BBBF48400AB0DB1 /* commentMinorAccident.swift in Sources */,
+				077919781BBBF4CD00AB0DB1 /* commentOnRoad.swift in Sources */,
+				077919351BBBF41900AB0DB1 /* ReportsMainVC.swift in Sources */,
 				141092721B8CB76300CD3114 /* MapViewController.swift in Sources */,
-				6CE9A1DE1B83827700BE4004 /* addHazardReport.swift in Sources */,
-				6CE9A2191B83835A00BE4004 /* commentMajorAccident.swift in Sources */,
 				6CE9A2341B839F9100BE4004 /* EditUserProfileViewController.swift in Sources */,
+				077919801BBBF4EB00AB0DB1 /* commentOther.swift in Sources */,
+				077919771BBBF4CD00AB0DB1 /* addHazardReport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

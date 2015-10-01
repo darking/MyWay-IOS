@@ -11,8 +11,6 @@ import UIKit
 import CoreLocation
 class trafficVC:ViewController{
     
-    private var isKeyboardVisible = false
-    
     
     @IBOutlet weak var moderateLable: UILabel!
     
@@ -21,6 +19,15 @@ class trafficVC:ViewController{
     
     
     @IBOutlet weak var standLable: UILabel!
+    
+    
+    
+    @IBOutlet weak var moderateBtn: UIButton!
+    
+    @IBOutlet weak var heavyBtn: UIButton!
+    
+    @IBOutlet weak var standstillBtn: UIButton!
+    
     
     var moderateFlag = false ;
     var heavyFalg = false ;
@@ -46,9 +53,17 @@ class trafficVC:ViewController{
         settings.setBool(true , forKey: "moderate");
         settings.setBool(false , forKey: "heavy");
         settings.setBool(false , forKey: "standstill");
-        moderateLable.text="Selected";
+//        moderateLable.text="Selected";
         heavyLable.text="";
         standLable.text="";
+        
+        let imageModerate = UIImage(named: "moderateG")
+        let imageHeavy = UIImage(named: "heavy")
+        let imageStandstill = UIImage(named:"standstill")
+        moderateBtn.setImage(imageModerate, forState: UIControlState.Normal)
+        heavyBtn.setImage(imageHeavy, forState: UIControlState.Normal)
+        standstillBtn.setImage(imageStandstill, forState: UIControlState.Normal)
+        
         
     }
     
@@ -60,8 +75,18 @@ class trafficVC:ViewController{
         settings.setBool(false , forKey: "moderate");
         settings.setBool(false , forKey: "standstill");
         moderateLable.text="";
-        heavyLable.text="Selected";
+//        heavyLable.text="Selected";
         standLable.text="";
+        
+        
+        let imageModerate = UIImage(named: "moderate")
+        let imageHeavy = UIImage(named: "heavyG")
+        let imageStandstill = UIImage(named:"standstill")
+        moderateBtn.setImage(imageModerate, forState: UIControlState.Normal)
+        heavyBtn.setImage(imageHeavy, forState: UIControlState.Normal)
+        standstillBtn.setImage(imageStandstill, forState: UIControlState.Normal)
+        
+
     }
     
     @IBAction func standstillTraffic(sender: AnyObject) {
@@ -73,7 +98,18 @@ class trafficVC:ViewController{
         settings.setBool(false , forKey: "moderate");
         moderateLable.text="";
         heavyLable.text="";
-        standLable.text="Selected";
+//        standLable.text="Selected";
+        
+        
+        let imageModerate = UIImage(named: "moderate")
+        let imageHeavy = UIImage(named: "heavy")
+        let imageStandstill = UIImage(named:"standstillG")
+        moderateBtn.setImage(imageModerate, forState: UIControlState.Normal)
+        heavyBtn.setImage(imageHeavy, forState: UIControlState.Normal)
+        standstillBtn.setImage(imageStandstill, forState: UIControlState.Normal)
+        
+
+        
     }
     
     
@@ -107,38 +143,61 @@ class trafficVC:ViewController{
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
-        if (commentTraffic.text == ""){
+        if (!moderateFlag && !heavyFalg && !standstillFlag){
+            
+            var alert : UIAlertView = UIAlertView(title: "Oops!", message:"Please select type of traffic", delegate:nil,cancelButtonTitle:"ok")
+            alert.show()
+
+            
             return false;
         }
         else {
             var manager:addTrafficJamReports = addTrafficJamReports();
             manager.TRAFFIC = self;
-            manager.addToTrafficList(commentTraffic.text);
-            commentTraffic.text = "";
             
+          
+            
+            if (commentTraffic.text == ""){
+                if(moderateFlag){
+                    commentTraffic.text = "Caution! there is moderate traffic ahead"
+                    
+                }
+                else if (heavyFalg){
+                    commentTraffic.text = "Caution! there is heavy traffic ahead"
+                }
+                else {
+                     commentTraffic.text = "Caution! there is standstill traffic ahead"
+                }
+
+            }
+            manager.addToTrafficList(commentTraffic.text);
             moderateFlag = false;
             heavyFalg = false;
             standstillFlag = false;
+            let imageModerate = UIImage(named: "moderate")
+            let imageHeavy = UIImage(named: "heavy")
+            let imageStandstill = UIImage(named:"standstill")
+            moderateBtn.setImage(imageModerate, forState: UIControlState.Normal)
+            heavyBtn.setImage(imageHeavy, forState: UIControlState.Normal)
+            standstillBtn.setImage(imageStandstill, forState: UIControlState.Normal)
+            commentTraffic.text = "";
             return true;
             
         }
     }
     
     
-    @IBAction func cancel(sender: AnyObject) {
-        commentTraffic.text = "";
-    }
+  
     
     override func viewDidLoad() {
         super.viewDidLoad();
         moderateLable.text="";
         heavyLable.text="";
         standLable.text="";
-        //locationManager.requestAlwaysAuthorization();
-        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization();
         locationManager.location;
-        NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.latitude.description, forKey: "lat");
-        NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.longitude.description, forKey: "lon");
+        NSUserDefaults.standardUserDefaults().setValue(locationManager.location.coordinate.latitude.description, forKey: "lat");
+        NSUserDefaults.standardUserDefaults().setValue(locationManager.location.coordinate.longitude.description, forKey: "lon");
         
         locationManager.startUpdatingLocation();
         println("current location is \(currentLocation.description)");
@@ -150,48 +209,22 @@ class trafficVC:ViewController{
         var dis=9.0;
         lo.filterLocations(objectsArray, currentLocation: currentLocation, distance: dis)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
-    }
-    
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        currentLocation = locations.last as! CLLocation;
-        println("current location is \(currentLocation.description)");
         
-        NSUserDefaults.standardUserDefaults().setValue(currentLocation.description, forKey: "currentLocation");
-        NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.latitude.description, forKey: "lat");
-        NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.longitude.description, forKey: "lon");
     }
     
-    override func viewDidDisappear(animated: Bool) {
+//    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+//        currentLocation = locations.last as! CLLocation;
+//        println("current location is \(currentLocation.description)");
+//        
+//        NSUserDefaults.standardUserDefaults().setValue(currentLocation.description, forKey: "currentLocation");
+//        NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.latitude.description, forKey: "lat");
+//        NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.longitude.description, forKey: "lon");
+//    }
+    
+     override func viewDidDisappear(animated: Bool) {
         locationManager.stopUpdatingLocation();
     }
     override func viewDidAppear(animated: Bool) {
         locationManager.startUpdatingLocation();
     }
-    
-    func keyboardWillShow(sender: NSNotification) {
-        
-        if isKeyboardVisible == false {
-            
-            self.view.frame.origin.y -= 80
-            
-            isKeyboardVisible = true
-        }
-        
-        
-    }
-    
-    func keyboardWillHide(sender: NSNotification) {
-        
-        if isKeyboardVisible == true {
-            
-            self.view.frame.origin.y += 80
-            
-            isKeyboardVisible = false
-            
-        }
-        
-    }
-
 }
