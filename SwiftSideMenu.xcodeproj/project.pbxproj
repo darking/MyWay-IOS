@@ -27,7 +27,6 @@
 		077919571BBBF46200AB0DB1 /* moderateG.png in Resources */ = {isa = PBXBuildFile; fileRef = 077919441BBBF46200AB0DB1 /* moderateG.png */; };
 		077919581BBBF46200AB0DB1 /* other.png in Resources */ = {isa = PBXBuildFile; fileRef = 077919451BBBF46200AB0DB1 /* other.png */; };
 		077919591BBBF46200AB0DB1 /* otherG.png in Resources */ = {isa = PBXBuildFile; fileRef = 077919461BBBF46200AB0DB1 /* otherG.png */; };
-		0779195A1BBBF46200AB0DB1 /* standStill.png in Resources */ = {isa = PBXBuildFile; fileRef = 077919471BBBF46200AB0DB1 /* standStill.png */; };
 		0779195B1BBBF46200AB0DB1 /* standStillG.png in Resources */ = {isa = PBXBuildFile; fileRef = 077919481BBBF46200AB0DB1 /* standStillG.png */; };
 		0779195C1BBBF46200AB0DB1 /* traffic.png in Resources */ = {isa = PBXBuildFile; fileRef = 077919491BBBF46200AB0DB1 /* traffic.png */; };
 		077919621BBBF48400AB0DB1 /* accidentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779195E1BBBF48400AB0DB1 /* accidentVC.swift */; };
@@ -168,7 +167,6 @@
 		077919441BBBF46200AB0DB1 /* moderateG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moderateG.png; sourceTree = "<group>"; };
 		077919451BBBF46200AB0DB1 /* other.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = other.png; sourceTree = "<group>"; };
 		077919461BBBF46200AB0DB1 /* otherG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = otherG.png; sourceTree = "<group>"; };
-		077919471BBBF46200AB0DB1 /* standStill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = standStill.png; sourceTree = "<group>"; };
 		077919481BBBF46200AB0DB1 /* standStillG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = standStillG.png; sourceTree = "<group>"; };
 		077919491BBBF46200AB0DB1 /* traffic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = traffic.png; sourceTree = "<group>"; };
 		0779195E1BBBF48400AB0DB1 /* accidentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accidentVC.swift; sourceTree = "<group>"; };
@@ -511,7 +509,6 @@
 				077919441BBBF46200AB0DB1 /* moderateG.png */,
 				077919451BBBF46200AB0DB1 /* other.png */,
 				077919461BBBF46200AB0DB1 /* otherG.png */,
-				077919471BBBF46200AB0DB1 /* standStill.png */,
 				077919481BBBF46200AB0DB1 /* standStillG.png */,
 				077919491BBBF46200AB0DB1 /* traffic.png */,
 				5C132586198E2A9A00CA49BE /* Supporting Files */,
@@ -769,7 +766,6 @@
 				C3EBDD821B92D56E009237A8 /* MonitorReportSample.plist in Resources */,
 				0779194C1BBBF46200AB0DB1 /* Major.png in Resources */,
 				077919511BBBF46200AB0DB1 /* construction.png in Resources */,
-				0779195A1BBBF46200AB0DB1 /* standStill.png in Resources */,
 				077919551BBBF46200AB0DB1 /* heavyG.png in Resources */,
 				0779194B1BBBF46200AB0DB1 /* OnRoadG.png in Resources */,
 				C3EBDD9C1B92D59A009237A8 /* drivers.plist in Resources */,
