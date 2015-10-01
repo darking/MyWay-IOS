@@ -9,6 +9,7 @@
 
 import Foundation
 import UIKit
+import GoogleMaps
 
 class commentStandstillTraffic:UITableViewController{
     
@@ -47,6 +48,9 @@ class commentStandstillTraffic:UITableViewController{
         showMap.title = "Standard Traffic";
         showMap.message = report.comment;
         showMap.location = report.reportLocation;
+        let (latitud, longitud) =  GetLocationVC().getCurrentLocation()
+        var myCLL:CLLocation = CLLocation(latitude: (NSUserDefaults.standardUserDefaults().valueForKey("lat") as! NSString).doubleValue , longitude: (NSUserDefaults.standardUserDefaults().valueForKey("lon") as! NSString).doubleValue)
+        showMap.location = myCLL
         self.navigationController?.pushViewController(showMap, animated: true);
 
     }

@@ -8,8 +8,9 @@
 
 import Foundation
 import UIKit
+import GoogleMaps
 
-class commentOther:UITableViewController{
+class commentOther:UITableViewController ,CLLocationManagerDelegate{
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1;
@@ -46,7 +47,20 @@ class commentOther:UITableViewController{
         var showMap:ShowOnMapVC = UIStoryboard(name: "reqLocaiton", bundle: nil).instantiateViewControllerWithIdentifier("ShowOnMapVC") as! ShowOnMapVC;
         showMap.title = "other";
         showMap.message = report.comment;
-        showMap.location = report.reportLocation;
+        
+        
+        //showMap.location = report.reportLocation;
+        
+        //MASHMOUM ebra
+      //  var laa = GetLocationVC.getCurrentLocation().0
+        //var lnn = GetLocationVC.getCurrentLocation().1
+        let (latitud, longitud) =  GetLocationVC().getCurrentLocation()
+       
+        //var myCLL:CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, lng)
+        var myCLL:CLLocation = CLLocation(latitude: (NSUserDefaults.standardUserDefaults().valueForKey("lat") as! NSString).doubleValue , longitude: (NSUserDefaults.standardUserDefaults().valueForKey("lon") as! NSString).doubleValue)
+        showMap.location = myCLL
+        //./MASHMOUM
+        
         self.navigationController?.pushViewController(showMap, animated: true);
     }
     

@@ -20,8 +20,20 @@ class CommentLocation{
         values.setValue(comment, forKey: "comment");
         var lon:String = NSUserDefaults.standardUserDefaults().valueForKey("lon") as! String;
         var lat:String = NSUserDefaults.standardUserDefaults().valueForKey("lat") as! String;
+        
+        
+        var hours = NSUserDefaults.standardUserDefaults().valueForKey("hour") as! Int;
+        
+        var day = NSUserDefaults.standardUserDefaults().valueForKey("day") as! Int;
+           var month = NSUserDefaults.standardUserDefaults().valueForKey("month") as! Int;
+        var year = NSUserDefaults.standardUserDefaults().valueForKey("year") as! Int;
+        
         values.setValue(lon, forKey: "lon");
         values.setValue(lat, forKey: "lat");
+        values.setValue(hours, forKey: "hour");
+        values.setValue(day, forKey: "day");
+        values.setValue(month, forKey: "month");
+        values.setValue(year, forKey: "year");
         return values;
         
     }
@@ -32,6 +44,10 @@ class CommentLocation{
         commentLocation.comment = values.objectForKey("comment") as! String;
         var lat: NSString = values.objectForKey("lat")as! NSString;
         var lon: NSString = values.objectForKey("lon") as! NSString;
+        var day = values.objectForKey("day")as! Int
+        var year = values.objectForKey("year")as! Int
+        var month = values.objectForKey("month")as! Int
+        var hour = values.objectForKey("hour")as! Int
         CLLocation(latitude: lat.doubleValue, longitude: lon.doubleValue)
         return commentLocation
     }

@@ -13,8 +13,6 @@ import CoreLocation
 class accidentVC:ViewController{
     
     
-    private var isKeyboardVisible = false
-    
     @IBOutlet weak var minorLable: UILabel!
     
     @IBOutlet weak var majorLable: UILabel!
@@ -28,13 +26,21 @@ class accidentVC:ViewController{
     var currentLocation:CLLocation = CLLocation();
     @IBOutlet var commentAccident: UITextField!
     
+    @IBOutlet weak var minorbtn: UIButton!
+    
+    
+    @IBOutlet weak var majorbtn: UIButton!
     
     @IBAction func minorAccident(sender: AnyObject) {
         majorFlag = false;
         minorFlag = true;
         settings.setBool(true , forKey: "minor");
-        minorLable.text="Selected";
+//        minorLable.text="Selected";
         majorLable.text="";
+        let imageMinor = UIImage(named: "MinorG")
+        let imageMajor = UIImage(named: "Major")
+        majorbtn.setImage(imageMajor, forState: UIControlState.Normal)
+        minorbtn.setImage(imageMinor, forState: UIControlState.Normal)
     }
 
     
@@ -61,7 +67,12 @@ class accidentVC:ViewController{
         majorFlag = true;
         settings.setBool(false, forKey: "minor");
         minorLable.text="";
-        majorLable.text="Selected";
+//        majorLable.text="Selected";
+        
+        let imageMinor = UIImage(named: "Minor")
+        let imageMajor = UIImage(named: "MajorG")
+        majorbtn.setImage(imageMajor, forState: UIControlState.Normal)
+        minorbtn.setImage(imageMinor, forState: UIControlState.Normal)
     }
 
    @IBAction func sendAccidentReport(sender: AnyObject) {
@@ -77,56 +88,72 @@ class accidentVC:ViewController{
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
-        if (commentAccident.text == ""){
+//        if (commentAccident.text == ""){
+//            return false;
+//        }
+        
+        if (minorFlag==false && majorFlag==false){
+            var alert : UIAlertView = UIAlertView(title: "Oops!", message:"Please select type of accident", delegate:nil,cancelButtonTitle:"ok")
+            alert.show()
             return false;
         }
+       
         else {
             var manager:addAccidentsReport = addAccidentsReport();
             manager.ACCIDENT = self;
+            
+            
+            if (commentAccident.text == ""){
+                if(minorFlag){
+                    commentAccident.text = "Caution! there is a minor accident ahead"
+                    
+                }
+                else {
+                    commentAccident.text = "Caution! there is a major accident ahead"
+
+                }
+            }
             manager.addToAccidentsList(commentAccident.text);
             commentAccident.text = "";
-            
             minorFlag = false;
             majorFlag = false;
+            let imageMinor = UIImage(named: "Minor")
+            let imageMajor = UIImage(named: "Major")
+            majorbtn.setImage(imageMajor, forState: UIControlState.Normal)
+            minorbtn.setImage(imageMinor, forState: UIControlState.Normal)
+            var getLocation:GetLocationVC = UIStoryboard(name: "GetLocation", bundle: nil).instantiateViewControllerWithIdentifier("GetLocationVC") as! GetLocationVC;
+            NSUserDefaults.standardUserDefaults().setValue(NSUserDefaults.standardUserDefaults().valueForKey("lat"), forKey: "reportLat");
+            NSUserDefaults.standardUserDefaults().setValue(NSUserDefaults.standardUserDefaults().valueForKey("lon"), forKey: "reportLon");
+            getLocation.latKey = "reportLat";
+            getLocation.lngKey = "reportLon";
             return true;
             
         }
     
     }
 
-
-
-    @IBAction func cancel(sender: AnyObject) {
-        commentAccident.text = "";
-    }
-
-
     override func viewDidLoad() {
         super.viewDidLoad();
         minorLable.text="";
         majorLable.text="";
-        //locationManager.requestAlwaysAuthorization();
-        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization();
         locationManager.location;
-        NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.latitude.description, forKey: "lat");
-        NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.longitude.description, forKey: "lon");
+        NSUserDefaults.standardUserDefaults().setValue(locationManager.location.coordinate.latitude.description, forKey: "lat");
+        NSUserDefaults.standardUserDefaults().setValue(locationManager.location.coordinate.longitude.description, forKey: "lon");
         
         locationManager.startUpdatingLocation();
         println("current location is \(currentLocation.description)");
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
     }
     
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        
-        currentLocation = locations.last as! CLLocation;
-        println("current location is \(currentLocation.description)");
-        
-        NSUserDefaults.standardUserDefaults().setValue(currentLocation.description, forKey: "currentLocation");
-        NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.latitude.description, forKey: "lat");
-        NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.longitude.description, forKey: "lon");
-    }
+//    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+//        
+//        currentLocation = locations.last as! CLLocation;
+//        println("current location is \(currentLocation.description)");
+//        
+//        NSUserDefaults.standardUserDefaults().setValue(currentLocation.description, forKey: "currentLocation");
+//        NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.latitude.description, forKey: "lat");
+//        NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.longitude.description, forKey: "lon");
+//    }
     
     override func viewDidDisappear(animated: Bool) {
         locationManager.stopUpdatingLocation();
@@ -134,31 +161,6 @@ class accidentVC:ViewController{
     override func viewDidAppear(animated: Bool) {
         locationManager.startUpdatingLocation();
     }
-    
-    func keyboardWillShow(sender: NSNotification) {
-        
-        if isKeyboardVisible == false {
-            
-            self.view.frame.origin.y -= 80
-            
-            isKeyboardVisible = true
-        }
-        
-        
-    }
-    
-    func keyboardWillHide(sender: NSNotification) {
-        
-        if isKeyboardVisible == true {
-            
-            self.view.frame.origin.y += 80
-            
-            isKeyboardVisible = false
-            
-        }
-        
-    }
-
 
 }
 

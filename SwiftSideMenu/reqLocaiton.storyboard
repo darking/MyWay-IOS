@@ -7,7 +7,7 @@
         <!--Show On MapVC-->
         <scene sceneID="bOv-wv-Usr">
             <objects>
-                <viewController storyboardIdentifier="ShowOnMapVC" id="v7O-6y-pho" customClass="ShowOnMapVC" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShowOnMapVC" id="v7O-6y-pho" customClass="ShowOnMapVC" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sdo-rW-mSl"/>
                         <viewControllerLayoutGuide type="bottom" id="Tfj-Cw-fap"/>
@@ -42,7 +42,7 @@
         <!--FirstVC-->
         <scene sceneID="JmL-NK-Mth">
             <objects>
-                <viewController id="HCy-gt-aDQ" customClass="FirstVC" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HCy-gt-aDQ" customClass="FirstVC" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PuQ-wx-paU"/>
                         <viewControllerLayoutGuide type="bottom" id="jQW-rv-zxf"/>

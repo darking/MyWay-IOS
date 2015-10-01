@@ -1,5 +1,5 @@
 //
-//  GetLocationVC.swift
+//      ationVC.swift
 //  SwiftSideMenu
 //
 //  Created by Abdullah Al Mashmoum on 8/20/15.
@@ -136,6 +136,9 @@ class GetLocationVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDele
         
         retrieveMarkerInfo(markerCoorLat, lng: markerCoorLng)
         
+      
+        
+        
         NSUserDefaults.standardUserDefaults().setValue(String(format:"%f", markerCoorLat), forKey: latKey)
         NSUserDefaults.standardUserDefaults().setValue(String(format:"%f", markerCoorLng), forKey: lngKey)
         //setting the coordinates in the static vars in addnewpoi class
@@ -195,13 +198,13 @@ class GetLocationVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDele
         }
     }
     
-  func getCurrentLocation() -> String {
+  func getCurrentLocation() -> (Double,Double) {
   
          let myLoc: String = "\(self.locationManager.location.coordinate.latitude),\(self.locationManager.location.coordinate.longitude)"
     
     println("my current location is: \(myLoc)")
     
-        return myLoc
+        return (self.locationManager.location.coordinate.latitude,self.locationManager.location.coordinate.longitude)
     }
     
 }
