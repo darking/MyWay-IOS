@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 47;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -46,6 +46,9 @@
 		0779197F1BBBF4EB00AB0DB1 /* addOtherReports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779197C1BBBF4EB00AB0DB1 /* addOtherReports.swift */; };
 		077919801BBBF4EB00AB0DB1 /* commentOther.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779197D1BBBF4EB00AB0DB1 /* commentOther.swift */; };
 		078780061BBCFB6D00B7CF93 /* getCommentDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078780051BBCFB6D00B7CF93 /* getCommentDetails.swift */; };
+		0787800B1BBD1F9F00B7CF93 /* KhalidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078780081BBD1F9F00B7CF93 /* KhalidViewController.swift */; };
+		0787800C1BBD1F9F00B7CF93 /* KhalidMapTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078780091BBD1F9F00B7CF93 /* KhalidMapTasks.swift */; };
+		0787800D1BBD1F9F00B7CF93 /* Khalidtable22.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0787800A1BBD1F9F00B7CF93 /* Khalidtable22.swift */; };
 		141092691B8CB71F00CD3114 /* POI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141092681B8CB71F00CD3114 /* POI.storyboard */; };
 		141092721B8CB76300CD3114 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410926A1B8CB76300CD3114 /* MapViewController.swift */; };
 		141092731B8CB76300CD3114 /* TypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410926B1B8CB76300CD3114 /* TypesTableViewController.swift */; };
@@ -80,6 +83,7 @@
 		5C13259C198E2A9A00CA49BE /* SwiftSideMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C13259B198E2A9A00CA49BE /* SwiftSideMenuTests.swift */; };
 		5C1325AA198E2AB300CA49BE /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C1325A7198E2AB300CA49BE /* image.png */; };
 		5C6D6A271A7E26380047FE0D /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6D6A261A7E26380047FE0D /* ViewController2.swift */; };
+		6CD32A271BBBFFEF00F6D684 /* DriverCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD32A261BBBFFEF00F6D684 /* DriverCustomCell.swift */; };
 		6CE9A1C01B8363D400BE4004 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1BE1B8363D400BE4004 /* mainViewController.swift */; };
 		6CE9A1C11B8363D400BE4004 /* MapTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1BF1B8363D400BE4004 /* MapTasks.swift */; };
 		6CE9A1C31B83641000BE4004 /* MainMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1C21B83641000BE4004 /* MainMapVC.swift */; };
@@ -186,6 +190,9 @@
 		0779197C1BBBF4EB00AB0DB1 /* addOtherReports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addOtherReports.swift; sourceTree = "<group>"; };
 		0779197D1BBBF4EB00AB0DB1 /* commentOther.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentOther.swift; sourceTree = "<group>"; };
 		078780051BBCFB6D00B7CF93 /* getCommentDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getCommentDetails.swift; sourceTree = "<group>"; };
+		078780081BBD1F9F00B7CF93 /* KhalidViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KhalidViewController.swift; sourceTree = "<group>"; };
+		078780091BBD1F9F00B7CF93 /* KhalidMapTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KhalidMapTasks.swift; sourceTree = "<group>"; };
+		0787800A1BBD1F9F00B7CF93 /* Khalidtable22.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Khalidtable22.swift; sourceTree = "<group>"; };
 		141092681B8CB71F00CD3114 /* POI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = POI.storyboard; sourceTree = "<group>"; };
 		1410926A1B8CB76300CD3114 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1410926B1B8CB76300CD3114 /* TypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypesTableViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +239,8 @@
 		5C1325A7198E2AB300CA49BE /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		5C6D6A261A7E26380047FE0D /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		645C7FC34CC5E01A1D5C9ED1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6CD32A261BBBFFEF00F6D684 /* DriverCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverCustomCell.swift; sourceTree = "<group>"; };
+		6CD32A281BBC559900F6D684 /* DriverCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriverCustomCell.xib; sourceTree = "<group>"; };
 		6CE9A1BE1B8363D400BE4004 /* mainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		6CE9A1BF1B8363D400BE4004 /* MapTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTasks.swift; sourceTree = "<group>"; };
 		6CE9A1C21B83641000BE4004 /* MainMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMapVC.swift; sourceTree = "<group>"; };
@@ -375,6 +384,16 @@
 			name = Other;
 			sourceTree = "<group>";
 		};
+		078780071BBD1E5500B7CF93 /* Khalid Map */ = {
+			isa = PBXGroup;
+			children = (
+				078780081BBD1F9F00B7CF93 /* KhalidViewController.swift */,
+				078780091BBD1F9F00B7CF93 /* KhalidMapTasks.swift */,
+				0787800A1BBD1F9F00B7CF93 /* Khalidtable22.swift */,
+			);
+			name = "Khalid Map";
+			sourceTree = "<group>";
+		};
 		1410927A1B8CB77200CD3114 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,6 +501,7 @@
 		5C132585198E2A9A00CA49BE /* SwiftSideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				078780071BBD1E5500B7CF93 /* Khalid Map */,
 				0779192D1BBBF3EE00AB0DB1 /* Team4 */,
 				6CE9A26C1B84AE1D00BE4004 /* MapIntegration */,
 				6CE9A21D1B83863100BE4004 /* Team2 */,
@@ -562,6 +582,7 @@
 				C3EBDD971B92D59A009237A8 /* DriversListVC.swift */,
 				C3EBDD981B92D59A009237A8 /* drivers.plist */,
 				C3EBDD991B92D59A009237A8 /* DriverDetailsVC.swift */,
+				6CD32A261BBBFFEF00F6D684 /* DriverCustomCell.swift */,
 			);
 			name = OmYasser;
 			sourceTree = "<group>";
@@ -649,6 +670,7 @@
 			children = (
 				C3EBDD6E1B92D529009237A8 /* FileUtils.swift */,
 				C3EBDD6F1B92D529009237A8 /* Team5_m.storyboard */,
+				6CD32A281BBC559900F6D684 /* DriverCustomCell.xib */,
 				C3EBDD701B92D529009237A8 /* AppSettings.swift */,
 				C3EBDD711B92D529009237A8 /* Team5.storyboard */,
 				C3EBDD721B92D529009237A8 /* UISettings.swift */,
@@ -715,7 +737,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					5C132582198E2A9A00CA49BE = {
@@ -729,7 +751,7 @@
 				};
 			};
 			buildConfigurationList = 5C13257E198E2A9A00CA49BE /* Build configuration list for PBXProject "SwiftSideMenu" */;
-			compatibilityVersion = "Xcode 6.3";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -865,6 +887,8 @@
 				6CE9A23A1B839F9100BE4004 /* UserInfo.swift in Sources */,
 				C3EBDD921B92D586009237A8 /* DailyReportVC.swift in Sources */,
 				0779196E1BBBF4B100AB0DB1 /* commentHeavyTraffic.swift in Sources */,
+				0787800D1BBD1F9F00B7CF93 /* Khalidtable22.swift in Sources */,
+				0787800B1BBD1F9F00B7CF93 /* KhalidViewController.swift in Sources */,
 				C3EBDD9D1B92D59A009237A8 /* DriverDetailsVC.swift in Sources */,
 				C3EBDD751B92D529009237A8 /* AppSettings.swift in Sources */,
 				5C13258B198E2A9A00CA49BE /* ViewController.swift in Sources */,
@@ -904,6 +928,7 @@
 				6CE9A2521B8474A300BE4004 /* ManagePoints.swift in Sources */,
 				6CE9A2391B839F9100BE4004 /* SetNewPasswordViewController.swift in Sources */,
 				52ECD6DA1B8643DE00718350 /* UIWindow+AHKAdditions.m in Sources */,
+				0787800C1BBD1F9F00B7CF93 /* KhalidMapTasks.swift in Sources */,
 				6CE9A2331B839F9100BE4004 /* CodeVerificationViewController.swift in Sources */,
 				C3EBDD811B92D56E009237A8 /* DaysListTVC.swift in Sources */,
 				1429139319DA9F4D0025188A /* MyNavigationController.swift in Sources */,
@@ -923,6 +948,7 @@
 				077919781BBBF4CD00AB0DB1 /* commentOnRoad.swift in Sources */,
 				077919351BBBF41900AB0DB1 /* ReportsMainVC.swift in Sources */,
 				141092721B8CB76300CD3114 /* MapViewController.swift in Sources */,
+				6CD32A271BBBFFEF00F6D684 /* DriverCustomCell.swift in Sources */,
 				6CE9A2341B839F9100BE4004 /* EditUserProfileViewController.swift in Sources */,
 				077919801BBBF4EB00AB0DB1 /* commentOther.swift in Sources */,
 				077919771BBBF4CD00AB0DB1 /* addHazardReport.swift in Sources */,

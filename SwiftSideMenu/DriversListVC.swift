@@ -15,6 +15,28 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
     }
     var userName = ""
     var drivers:NSArray = NSArray();
+    @IBAction func addDriver(sender: AnyObject) {
+        var addUserAlert:UIAlertController = UIAlertController(title: "Add Driver", message: "Please specify driver username/email", preferredStyle: .Alert);
+        //Create and add the Cancel action
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
+            //Do some stuff
+        }
+        addUserAlert.addAction(cancelAction)
+        //Create and an option action
+        let sendToDriver: UIAlertAction = UIAlertAction(title: "Submit", style: .Default) { action -> Void in
+            //Do some other stuff
+        }
+        addUserAlert.addAction(sendToDriver)
+        //Add a text field
+        addUserAlert.addTextFieldWithConfigurationHandler { textField -> Void in
+            //TextField configuration
+            //textField.textColor = UIColor.blueColor()
+        }
+        
+        //Present the AlertController
+        self.presentViewController(addUserAlert, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +47,8 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
 //        let path = NSBundle.mainBundle().pathForResource("drivers", ofType: "plist")
 //        let data = NSDictionary(contentsOfFile: path!)!
 //        drivers = data[userName] as! [String]
+        var nib = UINib(nibName: "DriverCustomCell", bundle: nil);
+        tableView.registerNib(nib, forCellReuseIdentifier: "driverCustomCell");
     }
     func read()->NSMutableArray{
         
@@ -45,13 +69,20 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-//        let cell = tableView.dequeueReusableCellWithIdentifier("c", forIndexPath: indexPath) as! UITableViewCell
-        let cell:UITableViewCell = UITableViewCell();
+//        let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("driverCustomCell") as! UITableViewCell
+        //let cell:UITableViewCell = UITableViewCell();
+        //let cell:DriverCustomCell = DriverCustomCell();
+        var cell:DriverCustomCell = self.tableView.dequeueReusableCellWithIdentifier("driverCustomCell") as! DriverCustomCell;
         if drivers.count == 0 {
             cell.textLabel?.text = "No drivers found";
         }
         else {
-            cell.textLabel?.text = (drivers[indexPath.row] as! String);
+            //cell.textLabel?.text = (drivers[indexPath.row] as! String);
+            cell.driverName?.text = "AdnanQaz";
+            cell.driverName?.sizeToFit();
+            cell.driverUsername?.text = "@AdnanQaz";
+            cell.driverUsername?.sizeToFit();
+            cell.driverImage?.image = UIImage(named: "chauffer.png");
         }
         return cell;
     }
