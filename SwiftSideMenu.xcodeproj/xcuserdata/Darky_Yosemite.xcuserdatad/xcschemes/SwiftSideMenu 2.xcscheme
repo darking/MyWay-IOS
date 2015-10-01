@@ -47,11 +47,10 @@
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
-<<<<<<< HEAD
-      allowLocationSimulation = "NO">
-=======
+
+
       allowLocationSimulation = "YES">
->>>>>>> bee47f4bac161678039b3013c144e9feea67efd2
+
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
