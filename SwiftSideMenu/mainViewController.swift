@@ -89,6 +89,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     @IBOutlet weak var viewMap: GMSMapView!
     
     
+    
     @IBOutlet weak var toggleTraffic: UISwitch!
   
     @IBOutlet weak var toggleFav: UISwitch!
@@ -238,6 +239,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     //Button for clearing route
     @IBAction func clrRoute(sender: AnyObject) {
     self.clrAllRoute()
+
          clearBtn.enabled = false
     }
 
@@ -837,7 +839,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     }
     
     func retrieveMarkerInfo(var lat:Double, var lng:Double) {
-        println("Marker lat: \(lat), Market lng: \(lng)")
+       // println("Marker lat: \(lat), Market lng: \(lng)")
         
         var coor:CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, lng)
         
@@ -1221,16 +1223,16 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
         println("path count: \(path.count())")
         
-        println("\(self.mapTasks.originCoordinate.latitude) \(self.mapTasks.originCoordinate.longitude) ")
-        println("\(self.mapTasks.destinationCoordinate.latitude) \(self.mapTasks.destinationCoordinate.longitude) ")
+        //println("\(self.mapTasks.originCoordinate.latitude) \(self.mapTasks.originCoordinate.longitude) ")
+        //println("\(self.mapTasks.destinationCoordinate.latitude) \(self.mapTasks.destinationCoordinate.longitude) ")
         
         var bounds:GMSCoordinateBounds = GMSCoordinateBounds()
       //  println("initial bounds: (\(bounds.southWest.latitude), \(bounds.southWest.longitude)) - (\(bounds.northEast.latitude), \(bounds.northEast.longitude)) ")
         
-        for (var i:UInt = 0; i < path.count(); i++){
-            bounds = bounds.includingCoordinate(path.coordinateAtIndex(i))
+        //for (var i:UInt = 0; i < path.count(); i++){
+         //   bounds = bounds.includingCoordinate(path.coordinateAtIndex(i))
           //  println("updated bounds: (\(bounds.southWest.latitude), \(bounds.southWest.longitude)) - (\(bounds.northEast.latitude), \(bounds.northEast.longitude)) ")
-        }
+       // }
         //println("final bounds: (\(bounds.southWest.latitude), \(bounds.southWest.longitude)) - (\(bounds.northEast.latitude), \(bounds.northEast.longitude)) ")
         
         routePolyline = GMSPolyline(path: path)
@@ -1259,15 +1261,16 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             
             markersArray.removeAll(keepCapacity: false)
         }
+      
     }
     
     
     //clear all route
     func clrAllRoute() {
         
-//        originMarker.map = nil
-//        destinationMarker.map = nil
-//        routePolyline.map = nil
+        originMarker.map = nil
+        destinationMarker.map = nil
+        routePolyline.map = nil
         
         originMarker = nil
         destinationMarker = nil
@@ -1275,15 +1278,20 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
         if markersArray.count > 0 {
             for marker in markersArray {
+                marker.map = viewMap
                 marker.map = nil
             }
             
             markersArray.removeAll(keepCapacity: false)
+            waypointsArray.removeAll(keepCapacity: false)
         }
-        
+
         viewMap.clear()
         
         
+        //println("wayPoints array count: \(waypointsArray.count)")
+        
+        //println("Markers array count: \(markersArray.count)")
     }
     
     //./clear all route
