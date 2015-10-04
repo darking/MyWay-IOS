@@ -18,7 +18,7 @@ class addTrafficJamReports{
     
     
     
-    func addToTrafficList(comment:String){
+    func addToTrafficList(comment:String,id_report: Int){
         let newSetting = NSUserDefaults.standardUserDefaults();
         
         if( TRAFFIC.moderateFlag == true)
@@ -28,7 +28,7 @@ class addTrafficJamReports{
             
             var currentList:NSMutableArray = self.showAllReports();
             
-            currentList.addObject(CommentLocation().valuesDicForComment(comment));
+            currentList.addObject(CommentLocation().valuesDicForComment(comment,id_report: id_report));
             currentList.writeToFile(filePath, atomically: false);
             
             println(filePath);}
@@ -41,7 +41,7 @@ class addTrafficJamReports{
             
             var currentList:NSMutableArray = self.showAllReports();
             
-            currentList.addObject(CommentLocation().valuesDicForComment(comment));
+            currentList.addObject(CommentLocation().valuesDicForComment(comment,id_report: id_report));
             currentList.writeToFile(filePath2, atomically: false);
             
             println(filePath2);
@@ -53,7 +53,7 @@ class addTrafficJamReports{
             
             var currentList:NSMutableArray = self.showAllReports();
             
-            currentList.addObject(CommentLocation().valuesDicForComment(comment));
+            currentList.addObject(CommentLocation().valuesDicForComment(comment,id_report: id_report));
             currentList.writeToFile(filePath3, atomically: false);
            
             println(filePath3);

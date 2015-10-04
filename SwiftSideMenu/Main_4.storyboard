@@ -23,7 +23,7 @@
         <!--All Comments-->
         <scene sceneID="MMT-FQ-Cl2">
             <objects>
-                <tableViewController storyboardIdentifier="DetailsVC" id="ErU-IG-vUA" customClass="TableVc" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DetailsVC" id="ErU-IG-vUA" customClass="TableVc" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="KsL-Kr-hHJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,7 +50,7 @@
         <!--Road Reports-->
         <scene sceneID="Ab2-xr-4JS">
             <objects>
-                <viewController storyboardIdentifier="Report" title="Road Reports" id="fER-EW-fF5" customClass="ReportsMainVC" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Report" title="Road Reports" id="fER-EW-fF5" customClass="ReportsMainVC" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bfU-Bw-rvA"/>
                         <viewControllerLayoutGuide type="bottom" id="oWa-UR-Upa"/>
@@ -136,7 +136,7 @@
         <!--Accident-->
         <scene sceneID="wKq-U2-ae6">
             <objects>
-                <viewController id="GFU-3c-g6B" customClass="accidentVC" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GFU-3c-g6B" customClass="accidentVC" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wYu-iX-Ya1"/>
                         <viewControllerLayoutGuide type="bottom" id="oZP-G0-uJf"/>
@@ -181,27 +181,6 @@
                                 <color key="textColor" red="0.021305714180000001" green="0.60407882059999995" blue="0.85479797980000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZ6-Gd-RxW">
-                                <rect key="frame" x="16" y="239" width="122" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqs-xp-Qp9">
-                                <rect key="frame" x="179" y="238" width="122" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKg-Za-kkF">
-                                <rect key="frame" x="16" y="385" width="288" height="30"/>
-                                <state key="normal" title="Set Location">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="lo:" destination="GFU-3c-g6B" eventType="touchUpInside" id="GDe-yo-uwd"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJs-9h-HgV">
                                 <rect key="frame" x="16" y="423" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -211,7 +190,7 @@
                                 </state>
                                 <connections>
                                     <action selector="sendAccidentReport:" destination="GFU-3c-g6B" eventType="touchUpInside" id="kwS-DT-ySl"/>
-                                    <segue destination="nvm-Vf-4lR" kind="push" id="XQv-IU-2Kl"/>
+                                    <segue destination="fER-EW-fF5" kind="push" id="VIw-fx-U4D"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comment:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZK-0s-Pu6">
@@ -221,7 +200,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your comment .. (Optional)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kWW-zW-E6W">
-                                <rect key="frame" x="15" y="332" width="288" height="30"/>
+                                <rect key="frame" x="16" y="347" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -231,9 +210,7 @@
                     <navigationItem key="navigationItem" title="Accident" id="wMX-Lb-Q3S"/>
                     <connections>
                         <outlet property="commentAccident" destination="kWW-zW-E6W" id="aBy-HI-pi3"/>
-                        <outlet property="majorLable" destination="Kqs-xp-Qp9" id="H2b-C7-UUc"/>
                         <outlet property="majorbtn" destination="OiK-DP-eOX" id="ZXl-SO-VXf"/>
-                        <outlet property="minorLable" destination="TZ6-Gd-RxW" id="jNe-jk-LYs"/>
                         <outlet property="minorbtn" destination="6QI-Ny-vKF" id="8zy-Rn-173"/>
                     </connections>
                 </viewController>
@@ -244,7 +221,7 @@
         <!--Hazard-->
         <scene sceneID="j02-BW-Nom">
             <objects>
-                <viewController id="9jK-jN-88h" customClass="hazardVC" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9jK-jN-88h" customClass="hazardVC" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NO9-sh-14F"/>
                         <viewControllerLayoutGuide type="bottom" id="2xb-LI-AYj"/>
@@ -280,7 +257,7 @@
                                 </state>
                                 <connections>
                                     <action selector="sendReport:" destination="9jK-jN-88h" eventType="touchUpInside" id="R3F-Up-69a"/>
-                                    <segue destination="ZCa-2b-1SR" kind="push" id="Kua-vW-onY"/>
+                                    <segue destination="fER-EW-fF5" kind="push" id="FZB-D7-K4Z"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wMV-f9-JCA">
@@ -301,27 +278,6 @@
                                 <color key="textColor" red="0.021305714180000001" green="0.60407882059999995" blue="0.85479797980000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P03-us-j0x">
-                                <rect key="frame" x="16" y="256" width="103" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgh-Z0-H0L">
-                                <rect key="frame" x="196" y="253" width="103" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7V-y5-ZXW">
-                                <rect key="frame" x="117" y="378" width="87" height="30"/>
-                                <state key="normal" title="Set Location">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="SetLocation:" destination="9jK-jN-88h" eventType="touchUpInside" id="BDc-ZH-8Im"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comment:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atF-4Z-nfx">
                                 <rect key="frame" x="16" y="311" width="92" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -329,7 +285,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your comment..(Optional)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zcr-rV-sGS">
-                                <rect key="frame" x="16" y="340" width="288" height="30"/>
+                                <rect key="frame" x="16" y="351" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -340,9 +296,7 @@
                     <connections>
                         <outlet property="commentHazard" destination="zcr-rV-sGS" id="EP0-4b-zbA"/>
                         <outlet property="constructionBtn" destination="0Gq-jM-gfg" id="iMh-LG-W9Z"/>
-                        <outlet property="constructionLable" destination="P03-us-j0x" id="CEg-mt-EUa"/>
                         <outlet property="onRoadBtn" destination="VFf-SU-xdL" id="ynk-lp-z7h"/>
-                        <outlet property="onRoadLable" destination="cgh-Z0-H0L" id="kYC-R3-iRi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kld-jk-10k" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -352,7 +306,7 @@
         <!--Other-->
         <scene sceneID="Oth-Lu-ivY">
             <objects>
-                <viewController id="a2b-wt-yBJ" customClass="otherVC" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="a2b-wt-yBJ" customClass="otherVC" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nff-YW-u30"/>
                         <viewControllerLayoutGuide type="bottom" id="Sby-w9-prv"/>
@@ -376,27 +330,6 @@
                                     <action selector="otherReport:" destination="a2b-wt-yBJ" eventType="touchUpInside" id="nRh-g9-Ibb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kr-ZY-foR">
-                                <rect key="frame" x="118" y="359" width="87" height="30"/>
-                                <state key="normal" title="Set Location">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="SetLcation:" destination="a2b-wt-yBJ" eventType="touchUpInside" id="bAF-gQ-UXj"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPo-ea-878">
-                                <rect key="frame" x="124" y="397" width="59" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Submit">
-                                    <color key="titleColor" red="0.021305714180000001" green="0.60407882059999995" blue="0.85479797980000005" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="sendReport:" destination="a2b-wt-yBJ" eventType="touchUpInside" id="Fqv-cT-6C9"/>
-                                    <segue destination="Ak6-NZ-Nfl" kind="push" id="g22-Ab-YaP"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comment:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBM-ST-PDI">
                                 <rect key="frame" x="17" y="273" width="98" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -408,6 +341,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPo-ea-878">
+                                <rect key="frame" x="125" y="382" width="59" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="0.021305714180000001" green="0.60407882059999995" blue="0.85479797980000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendReport:" destination="a2b-wt-yBJ" eventType="touchUpInside" id="Fqv-cT-6C9"/>
+                                    <segue destination="fER-EW-fF5" kind="push" id="mpP-oT-3Yl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16239276959999999" green="0.16239276959999999" blue="0.16239276959999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -419,12 +364,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UnY-nd-1st" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-988" y="897"/>
+            <point key="canvasLocation" x="-1132" y="951"/>
         </scene>
         <!--Hazard-->
         <scene sceneID="BpI-TB-7Ub">
             <objects>
-                <tableViewController id="ZCa-2b-1SR" customClass="commentConstruction" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ZCa-2b-1SR" customClass="commentConstruction" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="KY0-a7-3Kl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -451,7 +396,7 @@
         <!--Comment Other-->
         <scene sceneID="ROC-ux-v08">
             <objects>
-                <tableViewController id="Ak6-NZ-Nfl" customClass="commentOther" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Ak6-NZ-Nfl" customClass="commentOther" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="55D-4f-Dqz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -478,7 +423,7 @@
         <!--Accident-->
         <scene sceneID="omS-Kw-Puv">
             <objects>
-                <tableViewController id="nvm-Vf-4lR" customClass="commentMinorAccident" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="nvm-Vf-4lR" customClass="commentMinorAccident" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="SAj-Q4-rEF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -505,7 +450,7 @@
         <!--Traffic Jam-->
         <scene sceneID="uRZ-Q0-OII">
             <objects>
-                <tableViewController id="rV4-UJ-1ro" customClass="commentModerateTraffic" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="rV4-UJ-1ro" customClass="commentModerateTraffic" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="w22-gA-Zs7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -532,7 +477,7 @@
         <!--Traffic Jam-->
         <scene sceneID="k6A-hp-Gcs">
             <objects>
-                <viewController id="elh-9W-J0Q" customClass="trafficVC" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="elh-9W-J0Q" customClass="trafficVC" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HQO-97-SIH"/>
                         <viewControllerLayoutGuide type="bottom" id="9sf-RS-vPn"/>
@@ -565,15 +510,6 @@
                                     <action selector="heavyTraffic:" destination="elh-9W-J0Q" eventType="touchUpInside" id="eGI-vV-acO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biA-JI-l2O">
-                                <rect key="frame" x="218" y="98" width="100" height="100"/>
-                                <state key="normal" title="Button" image="standStill.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="standstillTraffic:" destination="elh-9W-J0Q" eventType="touchUpInside" id="HCu-Qb-3JY"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Moderate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mC-3R-m2r">
                                 <rect key="frame" x="16" y="213" width="84" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -592,26 +528,8 @@
                                 <color key="textColor" red="0.021305714180000001" green="0.60407882059999995" blue="0.85479797980000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waw-qY-xPb">
-                                <rect key="frame" x="26" y="232" width="100" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyo-pp-Sax">
-                                <rect key="frame" x="139" y="232" width="100" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dc-ja-4FR">
-                                <rect key="frame" x="230" y="232" width="100" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcV-g2-sDX">
-                                <rect key="frame" x="123" y="420" width="55" height="30"/>
+                                <rect key="frame" x="124" y="414" width="55" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" red="0.021305714180000001" green="0.60407882059999995" blue="0.85479797980000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -619,28 +537,27 @@
                                 </state>
                                 <connections>
                                     <action selector="sendTrafficReport:" destination="elh-9W-J0Q" eventType="touchUpInside" id="T7n-YC-755"/>
-                                    <segue destination="rV4-UJ-1ro" kind="push" id="IDw-ck-Dgj"/>
+                                    <segue destination="fER-EW-fF5" kind="push" id="Nhx-yG-PUc"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your comment..(Optional)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mh9-CD-Cuz">
+                                <rect key="frame" x="7" y="350" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comment:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GE-fq-DhP">
-                                <rect key="frame" x="16" y="286" width="93" height="21"/>
+                                <rect key="frame" x="16" y="321" width="93" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.021305714180000001" green="0.60407882059999995" blue="0.85479797980000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your comment..(Optional)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mh9-CD-Cuz">
-                                <rect key="frame" x="7" y="315" width="288" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNk-uh-BkH">
-                                <rect key="frame" x="110" y="376" width="87" height="30"/>
-                                <state key="normal" title="Set Location">
-                                    <color key="titleColor" red="0.021305714180000001" green="0.60407882059999995" blue="0.85479797980000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biA-JI-l2O">
+                                <rect key="frame" x="218" y="98" width="100" height="100"/>
+                                <state key="normal" title="Button" image="standStill">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="SetLocation:" destination="elh-9W-J0Q" eventType="touchUpInside" id="UsS-JI-rCm"/>
+                                    <action selector="standstillTraffic:" destination="elh-9W-J0Q" eventType="touchUpInside" id="HCu-Qb-3JY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -651,10 +568,7 @@
                     <connections>
                         <outlet property="commentTraffic" destination="mh9-CD-Cuz" id="8SC-qS-2HQ"/>
                         <outlet property="heavyBtn" destination="pkZ-QI-Z01" id="fJY-pi-w8q"/>
-                        <outlet property="heavyLable" destination="xyo-pp-Sax" id="GzL-ni-il2"/>
                         <outlet property="moderateBtn" destination="yyC-cC-q9w" id="b3Z-wV-bYN"/>
-                        <outlet property="moderateLable" destination="waw-qY-xPb" id="HTQ-7h-Oaz"/>
-                        <outlet property="standLable" destination="9dc-ja-4FR" id="M8e-AV-KpQ"/>
                         <outlet property="standstillBtn" destination="biA-JI-l2O" id="Xc3-bE-NjR"/>
                     </connections>
                 </viewController>
@@ -674,7 +588,7 @@
         <image name="moderate.png" width="350" height="350"/>
         <image name="other.png" width="350" height="350"/>
         <image name="side_menu_icon.png" width="36" height="36"/>
-        <image name="standStill.png" width="350" height="350"/>
+        <image name="standStill" width="350" height="350"/>
         <image name="traffic.png" width="350" height="350"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -682,4 +596,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="VIw-fx-U4D"/>
+    </inferredMetricsTieBreakers>
 </document>

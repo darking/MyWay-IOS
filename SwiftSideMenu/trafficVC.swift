@@ -10,18 +10,7 @@ import Foundation
 import UIKit
 import CoreLocation
 class trafficVC:ViewController{
-    
-    
-    @IBOutlet weak var moderateLable: UILabel!
-    
-    
-    @IBOutlet weak var heavyLable: UILabel!
-    
-    
-    @IBOutlet weak var standLable: UILabel!
-    
-    
-    
+
     @IBOutlet weak var moderateBtn: UIButton!
     
     @IBOutlet weak var heavyBtn: UIButton!
@@ -53,10 +42,7 @@ class trafficVC:ViewController{
         settings.setBool(true , forKey: "moderate");
         settings.setBool(false , forKey: "heavy");
         settings.setBool(false , forKey: "standstill");
-//        moderateLable.text="Selected";
-        heavyLable.text="";
-        standLable.text="";
-        
+
         let imageModerate = UIImage(named: "moderateG")
         let imageHeavy = UIImage(named: "heavy")
         let imageStandstill = UIImage(named:"standStill")
@@ -74,11 +60,7 @@ class trafficVC:ViewController{
         settings.setBool(true , forKey: "heavy");
         settings.setBool(false , forKey: "moderate");
         settings.setBool(false , forKey: "standstill");
-        moderateLable.text="";
-//        heavyLable.text="Selected";
-        standLable.text="";
-        
-        
+
         let imageModerate = UIImage(named: "moderate")
         let imageHeavy = UIImage(named: "heavyG")
         let imageStandstill = UIImage(named:"standStill")
@@ -96,52 +78,21 @@ class trafficVC:ViewController{
         settings.setBool(true , forKey: "standstill");
         settings.setBool(false , forKey: "heavy");
         settings.setBool(false , forKey: "moderate");
-        moderateLable.text="";
-        heavyLable.text="";
-//        standLable.text="Selected";
-        
-        
+ 
         let imageModerate = UIImage(named: "moderate")
         let imageHeavy = UIImage(named: "heavy")
         let imageStandstill = UIImage(named:"standStillG")
         moderateBtn.setImage(imageModerate, forState: UIControlState.Normal)
         heavyBtn.setImage(imageHeavy, forState: UIControlState.Normal)
         standstillBtn.setImage(imageStandstill, forState: UIControlState.Normal)
-        
-        
-        
-
+    
         
     }
     
-    
-    
-    @IBAction func SetLocation(sender: AnyObject) {
-        
-//        var getLocation:GetLocationVC = UIStoryboard(name: "GetLocation", bundle: nil).instantiateViewControllerWithIdentifier("GetLocationVC") as! GetLocationVC;
-//        
-//        NSUserDefaults.standardUserDefaults().setValue("0.0", forKey: "reportLat");
-//        NSUserDefaults.standardUserDefaults().setValue("0.0", forKey: "reportLon");
-//        getLocation.latKey = "reportLat";
-//        getLocation.lngKey = "reportLon";
-//        self.presentViewController(getLocation, animated: true, completion: {});
-        
-    }
     
     
     @IBAction func sendTrafficReport(sender: AnyObject) {
-        //
-        //        var manager:addTrafficJamReports = addTrafficJamReports();
-        //        manager.TRAFFIC = self;
-        //        manager.addToTrafficList(commentTraffic.text);
-        //        commentTraffic.text = "";
-        //
-        //        moderateFlag = false;
-        //        heavyFalg = false;
-        //        standstillFlag = false;
-        
-        
-        //
+
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
@@ -155,6 +106,7 @@ class trafficVC:ViewController{
         }
         else {
             var manager:addTrafficJamReports = addTrafficJamReports();
+            var adding:URLCommentConnection = URLCommentConnection();
             manager.TRAFFIC = self;
             
           
@@ -162,17 +114,44 @@ class trafficVC:ViewController{
             if (commentTraffic.text == ""){
                 if(moderateFlag){
                     commentTraffic.text = "Caution! there is moderate traffic ahead"
+//                     manager.addToTrafficList(commentTraffic.text,id_report: 3);
+                    adding.addToCommentList(commentTraffic.text,id_report: 4);
                     
                 }
                 else if (heavyFalg){
                     commentTraffic.text = "Caution! there is heavy traffic ahead"
+                    // manager.addToTrafficList(commentTraffic.text,id_report: 5);
+                      adding.addToCommentList(commentTraffic.text,id_report: 5);
                 }
                 else {
                      commentTraffic.text = "Caution! there is standstill traffic ahead"
+                     //manager.addToTrafficList(commentTraffic.text,id_report: 6);
+                      adding.addToCommentList(commentTraffic.text,id_report: 6);
                 }
 
             }
-            manager.addToTrafficList(commentTraffic.text);
+            
+            else
+            {
+                if(moderateFlag){
+                    
+                   // manager.addToTrafficList(commentTraffic.text,id_report: 3);
+                      adding.addToCommentList(commentTraffic.text,id_report: 4);
+                    
+                }
+                else if (heavyFalg){
+                  
+                   // manager.addToTrafficList(commentTraffic.text,id_report: 4);
+                      adding.addToCommentList(commentTraffic.text,id_report: 5);
+                }
+                else {
+                    
+                   // manager.addToTrafficList(commentTraffic.text,id_report: 5);
+                      adding.addToCommentList(commentTraffic.text,id_report: 6);
+                }
+            }
+            
+           
             moderateFlag = false;
             heavyFalg = false;
             standstillFlag = false;
@@ -192,15 +171,10 @@ class trafficVC:ViewController{
             
         }
     }
-    
-    
-  
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad();
-        moderateLable.text="";
-        heavyLable.text="";
-        standLable.text="";
+
         locationManager.requestAlwaysAuthorization();
         locationManager.location;
         NSUserDefaults.standardUserDefaults().setValue(locationManager.location.coordinate.latitude.description, forKey: "lat");
@@ -215,21 +189,9 @@ class trafficVC:ViewController{
         var a:allCommentVC=allCommentVC();
         var objectsArray: NSMutableArray = NSMutableArray();
         objectsArray=a.AddToArray();
-        //var dis=9.0;
-        lo.filterLocations(objectsArray, currentLocation: locationManager.location)
-        
-        
+
     }
-    
-//    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-//        currentLocation = locations.last as! CLLocation;
-//        println("current location is \(currentLocation.description)");
-//        
-//        NSUserDefaults.standardUserDefaults().setValue(currentLocation.description, forKey: "currentLocation");
-//        NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.latitude.description, forKey: "lat");
-//        NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.longitude.description, forKey: "lon");
-//    }
-    
+
      override func viewDidDisappear(animated: Bool) {
         locationManager.stopUpdatingLocation();
     }

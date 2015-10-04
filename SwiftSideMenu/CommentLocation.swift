@@ -13,42 +13,47 @@ import CoreLocation
 class CommentLocation{
     
     var comment:String = "";
+    var reportTypeId:Int=0;
     var reportLocation: CLLocation = CLLocation();
-    
-    func valuesDicForComment(comment: String)->NSDictionary{
-        var values:NSMutableDictionary = NSMutableDictionary();
+    var values:NSMutableDictionary = NSMutableDictionary();
+    func valuesDicForComment(comment: String,id_report: Int)->NSDictionary{
+        
         values.setValue(comment, forKey: "comment");
         var lon:String = NSUserDefaults.standardUserDefaults().valueForKey("lon") as! String;
         var lat:String = NSUserDefaults.standardUserDefaults().valueForKey("lat") as! String;
-        
-        
-        var hours = NSUserDefaults.standardUserDefaults().valueForKey("hour") as! Int;
-        
-        var day = NSUserDefaults.standardUserDefaults().valueForKey("day") as! Int;
-           var month = NSUserDefaults.standardUserDefaults().valueForKey("month") as! Int;
-        var year = NSUserDefaults.standardUserDefaults().valueForKey("year") as! Int;
-        
+
+        values.setValue(id_report, forKey: "reportTypeId");
         values.setValue(lon, forKey: "lon");
         values.setValue(lat, forKey: "lat");
-        values.setValue(hours, forKey: "hour");
-        values.setValue(day, forKey: "day");
-        values.setValue(month, forKey: "month");
-        values.setValue(year, forKey: "year");
+
         return values;
         
     }
     
+    func urlParams(dict:NSDictionary)->NSString{
+        var lat: NSString = dict.objectForKey("lat")as! NSString;
+        var lon: NSString = dict.objectForKey("lon") as! NSString;
+        var comment: NSString = dict.objectForKey("comment") as! NSString;
+        var reportTypeId: Int = dict.objectForKey("reportTypeId")as! Int;
+        var urlStatement:NSString = "report_id=\(reportTypeId)&report_comments=\(comment)&report_lat=\(lat)&report_log=\(lon)"
+        
+        println(urlStatement);
+        
+        return urlStatement;
+        
+        
+    }
     
     func objectFromDict(values: NSDictionary)->CommentLocation{
         var commentLocation: CommentLocation =  CommentLocation();
         commentLocation.comment = values.objectForKey("comment") as! String;
         var lat: NSString = values.objectForKey("lat")as! NSString;
         var lon: NSString = values.objectForKey("lon") as! NSString;
-        var day = values.objectForKey("day")as! Int
-        var year = values.objectForKey("year")as! Int
-        var month = values.objectForKey("month")as! Int
-        var hour = values.objectForKey("hour")as! Int
-        CLLocation(latitude: lat.doubleValue, longitude: lon.doubleValue)
+        var reportTypeId: Int = values.objectForKey("reportTypeId") as! Int;
+        commentLocation.reportTypeId=reportTypeId as Int;
+        commentLocation.reportLocation=CLLocation(latitude: lat.doubleValue, longitude: lon.doubleValue)
+        println("Tring to know what is in the commentLocation")
+        println(commentLocation)
         return commentLocation
     }
     
@@ -62,5 +67,7 @@ class CommentLocation{
         return objectsArray;
     }
     
+    
+
     
 }
