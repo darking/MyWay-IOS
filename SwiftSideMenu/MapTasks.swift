@@ -51,7 +51,7 @@ class MapTasks: NSObject {
     
     func geocodeAddress(address: String!, withCompletionHandler completionHandler: ((status: String, success: Bool) -> Void)) {
         if let lookupAddress = address {
-            var geocodeURLString = baseURLGeocode + "address=" + lookupAddress
+            var geocodeURLString = baseURLGeocode + "address=" + lookupAddress  + ", KW" 
             geocodeURLString = geocodeURLString.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
             
             let geocodeURL = NSURL(string: geocodeURLString)
@@ -135,7 +135,13 @@ class MapTasks: NSObject {
                     let directionsData = NSData(contentsOfURL: directionsURL!)
                     
                     var error: NSError?
+                    
+                    if directionsData == nil {
+                        println("DirectionData is nil !!!!")
+                    }
+                    
                     let dictionary: Dictionary<NSObject, AnyObject> = NSJSONSerialization.JSONObjectWithData(directionsData!, options: NSJSONReadingOptions.MutableContainers, error: &error) as! Dictionary<NSObject, AnyObject>
+                    
                     
                     if (error != nil) {
                         println(error)
