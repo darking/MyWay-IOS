@@ -49,6 +49,12 @@ class MenuManager {
         item.itemVCIdentifier = "Report";
         item.storyBoardName = "Main_4";
         MenuItem.all.menuItems.addObject(item);
+        
+        item = MenuItem();
+        item.itemTitle = "Favorites";
+        item.itemVCIdentifier = "favoritesList";
+        item.storyBoardName = "Team3.storyboard.favorites";
+        MenuItem.all.menuItems.addObject(item);
         //Here goes the Logout button
         //            item = MenuItem();
         //            item.itemTitle = "Logout";

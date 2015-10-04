@@ -13,6 +13,16 @@ import GoogleMaps
 
 class ShowOnMapVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate  {
 
+    var show = false;
+    var ShareButton:UIBarButtonItem = UIBarButtonItem();
+    
+    @IBAction func ShareButtonAction(sender: AnyObject) {
+        
+        var sharing:Share = Share();
+        
+        sharing.sharing(self)
+        
+    }
     
     //Declaring variable and IBAction and Outlet
     var locationManager = CLLocationManager()
@@ -348,6 +358,17 @@ class ShowOnMapVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDelega
     //VIEW DID LOAD()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.ShareButton = UIBarButtonItem(title: "Share", style: UIBarButtonItemStyle.Plain, target: self, action: "ShareButtonAction:");
+        
+        self.navigationItem.setRightBarButtonItem(self.ShareButton, animated: true);
+        
+        self.ShareButton.enabled = false;
+        
+        if (show){ //enables the share only if the class calling showOnMapVC sets "show" as true.
+            self.ShareButton.enabled = true;
+        }
+
         
         //request location
         

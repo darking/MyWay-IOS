@@ -144,7 +144,14 @@ class GetLocationVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDele
         //setting the coordinates in the static vars in addnewpoi class
         AddNewPOI.holder.pointLat = String(format:"%f", markerCoorLat);
         AddNewPOI.holder.pointLong = String(format:"%f", markerCoorLng);
-        println("static var set, lat: " + AddNewPOI.holder.pointLat + " long: " + AddNewPOI.holder.pointLong);
+        
+        //to set the coordinate to the favorites point
+        AddNewFavoriteVC.holder.favLat = String(format:"%f", markerCoorLat);
+        AddNewFavoriteVC.holder.favLong = String(format:"%f", markerCoorLng);
+        
+        println("static point var set, lat: " + AddNewPOI.holder.pointLat + " long: " + AddNewPOI.holder.pointLong);
+        
+        println("static fav var set, lat: " + AddNewFavoriteVC.holder.favLat + " long: " + AddNewFavoriteVC.holder.favLong);
         
         self.dismissViewControllerAnimated(true, completion: {})
 
