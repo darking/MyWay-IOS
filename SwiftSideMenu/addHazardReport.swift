@@ -18,7 +18,7 @@ class addHazardReport{
     
     
     
-    func addToHazardList(comment:String){
+    func addToHazardList(comment:String,id_report:Int){
         
         if( HAZARD.onroadFlag == true)
         {
@@ -27,7 +27,7 @@ class addHazardReport{
             
             var currentList:NSMutableArray = self.showAllReports();
             
-             currentList.addObject(CommentLocation().valuesDicForComment(comment));
+             currentList.addObject(CommentLocation().valuesDicForComment(comment,id_report: id_report));
             currentList.writeToFile(filePath, atomically: false);
             
             println(filePath);}
@@ -40,7 +40,7 @@ class addHazardReport{
             
             var currentList:NSMutableArray = self.showAllReports();
             
-             currentList.addObject(CommentLocation().valuesDicForComment(comment));
+             currentList.addObject(CommentLocation().valuesDicForComment(comment,id_report: id_report));
             currentList.writeToFile(filePath2, atomically: false);
           
             println(filePath2);

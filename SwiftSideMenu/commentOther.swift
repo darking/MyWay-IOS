@@ -47,20 +47,9 @@ class commentOther:UITableViewController ,CLLocationManagerDelegate{
         var showMap:ShowOnMapVC = UIStoryboard(name: "reqLocaiton", bundle: nil).instantiateViewControllerWithIdentifier("ShowOnMapVC") as! ShowOnMapVC;
         showMap.title = "other";
         showMap.message = report.comment;
-        
-        
-        //showMap.location = report.reportLocation;
-        
-        //MASHMOUM ebra
-      //  var laa = GetLocationVC.getCurrentLocation().0
-        //var lnn = GetLocationVC.getCurrentLocation().1
-        let (latitud, longitud) =  GetLocationVC().getCurrentLocation()
-       
-        //var myCLL:CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, lng)
-        var myCLL:CLLocation = CLLocation(latitude: (NSUserDefaults.standardUserDefaults().valueForKey("lat") as! NSString).doubleValue , longitude: (NSUserDefaults.standardUserDefaults().valueForKey("lon") as! NSString).doubleValue)
-        showMap.location = myCLL
-        //./MASHMOUM
-        
+
+        //hebah taleef
+        showMap.location=report.reportLocation;
         self.navigationController?.pushViewController(showMap, animated: true);
     }
     

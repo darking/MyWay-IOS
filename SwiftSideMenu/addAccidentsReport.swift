@@ -17,7 +17,7 @@ class addAccidentsReport{
     
     
     
-    func addToAccidentsList(comment:String){
+    func addToAccidentsList(comment:String,id_report: Int){
         
         if( ACCIDENT.minorFlag == true)
         {
@@ -26,7 +26,7 @@ class addAccidentsReport{
             
             var currentList:NSMutableArray = self.showAllReports();
             
-           currentList.addObject(CommentLocation().valuesDicForComment(comment));
+           currentList.addObject(CommentLocation().valuesDicForComment(comment,id_report: id_report));
             currentList.writeToFile(filePath, atomically: false);
             // ACCIDENTS.minorFlag=false;
             println(filePath);}
@@ -39,7 +39,7 @@ class addAccidentsReport{
             
             var currentList:NSMutableArray = self.showAllReports();
             
-            currentList.addObject(CommentLocation().valuesDicForComment(comment));
+            currentList.addObject(CommentLocation().valuesDicForComment(comment,id_report: id_report));
             currentList.writeToFile(filePath2, atomically: false);
             // ACCIDENTS.majorFlag=false;
             println(filePath2);

@@ -18,6 +18,7 @@ class allCommentVC {
     
     
     
+    
     func AddToArray()->NSMutableArray
     {
     
@@ -26,7 +27,6 @@ class allCommentVC {
         var minor:NSMutableArray = self.readArrayFromFile("minorAccidentReports.plist");
         
         objectsArray.addObjectsFromArray(minor as [AnyObject]);
-        
         
         var major:NSMutableArray = self.readArrayFromFile("majorAccidentReports.plist");
         
@@ -53,21 +53,24 @@ class allCommentVC {
         var standStill:NSMutableArray = self.readArrayFromFile("standstillTraffic.plist");
         
         objectsArray.addObjectsFromArray(standStill as [AnyObject]);
-        for v in objectsArray
-        {
-            
-            println("\(v)");
-            
-        }
-    
+        
+//        println("Print objectsArray on class AllVC")
+//        for v in objectsArray
+//        {
+//            println("Print v");
+//            println("\(v)");
+//          
+//            
+//        }
+//        
+//        println("print ObjectArray");
+//        println("\(objectsArray)");
+//        println("FINISH PRINTING")
+//    
         return objectsArray;
     }
     
-    
-//    for values in dictionies{
-//    objectsArray.addObject(CommentLocation().objectFromDict(values as! NSDictionary));
-    
-    
+      
     func readArrayFromFile(fileToRead:String)->NSMutableArray{
         let myUtil:FileUtils = FileUtils(fileName:fileToRead);
         let filePath:String = myUtil.docsPath();
