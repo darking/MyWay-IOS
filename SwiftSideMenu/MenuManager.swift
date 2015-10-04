@@ -85,6 +85,13 @@ class MenuManager {
 //        item.itemVCIdentifier = "keyboard";
 //        item.storyBoardName = "keyboard";
 //        MenuItem.all.menuItems.addObject(item);
+        
+        item = MenuItem();
+        item.itemTitle = "Digital Address";
+        item.itemVCIdentifier = "GeoVC";
+        item.storyBoardName = "GeoMash";
+        MenuItem.all.menuItems.addObject(item);
+        
         //
         
        
