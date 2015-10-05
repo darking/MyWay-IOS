@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-class PointOfInterest {
+class PointOfInterest { //EVENTS
     
     var name = "";
     var type = "";

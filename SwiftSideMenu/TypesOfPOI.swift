@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class TypesOfPOI:UITableViewController {
+class TypesOfPOI:UITableViewController, NSURLConnectionDataDelegate, NSURLConnectionDelegate  {
     
     @IBAction func toggleAction(sender: AnyObject) {
         toggleSideMenuView();
@@ -17,6 +17,8 @@ class TypesOfPOI:UITableViewController {
     
     
     @IBOutlet var SuggestNewButton: UIButton!
+    
+     var eventsList: NSArray = NSArray();
     
     
     //checks if user is registered before going to the suggest new point screen
@@ -43,11 +45,6 @@ class TypesOfPOI:UITableViewController {
         return poiTypes.count;//will change to the size(count) of the array returned from the server
     }
     
-    //        override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    //            var sectionHeaderView = NSBundle.mainBundle().loadNibNamed("PlanCellSectionHeader", owner: nil, options: nil)
-    //
-    //            return "";
-    //        }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = UITableViewCell();
@@ -61,7 +58,18 @@ class TypesOfPOI:UITableViewController {
         var row = indexPath.row;
         var mainStoryBoard:UIStoryboard = UIStoryboard(name: "Team3", bundle: nil);
         var nextScreen:SubTypesOfPOI = mainStoryBoard.instantiateViewControllerWithIdentifier("subTypes") as! SubTypesOfPOI;//we use as to customize the returned generic return value of the method
-        nextScreen.type = poiTypes[row];
+        var tempEventsList: NSMutableArray = NSMutableArray();
+        
+        var i = 0;
+        for var index = 0; index < eventsList.count; ++index {
+            var tempEvent: NSDictionary = eventsList[index] as! NSDictionary;
+            if tempEvent.valueForKey("category") as! String == poiTypes[row]{
+//                tempEventsList.insertObject(Holder.eventsList[index], atIndex: i);
+                tempEventsList.addObject(eventsList[index]);
+                i++;
+            }
+        }
+        nextScreen.locations = tempEventsList;
         println(poiTypes[row]);
         self.navigationController?.pushViewController(nextScreen, animated: true);
         
@@ -72,12 +80,14 @@ class TypesOfPOI:UITableViewController {
     override func viewDidAppear(animated: Bool) {
         
             if NSUserDefaults.standardUserDefaults().boolForKey("isLoggedin"){
-                SuggestNewButton.setTitle("Suggest New Point", forState: UIControlState.Normal);
+                SuggestNewButton.setTitle("Request Event", forState: UIControlState.Normal);
             }
             else {
-                SuggestNewButton.setTitle("Suggest New Point (Log in needed!)", forState: UIControlState.Normal);
+                SuggestNewButton.setTitle("Request Event (Log in needed!)", forState: UIControlState.Normal);
                 
             }
+        
+        startConnection();
         
     }
     
@@ -87,4 +97,35 @@ class TypesOfPOI:UITableViewController {
         poiTypes = DataManagement.getAllCats() as! [String];
         
     }
+    
+    
+    lazy var data = NSMutableData()
+    func startConnection(){
+        let urlPath: String = "http://mobile.comxa.com/events/all_events.jsp"
+        var url: NSURL = NSURL(string: urlPath)!
+        var request: NSURLRequest = NSURLRequest(URL: url)
+        
+        var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: true)!
+        data = NSMutableData()//re-initialize the data so it wouldn't be an invalid JSON after i append to it the newer JSON
+        connection.start()
+    }
+    
+    
+    func connection(connection: NSURLConnection, didReceiveData data: NSData) {
+        self.data.appendData(data)
+        
+    }
+    
+    
+    func connectionDidFinishLoading(connection: NSURLConnection) {
+        var err: NSError
+        // throwing an error on the line below (can't figure out where the error message is)
+        var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+        
+        eventsList = jsonResult.valueForKey("result_data") as! NSMutableArray;
+        
+        
+        println(eventsList);
+    }
+    
 }

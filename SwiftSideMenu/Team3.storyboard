@@ -30,15 +30,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pKP-59-oPG">
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="d61-Vj-ARt">
                             <rect key="frame" x="-23" y="-15" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <animations/>
-                            <state key="normal" title="Suggest New Point">
+                            <state key="normal" title="Request Event">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <segue destination="icM-dg-DYw" kind="push" id="pgt-81-fcd"/>
+                                <segue destination="icM-dg-DYw" kind="push" id="gwq-Pw-qRm"/>
                             </connections>
                         </button>
                         <prototypes>
@@ -59,7 +58,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="MyWay Interests" id="4Vh-fW-xyk">
+                    <navigationItem key="navigationItem" title="Events" id="4Vh-fW-xyk" userLabel="Events">
                         <barButtonItem key="leftBarButtonItem" image="side_menu_icon.png" id="Au8-qd-SCm">
                             <connections>
                                 <action selector="toggleAction:" destination="riB-hx-WPY" id="S4E-aZ-QRI"/>
@@ -68,14 +67,14 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="SuggestNewButton" destination="pKP-59-oPG" id="Xkg-S4-4dx"/>
+                        <outlet property="SuggestNewButton" destination="d61-Vj-ARt" id="fkl-HJ-OVf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YHP-X2-oaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="217" y="665"/>
         </scene>
-        <!--Suggest Point-->
+        <!--Request Event-->
         <scene sceneID="POO-IB-rki">
             <objects>
                 <viewController storyboardIdentifier="addNew" id="icM-dg-DYw" customClass="AddNewPOI" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
@@ -222,7 +221,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Suggest Point" id="MJX-JZ-9D6"/>
+                    <navigationItem key="navigationItem" title="Request Event" id="MJX-JZ-9D6" userLabel="Request Event"/>
                     <connections>
                         <outlet property="myImageView" destination="PdA-mz-Kto" id="KNe-7c-kjr"/>
                         <outlet property="nameText" destination="oQS-bO-N25" id="p8c-mo-d59"/>
@@ -310,7 +309,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <items>
-                                    <navigationItem title="Information" id="769-pR-thM"/>
+                                    <navigationItem title="Event Information" id="769-pR-thM"/>
                                 </items>
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="o1J-Je-J52">
