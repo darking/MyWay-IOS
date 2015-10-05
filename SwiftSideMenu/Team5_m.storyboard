@@ -24,7 +24,7 @@
                         </button>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" id="5pu-DN-WnJ">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5pu-DN-WnJ" id="iOr-HT-aTP">
                                     <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
@@ -95,6 +95,9 @@
                                 <state key="normal" title="Set new destination">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnSetDestination:" destination="2YO-0z-Ce8" eventType="touchUpInside" id="8N5-eY-zGv"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="egy-JY-omj">
                                 <rect key="frame" x="16" y="80" width="96" height="96"/>

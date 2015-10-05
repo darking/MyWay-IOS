@@ -120,6 +120,7 @@
 		6CD32ABA1BC2888A00F6D684 /* MonitorReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD32AB41BC2888A00F6D684 /* MonitorReportVC.swift */; };
 		6CD32ABB1BC2888A00F6D684 /* ReadReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD32AB51BC2888A00F6D684 /* ReadReport.swift */; };
 		6CD32ABC1BC2888A00F6D684 /* SelectDriverReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD32AB61BC2888A00F6D684 /* SelectDriverReportVC.swift */; };
+		6CD32AC01BC28FD100F6D684 /* URLCommentConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD32ABF1BC28FD100F6D684 /* URLCommentConnection.swift */; };
 		6CE9A1C01B8363D400BE4004 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1BE1B8363D400BE4004 /* mainViewController.swift */; };
 		6CE9A1C11B8363D400BE4004 /* MapTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1BF1B8363D400BE4004 /* MapTasks.swift */; };
 		6CE9A1C31B83641000BE4004 /* MainMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1C21B83641000BE4004 /* MainMapVC.swift */; };
@@ -328,6 +329,7 @@
 		6CD32AB41BC2888A00F6D684 /* MonitorReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorReportVC.swift; sourceTree = "<group>"; };
 		6CD32AB51BC2888A00F6D684 /* ReadReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadReport.swift; sourceTree = "<group>"; };
 		6CD32AB61BC2888A00F6D684 /* SelectDriverReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDriverReportVC.swift; sourceTree = "<group>"; };
+		6CD32ABF1BC28FD100F6D684 /* URLCommentConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLCommentConnection.swift; sourceTree = "<group>"; };
 		6CE9A1BE1B8363D400BE4004 /* mainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		6CE9A1BF1B8363D400BE4004 /* MapTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTasks.swift; sourceTree = "<group>"; };
 		6CE9A1C21B83641000BE4004 /* MainMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMapVC.swift; sourceTree = "<group>"; };
@@ -429,8 +431,8 @@
 				0779192F1BBBF41900AB0DB1 /* LocationFilteration.swift */,
 				077919301BBBF41900AB0DB1 /* Main_4.storyboard */,
 				077919311BBBF41900AB0DB1 /* ReportsMainVC.swift */,
-				49A928DB1BC1562D00391A03 /* URLCommentConnection.swift */,
 				0793071E1BC27D0700F24080 /* ListAllReports.swift */,
+				6CD32ABF1BC28FD100F6D684 /* URLCommentConnection.swift */,
 			);
 			name = Team4;
 			sourceTree = "<group>";
@@ -1064,6 +1066,7 @@
 				5C13258B198E2A9A00CA49BE /* ViewController.swift in Sources */,
 				49A961F51BC18F0100622F8D /* AddNewFavoriteVC.swift in Sources */,
 				6CE9A1C01B8363D400BE4004 /* mainViewController.swift in Sources */,
+				0793071F1BC27D0700F24080 /* ListAllReports.swift in Sources */,
 				142AAA8B1BC1345F0089F62F /* GeoViewController.swift in Sources */,
 				1429137D19D97A4F0025188A /* MyMenuTableViewController.swift in Sources */,
 				6CE9A2371B839F9100BE4004 /* LoginViewController.swift in Sources */,
@@ -1085,6 +1088,7 @@
 				077919621BBBF48400AB0DB1 /* accidentVC.swift in Sources */,
 				6CE9A23D1B839FCB00BE4004 /* ConnectionManager.swift in Sources */,
 				141092761B8CB76300CD3114 /* PlaceMarker.swift in Sources */,
+				6CD32AC01BC28FD100F6D684 /* URLCommentConnection.swift in Sources */,
 				522B7E931B86253C000A5678 /* ENSideMenuNavigationController.swift in Sources */,
 				077919761BBBF4CD00AB0DB1 /* hazardVC.swift in Sources */,
 				6CD32AAB1BC2886100F6D684 /* CommentLocation.swift in Sources */,
@@ -1122,7 +1126,6 @@
 				077919351BBBF41900AB0DB1 /* ReportsMainVC.swift in Sources */,
 				6CD32A921BC27FEF00F6D684 /* UISettings.swift in Sources */,
 				141092721B8CB76300CD3114 /* MapViewController.swift in Sources */,
-				0793071C1BC272C900F24080 /* URLCommentConnection.swift in Sources */,
 				6CE9A2341B839F9100BE4004 /* EditUserProfileViewController.swift in Sources */,
 				6CD32ABC1BC2888A00F6D684 /* SelectDriverReportVC.swift in Sources */,
 				077919801BBBF4EB00AB0DB1 /* commentOther.swift in Sources */,
