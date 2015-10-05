@@ -45,10 +45,10 @@
 		0779197E1BBBF4EB00AB0DB1 /* otherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779197B1BBBF4EB00AB0DB1 /* otherVC.swift */; };
 		0779197F1BBBF4EB00AB0DB1 /* addOtherReports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779197C1BBBF4EB00AB0DB1 /* addOtherReports.swift */; };
 		077919801BBBF4EB00AB0DB1 /* commentOther.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779197D1BBBF4EB00AB0DB1 /* commentOther.swift */; };
-		078780061BBCFB6D00B7CF93 /* getCommentDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078780051BBCFB6D00B7CF93 /* getCommentDetails.swift */; };
 		0787800B1BBD1F9F00B7CF93 /* KhalidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078780081BBD1F9F00B7CF93 /* KhalidViewController.swift */; };
 		0787800C1BBD1F9F00B7CF93 /* KhalidMapTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078780091BBD1F9F00B7CF93 /* KhalidMapTasks.swift */; };
 		0787800D1BBD1F9F00B7CF93 /* Khalidtable22.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0787800A1BBD1F9F00B7CF93 /* Khalidtable22.swift */; };
+		0793071C1BC272C900F24080 /* URLCommentConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793071B1BC272C900F24080 /* URLCommentConnection.swift */; };
 		141092691B8CB71F00CD3114 /* POI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141092681B8CB71F00CD3114 /* POI.storyboard */; };
 		141092721B8CB76300CD3114 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410926A1B8CB76300CD3114 /* MapViewController.swift */; };
 		141092731B8CB76300CD3114 /* TypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410926B1B8CB76300CD3114 /* TypesTableViewController.swift */; };
@@ -231,10 +231,10 @@
 		0779197B1BBBF4EB00AB0DB1 /* otherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = otherVC.swift; sourceTree = "<group>"; };
 		0779197C1BBBF4EB00AB0DB1 /* addOtherReports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addOtherReports.swift; sourceTree = "<group>"; };
 		0779197D1BBBF4EB00AB0DB1 /* commentOther.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentOther.swift; sourceTree = "<group>"; };
-		078780051BBCFB6D00B7CF93 /* getCommentDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getCommentDetails.swift; sourceTree = "<group>"; };
 		078780081BBD1F9F00B7CF93 /* KhalidViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KhalidViewController.swift; sourceTree = "<group>"; };
 		078780091BBD1F9F00B7CF93 /* KhalidMapTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KhalidMapTasks.swift; sourceTree = "<group>"; };
 		0787800A1BBD1F9F00B7CF93 /* Khalidtable22.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Khalidtable22.swift; sourceTree = "<group>"; };
+		0793071B1BC272C900F24080 /* URLCommentConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLCommentConnection.swift; sourceTree = "<group>"; };
 		141092681B8CB71F00CD3114 /* POI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = POI.storyboard; sourceTree = "<group>"; };
 		1410926A1B8CB76300CD3114 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1410926B1B8CB76300CD3114 /* TypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypesTableViewController.swift; sourceTree = "<group>"; };
@@ -410,16 +410,9 @@
 				0779192F1BBBF41900AB0DB1 /* LocationFilteration.swift */,
 				077919301BBBF41900AB0DB1 /* Main_4.storyboard */,
 				077919311BBBF41900AB0DB1 /* ReportsMainVC.swift */,
-				0785DB1C1BC11F2E00543AAB /* URLCommentConnection.swift */,
+				0793071B1BC272C900F24080 /* URLCommentConnection.swift */,
 			);
 			name = Team4;
-			sourceTree = "<group>";
-		};
-		077919361BBBF43000AB0DB1 /* Icon */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Icon;
 			sourceTree = "<group>";
 		};
 		0779195D1BBBF47500AB0DB1 /* Accident */ = {
@@ -1034,7 +1027,6 @@
 				142AAA8B1BC1345F0089F62F /* GeoViewController.swift in Sources */,
 				C3EBDD931B92D586009237A8 /* DailyRouteHolder.swift in Sources */,
 				1429137D19D97A4F0025188A /* MyMenuTableViewController.swift in Sources */,
-				0785DB1D1BC11F2E00543AAB /* URLCommentConnection.swift in Sources */,
 				6CE9A2371B839F9100BE4004 /* LoginViewController.swift in Sources */,
 				143615711B8F1CC3003FD356 /* GetLocationVC.swift in Sources */,
 				077919791BBBF4CD00AB0DB1 /* commentConstruction.swift in Sources */,
@@ -1084,6 +1076,7 @@
 				077919781BBBF4CD00AB0DB1 /* commentOnRoad.swift in Sources */,
 				077919351BBBF41900AB0DB1 /* ReportsMainVC.swift in Sources */,
 				141092721B8CB76300CD3114 /* MapViewController.swift in Sources */,
+				0793071C1BC272C900F24080 /* URLCommentConnection.swift in Sources */,
 				6CD32A271BBBFFEF00F6D684 /* DriverCustomCell.swift in Sources */,
 				6CE9A2341B839F9100BE4004 /* EditUserProfileViewController.swift in Sources */,
 				077919801BBBF4EB00AB0DB1 /* commentOther.swift in Sources */,
