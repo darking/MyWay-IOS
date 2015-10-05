@@ -48,7 +48,7 @@
 		0787800B1BBD1F9F00B7CF93 /* KhalidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078780081BBD1F9F00B7CF93 /* KhalidViewController.swift */; };
 		0787800C1BBD1F9F00B7CF93 /* KhalidMapTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078780091BBD1F9F00B7CF93 /* KhalidMapTasks.swift */; };
 		0787800D1BBD1F9F00B7CF93 /* Khalidtable22.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0787800A1BBD1F9F00B7CF93 /* Khalidtable22.swift */; };
-		0793071C1BC272C900F24080 /* URLCommentConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793071B1BC272C900F24080 /* URLCommentConnection.swift */; };
+		0793071F1BC27D0700F24080 /* ListAllReports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793071E1BC27D0700F24080 /* ListAllReports.swift */; };
 		141092691B8CB71F00CD3114 /* POI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141092681B8CB71F00CD3114 /* POI.storyboard */; };
 		141092721B8CB76300CD3114 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410926A1B8CB76300CD3114 /* MapViewController.swift */; };
 		141092731B8CB76300CD3114 /* TypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410926B1B8CB76300CD3114 /* TypesTableViewController.swift */; };
@@ -244,7 +244,7 @@
 		078780081BBD1F9F00B7CF93 /* KhalidViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KhalidViewController.swift; sourceTree = "<group>"; };
 		078780091BBD1F9F00B7CF93 /* KhalidMapTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KhalidMapTasks.swift; sourceTree = "<group>"; };
 		0787800A1BBD1F9F00B7CF93 /* Khalidtable22.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Khalidtable22.swift; sourceTree = "<group>"; };
-		0793071B1BC272C900F24080 /* URLCommentConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLCommentConnection.swift; sourceTree = "<group>"; };
+		0793071E1BC27D0700F24080 /* ListAllReports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAllReports.swift; sourceTree = "<group>"; };
 		141092681B8CB71F00CD3114 /* POI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = POI.storyboard; sourceTree = "<group>"; };
 		1410926A1B8CB76300CD3114 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1410926B1B8CB76300CD3114 /* TypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypesTableViewController.swift; sourceTree = "<group>"; };
@@ -429,7 +429,8 @@
 				0779192F1BBBF41900AB0DB1 /* LocationFilteration.swift */,
 				077919301BBBF41900AB0DB1 /* Main_4.storyboard */,
 				077919311BBBF41900AB0DB1 /* ReportsMainVC.swift */,
-				0793071B1BC272C900F24080 /* URLCommentConnection.swift */,
+				49A928DB1BC1562D00391A03 /* URLCommentConnection.swift */,
+				0793071E1BC27D0700F24080 /* ListAllReports.swift */,
 			);
 			name = Team4;
 			sourceTree = "<group>";
