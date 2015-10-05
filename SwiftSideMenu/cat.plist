@@ -2,8 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>Malls</string>
-	<string>Restaurants</string>
-	<string>Coffee Shops</string>
+	<string>Mall</string>
+	<string>Concerts</string>
+	<string>Conventions</string>
 </array>
 </plist>

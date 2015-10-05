@@ -11,9 +11,10 @@ import UIKit
 import CoreLocation
 
 class MoreInfoOfPOI:UIViewController{
-    var placeName:String = "";
-    var DataManagement:POIDataManager = POIDataManager();
-    var place:NSDictionary = NSDictionary();
+//    var placeName:String = "";
+    
+//    var DataManagement:POIDataManager = POIDataManager();
+    var event:NSDictionary = NSDictionary();
     @IBOutlet var TypeNameOut: UILabel!
     
     @IBOutlet var DetailsOut: UITextView!
@@ -25,13 +26,18 @@ class MoreInfoOfPOI:UIViewController{
         
         // code to redirect to the map (must send the object of the place im on, of the type PointOfInterest)
         var mapVC:ShowOnMapVC = UIStoryboard(name: "reqLocaiton", bundle: nil).instantiateViewControllerWithIdentifier("ShowOnMapVC") as! ShowOnMapVC;
-        mapVC.title = placeName;
-        mapVC.message = place.objectForKey("description") as? String;
-        let lat:String = place.objectForKey("lat") as! String;
-        let lng:String = place.objectForKey("long") as! String;
+
+        mapVC.title = event.objectForKey("name") as! NSString as String;
+        mapVC.message = event.objectForKey("description") as? String;
+        let lat:String = event.objectForKey("latitude") as! String;
+        let lng:String = event.objectForKey("longitude") as! String;
         
         let location = CLLocation(latitude: (lat as NSString).doubleValue, longitude: (lng as NSString).doubleValue)
         mapVC.location = location;
+        mapVC.lat = lat as String;
+        mapVC.long = lng as String;
+        //to enable the share button
+        mapVC.show = true;
         self.navigationController?.pushViewController(mapVC, animated: true);
         
     }
@@ -41,21 +47,32 @@ class MoreInfoOfPOI:UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad();
         
-        place = DataManagement.getDetailsOFPlace(placeName) as NSDictionary;
+//        place = DataManagement.getDetailsOFPlace(placeName) as NSDictionary;
         
-        TypeNameOut.text = placeName;
-        DetailsOut.text = place.objectForKey("description") as! NSString as String;
+        TypeNameOut.text = event.objectForKey("name") as? String;
+        DetailsOut.text = event.objectForKey("description") as! String;
         
-        let imageNames:NSArray = place.objectForKey("images") as! NSArray;
+        let imageNames = event.objectForKey("image") as! String;
         
-        // yossef - poi - use image name instead of image path
-        let firstImageName = imageNames.firstObject as! String;
-        
-        //to check if there is an image by the user.. it would set it, else it would leave it as the default image that is already set on the storyboard
-        if firstImageName != ""{
-        var fileUtils = FileUtils(fileName: firstImageName);
-        imageOut.image = imageConv.readImageAtPath(fileUtils.docsPath()) ;
+//        to check if there is an image by the user.. it would set it, else it would leave it as the default image that is already set on the storyboard
+        if imageNames != ""{
+            if let url = NSURL(string: imageNames) {
+                if let data = NSData(contentsOfURL: url){
+                    imageOut.contentMode = UIViewContentMode.ScaleAspectFit
+                    imageOut.image = UIImage(data: data)
+                }
+            }
+//            let url = NSURL(string: imageNames);
+//            let data = NSData(contentsOfURL: url!);
+//            imageOut.contentMode = UIViewContentMode.ScaleAspectFit
+//            imageOut.image = UIImage(data: data!);
+//            var fileUtils = FileUtils(fileName: firstImageName);
+//            imageOut.image = imageConv.readImageAtPath(fileUtils.docsPath()) ;
         }
+//         yossef - poi - use image name instead of image path
+//        let firstImageName = imageNames.firstObject as! String;
+        
+//
         
     }
 }

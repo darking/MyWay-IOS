@@ -74,7 +74,7 @@ class MenuManager {
     }
     func addRemaining () {
         item = MenuItem();
-        item.itemTitle = "MyWay Interests";
+        item.itemTitle = "MyWay Events";
         item.itemVCIdentifier = "CategorisView";
         item.storyBoardName = "Team3";
         MenuItem.all.menuItems.addObject(item);

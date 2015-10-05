@@ -15,11 +15,13 @@ class ShowOnMapVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDelega
 
     var show = false;
     var ShareButton:UIBarButtonItem = UIBarButtonItem();
-    
+    var lat = "";
+    var long = "";
     @IBAction func ShareButtonAction(sender: AnyObject) {
         
         var sharing:Share = Share();
-        
+        sharing.latitude = lat;
+        sharing.longitude = long;
         sharing.sharing(self)
         
     }

@@ -15,9 +15,9 @@ class SubTypesOfPOI:UITableViewController, UITableViewDataSource, UITableViewDel
     var tableViewx = UITableView()
     var showsArray = Array<String>()
     
-    var type:String = "";
+//    var type:String = "";
     
-    var locations:[String] = [];
+    var locations:NSMutableArray = NSMutableArray();
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1;
@@ -39,7 +39,8 @@ class SubTypesOfPOI:UITableViewController, UITableViewDataSource, UITableViewDel
             var textLabel = UILabel(frame: CGRectMake(10.0, 0.0, UIScreen.mainScreen().bounds.width - 20.0, 52.0 - 4.0))
             
             textLabel.textColor = UIColor.blackColor()
-            textLabel.text = locations[indexPath.row];
+            var tempEv: NSDictionary = locations[indexPath.row] as! NSDictionary;
+            textLabel.text =  tempEv.valueForKey("name") as? String;
             retCell.addSubview(textLabel);
             return retCell;
         }
@@ -67,7 +68,7 @@ class SubTypesOfPOI:UITableViewController, UITableViewDataSource, UITableViewDel
             var row = indexPath.row;
             var mainStoryBoard:UIStoryboard = UIStoryboard(name: "Team3", bundle: nil);
             var nextScreen:MoreInfoOfPOI = mainStoryBoard.instantiateViewControllerWithIdentifier("MoreInfoOfPOI") as! MoreInfoOfPOI;//we use as to customize the returned generic return value of the method
-            nextScreen.placeName = locations[row];
+            nextScreen.event = locations[row] as! NSDictionary;
             self.navigationController?.pushViewController(nextScreen, animated: true);
         }
         
@@ -84,9 +85,7 @@ class SubTypesOfPOI:UITableViewController, UITableViewDataSource, UITableViewDel
         if locations.count == 0 {
             let suggestNew = UITableViewRowAction(style: .Normal, title: "Suggest Some!") { action, index in
                 println("clicked..")
-                //                var alert : UIAlertView = UIAlertView(title: "ALERT!!", message: "TEST TEST.",
-                //                    delegate: nil, cancelButtonTitle: "OK");
-                //                alert.show();
+                
                 let viewControllers: [UIViewController] = self.navigationController!.viewControllers as! [UIViewController];
                 self.navigationController!.popToViewController(viewControllers[viewControllers.count - 2], animated: true);
                 
@@ -102,16 +101,21 @@ class SubTypesOfPOI:UITableViewController, UITableViewDataSource, UITableViewDel
                 // code to redirect to the map (must send the object of the place im on, of the type PointOfInterest)
                 var mapVC:ShowOnMapVC = UIStoryboard(name: "reqLocaiton", bundle: nil).instantiateViewControllerWithIdentifier("ShowOnMapVC") as! ShowOnMapVC;
                 //get the info of the location in the swiped row
-                var DataManagement:POIDataManager = POIDataManager();
-                var place:NSDictionary = DataManagement.getDetailsOFPlace(self.locations[indexPath.row]) as NSDictionary;
+//                var DataManagement:POIDataManager = POIDataManager();
+                var place:NSDictionary = self.locations[indexPath.row] as! NSDictionary;
                 
                 mapVC.title = place.objectForKey("name") as! NSString as String;
                 mapVC.message = place.objectForKey("description") as? String;
-                let lat:String = place.objectForKey("lat") as! String;
-                let lng:String = place.objectForKey("long") as! String;
+                let lat:String = place.objectForKey("latitude") as! String;
+                let lng:String = place.objectForKey("longitude") as! String;
+                //set the image here???
                 
                 let location = CLLocation(latitude: (lat as NSString).doubleValue, longitude: (lng as NSString).doubleValue)
                 mapVC.location = location;
+                mapVC.lat = lat as String;
+                mapVC.long = lng as String;
+                //to enable the share button
+                mapVC.show = true;
                 self.navigationController?.pushViewController(mapVC, animated: true);
             }
             
@@ -148,7 +152,7 @@ class SubTypesOfPOI:UITableViewController, UITableViewDataSource, UITableViewDel
         tableView.dataSource = self
         tableView.delegate = self
         
-        locations = DataManagement.getPlacesOfCat(type) as! [String];
+//        locations = DataManagement.getPlacesOfCat(type) as! [String];
         //        self.view.addSubview(tableView)
     }
 }
