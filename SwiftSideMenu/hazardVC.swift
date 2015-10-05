@@ -62,6 +62,9 @@ class hazardVC:ViewController{
     
     @IBAction func sendReport(sender: AnyObject) {
         
+        
+        var alert : UIAlertView = UIAlertView(title: "thank you", message:"Thank you for your cooperation", delegate:nil,cancelButtonTitle:"ok")
+        alert.show()
 
     }
     

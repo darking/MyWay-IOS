@@ -38,7 +38,7 @@ class otherVC:ViewController{
     @IBAction func sendReport(sender: AnyObject) {
 
         
-        var alert : UIAlertView = UIAlertView(title: "thank you", message:"Thank you for your corboration", delegate:nil,cancelButtonTitle:"ok")
+        var alert : UIAlertView = UIAlertView(title: "thank you", message:"Thank you for your cooperation", delegate:nil,cancelButtonTitle:"ok")
         alert.show()
         
        
@@ -83,6 +83,7 @@ class otherVC:ViewController{
   
     override func viewDidLoad() {
         super.viewDidLoad();
+        println(NSUserDefaults.standardUserDefaults().valueForKey("username") as! String);
 //      locationManager.requestAlwaysAuthorization();
         locationManager.requestWhenInUseAuthorization()
         locationManager.location;

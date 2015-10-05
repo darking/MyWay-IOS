@@ -25,7 +25,7 @@ class URLCommentConnection: UIViewController, NSURLConnectionDelegate, NSURLConn
         
         let urlReq:NSURLRequest=NSURLRequest(URL:Group4Url!);
         let connection:NSURLConnection?=NSURLConnection(request: urlReq, delegate: self, startImmediately: true);
-        
+        println("print Group4 URL");
         
         println(Group4Url);
     }
@@ -33,7 +33,7 @@ class URLCommentConnection: UIViewController, NSURLConnectionDelegate, NSURLConn
     func connection(connection: NSURLConnection, didReceiveData data: NSData) {
         dataConnection.appendData(data)
         let output = NSString(data: data, encoding: NSUTF8StringEncoding);
-        
+        println("print output");
         println(output);
         
         var new:[String] = output?.componentsSeparatedByString(",") as! [String];
@@ -43,6 +43,11 @@ class URLCommentConnection: UIViewController, NSURLConnectionDelegate, NSURLConn
     
     func connectionDidFinishLoading(connection: NSURLConnection) {
         var valuesDict = NSJSONSerialization.JSONObjectWithData(dataConnection, options: nil, error: nil);
+       
+        
+        println(valuesDict?.objectForKey("comment"));
+        println("valuesDict");
+        println(valuesDict);
         
     }
 }

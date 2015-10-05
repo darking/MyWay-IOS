@@ -92,7 +92,10 @@ class trafficVC:ViewController{
     
     
     @IBAction func sendTrafficReport(sender: AnyObject) {
-
+        
+        
+        var alert : UIAlertView = UIAlertView(title: "thank you", message:"Thank you for your cooperation", delegate:nil,cancelButtonTitle:"ok")
+        alert.show()
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
