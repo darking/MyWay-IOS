@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cGW-jH-yln">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Geocoding-->
+        <scene sceneID="8vC-yP-6KK">
+            <objects>
+                <viewController storyboardIdentifier="GeoVC" title="Geocoding" id="cGW-jH-yln" customClass="GeoViewController" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Se-X9-7mz"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZXM-hi-Vzz"/>
+                    </layoutGuides>
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="kiO-8P-a8U">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar opaque="NO" multipleTouchEnabled="YES" contentMode="redraw" barStyle="blackTranslucent" text="Disneyland" prompt="Enter a place or address to Geocode" placeholder="Place" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hqc-Fq-lU1">
+                                <rect key="frame" x="0.0" y="20" width="600" height="75"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="cGW-jH-yln" id="KJG-qe-HNc"/>
+                                </connections>
+                            </searchBar>
+                            <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F03-h7-3GM" customClass="AGSMapView">
+                                <rect key="frame" x="0.0" y="95" width="600" height="505"/>
+                                <subviews>
+                                    <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="ArcGIS.bundle/esri.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xg7-i6-ufP">
+                                        <rect key="frame" x="5" y="468" width="56" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="F4K-oX-K3i"/>
+                                            <constraint firstAttribute="height" constant="32" id="fUo-Qx-F5S"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Xg7-i6-ufP" firstAttribute="leading" secondItem="F03-h7-3GM" secondAttribute="leading" constant="5" id="9Bu-8R-0D4"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xg7-i6-ufP" secondAttribute="bottom" constant="5" id="tjq-Xm-dWt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hqc-Fq-lU1" firstAttribute="top" secondItem="3Se-X9-7mz" secondAttribute="bottom" id="9B8-Qm-vaS"/>
+                            <constraint firstItem="F03-h7-3GM" firstAttribute="leading" secondItem="kiO-8P-a8U" secondAttribute="leading" id="CB6-4E-SzW"/>
+                            <constraint firstItem="Hqc-Fq-lU1" firstAttribute="top" secondItem="kiO-8P-a8U" secondAttribute="top" id="FSC-7m-flc"/>
+                            <constraint firstItem="Hqc-Fq-lU1" firstAttribute="leading" secondItem="kiO-8P-a8U" secondAttribute="leading" id="OiN-4Q-4Yn"/>
+                            <constraint firstAttribute="trailing" secondItem="F03-h7-3GM" secondAttribute="trailing" id="OjD-8q-ufG"/>
+                            <constraint firstAttribute="trailing" secondItem="Hqc-Fq-lU1" secondAttribute="trailing" id="Uxx-mA-Dgu"/>
+                            <constraint firstItem="F03-h7-3GM" firstAttribute="top" secondItem="Hqc-Fq-lU1" secondAttribute="bottom" id="ZaX-p0-WqT"/>
+                            <constraint firstAttribute="bottom" secondItem="F03-h7-3GM" secondAttribute="bottom" id="ldA-zI-k1N"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="FSC-7m-flc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="SwiftSideMenu" id="erE-1E-VBG">
+                        <barButtonItem key="leftBarButtonItem" image="side_menu_icon" id="4Wg-Dx-RPu">
+                            <connections>
+                                <action selector="toggleMenu:" destination="cGW-jH-yln" id="2fw-7F-ffh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="F03-h7-3GM" id="rGF-IR-kev"/>
+                        <outlet property="searchBar" destination="Hqc-Fq-lU1" id="Pro-Nr-h2h"/>
+                        <segue destination="Meh-Ne-wtj" kind="presentation" identifier="ResultsSegue" modalPresentationStyle="formSheet" id="FZY-n4-q4d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OXH-oZ-qsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10" y="172"/>
+        </scene>
+        <!--Geo Results View Controller-->
+        <scene sceneID="UcS-lJ-ECU">
+            <objects>
+                <viewController storyboardIdentifier="ResultsViewController" id="Meh-Ne-wtj" customClass="GeoResultsViewController" customModule="MyWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sPH-Hj-DgF"/>
+                        <viewControllerLayoutGuide type="bottom" id="YrH-As-jjx"/>
+                    </layoutGuides>
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="uPn-fS-pit">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="RG5-tM-DCG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GeocodingResultCell" textLabel="Zmz-3g-Dwl" detailTextLabel="29B-pZ-qJf" style="IBUITableViewCellStyleSubtitle" id="1kN-rQ-lxJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1kN-rQ-lxJ" id="fEk-u2-yjG">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zmz-3g-Dwl">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="29B-pZ-qJf">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Meh-Ne-wtj" id="EoF-Dv-Kv8"/>
+                                    <outlet property="delegate" destination="Meh-Ne-wtj" id="reP-bW-x8F"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="vWJ-wn-2c7">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="FEB-Mn-gUQ"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="mA4-no-A4B"/>
+                                    <barButtonItem title="Done" id="bsf-ny-90b">
+                                        <connections>
+                                            <action selector="done:" destination="Meh-Ne-wtj" id="raf-h4-iG4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="G3G-Tn-u53"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vWJ-wn-2c7" secondAttribute="trailing" id="4JS-D3-vwk"/>
+                            <constraint firstItem="vWJ-wn-2c7" firstAttribute="top" secondItem="RG5-tM-DCG" secondAttribute="bottom" id="MKw-fl-i2J"/>
+                            <constraint firstItem="vWJ-wn-2c7" firstAttribute="leading" secondItem="uPn-fS-pit" secondAttribute="leading" id="My4-me-pxW"/>
+                            <constraint firstItem="RG5-tM-DCG" firstAttribute="leading" secondItem="uPn-fS-pit" secondAttribute="leading" id="Q0b-Ha-6Za"/>
+                            <constraint firstItem="RG5-tM-DCG" firstAttribute="top" secondItem="uPn-fS-pit" secondAttribute="top" id="T99-8D-LLp"/>
+                            <constraint firstAttribute="trailing" secondItem="RG5-tM-DCG" secondAttribute="trailing" id="UFw-Us-ahl"/>
+                            <constraint firstAttribute="bottom" secondItem="vWJ-wn-2c7" secondAttribute="bottom" id="qUX-YN-8Jg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="RG5-tM-DCG" id="rsb-9Q-Dwl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qai-MM-OLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="832" y="172"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ArcGIS.bundle/esri.png" width="16" height="16"/>
+        <image name="side_menu_icon" width="42" height="42"/>
+    </resources>
+</document>
