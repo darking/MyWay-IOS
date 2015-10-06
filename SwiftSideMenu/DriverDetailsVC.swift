@@ -18,18 +18,21 @@ class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var lblDriverLocation: UILabel!
     @IBOutlet weak var lblBatteryStatus: UILabel!
     @IBAction func btnSetDestination(sender: AnyObject) {
+        println("\(DriverDetailsVC.SettingDriverDestination.settingDriverDestination)");
+        if (DriverDetailsVC.SettingDriverDestination.settingDriverDestination == false) {
+            DriverDetailsVC.SettingDriverDestination.settingDriverDestination = true;
+            var showMap:ShowOnMapVC = UIStoryboard(name: "reqLocaiton", bundle: nil).instantiateViewControllerWithIdentifier("ShowOnMapVC") as! ShowOnMapVC;
+            showMap.title = "Set Driver Destination";
+            showMap.message = "Please select a location to send to the driver";
+            var driverDestination:CLLocation = CLLocation(latitude: 29.282064, longitude: 47.994);
+            //Zahraa st 305 (29.282064 , 47.994)
+            
+            showMap.location = driverDestination;
+            let (latitud, longitud) =  GetLocationVC().getCurrentLocation()
+            
+            self.presentViewController(showMap, animated: true, completion: {});
+        }
         
-        DriverDetailsVC.SettingDriverDestination.settingDriverDestination = true;
-        var showMap:ShowOnMapVC = UIStoryboard(name: "reqLocaiton", bundle: nil).instantiateViewControllerWithIdentifier("ShowOnMapVC") as! ShowOnMapVC;
-        showMap.title = "Set Driver Destination";
-        showMap.message = "Please select a location to send to the driver";
-        var driverDestination:CLLocation = CLLocation(latitude: 29.282064, longitude: 47.994);
-      //Zahraa st 305 (29.282064 , 47.994)
-        
-        showMap.location = driverDestination;
-        let (latitud, longitud) =  GetLocationVC().getCurrentLocation()
-  
-        self.navigationController?.pushViewController(showMap, animated: true);
     }
     
   
