@@ -31,20 +31,12 @@
 		0779195C1BBBF46200AB0DB1 /* traffic.png in Resources */ = {isa = PBXBuildFile; fileRef = 077919491BBBF46200AB0DB1 /* traffic.png */; };
 		077919621BBBF48400AB0DB1 /* accidentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779195E1BBBF48400AB0DB1 /* accidentVC.swift */; };
 		077919631BBBF48400AB0DB1 /* addAccidentsReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779195F1BBBF48400AB0DB1 /* addAccidentsReport.swift */; };
-		077919641BBBF48400AB0DB1 /* commentMinorAccident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077919601BBBF48400AB0DB1 /* commentMinorAccident.swift */; };
-		077919651BBBF48400AB0DB1 /* commentMajorAccident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077919611BBBF48400AB0DB1 /* commentMajorAccident.swift */; };
 		0779196C1BBBF4B100AB0DB1 /* trafficVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077919671BBBF4B100AB0DB1 /* trafficVC.swift */; };
-		0779196D1BBBF4B100AB0DB1 /* commentModerateTraffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077919681BBBF4B100AB0DB1 /* commentModerateTraffic.swift */; };
-		0779196E1BBBF4B100AB0DB1 /* commentHeavyTraffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077919691BBBF4B100AB0DB1 /* commentHeavyTraffic.swift */; };
-		0779196F1BBBF4B100AB0DB1 /* commentStandstillTraffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779196A1BBBF4B100AB0DB1 /* commentStandstillTraffic.swift */; };
 		077919701BBBF4B100AB0DB1 /* addTrafficJamReports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779196B1BBBF4B100AB0DB1 /* addTrafficJamReports.swift */; };
 		077919761BBBF4CD00AB0DB1 /* hazardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077919721BBBF4CD00AB0DB1 /* hazardVC.swift */; };
 		077919771BBBF4CD00AB0DB1 /* addHazardReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077919731BBBF4CD00AB0DB1 /* addHazardReport.swift */; };
-		077919781BBBF4CD00AB0DB1 /* commentOnRoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077919741BBBF4CD00AB0DB1 /* commentOnRoad.swift */; };
-		077919791BBBF4CD00AB0DB1 /* commentConstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077919751BBBF4CD00AB0DB1 /* commentConstruction.swift */; };
 		0779197E1BBBF4EB00AB0DB1 /* otherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779197B1BBBF4EB00AB0DB1 /* otherVC.swift */; };
 		0779197F1BBBF4EB00AB0DB1 /* addOtherReports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779197C1BBBF4EB00AB0DB1 /* addOtherReports.swift */; };
-		077919801BBBF4EB00AB0DB1 /* commentOther.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779197D1BBBF4EB00AB0DB1 /* commentOther.swift */; };
 		0787800B1BBD1F9F00B7CF93 /* KhalidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078780081BBD1F9F00B7CF93 /* KhalidViewController.swift */; };
 		0787800C1BBD1F9F00B7CF93 /* KhalidMapTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078780091BBD1F9F00B7CF93 /* KhalidMapTasks.swift */; };
 		0787800D1BBD1F9F00B7CF93 /* Khalidtable22.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0787800A1BBD1F9F00B7CF93 /* Khalidtable22.swift */; };
@@ -225,20 +217,12 @@
 		077919491BBBF46200AB0DB1 /* traffic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = traffic.png; sourceTree = "<group>"; };
 		0779195E1BBBF48400AB0DB1 /* accidentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = accidentVC.swift; sourceTree = "<group>"; };
 		0779195F1BBBF48400AB0DB1 /* addAccidentsReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addAccidentsReport.swift; sourceTree = "<group>"; };
-		077919601BBBF48400AB0DB1 /* commentMinorAccident.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentMinorAccident.swift; sourceTree = "<group>"; };
-		077919611BBBF48400AB0DB1 /* commentMajorAccident.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentMajorAccident.swift; sourceTree = "<group>"; };
 		077919671BBBF4B100AB0DB1 /* trafficVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trafficVC.swift; sourceTree = "<group>"; };
-		077919681BBBF4B100AB0DB1 /* commentModerateTraffic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentModerateTraffic.swift; sourceTree = "<group>"; };
-		077919691BBBF4B100AB0DB1 /* commentHeavyTraffic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentHeavyTraffic.swift; sourceTree = "<group>"; };
-		0779196A1BBBF4B100AB0DB1 /* commentStandstillTraffic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentStandstillTraffic.swift; sourceTree = "<group>"; };
 		0779196B1BBBF4B100AB0DB1 /* addTrafficJamReports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addTrafficJamReports.swift; sourceTree = "<group>"; };
 		077919721BBBF4CD00AB0DB1 /* hazardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hazardVC.swift; sourceTree = "<group>"; };
 		077919731BBBF4CD00AB0DB1 /* addHazardReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addHazardReport.swift; sourceTree = "<group>"; };
-		077919741BBBF4CD00AB0DB1 /* commentOnRoad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentOnRoad.swift; sourceTree = "<group>"; };
-		077919751BBBF4CD00AB0DB1 /* commentConstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentConstruction.swift; sourceTree = "<group>"; };
 		0779197B1BBBF4EB00AB0DB1 /* otherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = otherVC.swift; sourceTree = "<group>"; };
 		0779197C1BBBF4EB00AB0DB1 /* addOtherReports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addOtherReports.swift; sourceTree = "<group>"; };
-		0779197D1BBBF4EB00AB0DB1 /* commentOther.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = commentOther.swift; sourceTree = "<group>"; };
 		078780081BBD1F9F00B7CF93 /* KhalidViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KhalidViewController.swift; sourceTree = "<group>"; };
 		078780091BBD1F9F00B7CF93 /* KhalidMapTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KhalidMapTasks.swift; sourceTree = "<group>"; };
 		0787800A1BBD1F9F00B7CF93 /* Khalidtable22.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Khalidtable22.swift; sourceTree = "<group>"; };
@@ -437,8 +421,6 @@
 			children = (
 				0779195E1BBBF48400AB0DB1 /* accidentVC.swift */,
 				0779195F1BBBF48400AB0DB1 /* addAccidentsReport.swift */,
-				077919601BBBF48400AB0DB1 /* commentMinorAccident.swift */,
-				077919611BBBF48400AB0DB1 /* commentMajorAccident.swift */,
 			);
 			name = Accident;
 			sourceTree = "<group>";
@@ -447,9 +429,6 @@
 			isa = PBXGroup;
 			children = (
 				077919671BBBF4B100AB0DB1 /* trafficVC.swift */,
-				077919681BBBF4B100AB0DB1 /* commentModerateTraffic.swift */,
-				077919691BBBF4B100AB0DB1 /* commentHeavyTraffic.swift */,
-				0779196A1BBBF4B100AB0DB1 /* commentStandstillTraffic.swift */,
 				0779196B1BBBF4B100AB0DB1 /* addTrafficJamReports.swift */,
 			);
 			name = Traffic;
@@ -460,8 +439,6 @@
 			children = (
 				077919721BBBF4CD00AB0DB1 /* hazardVC.swift */,
 				077919731BBBF4CD00AB0DB1 /* addHazardReport.swift */,
-				077919741BBBF4CD00AB0DB1 /* commentOnRoad.swift */,
-				077919751BBBF4CD00AB0DB1 /* commentConstruction.swift */,
 			);
 			name = Hazard;
 			sourceTree = "<group>";
@@ -471,7 +448,6 @@
 			children = (
 				0779197B1BBBF4EB00AB0DB1 /* otherVC.swift */,
 				0779197C1BBBF4EB00AB0DB1 /* addOtherReports.swift */,
-				0779197D1BBBF4EB00AB0DB1 /* commentOther.swift */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -1039,7 +1015,6 @@
 				49A961FB1BC18F5F00622F8D /* ManageFavorites.swift in Sources */,
 				6CE9A2321B839F9100BE4004 /* ChagePasswordViewController.swift in Sources */,
 				0779196C1BBBF4B100AB0DB1 /* trafficVC.swift in Sources */,
-				077919651BBBF48400AB0DB1 /* commentMajorAccident.swift in Sources */,
 				C3EBDD911B92D586009237A8 /* CommentLocation.swift in Sources */,
 				C3EBDD8F1B92D586009237A8 /* AddDailyRouteVC.swift in Sources */,
 				143615671B8F1A62003FD356 /* AddNewPOI.swift in Sources */,
@@ -1050,7 +1025,6 @@
 				6CE9A23A1B839F9100BE4004 /* UserInfo.swift in Sources */,
 				C3EBDD921B92D586009237A8 /* DailyReportVC.swift in Sources */,
 				49A962011BC18F9900622F8D /* Share.swift in Sources */,
-				0779196E1BBBF4B100AB0DB1 /* commentHeavyTraffic.swift in Sources */,
 				0787800D1BBD1F9F00B7CF93 /* Khalidtable22.swift in Sources */,
 				0787800B1BBD1F9F00B7CF93 /* KhalidViewController.swift in Sources */,
 				C3EBDD9D1B92D59A009237A8 /* DriverDetailsVC.swift in Sources */,
@@ -1069,7 +1043,6 @@
 				6CE9A2371B839F9100BE4004 /* LoginViewController.swift in Sources */,
 				49A961FD1BC18F7500622F8D /* RetrieveFavoritesInterface.swift in Sources */,
 				143615711B8F1CC3003FD356 /* GetLocationVC.swift in Sources */,
-				077919791BBBF4CD00AB0DB1 /* commentConstruction.swift in Sources */,
 				0779197E1BBBF4EB00AB0DB1 /* otherVC.swift in Sources */,
 				1436156D1B8F1AD4003FD356 /* SubTypesOfPOI.swift in Sources */,
 				C3EBDD801B92D56E009237A8 /* Data.swift in Sources */,
@@ -1087,11 +1060,9 @@
 				077919761BBBF4CD00AB0DB1 /* hazardVC.swift in Sources */,
 				142AAA871BC1307A0089F62F /* GeoResultsViewController.swift in Sources */,
 				C3EBDD731B92D529009237A8 /* FileUtils.swift in Sources */,
-				0779196F1BBBF4B100AB0DB1 /* commentStandstillTraffic.swift in Sources */,
 				52ECD6D91B8643DE00718350 /* UIImage+AHKAdditions.m in Sources */,
 				6CE9A2591B8474A300BE4004 /* TypeView.swift in Sources */,
 				52ECD6D71B8643DE00718350 /* AHKActionSheet.m in Sources */,
-				0779196D1BBBF4B100AB0DB1 /* commentModerateTraffic.swift in Sources */,
 				6CE9A2561B8474A300BE4004 /* PointOfInterest.swift in Sources */,
 				6CE9A2521B8474A300BE4004 /* ManagePoints.swift in Sources */,
 				6CE9A2391B839F9100BE4004 /* SetNewPasswordViewController.swift in Sources */,
@@ -1112,14 +1083,11 @@
 				077919321BBBF41900AB0DB1 /* AllVC.swift in Sources */,
 				6CE9A2351B839F9100BE4004 /* ForgetPasswordViewController.swift in Sources */,
 				5C132589198E2A9A00CA49BE /* AppDelegate.swift in Sources */,
-				077919641BBBF48400AB0DB1 /* commentMinorAccident.swift in Sources */,
-				077919781BBBF4CD00AB0DB1 /* commentOnRoad.swift in Sources */,
 				077919351BBBF41900AB0DB1 /* ReportsMainVC.swift in Sources */,
 				141092721B8CB76300CD3114 /* MapViewController.swift in Sources */,
 				49A928DC1BC1562D00391A03 /* URLCommentConnection.swift in Sources */,
 				6CD32A271BBBFFEF00F6D684 /* DriverCustomCell.swift in Sources */,
 				6CE9A2341B839F9100BE4004 /* EditUserProfileViewController.swift in Sources */,
-				077919801BBBF4EB00AB0DB1 /* commentOther.swift in Sources */,
 				077919771BBBF4CD00AB0DB1 /* addHazardReport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

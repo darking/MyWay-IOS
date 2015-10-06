@@ -21,12 +21,7 @@ class addOtherReports : UIViewController, NSURLConnectionDelegate, NSURLConnecti
     var location:otherVC=otherVC();
     
     func addToOtherList(comment:String,id_report:Int){
-        
-      
-            let myUtil3:FileUtils = FileUtils(fileName: fileName33);
-            let filePath:String = myUtil3.docsPath();
-            
-            var currentList:NSMutableArray = self.showAllReports();
+   
         
         //sh taleef
         
@@ -41,34 +36,12 @@ class addOtherReports : UIViewController, NSURLConnectionDelegate, NSURLConnecti
         //finish taleef
         println(comment)
         println(id_report)
-            currentList.addObject(CommentLocation().valuesDicForComment(comment,id_report: id_report));
         
-            currentList.writeToFile(filePath, atomically: false);
             println("I'm trying to know what is saved in current List var");
-            println(currentList);
             println("Here its finish ");
-
-            println(filePath);
-        
-
-        
+   
     }
-    
-    func showAllReports()->NSMutableArray{
-        
-        let newSetting = NSUserDefaults.standardUserDefaults();
-       
-            let myUtil3:FileUtils = FileUtils(fileName: fileName33);
-            let filePath:String = myUtil3.docsPath();
-            
-            
-            myUtil3.createIfNotExistUnderDocs();
-            
-            var list:NSMutableArray = NSMutableArray(contentsOfFile: filePath)!;
-            println("OTHER");
-            return list;
-    }
-    
+
     func connection(connection: NSURLConnection, didReceiveData data: NSData) {
         dataConnection.appendData(data)
         let output = NSString(data: data, encoding: NSUTF8StringEncoding);

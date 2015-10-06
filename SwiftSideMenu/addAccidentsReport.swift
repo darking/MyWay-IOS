@@ -19,66 +19,22 @@ class addAccidentsReport{
     
     func addToAccidentsList(comment:String,id_report: Int){
         
-        if( ACCIDENT.minorFlag == true)
-        {
-            let myUtil:FileUtils = FileUtils(fileName: fileNamee);
-            let filePath:String = myUtil.docsPath();
-            
-            var currentList:NSMutableArray = self.showAllReports();
-            
-           currentList.addObject(CommentLocation().valuesDicForComment(comment,id_report: id_report));
-            currentList.writeToFile(filePath, atomically: false);
-            // ACCIDENTS.minorFlag=false;
-            println(filePath);}
-            
-        else
-        {
-            
-            let myUtil2:FileUtils = FileUtils(fileName: fileName22);
-            let filePath2:String = myUtil2.docsPath();
-            
-            var currentList:NSMutableArray = self.showAllReports();
-            
-            currentList.addObject(CommentLocation().valuesDicForComment(comment,id_report: id_report));
-            currentList.writeToFile(filePath2, atomically: false);
-            // ACCIDENTS.majorFlag=false;
-            println(filePath2);
-            
-        }
+        var cl:CommentLocation = CommentLocation()
+        var URLStatement:NSString = cl.urlParams(CommentLocation().valuesDicForComment(comment,id_report: id_report));
+        let Group4Url:NSURL?=NSURL(string:"http://mobile.comxa.com/reports/all_reports.json?\(URLStatement)");
         
+        let urlReq:NSURLRequest=NSURLRequest(URL:Group4Url!);
+        let connection:NSURLConnection?=NSURLConnection(request: urlReq, delegate: self, startImmediately: true);
+        println(Group4Url)
+        
+        //finish taleef
+        println(comment)
+        println(id_report)
+        
+        println("I'm trying to know what is saved in current List var");
+        println("Here its finish ");
+        
+    
     }
-    
-    func showAllReports()->NSMutableArray{
-        
-        let newSetting = NSUserDefaults.standardUserDefaults();
-        var result:Bool=newSetting.boolForKey("minor");
-        println(newSetting.boolForKey("minor"));
-        if(result == true)
-        {
-            let myUtil:FileUtils = FileUtils(fileName: fileNamee);
-            let filePath:String = myUtil.docsPath();
-            
-            
-            myUtil.createIfNotExistUnderDocs();
-            
-            var list:NSMutableArray = NSMutableArray(contentsOfFile: filePath)!;
-            println("MINOR");
-            return list;}
-            
-        else
-        {
-            
-            let myUtil2:FileUtils = FileUtils(fileName: fileName22);
-            let filePath2:String = myUtil2.docsPath();
-            myUtil2.createIfNotExistUnderDocs();
-            
-            var list:NSMutableArray = NSMutableArray(contentsOfFile: filePath2)!;
-            println("MAJOR");
-            return list;
-        }
-        
-    }
-    
-    
     
 }
