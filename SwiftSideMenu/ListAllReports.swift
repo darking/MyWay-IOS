@@ -7,26 +7,33 @@
 //
 
 import Foundation
-
+import SwiftyJSON
 
 class ListAllReports:NSObject, NSURLConnectionDelegate, NSURLConnectionDataDelegate {
     
     var callerMap: mainViewController = mainViewController();
     var dataConnection:NSMutableData=NSMutableData();
-    func getReportList()
+    func getReportList(caller: mainViewController)
     {
-        
+        callerMap = caller;
         let Group4Url:NSURL?=NSURL(string:"http://mobile.comxa.com/reports/all_reports.json");
         
         let urlReq:NSURLRequest=NSURLRequest(URL:Group4Url!);
         let connection:NSURLConnection?=NSURLConnection(request: urlReq, delegate: self, startImmediately: true);
-        println("print Group4 URL in class ListAllReports");
+        println("print Group4 URL");
         
         println(Group4Url);
         
         
     }
-    
+    func getReportsNow()-> NSDictionary{
+        let Group4Url:NSURL?=NSURL(string:"http://mobile.comxa.com/reports/all_reports.json");
+        let jsonVal:NSString = NSString(contentsOfURL: Group4Url!, encoding: NSUTF8StringEncoding, error: nil)!;
+        let jsonData:NSData = NSData(contentsOfURL: Group4Url!)!;
+        var valuesDict:NSDictionary = NSJSONSerialization.JSONObjectWithData(jsonData, options: nil, error: nil) as! NSDictionary;
+        return valuesDict;
+        
+    }
     func connection(connection: NSURLConnection, didReceiveData data: NSData) {
         dataConnection.appendData(data)
         let output = NSString(data: data, encoding: NSUTF8StringEncoding);
@@ -42,11 +49,14 @@ class ListAllReports:NSObject, NSURLConnectionDelegate, NSURLConnectionDataDeleg
         var valuesDict = NSJSONSerialization.JSONObjectWithData(dataConnection, options: nil, error: nil);
         
         
-        println(valuesDict?.objectForKey("comment"));
-        println("valuesDict");
-        println(valuesDict);
+        //println(valuesDict?.objectForKey("comment"));
+       // println("valuesDict");
+        //println(valuesDict);
+        
+  
+        
         //CommentLocation.dictionariesToObjects(valuesDict);
-        //callerMap.gotReports(valuesDict);
+        callerMap.gotReports(valuesDict!);
         
     }
 
