@@ -12,7 +12,8 @@ import Foundation
 class ManageFavorites: NSObject, NSURLConnectionDataDelegate, NSURLConnectionDelegate {
     let favs  = "favoriteList.plist";
     var favoritesVC: MyProtocol = FavoritesViewController();
-
+    var callerForPins: MyProtocol = mainViewController();
+    
     var list:NSMutableArray = NSMutableArray();
     lazy var data = NSMutableData()
     
@@ -50,14 +51,15 @@ class ManageFavorites: NSObject, NSURLConnectionDataDelegate, NSURLConnectionDel
         var request: NSURLRequest = NSURLRequest(URL: url)
         
         var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: true)!
-//        data = NSMutableData()//re-initialize the data so it wouldn't be an invalid JSON after i append to it the newer JSON
-//        connection.start()
+        //        data = NSMutableData()//re-initialize the data so it wouldn't be an invalid JSON after i append to it the newer JSON
+        //        connection.start()
     }
+    
     
     
     func connection(connection: NSURLConnection, didReceiveData data: NSData) {
         self.data.appendData(data)
-
+        
     }
     
     
@@ -77,11 +79,13 @@ class ManageFavorites: NSObject, NSURLConnectionDataDelegate, NSURLConnectionDel
                 delegate: nil, cancelButtonTitle: "OK");
             alert.show();
         } else {
-
-        //send the list to the class that called it
-//        var favoritesVC: FavoritesViewController = FavoritesViewController();
-        favoritesVC.setFavsData(list);
-        
+            
+            //send the list to the class that called it
+            //        var favoritesVC: FavoritesViewController = FavoritesViewController();
+            
+            favoritesVC.setFavsData(list);
+            callerForPins.setFavsData(list);
+            
         }
         println(list);
     }
