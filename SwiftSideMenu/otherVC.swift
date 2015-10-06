@@ -53,9 +53,9 @@ class otherVC:ViewController{
         }
         
         else {
-            var manager:addOtherReports = addOtherReports();
+            
             var adding:URLCommentConnection = URLCommentConnection();
-            manager.OTHER = self;
+           
             if (commentOther.text == ""){
                 commentOther.text = "caution! there is somthing on the road";
             }
@@ -93,9 +93,7 @@ class otherVC:ViewController{
         NSUserDefaults.standardUserDefaults().setValue(locationManager.location.coordinate.longitude.description, forKey: "lon");
         
         locationManager.startUpdatingLocation();
-        println("current location is \(currentLocation.description)");
-        var c:allCommentVC=allCommentVC();
-        c.AddToArray();
+       
     }
    
     override func viewDidDisappear(animated: Bool) {

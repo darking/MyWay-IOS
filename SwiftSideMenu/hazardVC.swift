@@ -79,12 +79,9 @@ class hazardVC:ViewController{
         }
         
         else {
-            var manager:addHazardReport = addHazardReport();
+            
             var adding:URLCommentConnection = URLCommentConnection();
-            manager.HAZARD = self;
-            
-            
-            
+          
             if (commentHazard.text == ""){
                 if(constructionFlag){
                     commentHazard.text = "Caution! there is a construction ahead"
@@ -144,8 +141,7 @@ class hazardVC:ViewController{
         locationManager.startUpdatingLocation();
         println("current location is \(currentLocation.description)");
         
-        var c:allCommentVC=allCommentVC();
-        c.AddToArray();
+        
     }
 
     override func viewDidDisappear(animated: Bool) {

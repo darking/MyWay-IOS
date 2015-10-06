@@ -73,9 +73,9 @@ class accidentVC:ViewController{
         }
        
         else {
-            var manager:addAccidentsReport = addAccidentsReport();
+            
             var adding:URLCommentConnection = URLCommentConnection();
-            manager.ACCIDENT = self;
+            
             
             
             if (commentAccident.text == ""){
@@ -96,13 +96,13 @@ class accidentVC:ViewController{
             {
                 if(minorFlag){
                     
-                    manager.addToAccidentsList(commentAccident.text,id_report: 6);
+                  
                     adding.addToCommentList(commentAccident.text,id_report: 7);
                     
                 }
                 else {
                     
-                    manager.addToAccidentsList(commentAccident.text,id_report: 7);
+             
                     adding.addToCommentList(commentAccident.text,id_report: 8);
                     
                 }

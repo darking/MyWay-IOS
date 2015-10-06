@@ -108,9 +108,9 @@ class trafficVC:ViewController{
             return false;
         }
         else {
-            var manager:addTrafficJamReports = addTrafficJamReports();
+            
             var adding:URLCommentConnection = URLCommentConnection();
-            manager.TRAFFIC = self;
+           
             
           
             
@@ -189,9 +189,9 @@ class trafficVC:ViewController{
         
         //******* Testing locationFilteration ****************
         var lo:LocationFilteration=LocationFilteration();
-        var a:allCommentVC=allCommentVC();
+        
         var objectsArray: NSMutableArray = NSMutableArray();
-        objectsArray=a.AddToArray();
+        
 
     }
 

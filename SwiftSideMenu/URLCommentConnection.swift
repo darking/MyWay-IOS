@@ -25,7 +25,7 @@ class URLCommentConnection: UIViewController, NSURLConnectionDelegate, NSURLConn
         
         let urlReq:NSURLRequest=NSURLRequest(URL:Group4Url!);
         let connection:NSURLConnection?=NSURLConnection(request: urlReq, delegate: self, startImmediately: true);
-        println("print Group4 URL");
+        println("print Group4 URL in class URLCommentConnection");
         
         println(Group4Url);
     }
