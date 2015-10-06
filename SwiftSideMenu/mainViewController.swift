@@ -42,9 +42,9 @@ public class Reachability {
 
 
 class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate, ENSideMenuDelegate, MyProtocol {
-
+    
     var khalidmapTasks = KhalidMapTasks()
-
+    
     var actionSheet = AHKActionSheet()
     
     var favPins:NSArray = NSArray();
@@ -63,7 +63,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     
     var placePicker: GMSPlacePicker?
     var placesClient: GMSPlacesClient?
-
+    
     // Instantiate a pair of UILabels in Interface Builder
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
@@ -75,7 +75,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     @IBAction func menuButton(sender: AnyObject) {
         toggleSideMenuView()
     }
-        @IBOutlet weak var lblInfo: UILabel!
+    @IBOutlet weak var lblInfo: UILabel!
     @IBOutlet weak var lblLongLat: UILabel!
     
     var mapTasks = MapTasks()
@@ -93,13 +93,13 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     var waypointsArray: Array<String> = []
     
     var travelMode = TravelModes.driving
- 
+    
     @IBOutlet weak var viewMap: GMSMapView!
     
     
     
     @IBOutlet weak var toggleTraffic: UISwitch!
-  
+    
     @IBOutlet weak var toggleFav: UISwitch!
     
     ///END of declaring variable
@@ -125,8 +125,8 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
         if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!)) {
             UIApplication.sharedApplication().openURL(NSURL(string:
-              //  "comgooglemaps://?center=\(Lat),\(Lng)&zoom=14&views=traffic")!)
-            "comgooglemaps://?saddr=\(locationManager.location.coordinate.latitude),\(locationManager.location.coordinate.longitude)&daddr=\(Lat),\(Lng)&directionsmode=driving&views=traffic")!)
+                //  "comgooglemaps://?center=\(Lat),\(Lng)&zoom=14&views=traffic")!)
+                "comgooglemaps://?saddr=\(locationManager.location.coordinate.latitude),\(locationManager.location.coordinate.longitude)&daddr=\(Lat),\(Lng)&directionsmode=driving&views=traffic")!)
         } else {
             NSLog("Can't use comgooglemaps://");
         }
@@ -135,7 +135,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     /////////TEST BUTTONS
     
     @IBAction func POIbtn(sender: AnyObject) {
-   showPOI()
+        showPOI()
     }
     
     @IBAction func routeANDpoi(sender: AnyObject) {
@@ -182,16 +182,16 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     
     //FUNC POI
     func POI(lat: Double ,lng: Double){
-
+        
         String(format: "%.2f", 1.1999898878) // Prints "1.20"
         
         var myLat = (String(format: "%.2f", lat) as NSString).doubleValue
         var myLng = (String(format: "%.2f", lng) as NSString).doubleValue
-
+        
         
         var path = GMSMutablePath()
-
-    
+        
+        
         var startPathLat =  (String(format: "%.2f", self.mapTasks.originCoordinate.latitude) as NSString).doubleValue
         var startPathLng =  (String(format: "%.2f", self.mapTasks.originCoordinate.longitude) as NSString).doubleValue
         
@@ -204,7 +204,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
         println("endPathLat: \(endPathLat)")
         println("endPathLng: \(endPathLng)")
-
+        
         
         viewMap.camera = GMSCameraPosition.cameraWithTarget(self.mapTasks.originCoordinate, zoom: 10.0)
         
@@ -213,10 +213,10 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         originMarker.icon = GMSMarker.markerImageWithColor(UIColor.greenColor())
         originMarker.title = self.mapTasks.originAddress
         
-                destinationMarker = GMSMarker(position: self.mapTasks.destinationCoordinate)
-                destinationMarker.map = self.viewMap
-                destinationMarker.icon = GMSMarker.markerImageWithColor(UIColor.redColor())
-                destinationMarker.title = self.mapTasks.destinationAddress
+        destinationMarker = GMSMarker(position: self.mapTasks.destinationCoordinate)
+        destinationMarker.map = self.viewMap
+        destinationMarker.icon = GMSMarker.markerImageWithColor(UIColor.redColor())
+        destinationMarker.title = self.mapTasks.destinationAddress
         
         
         if waypointsArray.count > 0 {
@@ -234,18 +234,18 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
         
     }
-
+    
     
     //.//////////TEST BUTTONS
-
+    
     
     //Button for clearing route
     @IBAction func clrRoute(sender: AnyObject) {
-    self.clrAllRoute()
-
-         clearBtn.enabled = false
+        self.clrAllRoute()
+        
+        clearBtn.enabled = false
     }
-
+    
     //./Button for clearing route
     
     
@@ -264,7 +264,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
         let createRouteAction = UIAlertAction(title: "Create Route", style: UIAlertActionStyle.Default) { (alertAction) -> Void in
             if let polyline = self.routePolyline {
-               // self.clearRoute()
+                // self.clearRoute()
                 self.waypointsArray.removeAll(keepCapacity: false)
             }
             
@@ -291,7 +291,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         addressAlert.addAction(closeAction)
         
         presentViewController(addressAlert, animated: true, completion: nil)
-
+        
     }
     //./button for creating from to destination
     
@@ -307,7 +307,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
         let createRouteAction = UIAlertAction(title: "Create Route", style: UIAlertActionStyle.Default) { (alertAction) -> Void in
             if let polyline = self.routePolyline {
-               // self.clearRoute()
+                // self.clearRoute()
                 self.waypointsArray.removeAll(keepCapacity: false)
             }
             
@@ -352,22 +352,22 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     
     override func viewDidAppear(animated: Bool) {
         viewMap.addObserver(self, forKeyPath: "myLocation", options: NSKeyValueObservingOptions.New, context: nil)
- 
-
+        
+        
         
     }
     
-   
     
-//    class func hasConnectivity() -> Bool {
-//        let reachability: Reachability = Reachability.reachabilityForInternetConnection()
-//        let networkStatus: Int = reachability.currentReachabilityStatus().rawValue
-//        return networkStatus != 0
-//    }
+    
+    //    class func hasConnectivity() -> Bool {
+    //        let reachability: Reachability = Reachability.reachabilityForInternetConnection()
+    //        let networkStatus: Int = reachability.currentReachabilityStatus().rawValue
+    //        return networkStatus != 0
+    //    }
     
     
     func gotReports(jso: AnyObject) {
-    
+        
         println("TESTING . REPORT")
         
         var json:JSON = JSON(jso)
@@ -386,30 +386,30 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             var report_type = result_data[i]["report_type"]
             
             //self.items.append("\(report_comments)","\(report_lat)","\(report_log)")
-//            self.hItems.setValue(report_comments, forKey: "comment")
-//            self.hItems.setValue(report_lat, forKey: "reportLat")
-//            self.hItems.setValue(report_log, forKey: "reportLon")
+            //            self.hItems.setValue(report_comments, forKey: "comment")
+            //            self.hItems.setValue(report_lat, forKey: "reportLat")
+            //            self.hItems.setValue(report_log, forKey: "reportLon")
             self.items.append((report_comments as String,report_lat as String,report_log as String))
             
             dict = ["comment": report_comments, "reportLat": report_lat,"reportLon": report_log]
             
-//            println("HERE I WILL PRINT DICT")
-//            print("report Lat: ")
-//            println(dict["reportLat"])
-//            print("report Lon: ")
-//            println(dict["reportLon"])
-           // println(self.hItems);
+            //            println("HERE I WILL PRINT DICT")
+            //            print("report Lat: ")
+            //            println(dict["reportLat"])
+            //            print("report Lon: ")
+            //            println(dict["reportLon"])
+            // println(self.hItems);
             //println("comments:  \(report_comments), lat: \(report_lat), log: \(report_log), type \(report_type)")
-         
-            //ADD MARKERS
-
-//            var marker = GMSMarker(position: CLLocationCoordinate2DMake((String(format: "%.7f", dict["reportLat"]!) as NSString).doubleValue, (String(format: "%.7f", dict["reportLon"]!) as NSString).doubleValue))
             
-           // var myCoor1 = CLLocationCoordinate2DMake(29.2786584, 48.0681507)
-                print("The convert of Lat: ")
+            //ADD MARKERS
+            
+            //            var marker = GMSMarker(position: CLLocationCoordinate2DMake((String(format: "%.7f", dict["reportLat"]!) as NSString).doubleValue, (String(format: "%.7f", dict["reportLon"]!) as NSString).doubleValue))
+            
+            // var myCoor1 = CLLocationCoordinate2DMake(29.2786584, 48.0681507)
+            print("The convert of Lat: ")
             println((dict["reportLat"]! as NSString).doubleValue)
             //print("The convert of lon: ")
-           // println((String(format: "%.2f", dict["reportLon"]!) as NSString).doubleValue)
+            // println((String(format: "%.2f", dict["reportLon"]!) as NSString).doubleValue)
             
             var myCoor2 = CLLocationCoordinate2DMake((dict["reportLat"]! as NSString).doubleValue, (dict["reportLon"]! as NSString).doubleValue)
             
@@ -418,15 +418,15 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             marker.map = viewMap
             marker.icon = GMSMarker.markerImageWithColor(UIColor.redColor())
             
-//
-//            markersArray.append(marker)
+            //
+            //            markersArray.append(marker)
             
             //./ADD MARKERS
         }
         
     }
     
-
+    
     
     //VIEW DID LOAD()
     override func viewDidLoad() {
@@ -443,35 +443,35 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         }
         
         self.title = "MyWay";
-
+        
         
         //SHOW REPORT
-     
-     //   dispatch_async(dispatch_get_main_queue(), { () -> Void in
         
-            ListAllReports().getReportList(self)
+        //   dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        
+        ListAllReports().getReportList(self)
         
         
-//            self.gotReports(ListAllReports().getReportsNow());
+        //            self.gotReports(ListAllReports().getReportsNow());
         
-//            println("comment in VIEW DID LOAD")
-//            println(self.dict["comment"])
-
+        //            println("comment in VIEW DID LOAD")
+        //            println(self.dict["comment"])
+        
         
         //})
-    
+        
         //var myCoor:CLLocationCoordinate2D = CLLocationCoordinate2DMake(locationManager.location.coordinate.latitude, locationManager.location.coordinate.longitude)
         
         var myDoubLat = 29.2786581
         var myDoubLng = 48.0681501
         
-//        var myCoor1 = CLLocationCoordinate2DMake(29.2786584, 48.0681656)
-//        
-//       
-//        var marker = GMSMarker(position: myCoor1)
-//        marker.title = "sdsds"
-//        marker.map = viewMap
-//        marker.icon = GMSMarker.markerImageWithColor(UIColor.greenColor())
+        //        var myCoor1 = CLLocationCoordinate2DMake(29.2786584, 48.0681656)
+        //
+        //
+        //        var marker = GMSMarker(position: myCoor1)
+        //        marker.title = "sdsds"
+        //        marker.map = viewMap
+        //        marker.icon = GMSMarker.markerImageWithColor(UIColor.greenColor())
         
         
         //./SHOW REPORT
@@ -487,7 +487,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
         //Begin of Find Address2
         actionSheet.addButtonWithTitle("Find Address2", type: AHKActionSheetButtonType.Default, handler:{ (AHKActionSheet) -> Void in
-        
+            
             // the alert object which will show the text in alert will show when the user click in the left tool bar button
             let addressAlert = UIAlertController(title: "Address Finder", message: "Type the address you want to find:", preferredStyle: UIAlertControllerStyle.Alert)
             
@@ -503,7 +503,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
                 self.mapTasks.geocodeAddress(address, withCompletionHandler: { (status, success) -> Void in
                     if !success {
                         println(status)
-
+                        
                         
                         if status == "ZERO_RESULTS" {
                             let alertController = UIAlertController(title: "iOScreator", message:
@@ -518,7 +518,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
                         
                         //core code
                         let actionSheet = UIAlertController(title: "Founded Location", message: "Select map type:", preferredStyle: UIAlertControllerStyle.ActionSheet)
-                      
+                        
                         
                         for var x = 0; x < self.khalidmapTasks.Results.count; ++x{
                             
@@ -535,7 +535,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
                             let longCo = ((locationCordinates["location"] as! Dictionary<NSObject, AnyObject>)["lng"]as! NSNumber).doubleValue
                             
                             
-                          
+                            
                             var longName = self.khalidmapTasks.Results[x]["formatted_address"] as! String
                             
                             //var shortName = self.mapTasks.Results[x]["types"] as! String
@@ -589,9 +589,9 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             addressAlert.addAction(findAction)
             addressAlert.addAction(closeAction)
             //adding the alert handler to viewcontroller
-          
+            
             self.presentViewController(addressAlert, animated: true, completion: nil)
-
+            
             
             func showAlertWithMessage(message: String) {
                 let alertController = UIAlertController(title: "GMapsDemo", message: message, preferredStyle: UIAlertControllerStyle.Alert)
@@ -605,8 +605,8 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
                 self.presentViewController(alertController, animated: true, completion: nil)
             }
             
-          
-            })//END of FIND Address2
+            
+        })//END of FIND Address2
         
         
         
@@ -745,8 +745,8 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
         actionSheet.addButtonWithTitle("On/Off Favourite", type: AHKActionSheetButtonType.Default, handler:  { (AHKActionSheet) -> Void in
             
-           
-           
+            
+            
             var myDoubLat = 29.2786584
             var myDoubLng = 48.0681507
             
@@ -779,7 +779,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
                 }
                 
             }
-
+            
             
             var myCoor:CLLocationCoordinate2D = CLLocationCoordinate2DMake(myDoubLat, myDoubLng)
             
@@ -790,8 +790,8 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             self.originMarker.map = self.viewMap
             self.originMarker.icon = GMSMarker.markerImageWithColor(UIColor.yellowColor())
             self.originMarker.title = "My Fav"
-
-           // println("did enter showFav()")
+            
+            // println("did enter showFav()")
             
             if self.waypointsArray.count > 0 {
                 for waypoint in self.waypointsArray {
@@ -817,74 +817,74 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             }else {
                 self.viewMap.trafficEnabled = true
             }
-
             
-            })
+            
+        })
         
         actionSheet.addButtonWithTitle("Navigate", type: AHKActionSheetButtonType.Default, handler:  { (AHKActionSheet) -> Void in
             
             
-        //
-        var Lat = 29.2786584
-        var Lng = 48.0681507
+            //
+            var Lat = 29.2786584
+            var Lng = 48.0681507
+            
+            if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!)) {
+                UIApplication.sharedApplication().openURL(NSURL(string:
+                    //  "comgooglemaps://?center=\(Lat),\(Lng)&zoom=14&views=traffic")!)
+                    "comgooglemaps://?saddr=\(self.locationManager.location.coordinate.latitude),\(self.locationManager.location.coordinate.longitude)&daddr=\(Lat),\(Lng)&directionsmode=driving&views=traffic")!)
+            } else {
+                NSLog("Can't use comgooglemaps://");
+            }
+            
+            //
+        })
         
-        if (UIApplication.sharedApplication().canOpenURL(NSURL(string:"comgooglemaps://")!)) {
-            UIApplication.sharedApplication().openURL(NSURL(string:
-                //  "comgooglemaps://?center=\(Lat),\(Lng)&zoom=14&views=traffic")!)
-                "comgooglemaps://?saddr=\(self.locationManager.location.coordinate.latitude),\(self.locationManager.location.coordinate.longitude)&daddr=\(Lat),\(Lng)&directionsmode=driving&views=traffic")!)
-        } else {
-            NSLog("Can't use comgooglemaps://");
-        }
-
-        //
-            })
-        
-        //////////// trying to add if statment for clear button 
+        //////////// trying to add if statment for clear button
         
         //map.getBounds().contains(marker.getPosition())
         
         
         
-//        actionSheet.addButtonWithTitle("clear", type: AHKActionSheetButtonType.Destructive, handler:  { (AHKActionSheet) -> Void in
-//
-//            
-//            self.clrAllRoute()
-//            
-//        })
-
-//         self.clearBtn = UIBarButtonItem(image: UIImage(named: "icon_me"), style: UIBarButtonItemStyle.Plain, target: self, action: "clrRoute:")
+        //        actionSheet.addButtonWithTitle("clear", type: AHKActionSheetButtonType.Destructive, handler:  { (AHKActionSheet) -> Void in
+        //
+        //
+        //            self.clrAllRoute()
+        //
+        //        })
+        
+        //         self.clearBtn = UIBarButtonItem(image: UIImage(named: "icon_me"), style: UIBarButtonItemStyle.Plain, target: self, action: "clrRoute:")
         
         self.clearBtn = UIBarButtonItem(title: "clear", style: UIBarButtonItemStyle.Plain, target: self, action: "clrRoute:")
         
         
         //
-       // self.navigationItem.rightBarButtonItems?.append(clearBtn)
+        // self.navigationItem.rightBarButtonItems?.append(clearBtn)
         
-       
+        
         
         self.navigationItem.setRightBarButtonItem(self.clearBtn, animated: true)
-       
         
-         self.clearBtn.enabled=false
         
-        ////////////./// trying to add if statment for clear button 
+        self.clearBtn.enabled=false
+        
+        ////////////./// trying to add if statment for clear button
         
         placesClient = GMSPlacesClient()
         
-       // lblLongLat.text = "long and lat havn't change"
-//        
-//        var camera = GMSCameraPosition.cameraWithLatitude(29.3760648,
-//            longitude: 47.9818853, zoom: 18)
+        // lblLongLat.text = "long and lat havn't change"
+        //
+        //        var camera = GMSCameraPosition.cameraWithLatitude(29.3760648,
+        //            longitude: 47.9818853, zoom: 18)
         
         
-//        var myDoubLat = 29.2786584
-//        var myDoubLng = 48.0681507
+        //        var myDoubLat = 29.2786584
+        //        var myDoubLng = 48.0681507
         
-
+        
         
         var camera = GMSCameraPosition.cameraWithLatitude(29.2786584, longitude: 48.0681507, zoom: 12)
-//          mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
-       
+        //          mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
+        
         var lat = 29.363
         
         var lng = 47.984
@@ -896,54 +896,54 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         
-       // mapView.myLocationEnabled = true
+        // mapView.myLocationEnabled = true
         viewMap.settings.compassButton = true;
         viewMap.settings.myLocationButton = true;
         
         viewMap.trafficEnabled = true;
         
-      // viewMap.addObserver(self, forKeyPath: "myLocation", options: NSKeyValueObservingOptions.New, context: nil)
-    
-      //  println(deviceLocation())
+        // viewMap.addObserver(self, forKeyPath: "myLocation", options: NSKeyValueObservingOptions.New, context: nil)
         
-       // self.view = mapView
+        //  println(deviceLocation())
+        
+        // self.view = mapView
         
         //var theLocation: NSString = "latitude: \(locationManager.location.coordinate.latitude) longitude : \(locationManager.location.coordinate.longitude)"
         
-       
-      //  println(theLocation)
         
-//        var circleCenter = CLLocationCoordinate2DMake(lat, lng)
-//        var circ = GMSCircle(position: circleCenter, radius: 1000)
-//        
-//     //   println(circ.description)
-//        
-//        circ.fillColor = UIColor(red: 0.35, green: 0, blue: 0, alpha: 0.05)
-//        circ.strokeColor = UIColor.redColor()
-//        circ.strokeWidth = 5
-//        circ.map = viewMap
-//   
-//        
-//        var floor = 1
-//        
-//        // Implement GMSTileURLConstructor
-//        // Returns a Tile based on the x,y,zoom coordinates, and the requested floor
-//        var urls = { (x: UInt, y: UInt, zoom: UInt) -> NSURL in
-//            var url = "http://www.example.com/floorplans/L\(floor)_\(zoom)_\(x)_\(y).png"
-//            return NSURL(string: url)!
-//        }
-//        
-//        // Create the GMSTileLayer
-//        var layer = GMSURLTileLayer(URLConstructor: urls)
-//        
-//        // Display on the map at a specific zIndex
-//        layer.zIndex = 100
-//        layer.map = viewMap
+        //  println(theLocation)
+        
+        //        var circleCenter = CLLocationCoordinate2DMake(lat, lng)
+        //        var circ = GMSCircle(position: circleCenter, radius: 1000)
+        //
+        //     //   println(circ.description)
+        //
+        //        circ.fillColor = UIColor(red: 0.35, green: 0, blue: 0, alpha: 0.05)
+        //        circ.strokeColor = UIColor.redColor()
+        //        circ.strokeWidth = 5
+        //        circ.map = viewMap
+        //
+        //
+        //        var floor = 1
+        //
+        //        // Implement GMSTileURLConstructor
+        //        // Returns a Tile based on the x,y,zoom coordinates, and the requested floor
+        //        var urls = { (x: UInt, y: UInt, zoom: UInt) -> NSURL in
+        //            var url = "http://www.example.com/floorplans/L\(floor)_\(zoom)_\(x)_\(y).png"
+        //            return NSURL(string: url)!
+        //        }
+        //
+        //        // Create the GMSTileLayer
+        //        var layer = GMSURLTileLayer(URLConstructor: urls)
+        //
+        //        // Display on the map at a specific zIndex
+        //        layer.zIndex = 100
+        //        layer.map = viewMap
         
         
-      //  randomPOI()
+        //  randomPOI()
         
-
+        
     }
     //./VIEW DID LOAD()
     
@@ -963,11 +963,11 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
         if markersArray.count > 0 || originMarker != nil {
             
-//            actionSheet.addButtonWithTitle("clear", type: AHKActionSheetButtonType.Destructive, handler:  { (AHKActionSheet) -> Void in
-//                
-//                self.clrAllRoute()
-//            
-//            })
+            //            actionSheet.addButtonWithTitle("clear", type: AHKActionSheetButtonType.Destructive, handler:  { (AHKActionSheet) -> Void in
+            //
+            //                self.clrAllRoute()
+            //
+            //            })
             
             clearBtn.enabled = true
             
@@ -976,7 +976,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     }
     
     func retrieveMarkerInfo(var lat:Double, var lng:Double) {
-       // println("Marker lat: \(lat), Market lng: \(lng)")
+        // println("Marker lat: \(lat), Market lng: \(lng)")
         
         var coor:CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, lng)
         
@@ -984,97 +984,97 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
         let settings = NSUserDefaults.standardUserDefaults()
         settings.setValue(lat, forKey: "coor")
-
+        
     }
     
     //testing
     
     
-  //  func mapView(mapView: GMSMapView!, didChangeCameraPosition position: GMSCameraPosition!) {
-        
-//        var path = GMSMutablePath()
-//    
-//        clrAllRoute()
-//        
-//                path.addCoordinate(CLLocationCoordinate2DMake(position.target.latitude + 0.050 , position.target.longitude - 0.050))
-//                path.addCoordinate(CLLocationCoordinate2DMake(position.target.latitude + 0.050 , position.target.longitude + 0.050))
-//                path.addCoordinate(CLLocationCoordinate2DMake(position.target.latitude - 0.050 , position.target.longitude + 0.050))
-//                path.addCoordinate(CLLocationCoordinate2DMake(position.target.latitude - 0.050 , position.target.longitude - 0.050))
-//                path.addCoordinate(CLLocationCoordinate2DMake(position.target.latitude + 0.050 , position.target.longitude - 0.050))
-//
-//        var rectangle = GMSPolyline(path: path)
-//        rectangle.map = viewMap
-        
-        
-        
-//        placesClient?.currentPlaceWithCallback({ (placeLikelihoodList: GMSPlaceLikelihoodList?, error: NSError?) -> Void in
-//            if let error = error {
-//                println("Pick Place error: \(error.localizedDescription)")
-//                return
-//            }
-//            
-//            self.nameLabel.text = "No current place"
-//            self.addressLabel.text = ""
-//            
-//            if let placeLicklihoodList = placeLikelihoodList {
-//                let place = placeLicklihoodList.likelihoods.first?.place
-//                if let place = place {
-//                    self.nameLabel.text = place.name
-//                    self.addressLabel.text = "\n".join(place.formattedAddress.componentsSeparatedByString(", "))
-//                }
-//            }
-//        })
-//        
-//println("placeClient descrip: \(placesClient?.description)")
-
-       
-//          var i = 0
-//        var myCoorArray = [CLLocationCoordinate2D]()
-//        
-//        myCoorArray.append(CLLocationCoordinate2DMake(29.2786584, 48.0681507))
-//        myCoorArray.append(CLLocationCoordinate2DMake(29.3424059, 47.7608936))
-//        myCoorArray.append(CLLocationCoordinate2DMake(29.0810784, 48.1307494))
-//        myCoorArray.append(CLLocationCoordinate2DMake(29.2528726, 47.9340363))
-//        myCoorArray.append(CLLocationCoordinate2DMake(29.2770, 48.0690))
-//        myCoorArray.append(CLLocationCoordinate2DMake(29.50, 48.50))
-//        myCoorArray.append(CLLocationCoordinate2DMake(29.60, 48.60))
-//        
-//        
-//        var Lat = 0.0
-//        var Lng = 0.0
-//        var cLat = 0.0
-//        var cLng = 0.0
-//        
-//        
-//        
-//                for coor in myCoorArray {
-//        
-//                    //String(format: "%.2f", 1.1999898878)
-//                    
-//                    Lat = (String(format: "%.0f", coor.latitude) as NSString).doubleValue
-//                    Lng = (String(format: "%.0f", coor.longitude) as NSString).doubleValue
-//                    
-//                    println("Lat in didChangeCamera: \(Lat) Lng in didChangeCamera: \(Lng)")
-//                    
-//                    cLat = (String(format: "%.0f", position.target.latitude) as NSString).doubleValue
-//                    cLng = (String(format: "%.0f", position.target.longitude) as NSString).doubleValue
-//                    
-//                    println("cLat in didChangeCamera: \(cLat) cLng in didChangeCamera: \(cLng)")
-//                    
-//                    if cLat == Lat || cLng == Lng {
-//        
-//                            originMarker = GMSMarker(position: coor)
-//                            originMarker.map = self.viewMap
-//                            originMarker.icon = GMSMarker.markerImageWithColor(getRandomColor())
-//                        originMarker.title = String(i)
-//                            i++
-//                    }
-//                }
-
-        
-      //  println("Camera postion did change: \(position.description)")
- //   }
-  
+    //  func mapView(mapView: GMSMapView!, didChangeCameraPosition position: GMSCameraPosition!) {
+    
+    //        var path = GMSMutablePath()
+    //
+    //        clrAllRoute()
+    //
+    //                path.addCoordinate(CLLocationCoordinate2DMake(position.target.latitude + 0.050 , position.target.longitude - 0.050))
+    //                path.addCoordinate(CLLocationCoordinate2DMake(position.target.latitude + 0.050 , position.target.longitude + 0.050))
+    //                path.addCoordinate(CLLocationCoordinate2DMake(position.target.latitude - 0.050 , position.target.longitude + 0.050))
+    //                path.addCoordinate(CLLocationCoordinate2DMake(position.target.latitude - 0.050 , position.target.longitude - 0.050))
+    //                path.addCoordinate(CLLocationCoordinate2DMake(position.target.latitude + 0.050 , position.target.longitude - 0.050))
+    //
+    //        var rectangle = GMSPolyline(path: path)
+    //        rectangle.map = viewMap
+    
+    
+    
+    //        placesClient?.currentPlaceWithCallback({ (placeLikelihoodList: GMSPlaceLikelihoodList?, error: NSError?) -> Void in
+    //            if let error = error {
+    //                println("Pick Place error: \(error.localizedDescription)")
+    //                return
+    //            }
+    //
+    //            self.nameLabel.text = "No current place"
+    //            self.addressLabel.text = ""
+    //
+    //            if let placeLicklihoodList = placeLikelihoodList {
+    //                let place = placeLicklihoodList.likelihoods.first?.place
+    //                if let place = place {
+    //                    self.nameLabel.text = place.name
+    //                    self.addressLabel.text = "\n".join(place.formattedAddress.componentsSeparatedByString(", "))
+    //                }
+    //            }
+    //        })
+    //
+    //println("placeClient descrip: \(placesClient?.description)")
+    
+    
+    //          var i = 0
+    //        var myCoorArray = [CLLocationCoordinate2D]()
+    //
+    //        myCoorArray.append(CLLocationCoordinate2DMake(29.2786584, 48.0681507))
+    //        myCoorArray.append(CLLocationCoordinate2DMake(29.3424059, 47.7608936))
+    //        myCoorArray.append(CLLocationCoordinate2DMake(29.0810784, 48.1307494))
+    //        myCoorArray.append(CLLocationCoordinate2DMake(29.2528726, 47.9340363))
+    //        myCoorArray.append(CLLocationCoordinate2DMake(29.2770, 48.0690))
+    //        myCoorArray.append(CLLocationCoordinate2DMake(29.50, 48.50))
+    //        myCoorArray.append(CLLocationCoordinate2DMake(29.60, 48.60))
+    //
+    //
+    //        var Lat = 0.0
+    //        var Lng = 0.0
+    //        var cLat = 0.0
+    //        var cLng = 0.0
+    //
+    //
+    //
+    //                for coor in myCoorArray {
+    //
+    //                    //String(format: "%.2f", 1.1999898878)
+    //
+    //                    Lat = (String(format: "%.0f", coor.latitude) as NSString).doubleValue
+    //                    Lng = (String(format: "%.0f", coor.longitude) as NSString).doubleValue
+    //
+    //                    println("Lat in didChangeCamera: \(Lat) Lng in didChangeCamera: \(Lng)")
+    //
+    //                    cLat = (String(format: "%.0f", position.target.latitude) as NSString).doubleValue
+    //                    cLng = (String(format: "%.0f", position.target.longitude) as NSString).doubleValue
+    //
+    //                    println("cLat in didChangeCamera: \(cLat) cLng in didChangeCamera: \(cLng)")
+    //
+    //                    if cLat == Lat || cLng == Lng {
+    //
+    //                            originMarker = GMSMarker(position: coor)
+    //                            originMarker.map = self.viewMap
+    //                            originMarker.icon = GMSMarker.markerImageWithColor(getRandomColor())
+    //                        originMarker.title = String(i)
+    //                            i++
+    //                    }
+    //                }
+    
+    
+    //  println("Camera postion did change: \(position.description)")
+    //   }
+    
     
     
     
@@ -1094,7 +1094,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
         var circleCenter = CLLocationCoordinate2DMake(locationManager.location.coordinate.latitude, locationManager.location.coordinate.longitude)
         var circ = GMSCircle(position: circleCenter, radius: 1000)
-
+        
         circ.fillColor = UIColor(red: 0.0, green: 0.35, blue: 0, alpha: 0.05)
         circ.strokeColor = UIColor.greenColor()
         circ.strokeWidth = 5
@@ -1144,7 +1144,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
     }
     //./Button for finding specific address
-  
+    
     
     //main for mapTask
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
@@ -1178,7 +1178,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
         presentViewController(alertController, animated: true, completion: nil)
     }
-
+    
     func setupLocationMarker(coordinate: CLLocationCoordinate2D) {
         if locationMarker != nil {
             locationMarker.map = nil
@@ -1241,7 +1241,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     
     //TESTING ADD POLY ON AND NEAR MARKER
     
-
+    
     
     func showPOI(){
         
@@ -1257,7 +1257,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         var myDoubLng = 48.0681507
         
         var myCoorArray = [CLLocationCoordinate2D]()
-
+        
         myCoorArray.append(CLLocationCoordinate2DMake(29.00, 48.00))
         myCoorArray.append(CLLocationCoordinate2DMake(29.10, 48.10))
         myCoorArray.append(CLLocationCoordinate2DMake(29.27, 48.06))
@@ -1311,7 +1311,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
                 markersArray.append(marker)
             }
         }
-
+        
         
     }
     
@@ -1328,12 +1328,12 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         //println("\(self.mapTasks.destinationCoordinate.latitude) \(self.mapTasks.destinationCoordinate.longitude) ")
         
         var bounds:GMSCoordinateBounds = GMSCoordinateBounds()
-      //  println("initial bounds: (\(bounds.southWest.latitude), \(bounds.southWest.longitude)) - (\(bounds.northEast.latitude), \(bounds.northEast.longitude)) ")
+        //  println("initial bounds: (\(bounds.southWest.latitude), \(bounds.southWest.longitude)) - (\(bounds.northEast.latitude), \(bounds.northEast.longitude)) ")
         
         //for (var i:UInt = 0; i < path.count(); i++){
-         //   bounds = bounds.includingCoordinate(path.coordinateAtIndex(i))
-          //  println("updated bounds: (\(bounds.southWest.latitude), \(bounds.southWest.longitude)) - (\(bounds.northEast.latitude), \(bounds.northEast.longitude)) ")
-       // }
+        //   bounds = bounds.includingCoordinate(path.coordinateAtIndex(i))
+        //  println("updated bounds: (\(bounds.southWest.latitude), \(bounds.southWest.longitude)) - (\(bounds.northEast.latitude), \(bounds.northEast.longitude)) ")
+        // }
         //println("final bounds: (\(bounds.southWest.latitude), \(bounds.southWest.longitude)) - (\(bounds.northEast.latitude), \(bounds.northEast.longitude)) ")
         
         routePolyline = GMSPolyline(path: path)
@@ -1342,7 +1342,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     
     
     func displayRouteInfo() {
-//        lblInfo.text = mapTasks.totalDistance + "\n" + mapTasks.totalDuration
+        //        lblInfo.text = mapTasks.totalDistance + "\n" + mapTasks.totalDuration
     }
     
     
@@ -1362,7 +1362,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             
             markersArray.removeAll(keepCapacity: false)
         }
-      
+        
     }
     
     
@@ -1386,7 +1386,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             markersArray.removeAll(keepCapacity: false)
             waypointsArray.removeAll(keepCapacity: false)
         }
-
+        
         viewMap.clear()
         
         
@@ -1421,7 +1421,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     // MARK: GMSMapViewDelegate method implementation
     //Help with recreating the route
     
- 
+    
     
     func mapView(mapView: GMSMapView!, didTapAtCoordinate coordinate: CLLocationCoordinate2D) {
         //println("function mapView runs")
@@ -1441,7 +1441,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             recreateRoute()
         }
     }
-
+    
     func setFavsData(favs: NSArray) {
         favPins = favs;
         println("")
@@ -1463,18 +1463,18 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             println("\(favName): \(favLat),\(favLong)");
             
         }
-
+        
         
     }
-
-        
-
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-
+    
+    
 } //./End of mainViewController
 
