@@ -399,8 +399,6 @@ class ShowOnMapVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDelega
                 markersArray.append(marker)
             }
         }
-        
-        
         //./request location
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -812,6 +810,14 @@ class ShowOnMapVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDelega
     //Help with recreating the route
     
     func mapView(mapView: GMSMapView!, didTapAtCoordinate coordinate: CLLocationCoordinate2D) {
+        if (DriverDetailsVC.SettingDriverDestination.settingDriverDestination == true) {
+            DriverDetailsVC.SettingDriverDestination.setDriverLatLong(coordinate);
+            //println("Coordinates (\(coordinate.latitude),\(coordinate.longitude)) sent to driver!");
+            
+            var backToDriverDetails:DriverDetailsVC = UIStoryboard(name: "Team5_m", bundle: nil).instantiateViewControllerWithIdentifier("DDVC") as! DriverDetailsVC;
+            self.presentViewController(backToDriverDetails, animated: true, completion: {});
+            
+        }
         println("function mapView runs")
         
         if let polyline = routePolyline {
