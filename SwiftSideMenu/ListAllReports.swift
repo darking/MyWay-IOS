@@ -20,7 +20,7 @@ class ListAllReports:NSObject, NSURLConnectionDelegate, NSURLConnectionDataDeleg
         
         let urlReq:NSURLRequest=NSURLRequest(URL:Group4Url!);
         let connection:NSURLConnection?=NSURLConnection(request: urlReq, delegate: self, startImmediately: true);
-        println("print Group4 URL");
+        println("print Group4 URL in class ListAllReports");
         
         println(Group4Url);
         
