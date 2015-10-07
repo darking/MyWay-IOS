@@ -1,13 +1,13 @@
 PODS:
-  - ArcGIS-Runtime-SDK-iOS (10.2.5)
   - GoogleMaps (1.10.3)
+  - SwiftyJSON (2.2.1)
 
 DEPENDENCIES:
-  - ArcGIS-Runtime-SDK-iOS
   - GoogleMaps
+  - SwiftyJSON (~> 2.2.1)
 
 SPEC CHECKSUMS:
-  ArcGIS-Runtime-SDK-iOS: 0d62980b8ed60c1ee8ca292c1c644e74e0e922aa
   GoogleMaps: 945e4ac3b74bcca3ddada51df256eb7beddb474d
+  SwiftyJSON: ae2d0a3d68025d136602a33c4ee215091ced3e33
 
 COCOAPODS: 0.38.2
