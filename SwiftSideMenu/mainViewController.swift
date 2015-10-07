@@ -393,13 +393,13 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             
             dict = ["comment": report_comments, "reportLat": report_lat,"reportLon": report_log]
             
-            //            println("HERE I WILL PRINT DICT")
-            //            print("report Lat: ")
-            //            println(dict["reportLat"])
-            //            print("report Lon: ")
-            //            println(dict["reportLon"])
-            // println(self.hItems);
-            //println("comments:  \(report_comments), lat: \(report_lat), log: \(report_log), type \(report_type)")
+                        println("HERE I WILL PRINT DICT")
+                        print("report Lat: ")
+                        println(dict["reportLat"])
+                        print("report Lon: ")
+                        println(dict["reportLon"])
+             println(self.hItems);
+            println("comments:  \(report_comments), lat: \(report_lat), log: \(report_log), type \(report_type)")
             
             //ADD MARKERS
             
@@ -412,11 +412,90 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             // println((String(format: "%.2f", dict["reportLon"]!) as NSString).doubleValue)
             
             var myCoor2 = CLLocationCoordinate2DMake((dict["reportLat"]! as NSString).doubleValue, (dict["reportLon"]! as NSString).doubleValue)
+            //taleef
             
-            var marker = GMSMarker(position: myCoor2)
-            marker.title = dict["comment"]
-            marker.map = viewMap
-            marker.icon = GMSMarker.markerImageWithColor(UIColor.redColor())
+            
+            var image: UIImage = UIImage(named: "OnRoad")!
+        
+
+            
+            
+            if(report_type.number == 1)
+            {
+                var marker = GMSMarker(position: myCoor2)
+                marker.title = dict["comment"]
+                marker.map = viewMap
+                marker.icon = UIImage(named: "OnMapOther");
+            
+            }
+            
+            else if (report_type.number == 2)
+            {
+                var marker = GMSMarker(position: myCoor2)
+                marker.title = dict["comment"]
+                marker.map = viewMap
+                marker.icon = UIImage(named: "OnMapCons");
+            
+            }
+                
+                
+            else if (report_type.number == 3)
+            {
+                var marker = GMSMarker(position: myCoor2)
+                marker.title = dict["comment"]
+                marker.map = viewMap
+                marker.icon = UIImage(named: "OnMapH");
+                
+            }
+                
+                
+            else if (report_type.number == 4)
+            {
+                var marker = GMSMarker(position: myCoor2)
+                marker.title = dict["comment"]
+                marker.map = viewMap
+                marker.icon = UIImage(named: "OnMapModerate");
+                
+            }
+            
+            
+            
+            else if (report_type.number == 5)
+            {
+                var marker = GMSMarker(position: myCoor2)
+                marker.title = dict["comment"]
+                marker.map = viewMap
+                marker.icon = UIImage(named: "OnMapHeavy");
+                
+            }
+            else if (report_type.number == 6)
+            {
+                var marker = GMSMarker(position: myCoor2)
+                marker.title = dict["comment"]
+                marker.map = viewMap
+                marker.icon = UIImage(named: "OnMapStand");
+                
+            }
+            
+            else if (report_type.number == 7)
+            {
+                
+                var marker = GMSMarker(position: myCoor2)
+                marker.title = dict["comment"]
+                marker.map = viewMap
+                marker.icon = UIImage(named: "OnMapMinor");
+            }
+            
+            else 
+            {
+                var marker = GMSMarker(position: myCoor2)
+                marker.title = dict["comment"]
+                marker.map = viewMap
+                marker.icon = UIImage(named: "OnMapMajor");
+                
+            }
+            
+            
             
             //
             //            markersArray.append(marker)

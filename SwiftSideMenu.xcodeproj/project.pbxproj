@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0770A98F1BC4EEB8007080F1 /* OnMapH.png in Resources */ = {isa = PBXBuildFile; fileRef = 0770A98E1BC4EEB8007080F1 /* OnMapH.png */; };
+		0770A9931BC4F157007080F1 /* OnMapMajor.png in Resources */ = {isa = PBXBuildFile; fileRef = 0770A9901BC4F157007080F1 /* OnMapMajor.png */; };
+		0770A9941BC4F157007080F1 /* OnMapMinor.png in Resources */ = {isa = PBXBuildFile; fileRef = 0770A9911BC4F157007080F1 /* OnMapMinor.png */; };
+		0770A9951BC4F157007080F1 /* OnMapCons.png in Resources */ = {isa = PBXBuildFile; fileRef = 0770A9921BC4F157007080F1 /* OnMapCons.png */; };
+		0770A9971BC4F53C007080F1 /* OnMapModerate.png in Resources */ = {isa = PBXBuildFile; fileRef = 0770A9961BC4F53C007080F1 /* OnMapModerate.png */; };
+		0770A9991BC4F542007080F1 /* OnMapOther.png in Resources */ = {isa = PBXBuildFile; fileRef = 0770A9981BC4F542007080F1 /* OnMapOther.png */; };
+		0770A99B1BC4F54B007080F1 /* OnMapStand.png in Resources */ = {isa = PBXBuildFile; fileRef = 0770A99A1BC4F54B007080F1 /* OnMapStand.png */; };
+		0770A99D1BC4F578007080F1 /* OnMapHeavy.png in Resources */ = {isa = PBXBuildFile; fileRef = 0770A99C1BC4F578007080F1 /* OnMapHeavy.png */; };
 		077919321BBBF41900AB0DB1 /* AllVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779192E1BBBF41900AB0DB1 /* AllVC.swift */; };
 		077919331BBBF41900AB0DB1 /* LocationFilteration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0779192F1BBBF41900AB0DB1 /* LocationFilteration.swift */; };
 		077919341BBBF41900AB0DB1 /* Main_4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 077919301BBBF41900AB0DB1 /* Main_4.storyboard */; };
@@ -190,6 +198,14 @@
 		076EC7041BBE55AA00CD0C25 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		076EC7061BBE55AA00CD0C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		076EC7071BBE55AA00CD0C25 /* JSONJoyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONJoyTests.swift; sourceTree = "<group>"; };
+		0770A98E1BC4EEB8007080F1 /* OnMapH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OnMapH.png; sourceTree = "<group>"; };
+		0770A9901BC4F157007080F1 /* OnMapMajor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OnMapMajor.png; sourceTree = "<group>"; };
+		0770A9911BC4F157007080F1 /* OnMapMinor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OnMapMinor.png; sourceTree = "<group>"; };
+		0770A9921BC4F157007080F1 /* OnMapCons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OnMapCons.png; sourceTree = "<group>"; };
+		0770A9961BC4F53C007080F1 /* OnMapModerate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OnMapModerate.png; sourceTree = "<group>"; };
+		0770A9981BC4F542007080F1 /* OnMapOther.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OnMapOther.png; sourceTree = "<group>"; };
+		0770A99A1BC4F54B007080F1 /* OnMapStand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OnMapStand.png; sourceTree = "<group>"; };
+		0770A99C1BC4F578007080F1 /* OnMapHeavy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OnMapHeavy.png; sourceTree = "<group>"; };
 		0779192E1BBBF41900AB0DB1 /* AllVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllVC.swift; sourceTree = "<group>"; };
 		0779192F1BBBF41900AB0DB1 /* LocationFilteration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationFilteration.swift; sourceTree = "<group>"; };
 		077919301BBBF41900AB0DB1 /* Main_4.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_4.storyboard; sourceTree = "<group>"; };
@@ -576,8 +592,16 @@
 				5C1325A7198E2AB300CA49BE /* image.png */,
 				5C13258C198E2A9A00CA49BE /* Main.storyboard */,
 				5C13258F198E2A9A00CA49BE /* Images.xcassets */,
+				0770A98E1BC4EEB8007080F1 /* OnMapH.png */,
 				142AAA701BC12D220089F62F /* BluePushpin.png */,
+				0770A99A1BC4F54B007080F1 /* OnMapStand.png */,
+				0770A99C1BC4F578007080F1 /* OnMapHeavy.png */,
 				077919371BBBF46200AB0DB1 /* OnRoad.png */,
+				0770A9961BC4F53C007080F1 /* OnMapModerate.png */,
+				0770A9981BC4F542007080F1 /* OnMapOther.png */,
+				0770A9901BC4F157007080F1 /* OnMapMajor.png */,
+				0770A9911BC4F157007080F1 /* OnMapMinor.png */,
+				0770A9921BC4F157007080F1 /* OnMapCons.png */,
 				077919381BBBF46200AB0DB1 /* OnRoadG.png */,
 				077919391BBBF46200AB0DB1 /* Major.png */,
 				0779193A1BBBF46200AB0DB1 /* MajorG.png */,
@@ -897,16 +921,21 @@
 				6CE9A2701B84AE2900BE4004 /* reqLocaiton.storyboard in Resources */,
 				9E4766FC19DDBCE900FCEACC /* Main.storyboard in Resources */,
 				141092691B8CB71F00CD3114 /* POI.storyboard in Resources */,
+				0770A9971BC4F53C007080F1 /* OnMapModerate.png in Resources */,
+				0770A99B1BC4F54B007080F1 /* OnMapStand.png in Resources */,
 				0779195B1BBBF46200AB0DB1 /* standStillG.png in Resources */,
 				5C132590198E2A9A00CA49BE /* Images.xcassets in Resources */,
 				6CD32A8F1BC27FEF00F6D684 /* DriverCustomCell.xib in Resources */,
 				077919581BBBF46200AB0DB1 /* other.png in Resources */,
 				0779194A1BBBF46200AB0DB1 /* OnRoad.png in Resources */,
+				0770A98F1BC4EEB8007080F1 /* OnMapH.png in Resources */,
 				0779194F1BBBF46200AB0DB1 /* MinorG.png in Resources */,
 				077919341BBBF41900AB0DB1 /* Main_4.storyboard in Resources */,
+				0770A99D1BC4F578007080F1 /* OnMapHeavy.png in Resources */,
 				0779195C1BBBF46200AB0DB1 /* traffic.png in Resources */,
 				143615651B8F1A34003FD356 /* defaultPoint.jpg in Resources */,
 				0779194C1BBBF46200AB0DB1 /* Major.png in Resources */,
+				0770A9951BC4F157007080F1 /* OnMapCons.png in Resources */,
 				077919511BBBF46200AB0DB1 /* construction.png in Resources */,
 				6CD32A911BC27FEF00F6D684 /* Team5.storyboard in Resources */,
 				077919551BBBF46200AB0DB1 /* heavyG.png in Resources */,
@@ -919,7 +948,9 @@
 				6CE9A1C71B83674F00BE4004 /* Podfile in Resources */,
 				077919571BBBF46200AB0DB1 /* moderateG.png in Resources */,
 				49A961FF1BC18F8600622F8D /* Team3.storyboard.favorites.storyboard in Resources */,
+				0770A9941BC4F157007080F1 /* OnMapMinor.png in Resources */,
 				6CE9A2421B83A06000BE4004 /* street.png in Resources */,
+				0770A9991BC4F542007080F1 /* OnMapOther.png in Resources */,
 				6CE9A25F1B8474D200BE4004 /* cat.plist in Resources */,
 				6CD32A8E1BC27FEF00F6D684 /* Team5_m.storyboard in Resources */,
 				0779194E1BBBF46200AB0DB1 /* Minor.png in Resources */,
@@ -938,6 +969,7 @@
 				143615691B8F1A8F003FD356 /* Team3.storyboard in Resources */,
 				6CD32A9D1BC2883100F6D684 /* drivers.plist in Resources */,
 				0779194D1BBBF46200AB0DB1 /* MajorG.png in Resources */,
+				0770A9931BC4F157007080F1 /* OnMapMajor.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
