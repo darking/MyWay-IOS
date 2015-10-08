@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 class ReadReport{
     let path =   NSBundle.mainBundle().pathForResource("MonitorReportSample", ofType: "plist");
     
