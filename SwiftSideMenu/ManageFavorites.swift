@@ -48,8 +48,13 @@ class ManageFavorites: NSObject, NSURLConnectionDataDelegate, NSURLConnectionDel
     func startConnection(){
         let urlPath: String = "http://mobile.comxa.com/fav/all_favs.json"
         var url: NSURL = NSURL(string: urlPath)!
-        var request: NSURLRequest = NSURLRequest(URL: url)
+        var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
+        request.HTTPMethod = "POST";
         
+        var username = NSUserDefaults.standardUserDefaults().stringForKey("username")!;
+        var bodyData = "username=\(username)";
+        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
+
         var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: true)!
         //        data = NSMutableData()//re-initialize the data so it wouldn't be an invalid JSON after i append to it the newer JSON
         //        connection.start()

@@ -20,6 +20,8 @@ class FavoritesViewController:UITableViewController, UITableViewDataSource, UITa
     var tableViewx = UITableView()
     var showsArray = Array<String>()
     
+    
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1;
     }
@@ -108,6 +110,7 @@ class FavoritesViewController:UITableViewController, UITableViewDataSource, UITa
             let sendToMap = UITableViewRowAction(style: .Normal, title: "Delete") { action, index in
                 println("delete button tapped")
                 var Manager:ManageFavorites = ManageFavorites();
+                Manager.favoritesVC = self;
                 var favorite:Favorite = Favorite();
                 var tempFav:NSDictionary = self.favesList[indexPath.row] as! NSDictionary;
                 favorite.name = tempFav.valueForKey("name") as! String;
