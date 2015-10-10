@@ -702,10 +702,11 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         //./SHOW REPORT
         
         //SHOW FV
-        var manageFavs: ManageFavorites = ManageFavorites();
-        manageFavs.callerForPins = self;
-        manageFavs.startConnection();
-        
+        if NSUserDefaults.standardUserDefaults().boolForKey("isLoggedin"){
+            var manageFavs: ManageFavorites = ManageFavorites();
+            manageFavs.callerForPins = self;
+            manageFavs.startConnection();
+        }
         
         
         //./SHOW FV
