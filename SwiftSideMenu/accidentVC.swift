@@ -130,7 +130,8 @@ class accidentVC:ViewController{
     override func viewDidLoad() {
         super.viewDidLoad();
 
-        locationManager.requestAlwaysAuthorization();
+        //locationManager.requestAlwaysAuthorization();
+        locationManager.requestWhenInUseAuthorization()
         locationManager.location;
         NSUserDefaults.standardUserDefaults().setValue(locationManager.location.coordinate.latitude.description, forKey: "lat");
         NSUserDefaults.standardUserDefaults().setValue(locationManager.location.coordinate.longitude.description, forKey: "lon");
