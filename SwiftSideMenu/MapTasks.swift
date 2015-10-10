@@ -98,7 +98,8 @@ class MapTasks: NSObject {
         
         if let originLocation = origin {
             if let destinationLocation = destination {
-                var directionsURLString = baseURLDirections + "origin=" + originLocation + "&destination=" + destinationLocation
+                var directionsURLString = baseURLDirections + "origin=" + originLocation + "&destination=" + destinationLocation + "&region=kw"
+      //    println("DirectionurlString: ")
                 
                 if let routeWaypoints = waypoints {
                     directionsURLString += "&waypoints=optimize:true"
@@ -124,6 +125,7 @@ class MapTasks: NSObject {
                     
                     
                     directionsURLString += "&mode=" + travelModeString
+                  //  println(directionsURLString)
                 }
                 
                 
