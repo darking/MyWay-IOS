@@ -506,6 +506,152 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     }
     
     
+    func khalod() {
+        
+        // the alert object which will show the text in alert will show when the user click in the left tool bar button
+        let addressAlert = UIAlertController(title: "Address Finder", message: "Type the address you want to find:", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        addressAlert.addTextFieldWithConfigurationHandler { (textField) -> Void in
+            textField.placeholder = "Address?"
+        }
+        
+        //alert box when clicking on find
+        let findAction = UIAlertAction(title: "Find Address", style: UIAlertActionStyle.Default) { (alertAction) -> Void in
+            
+            let address = (addressAlert.textFields![0] as! UITextField).text as String
+            
+            self.khalidmapTasks.geocodeAddress(address, withCompletionHandler: { (status, success) -> Void in
+                if !success {
+                    println(status)
+                    
+                    
+                    
+                    
+                    
+                    
+                    if status == "ZERO_RESULTS" {
+                        let alertController = UIAlertController(title: "iOScreator", message:
+                            "The location could not be found.", preferredStyle: UIAlertControllerStyle.Alert)
+                        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                        
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                    }
+                    
+                }
+                else {
+                    
+                    //core code
+                    let actionSheet = UIAlertController(title: "Founded Location", message: "Select map type:", preferredStyle: UIAlertControllerStyle.ActionSheet)
+                    
+                    
+                    
+                    
+                    for var x = 0; x < self.khalidmapTasks.Results.count; ++x{
+                        
+                        
+                        
+                        //var of dictionaty of address_componets from response
+                        
+                        //let locationName =  self.mapTasks.Results[x]["address_components"] as! Dictionary<NSObject, AnyObject>
+                        
+                        // var of dictionary of geometry from response
+                        let locationCordinates =  self.khalidmapTasks.Results[x]["geometry"] as! Dictionary<NSObject, AnyObject>;
+                        //var from lat co from response
+                        let latCo = ((locationCordinates["location"] as! Dictionary<NSObject, AnyObject>)["lat"]as! NSNumber).doubleValue
+                        //var from lng co from response
+                        let longCo = ((locationCordinates["location"] as! Dictionary<NSObject, AnyObject>)["lng"]as! NSNumber).doubleValue
+                        
+                        
+                        
+                        
+                        
+                        
+                        var longName = self.khalidmapTasks.Results[x]["formatted_address"] as! String
+                        
+                        //var shortName = self.mapTasks.Results[x]["types"] as! String
+                        
+                        let normalMapTypeAction = UIAlertAction(title: "\(longName)", style: UIAlertActionStyle.Default) { (alertAction) -> Void in
+                            
+                            let coordinate = CLLocationCoordinate2D(latitude: latCo, longitude: longCo)
+                            
+                            self.viewMap.camera = GMSCameraPosition.cameraWithTarget(coordinate, zoom: 6.0)
+                            
+                            self.setupLocationMarker(coordinate);
+                            
+                            
+                            
+                        }
+                        actionSheet.addAction(normalMapTypeAction)
+                        
+                    }
+                    //core code end
+                    //
+                    //                    let terrainMapTypeAction = UIAlertAction(title: "Terrain", style: UIAlertActionStyle.Default) { (alertAction) -> Void in
+                    //                        self.viewMap.mapType = kGMSTypeTerrain
+                    //                    }
+                    //
+                    //                    let hybridMapTypeAction = UIAlertAction(title: "Hybrid", style: UIAlertActionStyle.Default) { (alertAction) -> Void in
+                    //                        self.viewMap.mapType = kGMSTypeHybrid
+                    //                    }
+                    
+                    let cancelAction = UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel) { (alertAction) -> Void in
+                        
+                    }
+                    
+                    
+                    //                    actionSheet.addAction(terrainMapTypeAction)
+                    //                    actionSheet.addAction(hybridMapTypeAction)
+                    actionSheet.addAction(cancelAction)
+                    
+                    self.presentViewController(actionSheet, animated: true, completion: nil)
+                    
+                    
+                    
+                    
+                }
+                
+            })
+            
+        }
+        //alert box when clicking on close
+        let closeAction = UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel) { (alertAction) -> Void in
+            
+        }
+        
+        
+        //adding the alter box to aler handler obj
+        addressAlert.addAction(findAction)
+        addressAlert.addAction(closeAction)
+        //adding the alert handler to viewcontroller
+        
+        
+        
+        presentViewController(addressAlert, animated: true, completion: nil)
+        
+        
+        
+        
+        
+        
+        
+        
+        func showAlertWithMessage(message: String) {
+            let alertController = UIAlertController(title: "GMapsDemo", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let closeAction = UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel) { (alertAction) -> Void in
+                
+            }
+            
+            alertController.addAction(closeAction)
+            
+            presentViewController(alertController, animated: true, completion: nil)
+        }
+        
+        
+        
+        
+    }
+    
     
     //VIEW DID LOAD()
     override func viewDidLoad() {
@@ -556,176 +702,19 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         //./SHOW REPORT
         
         //SHOW FV
-        var manageFavs: ManageFavorites = ManageFavorites();
-        manageFavs.callerForPins = self;
-        manageFavs.startConnection();
-        
+        if NSUserDefaults.standardUserDefaults().boolForKey("isLoggedin"){
+            var manageFavs: ManageFavorites = ManageFavorites();
+            manageFavs.callerForPins = self;
+            manageFavs.startConnection();
+        }
         
         
         //./SHOW FV
         
         //Begin of Find Address2
         actionSheet.addButtonWithTitle("Find Address2", type: AHKActionSheetButtonType.Default, handler:{ (AHKActionSheet) -> Void in
-            
-            // the alert object which will show the text in alert will show when the user click in the left tool bar button
-            let addressAlert = UIAlertController(title: "Address Finder", message: "Type the address you want to find:", preferredStyle: UIAlertControllerStyle.Alert)
-            
-            addressAlert.addTextFieldWithConfigurationHandler { (textField) -> Void in
-                textField.placeholder = "Address?"
-            }
-            
-            //alert box when clicking on find
-            let findAction = UIAlertAction(title: "Find Address", style: UIAlertActionStyle.Default) { (alertAction) -> Void in
-                
-                let address = (addressAlert.textFields![0] as! UITextField).text as String
-                
-                self.mapTasks.geocodeAddress(address, withCompletionHandler: { (status, success) -> Void in
-                    if !success {
-                        println(status)
                         
-                        
-                        if status == "ZERO_RESULTS" {
-                            let alertController = UIAlertController(title: "iOScreator", message:
-                                "The location could not be found.", preferredStyle: UIAlertControllerStyle.Alert)
-                            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-                            
-                            self.presentViewController(alertController, animated: true, completion: nil)
-                        }
-                        
-                    }
-                    else {
-                        
-                        //core code
-                        let actionSheet = UIAlertController(title: "Founded Location", message: "Select map type:", preferredStyle: UIAlertControllerStyle.ActionSheet)
-                        
-                        
-                        for var x = 0; x < self.khalidmapTasks.Results.count; ++x{
-                            
-                            
-                            //var of dictionaty of address_componets from response
-                            
-                            //let locationName =  self.mapTasks.Results[x]["address_components"] as! Dictionary<NSObject, AnyObject>
-                            
-                            // var of dictionary of geometry from response
-                            let locationCordinates =  self.khalidmapTasks.Results[x]["geometry"] as! Dictionary<NSObject, AnyObject>;
-                            //var from lat co from response
-                            let latCo = ((locationCordinates["location"] as! Dictionary<NSObject, AnyObject>)["lat"]as! NSNumber).doubleValue
-                            //var from lng co from response
-                            let longCo = ((locationCordinates["location"] as! Dictionary<NSObject, AnyObject>)["lng"]as! NSNumber).doubleValue
-                            
-                            
-                            
-                            var longName = self.khalidmapTasks.Results[x]["formatted_address"] as! String
-                            
-                            //var shortName = self.mapTasks.Results[x]["types"] as! String
-                            
-                            let normalMapTypeAction = UIAlertAction(title: "\(longName)", style: UIAlertActionStyle.Default) { (alertAction) -> Void in
-                                
-                                let coordinate = CLLocationCoordinate2D(latitude: latCo, longitude: longCo)
-                                
-                                self.viewMap.camera = GMSCameraPosition.cameraWithTarget(coordinate, zoom: 6.0)
-                                
-                                self.setupLocationMarker(coordinate);
-                                
-                                
-                                
-                            }
-                            actionSheet.addAction(normalMapTypeAction)
-                            
-                        }
-                        //core code end
-                        //
-                        //                    let terrainMapTypeAction = UIAlertAction(title: "Terrain", style: UIAlertActionStyle.Default) { (alertAction) -> Void in
-                        //                        self.viewMap.mapType = kGMSTypeTerrain
-                        //                    }
-                        //
-                        //                    let hybridMapTypeAction = UIAlertAction(title: "Hybrid", style: UIAlertActionStyle.Default) { (alertAction) -> Void in
-                        //                        self.viewMap.mapType = kGMSTypeHybrid
-                        //                    }
-                        
-                        let cancelAction = UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel) { (alertAction) -> Void in
-                            
-                        }
-                        
-                        
-                        //                    actionSheet.addAction(terrainMapTypeAction)
-                        //                    actionSheet.addAction(hybridMapTypeAction)
-                        actionSheet.addAction(cancelAction)
-                        
-                        self.presentViewController(actionSheet, animated: true, completion: nil)
-                        
-                    }
-                    
-                })
-                
-            }
-            //alert box when clicking on close
-            let closeAction = UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel) { (alertAction) -> Void in
-                
-            }
-            
-            //adding the alter box to aler handler obj
-            addressAlert.addAction(findAction)
-            addressAlert.addAction(closeAction)
-            //adding the alert handler to viewcontroller
-            
-            self.presentViewController(addressAlert, animated: true, completion: nil)
-            
-            
-            func showAlertWithMessage(message: String) {
-                let alertController = UIAlertController(title: "GMapsDemo", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-                
-                let closeAction = UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel) { (alertAction) -> Void in
-                    
-                }
-                
-                alertController.addAction(closeAction)
-                
-                self.presentViewController(alertController, animated: true, completion: nil)
-            }
-            
-            
-        })//END of FIND Address2
-        
-        
-        
-        actionSheet.addButtonWithTitle("Find Address", type: AHKActionSheetButtonType.Default, handler:{ (AHKActionSheet) -> Void in
-            
-            let addressAlert = UIAlertController(title: "Address Finder", message: "Type the address you want to find:", preferredStyle: UIAlertControllerStyle.Alert)
-            
-            addressAlert.addTextFieldWithConfigurationHandler { (textField) -> Void in
-                textField.placeholder = "Address?"
-            }
-            
-            let findAction = UIAlertAction(title: "Find Address", style: UIAlertActionStyle.Default) { (alertAction) -> Void in
-                let address = (addressAlert.textFields![0] as! UITextField).text as String
-                
-                self.mapTasks.geocodeAddress(address, withCompletionHandler: { (status, success) -> Void in
-                    if !success {
-                        println(status)
-                        
-                        if status == "ZERO_RESULTS" {
-                            self.showAlertWithMessage("The location could not be found.")
-                        }
-                    }
-                    else {
-                        let coordinate = CLLocationCoordinate2D(latitude: self.mapTasks.fetchedAddressLatitude, longitude: self.mapTasks.fetchedAddressLongitude)
-                        self.viewMap.camera = GMSCameraPosition.cameraWithTarget(coordinate, zoom: 14.0)
-                        
-                        self.setupLocationMarker(coordinate)
-                    }
-                })
-                
-            }
-            
-            let closeAction = UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel) { (alertAction) -> Void in
-                
-            }
-            
-            addressAlert.addAction(findAction)
-            addressAlert.addAction(closeAction)
-            
-            self.presentViewController(addressAlert, animated: true, completion: nil)
+            self.khalod()
             
         })
         
