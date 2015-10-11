@@ -17,10 +17,7 @@ class EditUserProfileViewController: UIViewController, UIImagePickerControllerDe
     private let pickerController:UIImagePickerController = UIImagePickerController()
     
     @IBOutlet weak var username: UILabel!
-    @IBOutlet weak var firstName: UITextField!
-    @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var phone: UITextField!
     @IBOutlet weak var profilePicture: UIButton!
     
     @IBAction func cancelAction(sender: AnyObject) {
@@ -33,27 +30,26 @@ class EditUserProfileViewController: UIViewController, UIImagePickerControllerDe
         
         var defaultData = NSUserDefaults.standardUserDefaults()
         
-        var user = manager.getUserInfo(defaultData.valueForKey("username")!.description)
+        var user = defaultData.valueForKey("username")?.description
         
         if manager.isValidEmail(email.text) {
             
-            user.setFirstName(firstName.text)
-            user.setLastName(lastName.text)
-            user.setPhone(phone.text)
-            user.setEmail(email.text)
-            
-            if userDidPickImage {
+            manager.getUserInfo(user!) {
+                userInfo in
                 
-                var fileUtils:FileUtils = FileUtils(fileName: user.getUsername())
-                let imagePath:String = fileUtils.docsPath()
-                fileUtils.createIfNotExistUnderDocs();
-                ImageConversion().writeImage(pickedImage, toFile: imagePath)
+                userInfo.setEmail(self.email.text)
                 
-                user.setUserHasProfile()
+                if self.userDidPickImage {
+                    
+                    var fileUtils:FileUtils = FileUtils(fileName:user!)
+                    var imagePath:String = fileUtils.docsPath()
+                    fileUtils.createIfNotExistUnderDocs();
+                    ImageConversion().writeImage(self.pickedImage, toFile: imagePath)
+                    
+                }
                 
+                manager.updateUserInfo(userInfo)
             }
-            
-            manager.updateUserInfo(user)
             
             self.dismissViewControllerAnimated(false, completion: nil)
             
@@ -88,14 +84,14 @@ class EditUserProfileViewController: UIViewController, UIImagePickerControllerDe
         var manager = ConnectionManager()
         
         var defaultData = NSUserDefaults.standardUserDefaults()
-        var user = manager.getUserInfo(defaultData.valueForKey("username")!.description)
+        var user = defaultData.valueForKey("username")?.description
         
-        firstName.text = user.getFirstName()
-        lastName.text = user.getLastName()
-        username.text = user.getUsername()
-        email.text = user.getEmail()
-        phone.text = user.getPhone()
-
+        manager.getUserInfo(user!) {
+            userInfo in
+            
+            self.username.text = userInfo.getUsername()
+            self.email.text = userInfo.getEmail()
+        }
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
