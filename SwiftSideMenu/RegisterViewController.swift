@@ -22,19 +22,21 @@ class RegisterViewController: UIViewController {
         
         var manager = ConnectionManager()
         
-        if manager.isUsernameExist(username.text) {
-            usernameErrorLabel.hidden = false
-        } else {
-            usernameErrorLabel.hidden = true
-        }
+        manager.isUsernameExist(username.text, completionHandler: { (usernameExist) -> () in
+            
+            if usernameExist {
+                self.usernameErrorLabel.hidden = false
+            } else {
+                self.usernameErrorLabel.hidden = true
+            }
+            
+        })
         
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        
         view.endEditing(true)
         super.touchesBegan(touches, withEvent: event)
-        
     }
     
     @IBAction func registerAction(sender: AnyObject) {

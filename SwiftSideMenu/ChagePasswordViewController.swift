@@ -24,23 +24,26 @@ class ChagePasswordViewController: UIViewController {
         
         var defaultData = NSUserDefaults.standardUserDefaults()
         
-        var user = manager.getUserInfo(defaultData.valueForKey("username")!.description)
+        var user = defaultData.valueForKey("username")?.description
         
-        if newPassword.text != confirmNewPassword.text || oldPassword.text != user.getPassword() || newPassword.text == "" || confirmNewPassword.text == "" {
+        manager.getUserInfo(user!) {
+            userInfo in
             
-            let alertController = UIAlertController(title: "Warning", message: "Invalid data", preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-            self.presentViewController(alertController, animated: true, completion: nil)
-            
-        } else {
-            
-            user.setPassword(newPassword.text)
-            
-            manager.updateUserInfo(user)
-            
-            self.dismissViewControllerAnimated(true, completion: nil)
+            if self.newPassword.text != self.confirmNewPassword.text || self.oldPassword.text != userInfo.getPassword() || self.newPassword.text == "" || self.confirmNewPassword.text == "" {
+                
+                let alertController = UIAlertController(title: "Warning", message: "Invalid data", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                self.presentViewController(alertController, animated: true, completion: nil)
+                
+            } else {
+                
+                userInfo.setPassword(self.newPassword.text)
+                
+                manager.updateUserInfo(userInfo)
+                
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
         }
-        
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
