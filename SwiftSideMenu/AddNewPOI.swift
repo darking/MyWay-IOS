@@ -23,6 +23,8 @@ class AddNewPOI: UIViewController, UIImagePickerControllerDelegate, UINavigation
         static var typeName:String = "";
         static var pointLat:String = "";
         static var pointLong:String = "";
+        static var startDate:String = "";
+        static var endDate:String = "";
     }
     
     var imgConv:ImageConversion = ImageConversion();
@@ -53,13 +55,16 @@ class AddNewPOI: UIViewController, UIImagePickerControllerDelegate, UINavigation
         }
         else{
 //            var mpoi:addNewPoint = addNewPoint();
+            var mpoi:addNewPoint = addNewPoint();
+            
             point = PointOfInterest();
             point.name = nameText.text;
             point.description = textArea.text;
             point.type = typeText.text;
             point.lat = holder.pointLat;
             point.long = holder.pointLong;
-            
+            point.startDate = holder.startDate;
+            point.endDate = holder.endDate;
             
             
             if didSelectImage{
@@ -200,7 +205,7 @@ class AddNewPOI: UIViewController, UIImagePickerControllerDelegate, UINavigation
         request.HTTPMethod = "POST";
         
         var username = NSUserDefaults.standardUserDefaults().stringForKey("username")!;
-        var bodyData = "username=\(username)&category=\(point.type)&name=\(point.name)&latitude=\(point.lat)&longitude=\(point.long)&description=\(point.description)&image=\(point.images)";
+        var bodyData = "username=\(username)&category=\(point.type)&name=\(point.name)&latitude=\(point.lat)&longitude=\(point.long)&description=\(point.description)&image=\(point.images)&startDate=\(point.startDate)&endDate=\(point.endDate)";
         println(bodyData);
         var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: true)!
         data = NSMutableData()//re-initialize the data so it wouldn't be an invalid JSON after i append to it the newer JSON
