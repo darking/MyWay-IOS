@@ -718,7 +718,19 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             
         })
         
-        
+        // Share Current Location
+        actionSheet.addButtonWithTitle("Share Current Location", type: AHKActionSheetButtonType.Default, handler:{ (AHKActionSheet) -> Void in
+            
+            var lat = self.locationManager.location.coordinate.latitude
+            var lon = self.locationManager.location.coordinate.longitude
+            
+            var shareLocation = Share()
+            shareLocation.latitude = (String(format: "%.5f", lat) as String)
+            shareLocation.longitude = (String(format: "%.5f", lon) as String)
+            
+            shareLocation.sharing(self)
+            
+        })
         
         actionSheet.addButtonWithTitle("Get Direction from Current Location", type: AHKActionSheetButtonType.Default, handler:  { (AHKActionSheet) -> Void in
             
