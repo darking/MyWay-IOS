@@ -813,9 +813,10 @@ class ShowOnMapVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDelega
         if (DriverDetailsVC.SettingDriverDestination.settingDriverDestination == true) {
             DriverDetailsVC.SettingDriverDestination.setDriverLatLong(coordinate);
             //println("Coordinates (\(coordinate.latitude),\(coordinate.longitude)) sent to driver!");
-            
-            var backToDriverDetails:DriverDetailsVC = UIStoryboard(name: "Team5_m", bundle: nil).instantiateViewControllerWithIdentifier("DDVC") as! DriverDetailsVC;
-            self.presentViewController(backToDriverDetails, animated: true, completion: {});
+//            
+//            var backToDriverDetails:DriverDetailsVC = UIStoryboard(name: "Team5_m", bundle: nil).instantiateViewControllerWithIdentifier("DDVC") as! DriverDetailsVC;
+//            self.presentViewController(backToDriverDetails, animated: true, completion: {});
+            self.dismissViewControllerAnimated(true, completion: {});
             
         }
         println("function mapView runs")

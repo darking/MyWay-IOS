@@ -59,8 +59,8 @@ class KhalidViewController: UIViewController,CLLocationManagerDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
         //creating a map view and give it a defult location
-        let camera: GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(29.378586, longitude: 47.990341, zoom: 8.0)
-        viewMap.camera = camera
+       // let camera: GMSCameraPosition = GMSCameraPosition.cameraWithLatitude(29.378586, longitude: 47.990341, zoom: 8.0)
+        //viewMap.camera = camera
         
         
         
@@ -68,7 +68,7 @@ class KhalidViewController: UIViewController,CLLocationManagerDelegate {
         //calling the method for asking the user for enabling his current location
         locationManager.requestWhenInUseAuthorization()
         //making the object viewMap know the change of the user location
-        viewMap.addObserver(self, forKeyPath: "myLocation", options: NSKeyValueObservingOptions.New,context:nil)
+      //  viewMap.addObserver(self, forKeyPath: "myLocation", options: NSKeyValueObservingOptions.New,context:nil)
 
         
         
@@ -145,6 +145,19 @@ class KhalidViewController: UIViewController,CLLocationManagerDelegate {
     
     //mashmom start
     @IBAction func findAddress(sender: AnyObject) {
+
+        
+
+        self.khalod()
+        
+        
+    
+    }
+  
+    
+    
+    func khalod() {
+        
         // the alert object which will show the text in alert will show when the user click in the left tool bar button
         let addressAlert = UIAlertController(title: "Address Finder", message: "Type the address you want to find:", preferredStyle: UIAlertControllerStyle.Alert)
         
@@ -160,10 +173,10 @@ class KhalidViewController: UIViewController,CLLocationManagerDelegate {
             self.mapTasks.geocodeAddress(address, withCompletionHandler: { (status, success) -> Void in
                 if !success {
                     println(status)
-                  
                     
-
-
+                    
+                    
+                    
                     
                     
                     if status == "ZERO_RESULTS" {
@@ -185,8 +198,8 @@ class KhalidViewController: UIViewController,CLLocationManagerDelegate {
                     
                     for var x = 0; x < self.mapTasks.Results.count; ++x{
                         
-                       
-                            
+                        
+                        
                         //var of dictionaty of address_componets from response
                         
                         //let locationName =  self.mapTasks.Results[x]["address_components"] as! Dictionary<NSObject, AnyObject>
@@ -198,7 +211,7 @@ class KhalidViewController: UIViewController,CLLocationManagerDelegate {
                         //var from lng co from response
                         let longCo = ((locationCordinates["location"] as! Dictionary<NSObject, AnyObject>)["lng"]as! NSNumber).doubleValue
                         
-                    
+                        
                         
                         
                         
@@ -207,46 +220,46 @@ class KhalidViewController: UIViewController,CLLocationManagerDelegate {
                         
                         //var shortName = self.mapTasks.Results[x]["types"] as! String
                         
-                    let normalMapTypeAction = UIAlertAction(title: "\(longName)", style: UIAlertActionStyle.Default) { (alertAction) -> Void in
-                        
-                        let coordinate = CLLocationCoordinate2D(latitude: latCo, longitude: longCo)
-                        
-                        self.viewMap.camera = GMSCameraPosition.cameraWithTarget(coordinate, zoom: 6.0)
-                        
-                        self.setupLocationMarker(coordinate);
-                        
-                        
-                        
-                    }
-                         actionSheet.addAction(normalMapTypeAction)
+                        let normalMapTypeAction = UIAlertAction(title: "\(longName)", style: UIAlertActionStyle.Default) { (alertAction) -> Void in
+                            
+                            let coordinate = CLLocationCoordinate2D(latitude: latCo, longitude: longCo)
+                            
+                            self.viewMap.camera = GMSCameraPosition.cameraWithTarget(coordinate, zoom: 6.0)
+                            
+                            self.setupLocationMarker(coordinate);
+                            
+                            
+                            
+                        }
+                        actionSheet.addAction(normalMapTypeAction)
                         
                     }
                     //core code end
-//
-//                    let terrainMapTypeAction = UIAlertAction(title: "Terrain", style: UIAlertActionStyle.Default) { (alertAction) -> Void in
-//                        self.viewMap.mapType = kGMSTypeTerrain
-//                    }
-//                    
-//                    let hybridMapTypeAction = UIAlertAction(title: "Hybrid", style: UIAlertActionStyle.Default) { (alertAction) -> Void in
-//                        self.viewMap.mapType = kGMSTypeHybrid
-//                    }
+                    //
+                    //                    let terrainMapTypeAction = UIAlertAction(title: "Terrain", style: UIAlertActionStyle.Default) { (alertAction) -> Void in
+                    //                        self.viewMap.mapType = kGMSTypeTerrain
+                    //                    }
+                    //
+                    //                    let hybridMapTypeAction = UIAlertAction(title: "Hybrid", style: UIAlertActionStyle.Default) { (alertAction) -> Void in
+                    //                        self.viewMap.mapType = kGMSTypeHybrid
+                    //                    }
                     
                     let cancelAction = UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel) { (alertAction) -> Void in
                         
                     }
                     
-                   
-//                    actionSheet.addAction(terrainMapTypeAction)
-//                    actionSheet.addAction(hybridMapTypeAction)
+                    
+                    //                    actionSheet.addAction(terrainMapTypeAction)
+                    //                    actionSheet.addAction(hybridMapTypeAction)
                     actionSheet.addAction(cancelAction)
                     
                     self.presentViewController(actionSheet, animated: true, completion: nil)
-                     
-                  
+                    
+                    
                     
                     
                 }
-        
+                
             })
             
         }
@@ -285,14 +298,9 @@ class KhalidViewController: UIViewController,CLLocationManagerDelegate {
         }
         
         
+
         
-        
-    
     }
-  
-    
-    
-    
     
     
     

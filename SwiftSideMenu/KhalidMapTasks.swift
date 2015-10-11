@@ -39,7 +39,7 @@ class KhalidMapTasks:NSObject {
     func geocodeAddress(address: String!, withCompletionHandler completionHandler: ((status: String, success: Bool) -> Void)) {
          //first make sure that a valid address has been given:
         if let lookupAddress = address {
-            var geocodeURLString = baseURLGeocode + "address=" + lookupAddress
+            var geocodeURLString = baseURLGeocode + "address=" + lookupAddress + ", KW" 
             geocodeURLString = geocodeURLString.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
             
             let geocodeURL = NSURL(string: geocodeURLString)
@@ -65,6 +65,8 @@ class KhalidMapTasks:NSObject {
                     if status == "OK" {
                         
                        self.Results = dictionary["results"] as! Array<Dictionary<NSObject, AnyObject>>;
+                        
+                       // println(self.Results)
                         
                         let allResults = dictionary["results"] as! Array<Dictionary<NSObject, AnyObject>>
                     
