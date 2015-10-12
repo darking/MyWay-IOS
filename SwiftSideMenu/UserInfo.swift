@@ -12,60 +12,28 @@ import UIKit
 
 class UserInfo {
     
-    private var firstName:String
-    private var lastName:String
     private var username:String
     private var password:String
     private var email:String
-    private var phone:String
-    private var userHasProfile:String
     
     init (username:String, password:String, email:String) {
-        self.firstName = ""
-        self.lastName = ""
         self.username = username
         self.password = password
         self.email = email
-        self.phone = ""
-        self.userHasProfile = "0"
     }
     
     init (values: NSDictionary){
-        self.firstName = values.valueForKey("firstName") as! String;
-        self.lastName = values.valueForKey("lastName") as! String;
         self.username = values.valueForKey("username") as! String;
         self.password = values.valueForKey("password") as! String;
         self.email = values.valueForKey("email") as! String;
-        self.phone = values.valueForKey("phone") as! String;
-        self.userHasProfile = values.valueForKey("userHasProfile") as! String;
     }
     
     func toDictionary()->NSDictionary{
         var values:NSMutableDictionary = NSMutableDictionary();
-        values.setObject(self.firstName, forKey: "firstName");
-        values.setObject(self.lastName, forKey: "lastName");
         values.setObject(self.username, forKey: "username");
         values.setObject(self.password, forKey: "password");
         values.setObject(self.email, forKey: "email");
-        values.setObject(self.phone, forKey: "phone");
-        values.setObject(self.userHasProfile, forKey: "userHasProfile");
         return values;
-    }
-    
-    func getFirstName() -> String {
-        return firstName
-    }
-    
-    func setFirstName(firstName:String) {
-        self.firstName = firstName
-    }
-    
-    func getLastName() -> String {
-        return lastName
-    }
-    
-    func setLastName(lastName:String) {
-        self.lastName = lastName
     }
     
     func getUsername() -> String {
@@ -90,22 +58,6 @@ class UserInfo {
     
     func setEmail(email:String) {
         self.email = email
-    }
-    
-    func getPhone() -> String {
-        return phone
-    }
-    
-    func setPhone(phone:String) {
-        self.phone = phone
-    }
-    
-    func setUserHasProfile() {
-        self.userHasProfile = "1"
-    }
-    
-    func getUserHasProfile() -> String {
-        return userHasProfile
     }
     
     func getProfilePictureFilePath() -> String {

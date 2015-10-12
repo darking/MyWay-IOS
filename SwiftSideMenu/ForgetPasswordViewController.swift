@@ -16,32 +16,28 @@ class ForgetPasswordViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+    @IBAction func resetPasswordAction(sender: AnyObject) {
         
         var manager = ConnectionManager()
         
-        if manager.isUsernameExist(username.text) {
+        manager.isUsernameExist(username.text, completionHandler: { (usernameExist) -> () in
             
-            if identifier == "email" {
-                manager.sendCodeViaEmail(username.text)
-            } else if identifier == "sms" {
-                manager.sendCodeViaSms(username.text)
+            if usernameExist {
+                
+                manager.forgetPassword(self.username.text)
+                
+                self.dismissViewControllerAnimated(true, completion: nil)
+                
+            } else {
+                
+                let alertController = UIAlertController(title: "Warning", message:
+                    "Invalid username", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                self.presentViewController(alertController, animated: true, completion: nil)
+                
             }
             
-            return true
-            
-        } else {
-            
-            let alertController = UIAlertController(title: "Warning", message:
-                "Invalid username", preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-            
-            self.presentViewController(alertController, animated: true, completion: nil)
-            
-            
-            return false
-            
-        }
+        })
         
     }
     

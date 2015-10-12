@@ -21,6 +21,9 @@ class MoreInfoOfPOI:UIViewController{
     
     @IBOutlet var imageOut: UIImageView!
     
+    @IBOutlet var startDateOut: UILabel!
+    
+    @IBOutlet var endDateOut: UILabel!
     
     @IBAction func sendButton(sender: AnyObject) {
         
@@ -51,7 +54,9 @@ class MoreInfoOfPOI:UIViewController{
         
         TypeNameOut.text = event.objectForKey("name") as? String;
         DetailsOut.text = event.objectForKey("description") as! String;
+        startDateOut.text = event.objectForKey("startDate") as? String;
         
+        endDateOut.text = event.objectForKey("endDate") as? String;
         let imageNames = event.objectForKey("image") as! String;
         
 //        to check if there is an image by the user.. it would set it, else it would leave it as the default image that is already set on the storyboard
@@ -62,12 +67,7 @@ class MoreInfoOfPOI:UIViewController{
                     imageOut.image = UIImage(data: data)
                 }
             }
-//            let url = NSURL(string: imageNames);
-//            let data = NSData(contentsOfURL: url!);
-//            imageOut.contentMode = UIViewContentMode.ScaleAspectFit
-//            imageOut.image = UIImage(data: data!);
-//            var fileUtils = FileUtils(fileName: firstImageName);
-//            imageOut.image = imageConv.readImageAtPath(fileUtils.docsPath()) ;
+
         }
 //         yossef - poi - use image name instead of image path
 //        let firstImageName = imageNames.firstObject as! String;
