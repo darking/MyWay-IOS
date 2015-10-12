@@ -90,7 +90,6 @@
 		6C83464D1BC6809500FD0CE4 /* MonitorReportSample.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C8346471BC6809500FD0CE4 /* MonitorReportSample.plist */; };
 		6C83464E1BC6809500FD0CE4 /* MonitorReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8346481BC6809500FD0CE4 /* MonitorReportVC.swift */; };
 		6C83464F1BC6809500FD0CE4 /* ReadReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8346491BC6809500FD0CE4 /* ReadReport.swift */; };
-		6C8346501BC6809500FD0CE4 /* SelectDriverReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C83464A1BC6809500FD0CE4 /* SelectDriverReportVC.swift */; };
 		6C8346581BC680A000FD0CE4 /* AddDailyRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8346511BC680A000FD0CE4 /* AddDailyRouteVC.swift */; };
 		6C8346591BC680A000FD0CE4 /* AllpListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8346521BC680A000FD0CE4 /* AllpListController.swift */; };
 		6C83465A1BC680A000FD0CE4 /* CommentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8346531BC680A000FD0CE4 /* CommentLocation.swift */; };
@@ -112,6 +111,12 @@
 		6C8346781BC680C200FD0CE4 /* UISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8346701BC680C200FD0CE4 /* UISettings.swift */; };
 		6C8346791BC680C200FD0CE4 /* DriverReportCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C8346711BC680C200FD0CE4 /* DriverReportCustomCell.xib */; };
 		6C83467A1BC680C200FD0CE4 /* DriverList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8346721BC680C200FD0CE4 /* DriverList.swift */; };
+		6CBD03C91BCB8AAB00F97984 /* CLLocationSpeedExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBD03C61BCB8AAB00F97984 /* CLLocationSpeedExtension.swift */; };
+		6CBD03CA1BCB8AAB00F97984 /* JSONClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBD03C71BCB8AAB00F97984 /* JSONClass.swift */; };
+		6CBD03CB1BCB8AAB00F97984 /* SpeedClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBD03C81BCB8AAB00F97984 /* SpeedClass.swift */; };
+		6CBD03CE1BCB8ABA00F97984 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBD03CC1BCB8ABA00F97984 /* Driver.swift */; };
+		6CBD03CF1BCB8ABA00F97984 /* ReportNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBD03CD1BCB8ABA00F97984 /* ReportNotification.swift */; };
+		6CBD03D11BCB8E2600F97984 /* DriverBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBD03D01BCB8E2600F97984 /* DriverBean.swift */; };
 		6CD32AC01BC28FD100F6D684 /* URLCommentConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD32ABF1BC28FD100F6D684 /* URLCommentConnection.swift */; };
 		6CE9A1C01B8363D400BE4004 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1BE1B8363D400BE4004 /* mainViewController.swift */; };
 		6CE9A1C11B8363D400BE4004 /* MapTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE9A1BF1B8363D400BE4004 /* MapTasks.swift */; };
@@ -293,7 +298,6 @@
 		6C8346471BC6809500FD0CE4 /* MonitorReportSample.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MonitorReportSample.plist; sourceTree = "<group>"; };
 		6C8346481BC6809500FD0CE4 /* MonitorReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorReportVC.swift; sourceTree = "<group>"; };
 		6C8346491BC6809500FD0CE4 /* ReadReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadReport.swift; sourceTree = "<group>"; };
-		6C83464A1BC6809500FD0CE4 /* SelectDriverReportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectDriverReportVC.swift; sourceTree = "<group>"; };
 		6C8346511BC680A000FD0CE4 /* AddDailyRouteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDailyRouteVC.swift; sourceTree = "<group>"; };
 		6C8346521BC680A000FD0CE4 /* AllpListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllpListController.swift; sourceTree = "<group>"; };
 		6C8346531BC680A000FD0CE4 /* CommentLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentLocation.swift; sourceTree = "<group>"; };
@@ -315,6 +319,12 @@
 		6C8346701BC680C200FD0CE4 /* UISettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISettings.swift; sourceTree = "<group>"; };
 		6C8346711BC680C200FD0CE4 /* DriverReportCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriverReportCustomCell.xib; sourceTree = "<group>"; };
 		6C8346721BC680C200FD0CE4 /* DriverList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverList.swift; sourceTree = "<group>"; };
+		6CBD03C61BCB8AAB00F97984 /* CLLocationSpeedExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationSpeedExtension.swift; sourceTree = "<group>"; };
+		6CBD03C71BCB8AAB00F97984 /* JSONClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONClass.swift; sourceTree = "<group>"; };
+		6CBD03C81BCB8AAB00F97984 /* SpeedClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedClass.swift; sourceTree = "<group>"; };
+		6CBD03CC1BCB8ABA00F97984 /* Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		6CBD03CD1BCB8ABA00F97984 /* ReportNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportNotification.swift; sourceTree = "<group>"; };
+		6CBD03D01BCB8E2600F97984 /* DriverBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverBean.swift; sourceTree = "<group>"; };
 		6CD32ABF1BC28FD100F6D684 /* URLCommentConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLCommentConnection.swift; sourceTree = "<group>"; };
 		6CE9A1BE1B8363D400BE4004 /* mainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		6CE9A1BF1B8363D400BE4004 /* MapTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTasks.swift; sourceTree = "<group>"; };
@@ -648,6 +658,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6CBD03C51BCB8A8000F97984 /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+				6CBD03CC1BCB8ABA00F97984 /* Driver.swift */,
+				6CBD03CD1BCB8ABA00F97984 /* ReportNotification.swift */,
+				6CBD03C61BCB8AAB00F97984 /* CLLocationSpeedExtension.swift */,
+				6CBD03C71BCB8AAB00F97984 /* JSONClass.swift */,
+				6CBD03C81BCB8AAB00F97984 /* SpeedClass.swift */,
+			);
+			name = Driver;
+			sourceTree = "<group>";
+		};
 		6CD32A941BC27FFB00F6D684 /* OmYasser */ = {
 			isa = PBXGroup;
 			children = (
@@ -657,6 +679,7 @@
 				6C8346621BC680B100FD0CE4 /* DriverDetailsVC.swift */,
 				6C8346631BC680B100FD0CE4 /* DriverCustomCell.swift */,
 				6C8346641BC680B100FD0CE4 /* DriverReportCustomTVC.swift */,
+				6CBD03D01BCB8E2600F97984 /* DriverBean.swift */,
 			);
 			name = OmYasser;
 			sourceTree = "<group>";
@@ -683,7 +706,6 @@
 				6C8346471BC6809500FD0CE4 /* MonitorReportSample.plist */,
 				6C8346481BC6809500FD0CE4 /* MonitorReportVC.swift */,
 				6C8346491BC6809500FD0CE4 /* ReadReport.swift */,
-				6C83464A1BC6809500FD0CE4 /* SelectDriverReportVC.swift */,
 			);
 			name = MonitorReports;
 			sourceTree = "<group>";
@@ -771,6 +793,7 @@
 		6CEAC4FE1B81EB4200E63813 /* Team5 */ = {
 			isa = PBXGroup;
 			children = (
+				6CBD03C51BCB8A8000F97984 /* Driver */,
 				6C83466B1BC680C200FD0CE4 /* FileUtils.swift */,
 				6C83466C1BC680C200FD0CE4 /* Team5_m.storyboard */,
 				6C83466D1BC680C200FD0CE4 /* DriverCustomCell.xib */,
@@ -849,7 +872,7 @@
 				TargetAttributes = {
 					5C132582198E2A9A00CA49BE = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = SGL82PX6XB;
+						DevelopmentTeam = BNVCEC9C7S;
 					};
 					5C132594198E2A9A00CA49BE = {
 						CreatedOnToolsVersion = 6.0;
@@ -1038,6 +1061,7 @@
 				522B7E921B86253C000A5678 /* ENSideMenu.swift in Sources */,
 				52ECD6D81B8643DE00718350 /* AHKActionSheetViewController.m in Sources */,
 				141092731B8CB76300CD3114 /* TypesTableViewController.swift in Sources */,
+				6CBD03C91BCB8AAB00F97984 /* CLLocationSpeedExtension.swift in Sources */,
 				1436156B1B8F1AC7003FD356 /* TypesOfPOI.swift in Sources */,
 				6CE9A1C31B83641000BE4004 /* MainMapVC.swift in Sources */,
 				141092771B8CB76300CD3114 /* MarkerInfoView.swift in Sources */,
@@ -1080,24 +1104,27 @@
 				6C83465E1BC680A000FD0CE4 /* ModifyDailyRouteVC.swift in Sources */,
 				6C83465D1BC680A000FD0CE4 /* DailyRouteViewController.swift in Sources */,
 				6CE9A23D1B839FCB00BE4004 /* ConnectionManager.swift in Sources */,
+				6CBD03CF1BCB8ABA00F97984 /* ReportNotification.swift in Sources */,
 				6C8346731BC680C200FD0CE4 /* FileUtils.swift in Sources */,
 				141092761B8CB76300CD3114 /* PlaceMarker.swift in Sources */,
 				6C83465B1BC680A000FD0CE4 /* DailyReportVC.swift in Sources */,
 				6CD32AC01BC28FD100F6D684 /* URLCommentConnection.swift in Sources */,
 				522B7E931B86253C000A5678 /* ENSideMenuNavigationController.swift in Sources */,
 				6C8346651BC680B100FD0CE4 /* AddDriverVC.swift in Sources */,
+				6CBD03CB1BCB8AAB00F97984 /* SpeedClass.swift in Sources */,
 				077919761BBBF4CD00AB0DB1 /* hazardVC.swift in Sources */,
 				52ECD6D91B8643DE00718350 /* UIImage+AHKAdditions.m in Sources */,
 				6C83466A1BC680B100FD0CE4 /* DriverReportCustomTVC.swift in Sources */,
 				6CE9A2591B8474A300BE4004 /* TypeView.swift in Sources */,
+				6CBD03CE1BCB8ABA00F97984 /* Driver.swift in Sources */,
 				6C83464F1BC6809500FD0CE4 /* ReadReport.swift in Sources */,
 				52ECD6D71B8643DE00718350 /* AHKActionSheet.m in Sources */,
 				6CE9A2561B8474A300BE4004 /* PointOfInterest.swift in Sources */,
 				6CE9A2521B8474A300BE4004 /* ManagePoints.swift in Sources */,
-				6C8346501BC6809500FD0CE4 /* SelectDriverReportVC.swift in Sources */,
 				6C83464C1BC6809500FD0CE4 /* DaysListTVC.swift in Sources */,
 				6CE9A2391B839F9100BE4004 /* SetNewPasswordViewController.swift in Sources */,
 				52ECD6DA1B8643DE00718350 /* UIWindow+AHKAdditions.m in Sources */,
+				6CBD03CA1BCB8AAB00F97984 /* JSONClass.swift in Sources */,
 				0787800C1BBD1F9F00B7CF93 /* KhalidMapTasks.swift in Sources */,
 				6CE9A2331B839F9100BE4004 /* CodeVerificationViewController.swift in Sources */,
 				1429139319DA9F4D0025188A /* MyNavigationController.swift in Sources */,
@@ -1112,6 +1139,7 @@
 				6CE9A26F1B84AE2900BE4004 /* ShowOnMapVC.swift in Sources */,
 				141092791B8CB76300CD3114 /* UIViewExtension.swift in Sources */,
 				6C8346691BC680B100FD0CE4 /* DriverCustomCell.swift in Sources */,
+				6CBD03D11BCB8E2600F97984 /* DriverBean.swift in Sources */,
 				6CE9A2551B8474A300BE4004 /* POIDataManager.swift in Sources */,
 				077919321BBBF41900AB0DB1 /* AllVC.swift in Sources */,
 				6CE9A2351B839F9100BE4004 /* ForgetPasswordViewController.swift in Sources */,

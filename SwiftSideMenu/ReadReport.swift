@@ -9,26 +9,26 @@
 import Foundation
 
 class ReadReport{
-    let path =   NSBundle.mainBundle().pathForResource("MonitorReportSample", ofType: "plist");
-    
-   
-    func getDriverInfo()->NSDictionary{
-         var list:NSDictionary = NSDictionary(contentsOfFile: path!)!;
-        //return list.objectForKey("Kumar") as! NSDictionary;
-        
-        return list.objectForKey(SelectDriverReportVC.holder.driverName!) as! NSDictionary;
-    }
-    func getDays()->NSArray{
-        var dayGetter:NSDictionary = self.getDriverInfo();
-        var allKeys:NSArray = dayGetter.allKeys;
-        var allDaysObjects:NSMutableArray = NSMutableArray();
-        for (var i = 0 ; i < allKeys.count ; i++){
-            
-            var values:NSDictionary = dayGetter.objectForKey(allKeys.objectAtIndex(i)) as! NSDictionary;
-            var day = allKeys.objectAtIndex(i) as! String;
-            var date = Data(subDict: values, dayValue: day);
-            allDaysObjects.addObject(date);
-        }
-        return allDaysObjects;
-    }
+//    let path =   NSBundle.mainBundle().pathForResource("MonitorReportSample", ofType: "plist");
+//    
+//   
+//    func getDriverInfo()->NSDictionary{
+//         var list:NSDictionary = NSDictionary(contentsOfFile: path!)!;
+//        //return list.objectForKey("Kumar") as! NSDictionary;
+//        
+//        return list.objectForKey(SelectDriverReportVC.holder.driverName!) as! NSDictionary;
+//    }
+//    func getDays()->NSArray{
+//        var dayGetter:NSDictionary = self.getDriverInfo();
+//        var allKeys:NSArray = dayGetter.allKeys;
+//        var allDaysObjects:NSMutableArray = NSMutableArray();
+//        for (var i = 0 ; i < allKeys.count ; i++){
+//            
+//            var values:NSDictionary = dayGetter.objectForKey(allKeys.objectAtIndex(i)) as! NSDictionary;
+//            var day = allKeys.objectAtIndex(i) as! String;
+//            var date = Data(subDict: values, dayValue: day);
+//            allDaysObjects.addObject(date);
+//        }
+//        return allDaysObjects;
+//    }
 }
