@@ -112,7 +112,7 @@ class ConnectionManager {
 
     func login(username:String, password:String, completionHandler:(validData:Bool) -> ()) {
         var requestBody = "username=" + username + "&password=" + password
-        var requestUrl = "http://mobile.comxa.com/profile/valid_login.json"
+        var requestUrl = "http://172.16.8.105:8080/MyWayWeb/loginUser"
         
         request(requestBody, url: requestUrl) {
             responseData in
@@ -138,15 +138,15 @@ class ConnectionManager {
     
     func isUsernameExist(username:String, completionHandler:(usernameExist:Bool) -> ()) {
         var requestBody = "username=" + username
-        var requestUrl = "http://mobile.comxa.com/profile/valid_username.json"
+        var requestUrl = "http://172.16.8.105:8080/MyWayWeb/checkUsername"
         
         request(requestBody, url: requestUrl) {
             responseData in
-    
-            var returnValue = true
+            
+            var returnValue = false
     
             if responseData.valueForKey("result_code")?.description == "0" {
-                returnValue = false
+                returnValue = true
             }
     
             completionHandler(usernameExist: returnValue)
@@ -154,8 +154,14 @@ class ConnectionManager {
     }
     
     func register(newUser:UserInfo) {
-        var requestBody = "username=" + newUser.getUsername() + "&password=" + newUser.getPassword() + "&email=" + newUser.getEmail()
-        var requestUrl = "http://mobile.comxa.com/profile/valid_reg.json"
+        var converter = ImageConversion()
+        var imagePath = NSBundle.mainBundle().pathForResource("default", ofType: "png")
+        
+        var imageData = UIImageJPEGRepresentation(converter.readImageAtPath(imagePath!), 0.9)
+        var imageBase64Format = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
+        
+        var requestBody = "username=" + newUser.getUsername() + "&password=" + newUser.getPassword() + "&email=" + newUser.getEmail() + "&profilepicture=" + imageBase64Format
+        var requestUrl = "http://172.16.8.105:8080/MyWayWeb/registerUser"
         
         request(requestBody, url: requestUrl) {
             responseData in
@@ -164,7 +170,7 @@ class ConnectionManager {
     
     func getUserInfo (username:String, completionHandler:(userInfo:UserInfo) -> ()) {
         var requestBody = "username=" + username
-        var requestUrl = "http://mobile.comxa.com/profile/get_user_info.json"
+        var requestUrl = "http://172.16.8.105:8080/MyWayWeb/getUserProfile"
         
         request(requestBody, url: requestUrl) {
             responseData in
@@ -177,8 +183,7 @@ class ConnectionManager {
             
             var user = UserInfo(username: username, password: password, email: email)
             
-            var imageUrl = NSURL(string: profile_picture)
-            var imageData = NSData(contentsOfURL: imageUrl!)
+            var imageData = NSData(base64EncodedString: profile_picture, options: .allZeros)
             
             var fileUtils:FileUtils = FileUtils(fileName: username)
             var imagePath:String = fileUtils.docsPath()
@@ -196,7 +201,7 @@ class ConnectionManager {
         var imageBase64Format = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
         
         var requestBody = "username=" + user.getUsername() + "&password=" + user.getPassword() + "&email=" + user.getEmail() + "&profile_picture=" + imageBase64Format
-        var requestUrl = "http://mobile.comxa.com/profile/valid_edit.json"
+        var requestUrl = "http://172.16.8.105:8080/MyWayWeb/updateUserProfile"
         
         request(requestBody, url: requestUrl) {
             responseData in
@@ -218,7 +223,7 @@ class ConnectionManager {
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {
             response, data, error in
-            
+            println(data)
             completionHandler(responseData: (NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error: nil) as? NSDictionary)!)
         }
     }
