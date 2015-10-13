@@ -199,13 +199,16 @@ class AddNewPOI: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     
     func startConnection(){
-        let urlPath: String = "http://mobile.comxa.com/events/all_events.jsp"
+        //let urlPath: String = "http://mobile.comxa.com/events/all_events.jsp"
+        let urlPath: String = "http://172.16.8.105:8080/MyWayWeb/requestEvent"
         var url: NSURL = NSURL(string: urlPath)!
         var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "POST";
         
         var username = NSUserDefaults.standardUserDefaults().stringForKey("username")!;
-        var bodyData = "username=\(username)&category=\(point.type)&name=\(point.name)&latitude=\(point.lat)&longitude=\(point.long)&description=\(point.description)&image=\(point.images)&startDate=\(point.startDate)&endDate=\(point.endDate)";
+        //var bodyData = "username=\(username)&category=\(point.type)&name=\(point.name)&latitude=\(point.lat)&longitude=\(point.long)&description=\(point.description)&image=\(point.images)&startDate=\(point.startDate)&endDate=\(point.endDate)";
+        var bodyData = "username=ahmed&category=\(point.type)&name=\(point.name)&latitude=\(point.lat)&longitude=\(point.long)&description=\(point.description)&image=\(point.images)&startDate=\(point.startDate)&endDate=\(point.endDate)";
+        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
         println(bodyData);
         var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: true)!
         data = NSMutableData()//re-initialize the data so it wouldn't be an invalid JSON after i append to it the newer JSON
