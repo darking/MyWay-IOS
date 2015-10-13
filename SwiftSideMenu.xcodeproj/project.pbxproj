@@ -869,7 +869,7 @@
 				TargetAttributes = {
 					5C132582198E2A9A00CA49BE = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = BNVCEC9C7S;
+						DevelopmentTeam = SGL82PX6XB;
 					};
 					5C132594198E2A9A00CA49BE = {
 						CreatedOnToolsVersion = 6.0;
@@ -1101,7 +1101,6 @@
 				077919621BBBF48400AB0DB1 /* accidentVC.swift in Sources */,
 				6C83465E1BC680A000FD0CE4 /* ModifyDailyRouteVC.swift in Sources */,
 				6C83465D1BC680A000FD0CE4 /* DailyRouteViewController.swift in Sources */,
-				6CE9A23D1B839FCB00BE4004 /* ConnectionManager.swift in Sources */,
 				6CBD03CF1BCB8ABA00F97984 /* ReportNotification.swift in Sources */,
 				6C8346731BC680C200FD0CE4 /* FileUtils.swift in Sources */,
 				141092761B8CB76300CD3114 /* PlaceMarker.swift in Sources */,

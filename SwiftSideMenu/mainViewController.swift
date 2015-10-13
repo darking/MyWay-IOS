@@ -672,44 +672,15 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
         //SHOW REPORT
         
-        //   dispatch_async(dispatch_get_main_queue(), { () -> Void in
         
         ListAllReports().getReportList(self)
-        
-        
-        //            self.gotReports(ListAllReports().getReportsNow());
-        
-        //            println("comment in VIEW DID LOAD")
-        //            println(self.dict["comment"])
-        
-        
-        //})
-        
-        //var myCoor:CLLocationCoordinate2D = CLLocationCoordinate2DMake(locationManager.location.coordinate.latitude, locationManager.location.coordinate.longitude)
         
         var myDoubLat = 29.2786581
         var myDoubLng = 48.0681501
         
-        //        var myCoor1 = CLLocationCoordinate2DMake(29.2786584, 48.0681656)
-        //
-        //
-        //        var marker = GMSMarker(position: myCoor1)
-        //        marker.title = "sdsds"
-        //        marker.map = viewMap
-        //        marker.icon = GMSMarker.markerImageWithColor(UIColor.greenColor())
-        
-        
         //./SHOW REPORT
         
-        //SHOW FV
-        if NSUserDefaults.standardUserDefaults().boolForKey("isLoggedin"){
-            var manageFavs: ManageFavorites = ManageFavorites();
-            manageFavs.callerForPins = self;
-            manageFavs.startConnection();
-        }
-        
-        
-        //./SHOW FV
+
         
         //Begin of Find Address2
         actionSheet.addButtonWithTitle("Find Address2", type: AHKActionSheetButtonType.Default, handler:{ (AHKActionSheet) -> Void in
@@ -823,68 +794,78 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             
         }
         
-        actionSheet.addButtonWithTitle("On/Off Favourite", type: AHKActionSheetButtonType.Default, handler:  { (AHKActionSheet) -> Void in
+        actionSheet.addButtonWithTitle("Show Favourite", type: AHKActionSheetButtonType.Default, handler:  { (AHKActionSheet) -> Void in
             
-            
-            
-            var myDoubLat = 29.2786584
-            var myDoubLng = 48.0681507
-            
-            println("ay shy thany")
-            
-            println("items is \(self.items)")
-            
-            for item in self.items {
-                
-                println("item 0: \(item.0), item 1: \(item.1), item 2: \(item.2) ")
-                
-                var myCoor:CLLocationCoordinate2D = CLLocationCoordinate2DMake((String(format: "%.2f", item.1) as NSString).doubleValue, (String(format: "%.2f", item.2) as NSString).doubleValue)
-                
-                var marker = GMSMarker(position: myCoor)
-                marker.title = "random ebra"
-                marker.map = self.viewMap
-                marker.icon = GMSMarker.markerImageWithColor(UIColor.blackColor())
-                
-                if self.waypointsArray.count > 0 {
-                    for waypoint in self.waypointsArray {
-                        let lat: Double = (waypoint.componentsSeparatedByString(",")[0] as NSString).doubleValue
-                        let lng: Double = (waypoint.componentsSeparatedByString(",")[1] as NSString).doubleValue
-                        
-                        let marker = GMSMarker(position: CLLocationCoordinate2DMake(lat, lng))
-                        marker.map = self.viewMap
-                        marker.icon = GMSMarker.markerImageWithColor(UIColor.purpleColor())
-                        
-                        self.markersArray.append(marker)
-                    }
-                }
-                
+            //SHOW FV
+            if NSUserDefaults.standardUserDefaults().boolForKey("isLoggedin"){
+                var manageFavs: ManageFavorites = ManageFavorites();
+                manageFavs.callerForPins = self;
+                manageFavs.startConnection();
             }
             
+            self.clearBtn.enabled = true
             
-            var myCoor:CLLocationCoordinate2D = CLLocationCoordinate2DMake(myDoubLat, myDoubLng)
+            //./SHOW FV
             
-            self.viewMap.camera = GMSCameraPosition.cameraWithTarget(myCoor, zoom: 12.0)
             
-            // originMarker = GMSMarker(position: self.mapTasks.originCoordinate)
-            self.originMarker = GMSMarker(position: myCoor)
-            self.originMarker.map = self.viewMap
-            self.originMarker.icon = GMSMarker.markerImageWithColor(UIColor.yellowColor())
-            self.originMarker.title = "My Fav"
-            
-            // println("did enter showFav()")
-            
-            if self.waypointsArray.count > 0 {
-                for waypoint in self.waypointsArray {
-                    let lat: Double = (waypoint.componentsSeparatedByString(",")[0] as NSString).doubleValue
-                    let lng: Double = (waypoint.componentsSeparatedByString(",")[1] as NSString).doubleValue
-                    
-                    let marker = GMSMarker(position: CLLocationCoordinate2DMake(lat, lng))
-                    marker.map = self.viewMap
-                    marker.icon = GMSMarker.markerImageWithColor(UIColor.purpleColor())
-                    
-                    self.markersArray.append(marker)
-                }
-            }
+//            var myDoubLat = 29.2786584
+//            var myDoubLng = 48.0681507
+//            
+//            println("ay shy thany")
+//            
+//            println("items is \(self.items)")
+//            
+//            for item in self.items {
+//                
+//                println("item 0: \(item.0), item 1: \(item.1), item 2: \(item.2) ")
+//                
+//                var myCoor:CLLocationCoordinate2D = CLLocationCoordinate2DMake((String(format: "%.2f", item.1) as NSString).doubleValue, (String(format: "%.2f", item.2) as NSString).doubleValue)
+//                
+//                var marker = GMSMarker(position: myCoor)
+//                marker.title = "random ebra"
+//                marker.map = self.viewMap
+//                marker.icon = GMSMarker.markerImageWithColor(UIColor.blackColor())
+//                
+//                if self.waypointsArray.count > 0 {
+//                    for waypoint in self.waypointsArray {
+//                        let lat: Double = (waypoint.componentsSeparatedByString(",")[0] as NSString).doubleValue
+//                        let lng: Double = (waypoint.componentsSeparatedByString(",")[1] as NSString).doubleValue
+//                        
+//                        let marker = GMSMarker(position: CLLocationCoordinate2DMake(lat, lng))
+//                        marker.map = self.viewMap
+//                        marker.icon = GMSMarker.markerImageWithColor(UIColor.purpleColor())
+//                        
+//                        self.markersArray.append(marker)
+//                    }
+//                }
+//                
+//            }
+//            
+//            
+//            var myCoor:CLLocationCoordinate2D = CLLocationCoordinate2DMake(myDoubLat, myDoubLng)
+//            
+//            self.viewMap.camera = GMSCameraPosition.cameraWithTarget(myCoor, zoom: 12.0)
+//            
+//            // originMarker = GMSMarker(position: self.mapTasks.originCoordinate)
+//            self.originMarker = GMSMarker(position: myCoor)
+//            self.originMarker.map = self.viewMap
+//            self.originMarker.icon = GMSMarker.markerImageWithColor(UIColor.yellowColor())
+//            self.originMarker.title = "My Fav"
+//            
+//            // println("did enter showFav()")
+//            
+//            if self.waypointsArray.count > 0 {
+//                for waypoint in self.waypointsArray {
+//                    let lat: Double = (waypoint.componentsSeparatedByString(",")[0] as NSString).doubleValue
+//                    let lng: Double = (waypoint.componentsSeparatedByString(",")[1] as NSString).doubleValue
+//                    
+//                    let marker = GMSMarker(position: CLLocationCoordinate2DMake(lat, lng))
+//                    marker.map = self.viewMap
+//                    marker.icon = GMSMarker.markerImageWithColor(UIColor.purpleColor())
+//                    
+//                    self.markersArray.append(marker)
+//                }
+//            }
             
         })
         
@@ -919,29 +900,10 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             //
         })
         
-        //////////// trying to add if statment for clear button
-        
-        //map.getBounds().contains(marker.getPosition())
-        
-        
-        
-        //        actionSheet.addButtonWithTitle("clear", type: AHKActionSheetButtonType.Destructive, handler:  { (AHKActionSheet) -> Void in
-        //
-        //
-        //            self.clrAllRoute()
-        //
-        //        })
-        
-        //         self.clearBtn = UIBarButtonItem(image: UIImage(named: "icon_me"), style: UIBarButtonItemStyle.Plain, target: self, action: "clrRoute:")
+
         
         self.clearBtn = UIBarButtonItem(title: "clear", style: UIBarButtonItemStyle.Plain, target: self, action: "clrRoute:")
-        
-        
-        //
-        // self.navigationItem.rightBarButtonItems?.append(clearBtn)
-        
-        
-        
+
         self.navigationItem.setRightBarButtonItem(self.clearBtn, animated: true)
         
         
@@ -1448,10 +1410,12 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     
     //clear all route
     func clrAllRoute() {
-        
-        originMarker.map = nil
-        destinationMarker.map = nil
-        routePolyline.map = nil
+    
+//        if (self.originMarker.map != nil) {
+//        originMarker.map = nil
+//        destinationMarker.map = nil
+//        routePolyline.map = nil
+//        }
         
         originMarker = nil
         destinationMarker = nil
