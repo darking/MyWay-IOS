@@ -16,7 +16,10 @@ class ListAllReports:NSObject, NSURLConnectionDelegate, NSURLConnectionDataDeleg
     func getReportList(caller: mainViewController)
     {
         callerMap = caller;
-        let Group4Url:NSURL?=NSURL(string:"http://mobile.comxa.com/reports/all_reports.json");
+        //let Group4Url:NSURL?=NSURL(string:"http://mobile.comxa.com/reports/all_reports.json");
+        
+        let Group4Url:NSURL?=NSURL(string:"http://172.16.8.105:8080/MyWayWeb/viewAllTrafficReports");
+
         
         let urlReq:NSURLRequest=NSURLRequest(URL:Group4Url!);
         let connection:NSURLConnection?=NSURLConnection(request: urlReq, delegate: self, startImmediately: true);
