@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftSideMenu/CommentLocation.swift"
-            timestampString = "465721578.142295"
+            timestampString = "466417499.792572"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "objectFromDict(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -159,7 +159,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
             endingLineNumber = "49"
-            landmarkName = "connectionDidFinishLoading(_:)"
+            landmarkName = "connection(_:didReceiveData:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

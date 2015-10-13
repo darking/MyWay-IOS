@@ -15,6 +15,7 @@ class DriverReportCustomTVC: UITableViewCell {
     @IBOutlet weak var reportDate: UILabel!;
     @IBOutlet weak var reportTime: UILabel!;
     
+    @IBOutlet weak var reportLocation: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

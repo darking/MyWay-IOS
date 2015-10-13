@@ -25,15 +25,15 @@ class MonitorReportVC:UIViewController, ENSideMenuDelegate{
     var backButton:UIBarButtonItem = UIBarButtonItem();
     override func viewDidLoad() {
 //        self.backButton = UIBarButtonItem(title: "Back", style: , target: <#AnyObject?#>, action: "back")
-        daysArray = read.getDays();
-        var dayValue:Data = daysArray.objectAtIndex(index) as! Data;
-        DayTF.text = dayValue.day;
-        StartLTF.text = dayValue.startlocation;
-        EndLTF.text = dayValue.endlocation;
-        SpeedTF.text = dayValue.speed;
-        lblDriverName.text = SelectDriverReportVC.holder.driverName;
-    }
-    func back() {
+//        daysArray = read.getDays();
+//        var dayValue:Data = daysArray.objectAtIndex(index) as! Data;
+//        DayTF.text = dayValue.day;
+//        StartLTF.text = dayValue.startlocation;
+//        EndLTF.text = dayValue.endlocation;
+//        SpeedTF.text = dayValue.speed;
+//        lblDriverName.text = SelectDriverReportVC.holder.driverName;
+//    }
+//    func back() {
 //        var goBack:DaysListTVC = UIStoryboard(name: "", bundle: nil)
     }
     

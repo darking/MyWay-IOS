@@ -42,6 +42,10 @@ class DatesTVC: UITableViewController,UIPickerViewDelegate,UIPickerViewDataSourc
     @IBAction func startDateChanged(sender: UIDatePicker) {
         var dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        
+        AddNewPOI.holder.startDate = dateFormatter.stringFromDate(sender.date)
 //        dateFormatter.timeStyle = NSDateFormatterStyle.MediumStyle
         startDate.text = dateFormatter.stringFromDate(sender.date)
     }
@@ -49,6 +53,10 @@ class DatesTVC: UITableViewController,UIPickerViewDelegate,UIPickerViewDataSourc
     @IBAction func endDateChanged(sender: UIDatePicker) {
         var dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        
+        AddNewPOI.holder.endDate = dateFormatter.stringFromDate(sender.date)
 //        dateFormatter.timeStyle = NSDateFormatterStyle.MediumStyle
         endDate.text = dateFormatter.stringFromDate(sender.date)
     }

@@ -62,7 +62,9 @@ class AddNewFavoriteVC: UIViewController, UIImagePickerControllerDelegate, UINav
             
             let viewControllers: [UIViewController] = self.navigationController!.viewControllers as! [UIViewController];
             self.navigationController!.popToViewController(viewControllers[viewControllers.count - 2], animated: true);
-        
+            var alert : UIAlertView = UIAlertView(title: "Submited !", message: "Favourite have been added.",
+                delegate: nil, cancelButtonTitle: "OK");
+            alert.show();
             
         }
         

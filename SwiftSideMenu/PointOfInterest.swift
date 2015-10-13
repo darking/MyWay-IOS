@@ -18,6 +18,8 @@ class PointOfInterest { //EVENTS
     var lat = "0.0";
     var long = "0.0";
     var placeLocation:CLLocation = CLLocation();
+    var startDate = "";
+    var endDate = "";
     
     init (values:NSDictionary){
         
@@ -27,6 +29,8 @@ class PointOfInterest { //EVENTS
         self.images = values.valueForKey("imageArray") as! NSMutableArray;
         self.long = values.valueForKey("long") as! String;
         self.lat = values.valueForKey("lat") as! String;
+        self.lat = values.valueForKey("startDate") as! String;
+        self.lat = values.valueForKey("endDate") as! String;
         
     }
     
@@ -43,6 +47,8 @@ class PointOfInterest { //EVENTS
         values.setValue(long, forKey: "long");
         values.setValue(lat, forKey: "lat");
         values.setValue(images, forKey: "images");
+        values.setValue(startDate, forKey: "startDate");
+        values.setValue(endDate, forKey: "endDate");
         return values;
     }
     
