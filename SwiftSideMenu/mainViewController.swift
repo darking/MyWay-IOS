@@ -670,17 +670,6 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         self.title = "MyWay";
         
         
-        //SHOW REPORT
-        
-        
-        ListAllReports().getReportList(self)
-        
-        var myDoubLat = 29.2786581
-        var myDoubLng = 48.0681501
-        
-        //./SHOW REPORT
-        
-
         
         //Begin of Find Address2
         actionSheet.addButtonWithTitle("Find Address2", type: AHKActionSheetButtonType.Default, handler:{ (AHKActionSheet) -> Void in
@@ -793,6 +782,23 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         if favBool == true {
             
         }
+        
+        actionSheet.addButtonWithTitle("show Reports", type: AHKActionSheetButtonType.Default, handler:
+            { (AHKActionSheet) -> Void in
+                
+                //SHOW REPORT
+                
+                
+                ListAllReports().getReportList(self)
+                
+                var myDoubLat = 29.2786581
+                var myDoubLng = 48.0681501
+                
+                //./SHOW REPORT
+                
+                self.clearBtn.enabled = true
+                
+        })
         
         actionSheet.addButtonWithTitle("Show Favourite", type: AHKActionSheetButtonType.Default, handler:  { (AHKActionSheet) -> Void in
             
@@ -1118,13 +1124,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     //   }
     
     
-    
-    
-    
-    
-    
-    
-    
+ 
     
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
