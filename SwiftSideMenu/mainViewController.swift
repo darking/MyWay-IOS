@@ -692,6 +692,7 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
             
         })
         
+        //MARK: Direction from current location
         actionSheet.addButtonWithTitle("Get Direction from Current Location", type: AHKActionSheetButtonType.Default, handler:  { (AHKActionSheet) -> Void in
             
             let addressAlert = UIAlertController(title: "Create Route", message: "Connect locations with a route:", preferredStyle: UIAlertControllerStyle.Alert)
