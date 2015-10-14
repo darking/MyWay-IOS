@@ -11,9 +11,8 @@ import GoogleMaps
 class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSURLConnectionDelegate, NSURLConnectionDataDelegate {
     var reports:NSArray = [];
     var dataConnection:NSMutableData=NSMutableData();
-    
+    let driverdash:DriverDashboard = DriverDashboard();
     @IBOutlet weak var lblDriverName: UILabel!
-    //let settingDriverDestination = true;
     @IBOutlet weak var driverImage: UIImageView!
     @IBOutlet weak var reportsTable: UITableView!
     @IBOutlet weak var lblDriverLocation: UILabel!
@@ -23,16 +22,22 @@ class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBAction func btnSetDestination(sender: AnyObject) {
         println("\(DriverDetailsVC.SettingDriverDestination.settingDriverDestination)");
         if (DriverDetailsVC.SettingDriverDestination.settingDriverDestination == false) {
+           
             DriverDetailsVC.SettingDriverDestination.settingDriverDestination = true;
+           
             var showMap:ShowOnMapVC = UIStoryboard(name: "reqLocaiton", bundle: nil).instantiateViewControllerWithIdentifier("ShowOnMapVC") as! ShowOnMapVC;
+            
             showMap.title = "Set Driver Destination";
-            showMap.message = "Please select a location to send to the driver";
-            var driverDestination:CLLocation = CLLocation(latitude: 29.282064, longitude: 47.994);
+            //var driverDestination:CLLocation = CLLocation(latitude: 29.282064, longitude: 47.994);
             //Zahraa st 305 (29.282064 , 47.994)
-            showMap.location = driverDestination;
-            let (latitud, longitud) =  GetLocationVC().getCurrentLocation();
+            
+            var lat:NSString = driverdash.dashboard[0].valueForKey!("driver_currentLat") as! NSString;
+            
+            var lon:NSString = driverdash.dashboard[0].valueForKey!("driver_currentLon") as! NSString;
+            showMap.location = CLLocation(latitude: lat.doubleValue, longitude: lon.doubleValue);
+            
             self.presentViewController(showMap, animated: true, completion: {});
-        }
+                    }
     }
     func connection(connection: NSURLConnection, didReceiveData data: NSData) {
         dataConnection.appendData(data)
@@ -49,7 +54,7 @@ class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         // Alternative workaround for crash!!
         //dataConnection = NSMutableData();
     }
-
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         var nib = UINib(nibName: "DriverReportCustomCell", bundle: nil);
@@ -60,20 +65,13 @@ class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         lblDriverName.sizeToFit();
         lblDriverEmail.text = DriverBean.driverHolder.driverEmail;
         lblDriverEmail.sizeToFit();
-        driverImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: DriverBean.driverHolder.driverImageURL!)!)!)!;
-        //if drivers gps is off then:
-        lblDriverLocation.text = "GPS Currently off!";
-        lblDriverLocation.sizeToFit();
-        // else
-        // getLocation from web services
-        //Read battery percntage from driver's phone
-        lblBatteryStatus.text = "50%";
-        let allReportsUrl:NSURL?=NSURL(string:"http://mobile.comxa.com/parents/driver_report.json");
-        
+//        driverImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: DriverBean.driverHolder.driverImageURL!)!)!)!;
+        let allReportsUrl:NSURL?=NSURL(string:"http://192.168.1.9:8080/MyWayWeb/getAllDriverReports?driverUserName=" + DriverBean.driverHolder.driverUsername!);
+        println(DriverBean.driverHolder.driverUsername!);
         let urlReq:NSURLRequest=NSURLRequest(URL:allReportsUrl!);
         let connection:NSURLConnection?=NSURLConnection(request: urlReq, delegate: self, startImmediately: true);
         
-        
+        reportsTable.reloadData();
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -86,6 +84,16 @@ class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         self.presentViewController(notifyNewDestinationSet, animated: true, completion: nil);
         DriverDetailsVC.SettingDriverDestination.settingDriverDestination = false;
         }
+        println(driverdash.dashboard);
+        var lat:String = driverdash.dashboard[0].valueForKey("driver_currentLat") as! String;
+        var lon:String = driverdash.dashboard[0].valueForKey("driver_currentLon") as! String;
+        lblDriverLocation.text = lat + ", " + lon;
+        lblDriverLocation.sizeToFit();
+        lblBatteryStatus.text = (driverdash.dashboard[0].valueForKey("report_battaryStatus") as! String) + "%";
+        if DriverDetailsVC.SettingDriverDestination.settingDriverDestination == true {
+            println("\(DriverDetailsVC.SettingDriverDestination.getSentDriverLatLong())");
+        }
+        
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -100,9 +108,10 @@ class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         cell.reportReason.sizeToFit();
         cell.reportTime?.text = "Time: " + (reports[indexPath.row].valueForKey("report_time") as! String);
         cell.reportTime.sizeToFit();
+        println("This should be the date: " + (reports[indexPath.row].valueForKey("report_date") as! String));
         cell.reportDate?.text = "Date: " + (reports[indexPath.row].valueForKey("report_date") as! String);
         cell.reportDate.sizeToFit();
-        cell.reportLocation?.text = "Location: " + (reports[indexPath.row].valueForKey("report_location") as! String);
+        cell.reportLocation?.text = "Location: " + (reports[indexPath.row].valueForKey("report_lon") as! String) + ", " + (reports[indexPath.row].valueForKey("report_lat") as! String);
         cell.reportLocation.sizeToFit();
         cell.sizeToFit();
         
@@ -113,12 +122,17 @@ class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     struct SettingDriverDestination {
         static var settingDriverDestination = false;
-        
-        static func setDriverLatLong(driverLatLong:CLLocationCoordinate2D) -> CLLocation {
-            let lat = driverLatLong.latitude;
-            let long = driverLatLong.longitude;
-            let driverLatLong:CLLocation = CLLocation(latitude: lat, longitude: long);
-            return driverLatLong;
+        static var lat:CLLocationDegrees?;
+        static var long:CLLocationDegrees?;
+        static func setSentDriverLatLong(driverLatLong:CLLocationCoordinate2D){
+            self.lat = driverLatLong.latitude;
+            self.long = driverLatLong.longitude;
+        }
+        static func getSentDriverLatLong() -> CLLocationCoordinate2D {
+            var sentLocation:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: lat!, longitude: long!);
+            return sentLocation;
+            
         }
     }
+   
 }

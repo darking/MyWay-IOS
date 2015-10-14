@@ -15,8 +15,10 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
     }
     var dataConnection:NSMutableData=NSMutableData();
     var drivers:NSArray = [];
+    var userInput:UITextField?;
+
     @IBAction func addDriver(sender: AnyObject) {
-        var addUserAlert:UIAlertController = UIAlertController(title: "Add Driver", message: "Please specify driver username/email", preferredStyle: .Alert);
+                var addUserAlert:UIAlertController = UIAlertController(title: "Add Driver", message: "Please specify driver username/email", preferredStyle: .Alert);
         //Create and add the Cancel action
         let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
             //Do some stuff
@@ -25,12 +27,22 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
         //Create and an option action
         let sendToDriver: UIAlertAction = UIAlertAction(title: "Submit", style: .Default) { action -> Void in
             //Do some other stuff
+            let settings = NSUserDefaults.standardUserDefaults();
+            var requestBody = "parentUserName=pifss" + "&driverIdentifier=aba" //+ self.userInput!.text;
+            var requestUrl = "http://192.168.1.9:8080/MyWayWeb/addUserDriver"
+            
+            self.request(requestBody, url: requestUrl) {
+                
+                responseData in
+                
+            }
         }
         addUserAlert.addAction(sendToDriver)
         //Add a text field
         addUserAlert.addTextFieldWithConfigurationHandler { textField -> Void in
             //TextField configuration
             //textField.textColor = UIColor.blueColor()
+            self.userInput = textField;
         }
         
         //Present the AlertController
@@ -44,7 +56,9 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
     
     func connectionDidFinishLoading(connection: NSURLConnection) {
          var valuesDict: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataConnection, options: nil, error: nil) as! NSDictionary;
+        println(valuesDict);
         drivers = valuesDict.objectForKey("result_data") as! NSArray
+        
         println(drivers);
         self.tableView.reloadData();
         tableView.estimatedRowHeight = 44.0;
@@ -57,12 +71,13 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        let allDriversUrl:NSURL?=NSURL(string:"http://mobile.comxa.com/parents/all_drivers.json");
+        var driverSetDes:DriverSetDestinationDao = DriverSetDestinationDao();
+        //driverSetDest
+        var thisUser:String = "ahmed"
+        let allDriversUrl:NSURL?=NSURL(string:"http://192.168.1.9:8080/MyWayWeb/getUserDrivers?parentUserName=" + thisUser);
         
         let urlReq:NSURLRequest=NSURLRequest(URL:allDriversUrl!);
         let connection:NSURLConnection?=NSURLConnection(request: urlReq, delegate: self, startImmediately: true);
-        println("print Group5 URL in class DriversListVC");
-        println(allDriversUrl!);
 
         var nib = UINib(nibName: "DriverCustomCell", bundle: nil);
         tableView.registerNib(nib, forCellReuseIdentifier: "driverCustomCell");
@@ -94,13 +109,13 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
             cell.driverName.text = drivers[indexPath.row]["driver_username"] as! String;
             cell.driverName.sizeToFit();
             //Change to email later
-            cell.driverUsername.text = drivers[indexPath.row].valueForKey("driver_name") as! String;
+            cell.driverUsername.text = drivers[indexPath.row].valueForKey("driver_email") as! String;
             
             cell.driverUsername.sizeToFit();
-            let driverImageURL:String = drivers[indexPath.row].valueForKey("driver_image") as! String;
-            let profileImage:UIImage = UIImage(data: NSData(contentsOfURL: NSURL(string: driverImageURL)!)!)!;
-            println(cell.frame.height);
-            cell.driverImage.image = profileImage;
+//            let driverImageURL:String = drivers[indexPath.row].valueForKey("driver_image") as! String;
+//            let profileImage:UIImage = UIImage(data: NSData(contentsOfURL: NSURL(string: driverImageURL)!)!)!;
+//            println(cell.frame.height);
+//            cell.driverImage.image = profileImage;
         }
         return cell;
     }
@@ -109,9 +124,20 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
             let index = indexPath.row;
             var redirect:DriverDetailsVC = UIStoryboard(name: "Team5_m", bundle: nil).instantiateViewControllerWithIdentifier("DDVC") as! DriverDetailsVC;
             DriverBean.driverHolder.driverUsername = drivers[indexPath.row].valueForKey("driver_username") as! String!;
-            DriverBean.driverHolder.driverEmail = drivers[indexPath.row].valueForKey("driver_name") as! String;
-            DriverBean.driverHolder.driverImageURL = drivers[indexPath.row].valueForKey("driver_image") as! String;
+            DriverBean.driverHolder.driverEmail = drivers[indexPath.row].valueForKey("driver_email") as! String;
+//            DriverBean.driverHolder.driverImageURL = drivers[indexPath.row].valueForKey("driver_image") as! String;
             
             self.navigationController?.pushViewController(redirect, animated: true)        }
+    }
+    func request(requestBody:String, url:String, completionHandler: (responseData:NSData) -> ()) {
+        var request = NSMutableURLRequest()
+        request.URL = NSURL(string: url)
+        request.HTTPMethod = "POST"
+        request.HTTPBody = requestBody.dataUsingEncoding(NSUTF8StringEncoding)
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) {
+            (response, data, error) in
+            println(data)
+        }
     }
 }

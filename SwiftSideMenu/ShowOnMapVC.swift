@@ -811,7 +811,17 @@ class ShowOnMapVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDelega
     
     func mapView(mapView: GMSMapView!, didTapAtCoordinate coordinate: CLLocationCoordinate2D) {
         if (DriverDetailsVC.SettingDriverDestination.settingDriverDestination == true) {
-            DriverDetailsVC.SettingDriverDestination.setDriverLatLong(coordinate);
+            DriverDetailsVC.SettingDriverDestination.setSentDriverLatLong(coordinate);
+            var submitDest:DriverSetDestinationDao = DriverSetDestinationDao();
+            var lon:String = String(stringInterpolationSegment: coordinate.longitude);
+            var lat:String = String(stringInterpolationSegment: coordinate.latitude);
+            var requestBody = "userName=omar&lat=" + lat + "&lon=" + lon //+ self.userInput!.text;
+            var requestUrl = "http://192.168.1.9:8080/MyWayWeb/setDriverDestination"
+            submitDest.request(requestBody, url: requestUrl, completionHandler: {
+                
+                responseData in
+                
+            })
             //println("Coordinates (\(coordinate.latitude),\(coordinate.longitude)) sent to driver!");
 //            
 //            var backToDriverDetails:DriverDetailsVC = UIStoryboard(name: "Team5_m", bundle: nil).instantiateViewControllerWithIdentifier("DDVC") as! DriverDetailsVC;
