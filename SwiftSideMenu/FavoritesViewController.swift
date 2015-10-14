@@ -96,6 +96,8 @@ class FavoritesViewController:UITableViewController, UITableViewDataSource, UITa
     }
     
     
+    
+    
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
         if favesList.count == 0 {
             let suggestNew = UITableViewRowAction(style: .Normal, title: "Add Some!") { action, index in
@@ -116,17 +118,53 @@ class FavoritesViewController:UITableViewController, UITableViewDataSource, UITa
                 favorite.name = tempFav.valueForKey("name") as! String;
                 favorite.lat = tempFav.valueForKey("latitude") as! String;
                 favorite.long = tempFav.valueForKey("longitude") as! String;
+                
 //                Manager.deleteFavorite(favorite);
+               
                 //MARK: delete favorite
                 //after calling the deletefavorite method we need to reload the page so the changes are shown
+//                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//                    self.tableView.reloadData()
+//                })
+
+                
                 var df:DeleteFavorite = DeleteFavorite();
                 df.deleteFavorite(favorite);
                 self.favesList.removeObject(indexPath.row);
                 self.tableView.reloadData();
                 //to reload the page information when i go back to it from the add
+//                
+//                var alert = UIAlertController(title: "Title", message: "Message", preferredStyle: UIAlertControllerStyle.Alert)
+//                
+//                // The order in which we add the buttons matters.
+//                // Add the Cancel button first to match the iOS 7 default style,
+//                // where the cancel button is at index 0.
+//                alert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in
+//                   // self.handelCancel()
+//                }))
+//                
+//                alert.addAction(UIAlertAction(title: "Confirm", style: .Default, handler: { (action: UIAlertAction!) in
+//                    //self.handelConfirm()
+//                    var manageFavs:ManageFavorites = ManageFavorites();
+//                    manageFavs.favoritesVC = self;
+//                    manageFavs.startConnection();
+//                    self.tableView.reloadData();
+//                }))
+//                
+//                self.presentViewController(alert, animated: true, completion: nil)
+                
+                var manageFavs:ManageFavorites = ManageFavorites();
+                manageFavs.favoritesVC = self;
+                manageFavs.startConnection();
+                self.tableView.reloadData();
+                
             }
             
             sendToMap.backgroundColor = UIColor.redColor()
+            
+            
+         
+            
             return [sendToMap]
         }
     }
@@ -173,6 +211,22 @@ class FavoritesViewController:UITableViewController, UITableViewDataSource, UITa
         tableView.separatorColor = UIColor.clearColor()
         tableView.dataSource = self
         tableView.delegate = self
+        
+        //MARK: MASH
+        var refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: Selector("refreshCell"), forControlEvents: UIControlEvents.AllEvents)
+        
+        self.refreshControl = refreshControl
+    }
+    
+    
+    func refreshCell() {
+        
+        
+        
+        self.tableView.reloadData()
+        refreshControl?.endRefreshing()
+        
     }
     
     func setFavsData(favs: NSArray) {
