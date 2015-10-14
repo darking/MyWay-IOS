@@ -101,7 +101,8 @@ class TypesOfPOI:UITableViewController, NSURLConnectionDataDelegate, NSURLConnec
     
     lazy var data = NSMutableData()
     func startConnection(){
-        let urlPath: String = "http://mobile.comxa.com/events/all_events.jsp"
+        //let urlPath: String = "http://mobile.comxa.com/events/all_events.jsp"
+        let urlPath: String = "http://172.16.8.105:8080/MyWayWeb/viewAllEvents"
         var url: NSURL = NSURL(string: urlPath)!
         var request: NSURLRequest = NSURLRequest(URL: url)
         

@@ -18,18 +18,18 @@ class URLCommentConnection: UIViewController, NSURLConnectionDelegate, NSURLConn
         
         var URLStatement:NSString = cl.urlParams(CommentLocation().valuesDicForComment(comment,id_report: id_report));
         
-        //URLStatement.dataUsingEncoding(NSUTF8StringEncoding);
+        URLStatement.dataUsingEncoding(NSUTF8StringEncoding);
         
-        // var urlStr : NSString = URLStatement.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+         var urlStr : NSString = URLStatement.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         
-       // let Group4Url:NSURL?=NSURL(string:"http://mobile.comxa.com/reports/all_reports.json?\(urlStr)");
+        let Group4Url:NSURL?=NSURL(string:"http://172.16.8.105:8080/MyWayWeb/postTrafficReport?\(urlStr)");
         
         
-        let Group4Url:NSURL?=NSURL(string:"http://mobile.comxa.com/reports/all_reports.json?");
-        let request = NSMutableURLRequest(URL:Group4Url!);
-        request.HTTPMethod="POST";
-        request.HTTPBody=URLStatement.dataUsingEncoding(NSUTF8StringEncoding);
-        
+//        let Group4Url:NSURL?=NSURL(string:"http://172.16.8.105:8080/MyWayWeb/postTrafficReport?");
+//        let request = NSMutableURLRequest(URL:Group4Url!);
+//        request.HTTPMethod="POST";
+//        request.HTTPBody=URLStatement.dataUsingEncoding(NSUTF8StringEncoding);
+//        
         let urlReq:NSURLRequest=NSURLRequest(URL:Group4Url!);
         let connection:NSURLConnection?=NSURLConnection(request: urlReq, delegate: self, startImmediately: true);
         println("print Group4 URL in class URLCommentConnection");
