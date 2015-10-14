@@ -51,7 +51,7 @@ class DaysListTVC:UITableViewController, ENSideMenuDelegate {
     }
     override func viewDidLoad(){
         super.viewDidLoad();
-        daysArray = read.getDays();
+   //     daysArray = read.getDays();
     }
     
 }

@@ -22,7 +22,11 @@ class RegisterViewController: UIViewController {
         
         var manager = ConnectionManager()
         
-        manager.isUsernameExist(username.text, completionHandler: { (usernameExist) -> () in
+        manager.isUsernameExist(username.text) {
+            
+            usernameExist in
+            
+            println("username_exist_is  " + usernameExist.description)
             
             if usernameExist {
                 self.usernameErrorLabel.hidden = false
@@ -30,7 +34,7 @@ class RegisterViewController: UIViewController {
                 self.usernameErrorLabel.hidden = true
             }
             
-        })
+        }
         
     }
     
@@ -52,7 +56,7 @@ class RegisterViewController: UIViewController {
         } else {
             manager.register(UserInfo(username: username.text, password: password.text, email: email.text))
             
-            self.dismissViewControllerAnimated(true, completion: nil)
+            //self.dismissViewControllerAnimated(true, completion: nil)
         }
         
     }

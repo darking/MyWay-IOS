@@ -44,7 +44,7 @@ class CommentLocation{
         var reportTypeId: Int = dict.objectForKey("reportTypeId")as! Int;
         var urlUsername:String = dict.objectForKey("username") as! String;
         
-        var urlStatement:NSString = "report_id=\(reportTypeId)&report_comments=\(comment)&report_lat=\(lat)&report_log=\(lon)&username=\(urlUsername)"
+        var urlStatement:NSString = "report_type=\(reportTypeId)&report_comments=\(comment)&report_lat=\(lat)&report_log=\(lon)&username=\(urlUsername)"
         
         println(urlStatement);
         
@@ -60,6 +60,8 @@ class CommentLocation{
         var lon: NSString = values.objectForKey("lon") as! NSString;
         var reportTypeId: Int = values.objectForKey("reportTypeId") as! Int;
         commentLocation.username=values.objectForKey("username") as! String;
+        println("here i will print report id");
+        println(reportTypeId)
         commentLocation.reportTypeId=reportTypeId as Int;
         commentLocation.reportLocation=CLLocation(latitude: lat.doubleValue, longitude: lon.doubleValue)
         println("Tring to know what is in the commentLocation")
