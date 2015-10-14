@@ -8,6 +8,7 @@
 
 
 import Foundation
+import SwiftyJSON
 
 class ManageFavorites: NSObject, NSURLConnectionDataDelegate, NSURLConnectionDelegate {
     let favs  = "favoriteList.plist";
@@ -18,35 +19,35 @@ class ManageFavorites: NSObject, NSURLConnectionDataDelegate, NSURLConnectionDel
     lazy var data = NSMutableData()
     
     
-    func addFavorite(newFav: Favorite){
-        
-        let urlPath: String = "http://mobile.comxa.com/fav/add_fav.json"
-        var url: NSURL = NSURL(string: urlPath)!
-        var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
-        request.HTTPMethod = "POST";
-        
-        var username = NSUserDefaults.standardUserDefaults().stringForKey("username")!;
-        var bodyData = "username=\(username)&name=\(newFav.name)&latitude=\(newFav.lat)&longitude=\(newFav.long)";
-        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
-        var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: true)!
-        
-    }
+//    func addFavorite(newFav: Favorite){
+//        
+//        let urlPath: String = "http://172.16.8.105:8080/MyWayWeb/addFavorite"
+//        var url: NSURL = NSURL(string: urlPath)!
+//        var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
+//        request.HTTPMethod = "POST";
+//        
+//        var username = NSUserDefaults.standardUserDefaults().stringForKey("username")!;
+//        var bodyData = "username=\(username)&name=\(newFav.name)&latitude=\(newFav.lat)&longitude=\(newFav.long)";
+//        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
+//        var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: true)!
+//        
+//    }
     
-    func deleteFavorite(newFav: Favorite){
-        let urlPath: String = "http://mobile.comxa.com/fav/delete_fav.json"
-        var url: NSURL = NSURL(string: urlPath)!
-        var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
-        request.HTTPMethod = "POST";
-        
-        var username = NSUserDefaults.standardUserDefaults().stringForKey("username")!;
-        var bodyData = "username=\(username)&name=\(newFav.name)";
-        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
-        var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: true)!
-    }
+//    func deleteFavorite(newFav: Favorite){
+//        let urlPath: String = "http://172.16.8.105:8080/MyWayWeb/deleteFavorite"
+//        var url: NSURL = NSURL(string: urlPath)!
+//        var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
+//        request.HTTPMethod = "POST";
+//        
+//        var username = NSUserDefaults.standardUserDefaults().stringForKey("username")!;
+//        var bodyData = "username=\(username)&name=\(newFav.name)";
+//        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
+//        var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: true)!
+//    }
     
     
     func startConnection(){
-        let urlPath: String = "http://mobile.comxa.com/fav/all_favs.json"
+        let urlPath: String = "http://172.16.8.105:8080/MyWayWeb/viewAllFavorites"
         var url: NSURL = NSURL(string: urlPath)!
         var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "POST";
@@ -70,9 +71,11 @@ class ManageFavorites: NSObject, NSURLConnectionDataDelegate, NSURLConnectionDel
     
     func connectionDidFinishLoading(connection: NSURLConnection) {
         var err: NSError
+        
         // throwing an error on the line below (can't figure out where the error message is)
         var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
-        
+        println("jsonResult:\(jsonResult)");
+
         list = jsonResult.valueForKey("result_data") as! NSMutableArray;
         
         // To check if the request was successful
@@ -85,12 +88,9 @@ class ManageFavorites: NSObject, NSURLConnectionDataDelegate, NSURLConnectionDel
             alert.show();
         } else {
             
-            //send the list to the class that called it
-            //        var favoritesVC: FavoritesViewController = FavoritesViewController();
-            
             favoritesVC.setFavsData(list);
             callerForPins.setFavsData(list);
-            
+        
         }
         println(list);
     }

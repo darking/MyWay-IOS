@@ -45,13 +45,15 @@ class AddNewFavoriteVC: UIViewController, UIImagePickerControllerDelegate, UINav
             favorite.long = holder.favLong;
             
             
-            var Manager:ManageFavorites = ManageFavorites();
+//            var Manager:ManageFavorites = ManageFavorites();
             
             //old code: to add the fav to the plist
 //            Manager.addFavoriteToPList(favorite);
             
             //send new fav to web service
-            Manager.addFavorite(favorite);
+//            Manager.addFavorite(favorite);
+            var af:AddFavorite = AddFavorite();
+            af.addFavorite(favorite);
             
             AddNewFavoriteVC.holder.favLat = "";
             AddNewFavoriteVC.holder.favLong = "";
@@ -59,6 +61,8 @@ class AddNewFavoriteVC: UIViewController, UIImagePickerControllerDelegate, UINav
             AddNewPOI.holder.typeName = "";
             AddNewPOI.holder.pointLat = "";
             AddNewPOI.holder.pointLong = "";
+            
+//
             
             let viewControllers: [UIViewController] = self.navigationController!.viewControllers as! [UIViewController];
             self.navigationController!.popToViewController(viewControllers[viewControllers.count - 2], animated: true);

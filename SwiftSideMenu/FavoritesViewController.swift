@@ -16,7 +16,7 @@ class FavoritesViewController:UITableViewController, UITableViewDataSource, UITa
  
     
     
-    var favesList:NSArray = NSArray();
+    var favesList:NSMutableArray = NSMutableArray();
     var tableViewx = UITableView()
     var showsArray = Array<String>()
     
@@ -116,9 +116,14 @@ class FavoritesViewController:UITableViewController, UITableViewDataSource, UITa
                 favorite.name = tempFav.valueForKey("name") as! String;
                 favorite.lat = tempFav.valueForKey("latitude") as! String;
                 favorite.long = tempFav.valueForKey("longitude") as! String;
-                Manager.deleteFavorite(favorite);
-//                self.tableView.reloadData();//to reload the page information when i go back to it from the add
-            
+//                Manager.deleteFavorite(favorite);
+                //MARK: delete favorite
+                //after calling the deletefavorite method we need to reload the page so the changes are shown
+                var df:DeleteFavorite = DeleteFavorite();
+                df.deleteFavorite(favorite);
+                self.favesList.removeObject(indexPath.row);
+                self.tableView.reloadData();
+                //to reload the page information when i go back to it from the add
             }
             
             sendToMap.backgroundColor = UIColor.redColor()
@@ -146,7 +151,10 @@ class FavoritesViewController:UITableViewController, UITableViewDataSource, UITa
 //        favesList = manageFavs.showAllFavorites() as NSArray;
         
         //get/set the values of the faves by calling the getAllFavorites method in ManageFavorites class
-        
+        var manageFavs:ManageFavorites = ManageFavorites();
+        manageFavs.favoritesVC = self;
+        manageFavs.startConnection();
+        self.tableView.reloadData();
 
     }
     
@@ -155,9 +163,9 @@ class FavoritesViewController:UITableViewController, UITableViewDataSource, UITa
     override func viewDidLoad() {
         super.viewDidLoad();
         
-        var manageFavs:ManageFavorites = ManageFavorites();
-        manageFavs.favoritesVC = self;
-        manageFavs.startConnection();
+//        var manageFavs:ManageFavorites = ManageFavorites();
+//        manageFavs.favoritesVC = self;
+//        manageFavs.startConnection();
         
         self.tableView.reloadData();//to reload the page information when i go back to it from the add
         
@@ -168,8 +176,7 @@ class FavoritesViewController:UITableViewController, UITableViewDataSource, UITa
     }
     
     func setFavsData(favs: NSArray) {
-        favesList = favs;
+        favesList = favs as! NSMutableArray;
         self.tableView.reloadData();//to reload the page information when i go back to it from the add
     }
-
 }

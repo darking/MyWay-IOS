@@ -72,6 +72,8 @@
 		49A961FF1BC18F8600622F8D /* Team3.storyboard.favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A961FE1BC18F8600622F8D /* Team3.storyboard.favorites.storyboard */; };
 		49A962011BC18F9900622F8D /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A962001BC18F9900622F8D /* Share.swift */; };
 		49DBC8C91BCA227800BF0C0C /* DatesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DBC8C81BCA227800BF0C0C /* DatesTVC.swift */; };
+		49EEC6001BCE667A001E365C /* AddFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EEC5FF1BCE667A001E365C /* AddFavorite.swift */; };
+		49EEC6021BCE6CF5001E365C /* DeleteFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EEC6011BCE6CF5001E365C /* DeleteFavorite.swift */; };
 		522B7E921B86253C000A5678 /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E901B86253C000A5678 /* ENSideMenu.swift */; };
 		522B7E931B86253C000A5678 /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B7E911B86253C000A5678 /* ENSideMenuNavigationController.swift */; };
 		526014461B81CB1600498D3F /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526014451B81CB1500498D3F /* MenuItem.swift */; };
@@ -268,6 +270,8 @@
 		49A961FE1BC18F8600622F8D /* Team3.storyboard.favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Team3.storyboard.favorites.storyboard; sourceTree = "<group>"; };
 		49A962001BC18F9900622F8D /* Share.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
 		49DBC8C81BCA227800BF0C0C /* DatesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatesTVC.swift; sourceTree = "<group>"; };
+		49EEC5FF1BCE667A001E365C /* AddFavorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFavorite.swift; sourceTree = "<group>"; };
+		49EEC6011BCE6CF5001E365C /* DeleteFavorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteFavorite.swift; sourceTree = "<group>"; };
 		522B7E901B86253C000A5678 /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ENSideMenu.swift; path = SwiftSideMenu/ENSideMenu.swift; sourceTree = SOURCE_ROOT; };
 		522B7E911B86253C000A5678 /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ENSideMenuNavigationController.swift; path = SwiftSideMenu/ENSideMenuNavigationController.swift; sourceTree = SOURCE_ROOT; };
 		526014451B81CB1500498D3F /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
@@ -558,6 +562,8 @@
 				49A961F81BC18F4700622F8D /* FavoritesViewController.swift */,
 				49A961FA1BC18F5F00622F8D /* ManageFavorites.swift */,
 				49A961FC1BC18F7500622F8D /* RetrieveFavoritesInterface.swift */,
+				49EEC5FF1BCE667A001E365C /* AddFavorite.swift */,
+				49EEC6011BCE6CF5001E365C /* DeleteFavorite.swift */,
 			);
 			name = "Team3 Favorites";
 			sourceTree = "<group>";
@@ -1071,11 +1077,13 @@
 				143615671B8F1A62003FD356 /* AddNewPOI.swift in Sources */,
 				141092751B8CB76300CD3114 /* GooglePlace.swift in Sources */,
 				6C8346781BC680C200FD0CE4 /* UISettings.swift in Sources */,
+				49EEC6021BCE6CF5001E365C /* DeleteFavorite.swift in Sources */,
 				6C8346681BC680B100FD0CE4 /* DriverDetailsVC.swift in Sources */,
 				6CE9A2511B8474A300BE4004 /* FileCopier.swift in Sources */,
 				6CE9A2501B8474A300BE4004 /* addNewPoint.swift in Sources */,
 				6C8346761BC680C200FD0CE4 /* AppSettings.swift in Sources */,
 				49A962011BC18F9900622F8D /* Share.swift in Sources */,
+				49EEC6001BCE667A001E365C /* AddFavorite.swift in Sources */,
 				0787800B1BBD1F9F00B7CF93 /* KhalidViewController.swift in Sources */,
 				6C83465A1BC680A000FD0CE4 /* CommentLocation.swift in Sources */,
 				5C13258B198E2A9A00CA49BE /* ViewController.swift in Sources */,
