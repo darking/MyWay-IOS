@@ -12,7 +12,7 @@ class DriverDashboard:NSObject, NSURLConnectionDelegate, NSURLConnectionDataDele
     var dashboard:NSArray = [];
     override init(){
         super.init()
-        let dashboardUrl:NSURL?=NSURL(string:"http://192.168.1.9:8080/MyWayWeb/getDriverDashBoard?driverUserName=omar");
+        let dashboardUrl:NSURL?=NSURL(string:"http://192.168.8.102:8080/MyWayWeb/getDriverDashBoard?driverUserName=omar");
         let urlReq:NSURLRequest=NSURLRequest(URL:dashboardUrl!);
         let connection:NSURLConnection?=NSURLConnection(request: urlReq, delegate: self, startImmediately: true);
         }

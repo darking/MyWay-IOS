@@ -29,7 +29,7 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
             //Do some other stuff
             let settings = NSUserDefaults.standardUserDefaults();
             var requestBody = "parentUserName=pifss" + "&driverIdentifier=aba" //+ self.userInput!.text;
-            var requestUrl = "http://192.168.1.9:8080/MyWayWeb/addUserDriver"
+            var requestUrl = "http://192.168.8.102:8080/MyWayWeb/addUserDriver"
             
             self.request(requestBody, url: requestUrl) {
                 
@@ -74,7 +74,7 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
         var driverSetDes:DriverSetDestinationDao = DriverSetDestinationDao();
         //driverSetDest
         var thisUser:String = "ahmed"
-        let allDriversUrl:NSURL?=NSURL(string:"http://192.168.1.9:8080/MyWayWeb/getUserDrivers?parentUserName=" + thisUser);
+        let allDriversUrl:NSURL?=NSURL(string:"http://192.168.8.102:8080/MyWayWeb/getUserDrivers?parentUserName=" + thisUser);
         
         let urlReq:NSURLRequest=NSURLRequest(URL:allDriversUrl!);
         let connection:NSURLConnection?=NSURLConnection(request: urlReq, delegate: self, startImmediately: true);
