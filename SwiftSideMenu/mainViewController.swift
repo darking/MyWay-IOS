@@ -53,7 +53,10 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     var dict = Dictionary<String, String>()
     var hItems:NSDictionary=NSDictionary();
     
+    
+    //MARK: initilizing bar buttons
     var clearBtn:UIBarButtonItem = UIBarButtonItem()
+    var searchBtn:UIBarButtonItem = UIBarButtonItem()
     
     var favBool:Bool = false
     var favString:String = "Toggle Fav"
@@ -669,6 +672,8 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
         
         self.title = "MyWay";
         
+        //MARK: add search bar
+        UIBarButtonItem(title: "search", style: UIBarButtonItemStyle.Plain, target: self, action: "clrRoute:")
         
         
         //Begin of Find Address2
