@@ -58,24 +58,16 @@ class AddDriverVC:UIViewController{
         NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.latitude.description, forKey: "lat");
         NSUserDefaults.standardUserDefaults().setValue(currentLocation.coordinate.longitude.description, forKey: "lon");
     }
-    
     override func viewDidDisappear(animated: Bool) {
         locationManager.stopUpdatingLocation();
     }
     override func viewDidAppear(animated: Bool) {
         locationManager.startUpdatingLocation();
     }
-    
-    
-    
     @IBAction func BackBtn(sender: AnyObject) {
-        
-        
     }
     @IBOutlet weak var DeleteBtnAction: UIButton!
     @IBAction func DeleteBtn(sender: AnyObject) {
-        
-    //Here Is Gonna be the code to delete it from the DataBase
-        
+        //Here Is Gonna be the code to delete it from the DataBase
     }
 }

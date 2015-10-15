@@ -200,7 +200,8 @@ class AddNewPOI: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     func startConnection(){
         //let urlPath: String = "http://mobile.comxa.com/events/all_events.jsp"
-        let urlPath: String = "http://172.16.8.105:8080/MyWayWeb/requestEvent"
+//        let urlPath: String = "http://172.16.8.105:8080/MyWayWeb/requestEvent"
+        let urlPath: String = "\(ConnectionString.holder.URL)/requestEvent"
         var url: NSURL = NSURL(string: urlPath)!
         var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "POST";
@@ -244,6 +245,10 @@ class AddNewPOI: UIViewController, UIImagePickerControllerDelegate, UINavigation
             //emptying the favs static holder
             AddNewFavoriteVC.holder.favLat = "";
             AddNewFavoriteVC.holder.favLong = "";
+            
+            //emptying driver's static holder
+            DriverDetailsVC.holder.driverLat = 0.0;
+            DriverDetailsVC.holder.driverLong = 0.0;
             
             println("lat: " + AddNewPOI.holder.pointLat + " long: " + AddNewPOI.holder.pointLong);
             
