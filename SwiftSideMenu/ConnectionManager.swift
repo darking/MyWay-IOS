@@ -112,7 +112,7 @@ class ConnectionManager {
 
     func login(username:String, password:String, completionHandler:(validData:Bool) -> ()) {
         var requestBody = "username=" + username + "&password=" + password
-        var requestUrl = "http://172.16.8.105:8080/MyWayWeb/loginUser"
+        var requestUrl = "\(ConnectionString.holder.URL)/loginUser"
         
         request(requestBody, url: requestUrl) {
             responseData in
@@ -138,7 +138,7 @@ class ConnectionManager {
     
     func isUsernameExist(username:String, completionHandler:(usernameExist:Bool) -> ()) {
         var requestBody = "username=" + username
-        var requestUrl = "http://172.16.8.105:8080/MyWayWeb/checkUsername"
+        var requestUrl = "\(ConnectionString.holder.URL)/checkUsername"
         
         request(requestBody, url: requestUrl) {
             responseData in
@@ -161,7 +161,7 @@ class ConnectionManager {
         var imageBase64Format = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
         
         var requestBody = "username=" + newUser.getUsername() + "&password=" + newUser.getPassword() + "&email=" + newUser.getEmail() + "&profilepicture=" + imageBase64Format
-        var requestUrl = "http://172.16.8.105:8080/MyWayWeb/registerUser"
+        var requestUrl = "\(ConnectionString.holder.URL)/registerUser"
         
         request(requestBody, url: requestUrl) {
             responseData in
@@ -170,7 +170,7 @@ class ConnectionManager {
     
     func getUserInfo (username:String, completionHandler:(userInfo:UserInfo) -> ()) {
         var requestBody = "username=" + username
-        var requestUrl = "http://172.16.8.105:8080/MyWayWeb/getUserProfile"
+        var requestUrl = "\(ConnectionString.holder.URL)/getUserProfile"
         
         request(requestBody, url: requestUrl) {
             responseData in
@@ -201,7 +201,7 @@ class ConnectionManager {
         var imageBase64Format = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
         
         var requestBody = "username=" + user.getUsername() + "&password=" + user.getPassword() + "&email=" + user.getEmail() + "&profile_picture=" + imageBase64Format
-        var requestUrl = "http://172.16.8.105:8080/MyWayWeb/updateUserProfile"
+        var requestUrl = "\(ConnectionString.holder.URL)/updateUserProfile"
         
         request(requestBody, url: requestUrl) {
             responseData in

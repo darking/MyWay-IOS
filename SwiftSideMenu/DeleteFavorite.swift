@@ -17,7 +17,8 @@ class DeleteFavorite: NSObject, NSURLConnectionDataDelegate, NSURLConnectionDele
     lazy var data = NSMutableData()
 
     func deleteFavorite(newFav: Favorite){
-        let urlPath: String = "http://172.16.8.105:8080/MyWayWeb/deleteFavorite"
+//        let urlPath: String = "http://172.16.8.105:8080/MyWayWeb/deleteFavorite"
+        let urlPath: String = "\(ConnectionString.holder.URL)/deleteFavorite"
         var url: NSURL = NSURL(string: urlPath)!
         var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "POST";

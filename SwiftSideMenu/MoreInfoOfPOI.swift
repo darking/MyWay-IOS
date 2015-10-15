@@ -60,6 +60,7 @@ class MoreInfoOfPOI:UIViewController{
         let imageNames = event.objectForKey("image") as! String;
         
 //        to check if there is an image by the user.. it would set it, else it would leave it as the default image that is already set on the storyboard
+        //MARK: IMAGE SETTING
         if imageNames != ""{
             if let url = NSURL(string: imageNames) {
                 if let data = NSData(contentsOfURL: url){
