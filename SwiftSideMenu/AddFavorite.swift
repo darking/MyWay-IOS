@@ -17,7 +17,9 @@ class AddFavorite: NSObject, NSURLConnectionDataDelegate, NSURLConnectionDelegat
     
     func addFavorite(newFav: Favorite){
         
-        let urlPath: String = "http://172.16.8.105:8080/MyWayWeb/addFavorite"
+//        let urlPath: String = "http://172.16.8.105:8080/MyWayWeb/addFavorite"
+        let urlPath: String = "\(ConnectionString.holder.URL)/addFavorite"
+
         var url: NSURL = NSURL(string: urlPath)!
         var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "POST";

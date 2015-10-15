@@ -47,7 +47,8 @@ class ManageFavorites: NSObject, NSURLConnectionDataDelegate, NSURLConnectionDel
     
     
     func startConnection(){
-        let urlPath: String = "http://172.16.8.105:8080/MyWayWeb/viewAllFavorites"
+//        let urlPath: String = "http://172.16.8.105:8080/MyWayWeb/viewAllFavorites"
+        let urlPath: String = "\(ConnectionString.holder.URL)/viewAllFavorites"
         var url: NSURL = NSURL(string: urlPath)!
         var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "POST";

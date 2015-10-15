@@ -853,7 +853,7 @@ class ShowOnMapVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDelega
             var lon:String = String(stringInterpolationSegment: coordinate.longitude);
             var lat:String = String(stringInterpolationSegment: coordinate.latitude);
             var requestBody = "userName=omar&lat=" + lat + "&lon=" + lon //+ self.userInput!.text;
-            var requestUrl = "http://192.168.1.9:8080/MyWayWeb/setDriverDestination"
+            var requestUrl = "\(ConnectionString.holder.URL)/setDriverDestination"
             submitDest.request(requestBody, url: requestUrl, completionHandler: {
                 
                 responseData in

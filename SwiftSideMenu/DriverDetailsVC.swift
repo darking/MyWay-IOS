@@ -66,7 +66,7 @@ class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         lblDriverEmail.text = DriverBean.driverHolder.driverEmail;
         lblDriverEmail.sizeToFit();
 //        driverImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: DriverBean.driverHolder.driverImageURL!)!)!)!;
-        let allReportsUrl:NSURL?=NSURL(string:"http://192.168.1.9:8080/MyWayWeb/getAllDriverReports?driverUserName=" + DriverBean.driverHolder.driverUsername!);
+        let allReportsUrl:NSURL?=NSURL(string:"\(ConnectionString.holder.URL)/getAllDriverReports?driverUserName=" + DriverBean.driverHolder.driverUsername!);
         println(DriverBean.driverHolder.driverUsername!);
         let urlReq:NSURLRequest=NSURLRequest(URL:allReportsUrl!);
         let connection:NSURLConnection?=NSURLConnection(request: urlReq, delegate: self, startImmediately: true);

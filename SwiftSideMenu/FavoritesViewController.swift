@@ -222,8 +222,6 @@ class FavoritesViewController:UITableViewController, UITableViewDataSource, UITa
     
     func refreshCell() {
         
-        
-        
         self.tableView.reloadData()
         refreshControl?.endRefreshing()
         
