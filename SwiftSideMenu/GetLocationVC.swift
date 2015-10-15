@@ -136,11 +136,12 @@ class GetLocationVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDele
         
         retrieveMarkerInfo(markerCoorLat, lng: markerCoorLng)
         
-      
-        
-        
+
         NSUserDefaults.standardUserDefaults().setValue(String(format:"%f", markerCoorLat), forKey: latKey)
         NSUserDefaults.standardUserDefaults().setValue(String(format:"%f", markerCoorLng), forKey: lngKey)
+        
+        //MARK: Static Coordinates
+        
         //setting the coordinates in the static vars in addnewpoi class
         AddNewPOI.holder.pointLat = String(format:"%f", markerCoorLat);
         AddNewPOI.holder.pointLong = String(format:"%f", markerCoorLng);
@@ -149,9 +150,44 @@ class GetLocationVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDele
         AddNewFavoriteVC.holder.favLat = String(format:"%f", markerCoorLat);
         AddNewFavoriteVC.holder.favLong = String(format:"%f", markerCoorLng);
         
+        //Set location for driver class
+        DriverDetailsVC.holder.driverLat = markerCoorLat;
+        DriverDetailsVC.holder.driverLong = markerCoorLng;
+        
         println("static point var set, lat: " + AddNewPOI.holder.pointLat + " long: " + AddNewPOI.holder.pointLong);
         
         println("static fav var set, lat: " + AddNewFavoriteVC.holder.favLat + " long: " + AddNewFavoriteVC.holder.favLong);
+        
+        println("static driver var set, lat: " + "\(DriverDetailsVC.holder.driverLat)" + " long: " + "\(DriverDetailsVC.holder.driverLong)");
+        
+        //MARK: sending the coordinates to the server
+        if (DriverDetailsVC.SettingDriverDestination.settingDriverDestination == true) {
+            println("SENDING: Driver's coordinates!!!!");
+            DriverDetailsVC.SettingDriverDestination.lat = DriverDetailsVC.holder.driverLat as? CLLocationDegrees;
+            DriverDetailsVC.SettingDriverDestination.long = DriverDetailsVC.holder.driverLong as? CLLocationDegrees;
+            var submitDest:DriverSetDestinationDao = DriverSetDestinationDao();
+            var lon:String = "\(DriverDetailsVC.holder.driverLong)";
+            var lat:String = "\(DriverDetailsVC.holder.driverLat)";
+            var requestBody = "userName=omar&lat=" + lat + "&lon=" + lon //+ self.userInput!.text;
+            var requestUrl = "\(ConnectionString.holder.URL)/setDriverDestination"
+            submitDest.request(requestBody, url: requestUrl, completionHandler: {
+                
+                responseData in
+                
+            })
+            
+            AddNewFavoriteVC.holder.favLat = "";
+            AddNewFavoriteVC.holder.favLong = "";
+            //emptying the static holders of the POI
+            AddNewPOI.holder.typeName = "";
+            AddNewPOI.holder.pointLat = "";
+            AddNewPOI.holder.pointLong = "";
+            
+            //emptying driver's static holder
+            DriverDetailsVC.holder.driverLat = 0.0;
+            DriverDetailsVC.holder.driverLong = 0.0;
+            
+        }
         
         self.dismissViewControllerAnimated(true, completion: {})
 

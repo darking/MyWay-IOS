@@ -246,6 +246,10 @@ class AddNewPOI: UIViewController, UIImagePickerControllerDelegate, UINavigation
             AddNewFavoriteVC.holder.favLat = "";
             AddNewFavoriteVC.holder.favLong = "";
             
+            //emptying driver's static holder
+            DriverDetailsVC.holder.driverLat = 0.0;
+            DriverDetailsVC.holder.driverLong = 0.0;
+            
             println("lat: " + AddNewPOI.holder.pointLat + " long: " + AddNewPOI.holder.pointLong);
             
             var tempCor2: AnyObject? = NSUserDefaults.standardUserDefaults().valueForKey("pointLat");

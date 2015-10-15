@@ -19,24 +19,34 @@ class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var lblBatteryStatus: UILabel!
     @IBOutlet weak var lblDriverEmail: UILabel!
     
+    struct holder {
+        static var driverLat:Double = 0.0;
+        static var driverLong:Double = 0.0;
+    }
+    
     @IBAction func btnSetDestination(sender: AnyObject) {
         println("\(DriverDetailsVC.SettingDriverDestination.settingDriverDestination)");
         if (DriverDetailsVC.SettingDriverDestination.settingDriverDestination == false) {
            
             DriverDetailsVC.SettingDriverDestination.settingDriverDestination = true;
-           
-            var showMap:ShowOnMapVC = UIStoryboard(name: "reqLocaiton", bundle: nil).instantiateViewControllerWithIdentifier("ShowOnMapVC") as! ShowOnMapVC;
+//
+//            var showMap:ShowOnMapVC = UIStoryboard(name: "reqLocaiton", bundle: nil).instantiateViewControllerWithIdentifier("ShowOnMapVC") as! ShowOnMapVC;
+//            
+//            showMap.title = "Set Driver Destination";
+//            //var driverDestination:CLLocation = CLLocation(latitude: 29.282064, longitude: 47.994);
+//            //Zahraa st 305 (29.282064 , 47.994)
+//            
+//            var lat:NSString = driverdash.dashboard[0].valueForKey!("driver_currentLat") as! NSString;
+//            
+//            var lon:NSString = driverdash.dashboard[0].valueForKey!("driver_currentLon") as! NSString;
+//            showMap.location = CLLocation(latitude: lat.doubleValue, longitude: lon.doubleValue);
+//            
+//            self.presentViewController(showMap, animated: true, completion: {});
             
-            showMap.title = "Set Driver Destination";
-            //var driverDestination:CLLocation = CLLocation(latitude: 29.282064, longitude: 47.994);
-            //Zahraa st 305 (29.282064 , 47.994)
             
-            var lat:NSString = driverdash.dashboard[0].valueForKey!("driver_currentLat") as! NSString;
+            var getLocation:GetLocationVC = UIStoryboard(name: "GetLocation", bundle: nil).instantiateViewControllerWithIdentifier("GetLocationVC") as! GetLocationVC;
+             self.presentViewController(getLocation, animated: true, completion: {});
             
-            var lon:NSString = driverdash.dashboard[0].valueForKey!("driver_currentLon") as! NSString;
-            showMap.location = CLLocation(latitude: lat.doubleValue, longitude: lon.doubleValue);
-            
-            self.presentViewController(showMap, animated: true, completion: {});
                     }
     }
     func connection(connection: NSURLConnection, didReceiveData data: NSData) {
@@ -95,6 +105,7 @@ class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         }
         
     }
+    
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1;

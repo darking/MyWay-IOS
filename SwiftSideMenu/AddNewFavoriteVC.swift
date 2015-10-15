@@ -62,7 +62,10 @@ class AddNewFavoriteVC: UIViewController, UIImagePickerControllerDelegate, UINav
             AddNewPOI.holder.pointLat = "";
             AddNewPOI.holder.pointLong = "";
             
-//
+            //emptying driver's static holder
+            DriverDetailsVC.holder.driverLat = 0.0;
+            DriverDetailsVC.holder.driverLong = 0.0;
+            
             
             let viewControllers: [UIViewController] = self.navigationController!.viewControllers as! [UIViewController];
             self.navigationController!.popToViewController(viewControllers[viewControllers.count - 2], animated: true);
