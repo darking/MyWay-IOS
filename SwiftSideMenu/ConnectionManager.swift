@@ -182,14 +182,14 @@ class ConnectionManager {
             var profile_picture = (userInfo.valueForKey("profile_picture")?.description!)!
             
             var user = UserInfo(username: username, password: password, email: email)
-            
+            /*
             var imageData = NSData(base64EncodedString: profile_picture, options: .allZeros)
             
             var fileUtils:FileUtils = FileUtils(fileName: username)
             var imagePath:String = fileUtils.docsPath()
             fileUtils.createIfNotExistUnderDocs();
             ImageConversion().writeImage(UIImage(data: imageData!)!, toFile: imagePath)
-            
+            */
             completionHandler (userInfo:user)
         }
     }
