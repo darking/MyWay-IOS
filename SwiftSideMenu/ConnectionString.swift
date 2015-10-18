@@ -9,7 +9,7 @@
 import Foundation
 class ConnectionString {
     struct holder {
-        static var URL = "http://192.168.8.102:8080/MyWayWeb"; //Adnan's Connection
+        static var URL = "http://54.88.107.56:80/MyWayWeb"; //Adnan's Connection
     }
     
 }

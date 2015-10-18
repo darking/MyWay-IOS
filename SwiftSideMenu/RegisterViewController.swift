@@ -46,7 +46,7 @@ class RegisterViewController: UIViewController {
     @IBAction func registerAction(sender: AnyObject) {
         
         var manager = ConnectionManager()
-                
+        
         if password.text != confirmPassword.text || manager.isValidEmail(email.text) == false || usernameErrorLabel.hidden == false {
             
             let alertController = UIAlertController(title: "Warning", message: "Invalid data", preferredStyle: UIAlertControllerStyle.Alert)
@@ -56,7 +56,7 @@ class RegisterViewController: UIViewController {
         } else {
             manager.register(UserInfo(username: username.text, password: password.text, email: email.text))
             
-            //self.dismissViewControllerAnimated(true, completion: nil)
+            self.dismissViewControllerAnimated(true, completion: nil)
         }
         
     }
@@ -98,5 +98,5 @@ class RegisterViewController: UIViewController {
         }
         
     }
-
+    
 }
