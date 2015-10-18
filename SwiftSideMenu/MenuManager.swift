@@ -37,12 +37,12 @@ class MenuManager {
         item.itemVCIdentifier = "DLVC";
         item.storyBoardName = "Team5_m";
         MenuItem.all.menuItems.addObject(item);
-        
-        item = MenuItem();
-        item.itemTitle = "Daily Route";
-        item.itemVCIdentifier = "DailyRouteVC";
-        item.storyBoardName = "Team5_m";
-        MenuItem.all.menuItems.addObject(item);
+//        
+//        item = MenuItem();
+//        item.itemTitle = "Daily Route";
+//        item.itemVCIdentifier = "DailyRouteVC";
+//        item.storyBoardName = "Team5_m";
+//        MenuItem.all.menuItems.addObject(item);
         
         item = MenuItem();
         item.itemTitle = "Post Report";
@@ -92,11 +92,11 @@ class MenuManager {
 //        item.storyBoardName = "keyboard";
 //        MenuItem.all.menuItems.addObject(item);
         
-        item = MenuItem();
-        item.itemTitle = "Digital Address";
-        item.itemVCIdentifier = "GeoVC";
-        item.storyBoardName = "GeoMash";
-        MenuItem.all.menuItems.addObject(item);
+//        item = MenuItem();
+//        item.itemTitle = "Digital Address";
+//        item.itemVCIdentifier = "GeoVC";
+//        item.storyBoardName = "GeoMash";
+//        MenuItem.all.menuItems.addObject(item);
         
         //
         
