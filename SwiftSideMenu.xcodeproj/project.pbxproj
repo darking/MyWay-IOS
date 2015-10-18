@@ -116,6 +116,7 @@
 		6C8346791BC680C200FD0CE4 /* DriverReportCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C8346711BC680C200FD0CE4 /* DriverReportCustomCell.xib */; };
 		6C9B1FE41BCE6D38003116CA /* DriverDashboardDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B1FE31BCE6D38003116CA /* DriverDashboardDao.swift */; };
 		6C9B1FE81BCEB118003116CA /* DriverSetDestinationDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B1FE71BCEB118003116CA /* DriverSetDestinationDao.swift */; };
+		6C9B1FEC1BD0199C003116CA /* ParentMonitoringImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C9B1FEB1BD0199C003116CA /* ParentMonitoringImages.xcassets */; };
 		6CBD03C91BCB8AAB00F97984 /* CLLocationSpeedExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBD03C61BCB8AAB00F97984 /* CLLocationSpeedExtension.swift */; };
 		6CBD03CA1BCB8AAB00F97984 /* JSONClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBD03C71BCB8AAB00F97984 /* JSONClass.swift */; };
 		6CBD03CB1BCB8AAB00F97984 /* SpeedClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBD03C81BCB8AAB00F97984 /* SpeedClass.swift */; };
@@ -327,6 +328,7 @@
 		6C8346711BC680C200FD0CE4 /* DriverReportCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriverReportCustomCell.xib; sourceTree = "<group>"; };
 		6C9B1FE31BCE6D38003116CA /* DriverDashboardDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverDashboardDao.swift; sourceTree = "<group>"; };
 		6C9B1FE71BCEB118003116CA /* DriverSetDestinationDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverSetDestinationDao.swift; sourceTree = "<group>"; };
+		6C9B1FEB1BD0199C003116CA /* ParentMonitoringImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ParentMonitoringImages.xcassets; sourceTree = "<group>"; };
 		6CBD03C61BCB8AAB00F97984 /* CLLocationSpeedExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationSpeedExtension.swift; sourceTree = "<group>"; };
 		6CBD03C71BCB8AAB00F97984 /* JSONClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONClass.swift; sourceTree = "<group>"; };
 		6CBD03C81BCB8AAB00F97984 /* SpeedClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedClass.swift; sourceTree = "<group>"; };
@@ -814,6 +816,7 @@
 				6CD32AB01BC2887200F6D684 /* MonitorReports */,
 				6CD32AA11BC2883A00F6D684 /* EmansWork */,
 				6CD32A941BC27FFB00F6D684 /* OmYasser */,
+				6C9B1FEB1BD0199C003116CA /* ParentMonitoringImages.xcassets */,
 			);
 			name = Team5;
 			sourceTree = "<group>";
@@ -967,6 +970,7 @@
 				0779195C1BBBF46200AB0DB1 /* traffic.png in Resources */,
 				143615651B8F1A34003FD356 /* defaultPoint.jpg in Resources */,
 				0779194C1BBBF46200AB0DB1 /* Major.png in Resources */,
+				6C9B1FEC1BD0199C003116CA /* ParentMonitoringImages.xcassets in Resources */,
 				0770A9951BC4F157007080F1 /* OnMapCons.png in Resources */,
 				077919511BBBF46200AB0DB1 /* construction.png in Resources */,
 				6C8346771BC680C200FD0CE4 /* Team5.storyboard in Resources */,
