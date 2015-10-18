@@ -29,7 +29,7 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
             //Do some other stuff
             let settings = NSUserDefaults.standardUserDefaults();
             var requestBody = "parentUserName=pifss" + "&driverIdentifier=aba" //+ self.userInput!.text;
-            var requestUrl = "http://192.168.8.102:8080/MyWayWeb/addUserDriver"
+            var requestUrl = ConnectionString.holder.URL + "/addUserDriver"
             
             self.request(requestBody, url: requestUrl) {
                 
@@ -74,8 +74,8 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
         var driverSetDes:DriverSetDestinationDao = DriverSetDestinationDao();
         //driverSetDest
         var thisUser:String = "ahmed"
-        let allDriversUrl:NSURL?=NSURL(string:"http://192.168.8.102:8080/MyWayWeb/getUserDrivers?parentUserName=" + thisUser);
-        
+        let allDriversUrl:NSURL?=NSURL(string:ConnectionString.holder.URL + "/getUserDrivers?parentUserName=" + thisUser);
+        println(allDriversUrl);
         let urlReq:NSURLRequest=NSURLRequest(URL:allDriversUrl!);
         let connection:NSURLConnection?=NSURLConnection(request: urlReq, delegate: self, startImmediately: true);
 
@@ -110,7 +110,7 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
             cell.driverName.sizeToFit();
             //Change to email later
             cell.driverUsername.text = drivers[indexPath.row].valueForKey("driver_email") as! String;
-            
+            cell.driverImage.image = UIImage(named:"chauffer");
             cell.driverUsername.sizeToFit();
 //            let driverImageURL:String = drivers[indexPath.row].valueForKey("driver_image") as! String;
 //            let profileImage:UIImage = UIImage(data: NSData(contentsOfURL: NSURL(string: driverImageURL)!)!)!;

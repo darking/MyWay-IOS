@@ -78,6 +78,12 @@ class mainViewController: UIViewController, CLLocationManagerDelegate, GMSMapVie
     @IBAction func menuButton(sender: AnyObject) {
         toggleSideMenuView()
     }
+    
+
+    @IBAction func toggle(sender: AnyObject) {
+        toggleSideMenuView()
+    }
+    
     @IBOutlet weak var lblInfo: UILabel!
     @IBOutlet weak var lblLongLat: UILabel!
     

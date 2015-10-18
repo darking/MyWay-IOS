@@ -38,7 +38,13 @@
                     <toolbarItems>
                         <barButtonItem title="Item" id="Yev-MG-rL2"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="SwiftSideMenu" id="MeF-18-D9R"/>
+                    <navigationItem key="navigationItem" title="SwiftSideMenu" id="MeF-18-D9R">
+                        <barButtonItem key="rightBarButtonItem" image="side_menu_icon.png" id="D0c-2k-WUK">
+                            <connections>
+                                <action selector="toggle:" destination="vXZ-lx-hvc" id="IvD-JJ-h5G"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="viewMap" destination="WAZ-x0-6fa" id="kEE-se-UPZ"/>
@@ -49,6 +55,9 @@
             <point key="canvasLocation" x="99" y="243"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="side_menu_icon.png" width="36" height="36"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

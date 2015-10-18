@@ -12,13 +12,13 @@ class DriverDashboard:NSObject, NSURLConnectionDelegate, NSURLConnectionDataDele
     var dashboard:NSArray = [];
     override init(){
         super.init()
-        let dashboardUrl:NSURL?=NSURL(string:"http://192.168.8.102:8080/MyWayWeb/getDriverDashBoard?driverUserName=omar");
+        let dashboardUrl:NSURL?=NSURL(string:ConnectionString.holder.URL + "/getDriverDashBoard?driverUserName=karim");
         let urlReq:NSURLRequest=NSURLRequest(URL:dashboardUrl!);
         let connection:NSURLConnection?=NSURLConnection(request: urlReq, delegate: self, startImmediately: true);
         }
     func connectionDidFinishLoading(connection: NSURLConnection) {
-        var valuesDict: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataConnection, options: nil, error: nil) as! NSDictionary;
-        dashboard = valuesDict.objectForKey("result_data") as! NSArray
+//        var valuesDict: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataConnection, options: nil, error: nil) as! NSDictionary;
+//        dashboard = valuesDict.objectForKey("result_data") as! NSArray
     }
     func connection(connection: NSURLConnection, didReceiveData data: NSData) {
         dataConnection.appendData(data)

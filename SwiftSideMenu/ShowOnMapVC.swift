@@ -386,91 +386,106 @@ class ShowOnMapVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDelega
     //VIEW DID LOAD()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        
-        self.ShareButton = UIBarButtonItem(title: "Share", style: UIBarButtonItemStyle.Plain, target: self, action: "ShareButtonAction:");
-        
-        self.navigationItem.setRightBarButtonItem(self.ShareButton, animated: true);
-        
-        self.ShareButton.enabled = false;
-        
-        if (show){ //enables the share only if the class calling showOnMapVC sets "show" as true.
-            self.ShareButton.enabled = true;
-        }
-
-        
-        //request location
-        
-        var myCoor:CLLocationCoordinate2D = location!.coordinate
-        
-       // println("myCoor latgtitude: \(myCoor.longitude), myCoor longtitude: \(myCoor.longitude)")
-        
-       //MARK: Event mall
-        
-        originMarker = GMSMarker(position: myCoor)
-        originMarker.map = self.viewMap
-        originMarker.icon = GMSMarker.markerImageWithColor(UIColor.blueColor())
-        originMarker.title = message
-        lblTitle.text = myTitle
-        
-        
-        //MARK: BEGIN Direction
-        
-        createDirecton()
-        
-        //MARK: END OF Direction
-        
-        
-        if waypointsArray.count > 0 {
-            for waypoint in waypointsArray {
-                let lat: Double = (waypoint.componentsSeparatedByString(",")[0] as NSString).doubleValue
-                let lng: Double = (waypoint.componentsSeparatedByString(",")[1] as NSString).doubleValue
-                
-                let marker = GMSMarker(position: CLLocationCoordinate2DMake(lat, lng))
-                marker.map = viewMap
-                marker.icon = GMSMarker.markerImageWithColor(UIColor.purpleColor())
-                
-                markersArray.append(marker)
+        if (DriverDetailsVC.SettingDriverDestination.gettingReportCoordinate == true) {
+            var reportCoor:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: DriverDetailsVC.SettingDriverDestination.reportLocationAtIndexLat, longitude: DriverDetailsVC.SettingDriverDestination.reportLocationAtIndexLon);
+            originMarker = GMSMarker(position: reportCoor);
+            originMarker.map = self.viewMap
+            originMarker.icon = GMSMarker.markerImageWithColor(UIColor.cyanColor())
+            var camera = GMSCameraPosition.cameraWithLatitude(DriverDetailsVC.SettingDriverDestination.reportLocationAtIndexLat,
+                longitude: DriverDetailsVC.SettingDriverDestination.reportLocationAtIndexLon, zoom: 12)
+            //  mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
+            
+            viewMap.camera = camera
+            
+            viewMap.camera = GMSCameraPosition.cameraWithTarget(reportCoor, zoom: 10.0)
+            
+            viewMap.delegate = self
+        } else {
+            locationManager.delegate = self
+            locationManager.requestWhenInUseAuthorization()
+            
+            self.ShareButton = UIBarButtonItem(title: "Share", style: UIBarButtonItemStyle.Plain, target: self, action: "ShareButtonAction:");
+            
+            self.navigationItem.setRightBarButtonItem(self.ShareButton, animated: true);
+            
+            self.ShareButton.enabled = false;
+            
+            if (show){ //enables the share only if the class calling showOnMapVC sets "show" as true.
+                self.ShareButton.enabled = true;
             }
+            
+            
+            //request location
+            
+            var myCoor:CLLocationCoordinate2D = location!.coordinate
+            
+            // println("myCoor latgtitude: \(myCoor.longitude), myCoor longtitude: \(myCoor.longitude)")
+            
+            //MARK: Event mall
+            
+            originMarker = GMSMarker(position: myCoor)
+            originMarker.map = self.viewMap
+            originMarker.icon = GMSMarker.markerImageWithColor(UIColor.blueColor())
+            originMarker.title = message
+            lblTitle.text = myTitle
+            
+            
+            //MARK: BEGIN Direction
+            
+            createDirecton()
+            
+            //MARK: END OF Direction
+            
+            
+            if waypointsArray.count > 0 {
+                for waypoint in waypointsArray {
+                    let lat: Double = (waypoint.componentsSeparatedByString(",")[0] as NSString).doubleValue
+                    let lng: Double = (waypoint.componentsSeparatedByString(",")[1] as NSString).doubleValue
+                    
+                    let marker = GMSMarker(position: CLLocationCoordinate2DMake(lat, lng))
+                    marker.map = viewMap
+                    marker.icon = GMSMarker.markerImageWithColor(UIColor.purpleColor())
+                    
+                    markersArray.append(marker)
+                }
+            }
+            //./request location
+            
+            // Do any additional setup after loading the view, typically from a nib.
+            
+            //lblLongLat.text = "long and lat havn't change"
+            
+            var camera = GMSCameraPosition.cameraWithLatitude(29.3760648,
+                longitude: 47.9818853, zoom: 12)
+            //  mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
+            
+            viewMap.camera = camera
+            
+            viewMap.camera = GMSCameraPosition.cameraWithTarget(myCoor, zoom: 10.0)
+            
+            viewMap.delegate = self
+            
+            locationManager.delegate = self
+            locationManager.requestWhenInUseAuthorization()
+            
+            // mapView.myLocationEnabled = true
+            viewMap.settings.compassButton = true;
+            viewMap.settings.myLocationButton = true;
+            
+            //mapView.trafficEnabled = true;
+            
+            
+            // println(deviceLocation())
+            
+            // self.view = mapView
+            
         }
-        //./request location
-        
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        //lblLongLat.text = "long and lat havn't change"
-        
-        var camera = GMSCameraPosition.cameraWithLatitude(29.3760648,
-            longitude: 47.9818853, zoom: 12)
-        //  mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
-       
-        viewMap.camera = camera
-        
-         viewMap.camera = GMSCameraPosition.cameraWithTarget(myCoor, zoom: 10.0)
-        
-        viewMap.delegate = self
-        
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        
-       // mapView.myLocationEnabled = true
-        viewMap.settings.compassButton = true;
-        viewMap.settings.myLocationButton = true;
-        
-        //mapView.trafficEnabled = true;
-        
-        
-       // println(deviceLocation())
-        
-       // self.view = mapView
-        
     }
     //./VIEW DID LOAD()
-    
-    
+
+
     //testing
-    
+
     //device location is working
     func deviceLocation() -> NSString {
         
@@ -479,7 +494,7 @@ class ShowOnMapVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDelega
         return theLocation
         
     }
-    
+
     func locationManager(manager: CLLocationManager!, didUpdateToLocation newLocation: CLLocation!, fromLocation oldLocation: CLLocation!) {
         println(oldLocation.debugDescription)
         println(newLocation.debugDescription)
