@@ -18,7 +18,7 @@ class ListAllReports:NSObject, NSURLConnectionDelegate, NSURLConnectionDataDeleg
         callerMap = caller;
         //let Group4Url:NSURL?=NSURL(string:"http://mobile.comxa.com/reports/all_reports.json");
         
-        let Group4Url:NSURL?=NSURL(string:"http://172.16.8.105:8080/MyWayWeb/viewAllTrafficReports");
+        let Group4Url:NSURL?=NSURL(string:"http://54.88.107.56:80/MyWayWeb/viewAllTrafficReports");
 
         
         let urlReq:NSURLRequest=NSURLRequest(URL:Group4Url!);
