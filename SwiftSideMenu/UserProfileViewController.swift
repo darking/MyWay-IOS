@@ -50,9 +50,10 @@ class UserProfileViewController: UIViewController, ENSideMenuDelegate {
             
             self.username.text = userInfo.getUsername()
             self.email.text = userInfo.getEmail()
-            
+            /*
             var converter = ImageConversion()
-            //self.profilePicture.image = converter.readImageAtPath(userInfo.getProfilePictureFilePath())
+            self.profilePicture.image = converter.readImageAtPath(userInfo.getProfilePictureFilePath())
+            */
         }
         
     }

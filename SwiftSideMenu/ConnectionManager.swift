@@ -9,107 +9,107 @@
 import Foundation
 
 class ConnectionManager {
-
-/*************** Saving the data locally ***************/
     
-//    struct common {
-//        static let accountsFileName:String = "accounts";
-//        static let accountsFileType:String = "plist";
-//        static var loaded:Bool = false;
-//        static var allAccounts:NSMutableArray = NSMutableArray();
-//        static var filePath:String = "";
-//    }
-//    
-//    func loadAccountValues()->NSMutableArray{
-//        let utils = FileUtils(fileName: ConnectionManager.common.accountsFileName);
-//        utils.fileType = ConnectionManager.common.accountsFileType;
-//        utils.createIfNotExistUnderDocs();
-//        let filePath = utils.docsPath();
-//        ConnectionManager.common.filePath = filePath;
-//        let valuesArray = NSMutableArray(contentsOfFile: filePath);
-//        return valuesArray!;
-//    }
-//    
-//    func loadAccounts(){
-//        let valuesArray = self.loadAccountValues();
-//        var allAccounts:NSMutableArray = NSMutableArray();
-//        for (var i = 0 ; i < valuesArray.count; i++){
-//            var currentElement:NSDictionary = valuesArray.objectAtIndex(i) as! NSDictionary;
-//            allAccounts.addObject(UserInfo(values: currentElement));
-//        }
-//        ConnectionManager.common.loaded = true;
-//        ConnectionManager.common.allAccounts = allAccounts;
-//    }
-//    
-//    
-//    func prepareDate(){
-//        if !ConnectionManager.common.loaded{
-//            self.loadAccounts();
-//        }
-//    }
-//    
-//    func login(username:String, password:String) -> Bool {
-//        self.prepareDate();
-//        for (var i = 0 ; i < ConnectionManager.common.allAccounts.count; i++){
-//            
-//            var currentUser:UserInfo = ConnectionManager.common.allAccounts.objectAtIndex(i) as! UserInfo;
-//            if currentUser.getUsername() == username {
-//                if currentUser.getPassword() == password {
-//                    return true;
-//                }
-//            }
-//        }
-//        return false;
-//    }
-//    
-//    func isUsernameExist(username:String) -> Bool {
-//        self.prepareDate();
-//        for (var i = 0 ; i < ConnectionManager.common.allAccounts.count; i++){
-//            
-//            var currentUser:UserInfo = ConnectionManager.common.allAccounts.objectAtIndex(i) as! UserInfo;
-//            if currentUser.getUsername() == username {
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
-//    
-//    func register(newUser:UserInfo) {
-//        var allValues:NSMutableArray = self.loadAccountValues();
-//        allValues.addObject(newUser.toDictionary())
-//        allValues.writeToFile(ConnectionManager.common.filePath, atomically: true);
-//        self.loadAccounts();
-//    }
-//    
-//    func getUserInfo (username:String) -> UserInfo {
-//        self.prepareDate();
-//        for (var i = 0 ; i < ConnectionManager.common.allAccounts.count; i++){
-//            
-//            var currentUser:UserInfo = ConnectionManager.common.allAccounts.objectAtIndex(i) as! UserInfo;
-//            if currentUser.getUsername() == username {
-//                return currentUser;
-//            }
-//        }
-//        return UserInfo(username: "", password: "", email: "");
-//    }
-//    
-//    func updateUserInfo(user:UserInfo) {
-//        self.prepareDate();
-//        var allValues:NSMutableArray = self.loadAccountValues();
-//        for (var i = 0 ; i < ConnectionManager.common.allAccounts.count; i++){
-//            
-//            var currentUser:UserInfo = ConnectionManager.common.allAccounts.objectAtIndex(i) as! UserInfo;
-//            if currentUser.getUsername() == user.getUsername() {
-//                allValues.replaceObjectAtIndex(i, withObject: user.toDictionary());
-//                break;
-//            }
-//        }
-//        allValues.writeToFile(ConnectionManager.common.filePath, atomically: true);
-//        self.loadAccounts();
-//    }
-
-/*************** Saving the data in the backend server ***************/
-
+    /*************** Saving the data locally ***************/
+    
+    //    struct common {
+    //        static let accountsFileName:String = "accounts";
+    //        static let accountsFileType:String = "plist";
+    //        static var loaded:Bool = false;
+    //        static var allAccounts:NSMutableArray = NSMutableArray();
+    //        static var filePath:String = "";
+    //    }
+    //    
+    //    func loadAccountValues()->NSMutableArray{
+    //        let utils = FileUtils(fileName: ConnectionManager.common.accountsFileName);
+    //        utils.fileType = ConnectionManager.common.accountsFileType;
+    //        utils.createIfNotExistUnderDocs();
+    //        let filePath = utils.docsPath();
+    //        ConnectionManager.common.filePath = filePath;
+    //        let valuesArray = NSMutableArray(contentsOfFile: filePath);
+    //        return valuesArray!;
+    //    }
+    //    
+    //    func loadAccounts(){
+    //        let valuesArray = self.loadAccountValues();
+    //        var allAccounts:NSMutableArray = NSMutableArray();
+    //        for (var i = 0 ; i < valuesArray.count; i++){
+    //            var currentElement:NSDictionary = valuesArray.objectAtIndex(i) as! NSDictionary;
+    //            allAccounts.addObject(UserInfo(values: currentElement));
+    //        }
+    //        ConnectionManager.common.loaded = true;
+    //        ConnectionManager.common.allAccounts = allAccounts;
+    //    }
+    //    
+    //    
+    //    func prepareDate(){
+    //        if !ConnectionManager.common.loaded{
+    //            self.loadAccounts();
+    //        }
+    //    }
+    //    
+    //    func login(username:String, password:String) -> Bool {
+    //        self.prepareDate();
+    //        for (var i = 0 ; i < ConnectionManager.common.allAccounts.count; i++){
+    //            
+    //            var currentUser:UserInfo = ConnectionManager.common.allAccounts.objectAtIndex(i) as! UserInfo;
+    //            if currentUser.getUsername() == username {
+    //                if currentUser.getPassword() == password {
+    //                    return true;
+    //                }
+    //            }
+    //        }
+    //        return false;
+    //    }
+    //    
+    //    func isUsernameExist(username:String) -> Bool {
+    //        self.prepareDate();
+    //        for (var i = 0 ; i < ConnectionManager.common.allAccounts.count; i++){
+    //            
+    //            var currentUser:UserInfo = ConnectionManager.common.allAccounts.objectAtIndex(i) as! UserInfo;
+    //            if currentUser.getUsername() == username {
+    //                return true;
+    //            }
+    //        }
+    //        return false;
+    //    }
+    //    
+    //    func register(newUser:UserInfo) {
+    //        var allValues:NSMutableArray = self.loadAccountValues();
+    //        allValues.addObject(newUser.toDictionary())
+    //        allValues.writeToFile(ConnectionManager.common.filePath, atomically: true);
+    //        self.loadAccounts();
+    //    }
+    //    
+    //    func getUserInfo (username:String) -> UserInfo {
+    //        self.prepareDate();
+    //        for (var i = 0 ; i < ConnectionManager.common.allAccounts.count; i++){
+    //            
+    //            var currentUser:UserInfo = ConnectionManager.common.allAccounts.objectAtIndex(i) as! UserInfo;
+    //            if currentUser.getUsername() == username {
+    //                return currentUser;
+    //            }
+    //        }
+    //        return UserInfo(username: "", password: "", email: "");
+    //    }
+    //    
+    //    func updateUserInfo(user:UserInfo) {
+    //        self.prepareDate();
+    //        var allValues:NSMutableArray = self.loadAccountValues();
+    //        for (var i = 0 ; i < ConnectionManager.common.allAccounts.count; i++){
+    //            
+    //            var currentUser:UserInfo = ConnectionManager.common.allAccounts.objectAtIndex(i) as! UserInfo;
+    //            if currentUser.getUsername() == user.getUsername() {
+    //                allValues.replaceObjectAtIndex(i, withObject: user.toDictionary());
+    //                break;
+    //            }
+    //        }
+    //        allValues.writeToFile(ConnectionManager.common.filePath, atomically: true);
+    //        self.loadAccounts();
+    //    }
+    
+    /*************** Saving the data in the backend server ***************/
+    
     func login(username:String, password:String, completionHandler:(validData:Bool) -> ()) {
         var requestBody = "username=" + username + "&password=" + password
         var requestUrl = "\(ConnectionString.holder.URL)/loginUser"
@@ -126,7 +126,7 @@ class ConnectionManager {
             completionHandler(validData: returnValue)
         }
     }
-
+    
     func forgetPassword(username:String) {
         var requestBody = "username=" + username
         var requestUrl = "http://mobile.comxa.com/profile/valid_forget_password.json"
@@ -144,11 +144,11 @@ class ConnectionManager {
             responseData in
             
             var returnValue = false
-    
+            
             if responseData.valueForKey("result_code")?.description == "0" {
                 returnValue = true
             }
-    
+            
             completionHandler(usernameExist: returnValue)
         }
     }
@@ -157,7 +157,7 @@ class ConnectionManager {
         var converter = ImageConversion()
         var imagePath = NSBundle.mainBundle().pathForResource("default", ofType: "png")
         
-        var imageData = UIImageJPEGRepresentation(converter.readImageAtPath(imagePath!), 0.9)
+        var imageData = UIImagePNGRepresentation(converter.readImageAtPath(imagePath!))
         var imageBase64Format = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
         
         var requestBody = "username=" + newUser.getUsername() + "&password=" + newUser.getPassword() + "&email=" + newUser.getEmail() + "&profilepicture=" + imageBase64Format
@@ -182,14 +182,14 @@ class ConnectionManager {
             var profile_picture = (userInfo.valueForKey("profile_picture")?.description!)!
             
             var user = UserInfo(username: username, password: password, email: email)
-            
+            /*
             var imageData = NSData(base64EncodedString: profile_picture, options: .allZeros)
             
             var fileUtils:FileUtils = FileUtils(fileName: username)
             var imagePath:String = fileUtils.docsPath()
             fileUtils.createIfNotExistUnderDocs();
             ImageConversion().writeImage(UIImage(data: imageData!)!, toFile: imagePath)
-            
+            */
             completionHandler (userInfo:user)
         }
     }
@@ -197,7 +197,7 @@ class ConnectionManager {
     func updateUserInfo(user:UserInfo) {
         var converter = ImageConversion()
         
-        var imageData = UIImageJPEGRepresentation(converter.readImageAtPath(user.getProfilePictureFilePath()), 0.9)
+        var imageData = UIImagePNGRepresentation(converter.readImageAtPath(user.getProfilePictureFilePath()))
         var imageBase64Format = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0))
         
         var requestBody = "username=" + user.getUsername() + "&password=" + user.getPassword() + "&email=" + user.getEmail() + "&profile_picture=" + imageBase64Format

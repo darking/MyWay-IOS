@@ -22,7 +22,7 @@ class URLCommentConnection: UIViewController, NSURLConnectionDelegate, NSURLConn
         
          var urlStr : NSString = URLStatement.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         
-        let Group4Url:NSURL?=NSURL(string:"http://172.16.8.105:8080/MyWayWeb/postTrafficReport?\(urlStr)");
+        let Group4Url:NSURL?=NSURL(string:"http://54.88.107.56:80/MyWayWeb/postTrafficReport?\(urlStr)");
         
         
 //        let Group4Url:NSURL?=NSURL(string:"http://172.16.8.105:8080/MyWayWeb/postTrafficReport?");
