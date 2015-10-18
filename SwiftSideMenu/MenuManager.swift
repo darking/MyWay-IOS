@@ -37,12 +37,12 @@ class MenuManager {
         item.itemVCIdentifier = "DLVC";
         item.storyBoardName = "Team5_m";
         MenuItem.all.menuItems.addObject(item);
-        
-        item = MenuItem();
-        item.itemTitle = "Daily Route";
-        item.itemVCIdentifier = "DailyRouteVC";
-        item.storyBoardName = "Team5_m";
-        MenuItem.all.menuItems.addObject(item);
+//        
+//        item = MenuItem();
+//        item.itemTitle = "Daily Route";
+//        item.itemVCIdentifier = "DailyRouteVC";
+//        item.storyBoardName = "Team5_m";
+//        MenuItem.all.menuItems.addObject(item);
         
         item = MenuItem();
         item.itemTitle = "Post Report";
