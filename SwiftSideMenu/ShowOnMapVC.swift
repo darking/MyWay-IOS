@@ -391,6 +391,15 @@ class ShowOnMapVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDelega
             originMarker = GMSMarker(position: reportCoor);
             originMarker.map = self.viewMap
             originMarker.icon = GMSMarker.markerImageWithColor(UIColor.cyanColor())
+            var camera = GMSCameraPosition.cameraWithLatitude(DriverDetailsVC.SettingDriverDestination.reportLocationAtIndexLat,
+                longitude: DriverDetailsVC.SettingDriverDestination.reportLocationAtIndexLon, zoom: 12)
+            //  mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
+            
+            viewMap.camera = camera
+            
+            viewMap.camera = GMSCameraPosition.cameraWithTarget(reportCoor, zoom: 10.0)
+            
+            viewMap.delegate = self
         } else {
             locationManager.delegate = self
             locationManager.requestWhenInUseAuthorization()
