@@ -355,11 +355,40 @@ class ShowOnMapVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDelega
     
     //./CREATE ROUTE FROM MY LOCAITON
     
-    
+   
+    func createDirecton() {
+        
+        if let polyline = self.routePolyline {
+            // self.clearRoute()
+            self.waypointsArray.removeAll(keepCapacity: false)
+        }
+        
+        let origin: String = "\(self.locationManager.location.coordinate.latitude),\(self.locationManager.location.coordinate.longitude)"
+        
+        //let origin: String = GetLocationVC()
+        
+        println("origin \(origin)")
+        let destination = "\(self.location!.coordinate.latitude),\(self.location!.coordinate.longitude)"
+        
+        self.mapTasks.getDirections(origin, destination: destination, waypoints: nil, travelMode: self.travelMode, completionHandler: { (status, success) -> Void in
+            if success {
+                self.configureMapAndMarkersForRoute()
+                self.drawRoute()
+                self.displayRouteInfo()
+            }
+            else {
+                println(status)
+            }
+        })
+        
+    }
     
     //VIEW DID LOAD()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
         
         self.ShareButton = UIBarButtonItem(title: "Share", style: UIBarButtonItemStyle.Plain, target: self, action: "ShareButtonAction:");
         
@@ -376,15 +405,22 @@ class ShowOnMapVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDelega
         
         var myCoor:CLLocationCoordinate2D = location!.coordinate
         
-        println("myCoor latgtitude: \(myCoor.longitude), myCoor longtitude: \(myCoor.longitude)")
+       // println("myCoor latgtitude: \(myCoor.longitude), myCoor longtitude: \(myCoor.longitude)")
         
-       
+       //MARK: Event mall
         
         originMarker = GMSMarker(position: myCoor)
         originMarker.map = self.viewMap
-        originMarker.icon = GMSMarker.markerImageWithColor(UIColor.blackColor())
+        originMarker.icon = GMSMarker.markerImageWithColor(UIColor.blueColor())
         originMarker.title = message
         lblTitle.text = myTitle
+        
+        
+        //MARK: BEGIN Direction
+        
+        createDirecton()
+        
+        //MARK: END OF Direction
         
         
         if waypointsArray.count > 0 {
@@ -735,17 +771,17 @@ class ShowOnMapVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDelega
 //        bounds.southWest.latitude, bounds.southWest.longitude,
 //        bounds.northEast.latitude, bounds.northEast.longitude);
         
-        println("\(self.mapTasks.originCoordinate.latitude) \(self.mapTasks.originCoordinate.longitude) ")
-        println("\(self.mapTasks.destinationCoordinate.latitude) \(self.mapTasks.destinationCoordinate.longitude) ")
+        //println("\(self.mapTasks.originCoordinate.latitude) \(self.mapTasks.originCoordinate.longitude) ")
+       // println("\(self.mapTasks.destinationCoordinate.latitude) \(self.mapTasks.destinationCoordinate.longitude) ")
         
         var bounds:GMSCoordinateBounds = GMSCoordinateBounds()
-        println("initial bounds: (\(bounds.southWest.latitude), \(bounds.southWest.longitude)) - (\(bounds.northEast.latitude), \(bounds.northEast.longitude)) ")
+       // println("initial bounds: (\(bounds.southWest.latitude), \(bounds.southWest.longitude)) - (\(bounds.northEast.latitude), \(bounds.northEast.longitude)) ")
         
         for (var i:UInt = 0; i < path.count(); i++){
             bounds = bounds.includingCoordinate(path.coordinateAtIndex(i))
-            println("updated bounds: (\(bounds.southWest.latitude), \(bounds.southWest.longitude)) - (\(bounds.northEast.latitude), \(bounds.northEast.longitude)) ")
+          //  println("updated bounds: (\(bounds.southWest.latitude), \(bounds.southWest.longitude)) - (\(bounds.northEast.latitude), \(bounds.northEast.longitude)) ")
         }
-        println("final bounds: (\(bounds.southWest.latitude), \(bounds.southWest.longitude)) - (\(bounds.northEast.latitude), \(bounds.northEast.longitude)) ")
+      //  println("final bounds: (\(bounds.southWest.latitude), \(bounds.southWest.longitude)) - (\(bounds.northEast.latitude), \(bounds.northEast.longitude)) ")
         
         routePolyline = GMSPolyline(path: path)
         routePolyline.map = viewMap
@@ -753,7 +789,8 @@ class ShowOnMapVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDelega
     
     
     func displayRouteInfo() {
-        lblInfo.text = mapTasks.totalDistance + "\n" + mapTasks.totalDuration
+      //  lblInfo.text = mapTasks.totalDistance + "\n" + mapTasks.totalDuration
+        println(mapTasks.totalDistance + "\n" + mapTasks.totalDuration)
     }
     
     
@@ -810,15 +847,25 @@ class ShowOnMapVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDelega
     //Help with recreating the route
     
     func mapView(mapView: GMSMapView!, didTapAtCoordinate coordinate: CLLocationCoordinate2D) {
-        if (DriverDetailsVC.SettingDriverDestination.settingDriverDestination == true) {
-            DriverDetailsVC.SettingDriverDestination.setDriverLatLong(coordinate);
-            //println("Coordinates (\(coordinate.latitude),\(coordinate.longitude)) sent to driver!");
+//        if (DriverDetailsVC.SettingDriverDestination.settingDriverDestination == true) {
+//            DriverDetailsVC.SettingDriverDestination.setSentDriverLatLong(coordinate);
+//            var submitDest:DriverSetDestinationDao = DriverSetDestinationDao();
+//            var lon:String = String(stringInterpolationSegment: coordinate.longitude);
+//            var lat:String = String(stringInterpolationSegment: coordinate.latitude);
+//            var requestBody = "userName=omar&lat=" + lat + "&lon=" + lon //+ self.userInput!.text;
+//            var requestUrl = "http://192.168.8.102:8080/MyWayWeb/setDriverDestination"
+//            submitDest.request(requestBody, url: requestUrl, completionHandler: {
+//                
+//                responseData in
+//                
+//            })
+//            //println("Coordinates (\(coordinate.latitude),\(coordinate.longitude)) sent to driver!");
+////            
+////            var backToDriverDetails:DriverDetailsVC = UIStoryboard(name: "Team5_m", bundle: nil).instantiateViewControllerWithIdentifier("DDVC") as! DriverDetailsVC;
+////            self.presentViewController(backToDriverDetails, animated: true, completion: {});
+//            self.dismissViewControllerAnimated(true, completion: {});
 //            
-//            var backToDriverDetails:DriverDetailsVC = UIStoryboard(name: "Team5_m", bundle: nil).instantiateViewControllerWithIdentifier("DDVC") as! DriverDetailsVC;
-//            self.presentViewController(backToDriverDetails, animated: true, completion: {});
-            self.dismissViewControllerAnimated(true, completion: {});
-            
-        }
+//        }
         println("function mapView runs")
         
         if let polyline = routePolyline {
