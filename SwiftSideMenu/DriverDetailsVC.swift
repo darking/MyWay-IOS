@@ -75,13 +75,14 @@ class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         let urlReq:NSURLRequest=NSURLRequest(URL: allReportsUrl!, cachePolicy: .ReloadIgnoringLocalCacheData, timeoutInterval: 5);
         let connection:NSURLConnection?=NSURLConnection(request: urlReq, delegate: self, startImmediately: true);
         reportsTable.reloadData();
-        let driverdash:DriverDashboardDao = DriverDashboardDao();
+        //let driverdash:DriverDashboardDao = DriverDashboardDao();
+        //DriverDashboardDao.self
         //println(driverdash.dashboard[0]);
 //        var lat = driverdash.dashboard[0].valueForKey("driver_currentLat") as! String;
 //        var lon = driverdash.dashboard[0].valueForKey("driver_currentLon") as! String;
-//        lblDriverLocation.text = lat + ", " + lon ;
+        lblDriverLocation.text = "29.374, 47.974" ;
 //        lblDriverLocation.sizeToFit();
-        lblBatteryStatus.text = (driverdash.dashboard[0].valueForKey("report_battaryStatus") as! String) + "%";
+        lblBatteryStatus.text = "60%";
     }
     override func viewDidLoad() {
         super.viewDidLoad()
