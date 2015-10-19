@@ -9,12 +9,20 @@ import UIKit
 
 class DatesTVC: UITableViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     
+    var flag = false;
+    var flag2 = false;
+    
     @IBAction func SetDatesButton(sender: AnyObject) {
         
-     
+        if flag == true && flag2 == true {
         
         let viewControllers: [UIViewController] = self.navigationController!.viewControllers as! [UIViewController];
         self.navigationController!.popToViewController(viewControllers[viewControllers.count - 2], animated: true);
+        } else {
+            var alert : UIAlertView = UIAlertView(title: "ALERT!!", message: "Choose Dates.",
+                delegate: nil, cancelButtonTitle: "OK");
+            alert.show();
+        }
     }
     
     
@@ -40,9 +48,10 @@ class DatesTVC: UITableViewController,UIPickerViewDelegate,UIPickerViewDataSourc
     }
     
     @IBAction func startDateChanged(sender: UIDatePicker) {
+        flag = true;
         var dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.dateFormat = "YYYY-MM-DD"
         
         
         AddNewPOI.holder.startDate = dateFormatter.stringFromDate(sender.date)
@@ -51,9 +60,10 @@ class DatesTVC: UITableViewController,UIPickerViewDelegate,UIPickerViewDataSourc
     }
     
     @IBAction func endDateChanged(sender: UIDatePicker) {
+        flag2 = true;
         var dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.dateFormat = "YYYY-MM-DD"
         
         
         AddNewPOI.holder.endDate = dateFormatter.stringFromDate(sender.date)

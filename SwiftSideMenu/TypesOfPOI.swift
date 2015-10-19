@@ -127,7 +127,7 @@ class TypesOfPOI:UITableViewController, NSURLConnectionDataDelegate, NSURLConnec
         eventsList = jsonResult.valueForKey("result_data") as! NSMutableArray;
         
         
-        println(eventsList);
+//        println(eventsList);
     }
     
 }
