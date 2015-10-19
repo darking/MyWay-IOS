@@ -28,7 +28,7 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
         let sendToDriver: UIAlertAction = UIAlertAction(title: "Submit", style: .Default) { action -> Void in
             //Do some other stuff
             let settings = NSUserDefaults.standardUserDefaults();
-            var requestBody = "parentUserName=pifss" + "&driverIdentifier=aba" //+ self.userInput!.text;
+            var requestBody = "parentUserName=" + (settings.valueForKey("username") as! String) + "&driverIdentifier=" + (self.userInput!.text as! String);
             var requestUrl = ConnectionString.holder.URL + "/addUserDriver"
             
             self.request(requestBody, url: requestUrl) {

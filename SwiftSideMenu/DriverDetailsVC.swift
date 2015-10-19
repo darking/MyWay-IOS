@@ -12,7 +12,7 @@ class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     var reports:NSArray = [];
 //    var dataConnection:NSMutableData=NSMutableData();
     var dataConnection:NSData = NSData();
-    let driverdash:DriverDashboard = DriverDashboard();
+//    let driverdash:DriverDashboard = DriverDashboard();
     @IBOutlet weak var lblDriverName: UILabel!
     @IBOutlet weak var driverImage: UIImageView!
     @IBOutlet weak var reportsTable: UITableView!
@@ -75,12 +75,12 @@ class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         let urlReq:NSURLRequest=NSURLRequest(URL: allReportsUrl!, cachePolicy: .ReloadIgnoringLocalCacheData, timeoutInterval: 5);
         let connection:NSURLConnection?=NSURLConnection(request: urlReq, delegate: self, startImmediately: true);
         reportsTable.reloadData();
-        
-        var lat:Double = (driverdash.dashboard[0].valueForKey("driver_currentLat") as! NSString).doubleValue;
-        var lon:Double = (driverdash.dashboard[0].valueForKey("driver_currentLon") as! NSString).doubleValue
-        ;
-        lblDriverLocation.text = String((((lat as! NSString) as String) + ", " + ((lon as! NSString) as String)) as! String);
-        lblDriverLocation.sizeToFit();
+        let driverdash:DriverDashboardDao = DriverDashboardDao();
+        //println(driverdash.dashboard[0]);
+//        var lat = driverdash.dashboard[0].valueForKey("driver_currentLat") as! String;
+//        var lon = driverdash.dashboard[0].valueForKey("driver_currentLon") as! String;
+//        lblDriverLocation.text = lat + ", " + lon ;
+//        lblDriverLocation.sizeToFit();
         lblBatteryStatus.text = (driverdash.dashboard[0].valueForKey("report_battaryStatus") as! String) + "%";
     }
     override func viewDidLoad() {
@@ -90,7 +90,7 @@ class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         self.reportsTable.registerNib(nib, forCellReuseIdentifier: "reportCustomCell");
         
         lblDriverName.text = DriverBean.driverHolder.driverUsername;
-        println("Driver's username from driver details: \(DriverBean.driverHolder.driverUsername)")
+        println("Driver's username from driver details: \(DriverBean.driverHolder.driverUsername!)")
         lblDriverName.sizeToFit();
         lblDriverEmail.text = DriverBean.driverHolder.driverEmail;
         lblDriverEmail.sizeToFit();
