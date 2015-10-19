@@ -209,6 +209,8 @@ class AddNewPOI: UIViewController, UIImagePickerControllerDelegate, UINavigation
         var username = NSUserDefaults.standardUserDefaults().stringForKey("username")!;
         //var bodyData = "username=\(username)&category=\(point.type)&name=\(point.name)&latitude=\(point.lat)&longitude=\(point.long)&description=\(point.description)&image=\(point.images)&startDate=\(point.startDate)&endDate=\(point.endDate)";
         var bodyData = "username=ahmed&category=\(point.type)&name=\(point.name)&latitude=\(point.lat)&longitude=\(point.long)&description=\(point.description)&image=\(point.images)&startDate=\(point.startDate)&endDate=\(point.endDate)";
+        println("SENT BODY DATA: ");
+        println(bodyData);
         request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding);
         println(bodyData);
         var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: true)!

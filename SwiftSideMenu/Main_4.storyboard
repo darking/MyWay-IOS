@@ -119,7 +119,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.16239276960784321" green="0.16239276960784321" blue="0.16239276960784321" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Road Reports" id="lxv-6B-Ozt">
                         <barButtonItem key="leftBarButtonItem" image="side_menu_icon.png" id="hJw-5D-gdV">
@@ -205,7 +205,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.16239276959999999" green="0.16239276959999999" blue="0.16239276959999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Accident" id="wMX-Lb-Q3S"/>
                     <connections>
@@ -290,7 +290,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.16239276959999999" green="0.16239276959999999" blue="0.16239276959999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Hazard" id="o4U-aR-2SN"/>
                     <connections>
@@ -354,7 +354,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.16239276959999999" green="0.16239276959999999" blue="0.16239276959999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Other" id="dnN-AY-GWb"/>
                     <connections>
@@ -561,7 +561,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.16239276959999999" green="0.16239276959999999" blue="0.16239276959999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.16239276959999999" green="0.16239276959999999" blue="0.16239276959999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Traffic Jam" id="LTS-Gd-8g7"/>
