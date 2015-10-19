@@ -43,6 +43,8 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
             //TextField configuration
             //textField.textColor = UIColor.blueColor()
             self.userInput = textField;
+            //println("here i will print userInput");
+            
         }
         
         //Present the AlertController
@@ -58,7 +60,7 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
          var valuesDict: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataConnection, options: nil, error: nil) as! NSDictionary;
         println(valuesDict);
         drivers = valuesDict.objectForKey("result_data") as! NSArray
-        
+        println("here i will print drivers");
         println(drivers);
         self.tableView.reloadData();
         tableView.estimatedRowHeight = 44.0;
