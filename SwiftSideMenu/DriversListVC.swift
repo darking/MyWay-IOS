@@ -28,7 +28,7 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
         let sendToDriver: UIAlertAction = UIAlertAction(title: "Submit", style: .Default) { action -> Void in
             //Do some other stuff
             let settings = NSUserDefaults.standardUserDefaults();
-            var requestBody = "parentUserName=pifss" + "&driverIdentifier=aba" //+ self.userInput!.text;
+            var requestBody = "parentUserName=" + (settings.valueForKey("username") as! String) + "&driverIdentifier=" + (self.userInput!.text as! String);
             var requestUrl = ConnectionString.holder.URL + "/addUserDriver"
             
             self.request(requestBody, url: requestUrl) {
@@ -75,9 +75,9 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
         super.viewDidLoad()
         var driverSetDes:DriverSetDestinationDao = DriverSetDestinationDao();
         //driverSetDest
-        var thisUser:String = "ahmed"
+        var thisUser:String = NSUserDefaults.standardUserDefaults().valueForKey("username") as! String;
         let allDriversUrl:NSURL?=NSURL(string:ConnectionString.holder.URL + "/getUserDrivers?parentUserName=" + thisUser);
-        println(allDriversUrl);
+        //println(allDriversUrl);
         let urlReq:NSURLRequest=NSURLRequest(URL:allDriversUrl!);
         let connection:NSURLConnection?=NSURLConnection(request: urlReq, delegate: self, startImmediately: true);
 
@@ -106,7 +106,7 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
         }
         else {
             var tmp = drivers[indexPath.row]["driver_username"] as! String;
-            println(tmp)
+            //println(tmp)
             cell.textLabel?.text = "";
             cell.driverName.text = drivers[indexPath.row]["driver_username"] as! String;
             cell.driverName.sizeToFit();
