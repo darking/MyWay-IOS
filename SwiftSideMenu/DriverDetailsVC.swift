@@ -26,7 +26,7 @@ class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     @IBAction func btnSetDestination(sender: AnyObject) {
-        println("\(DriverDetailsVC.SettingDriverDestination.settingDriverDestination)");
+        //println("\(DriverDetailsVC.SettingDriverDestination.settingDriverDestination)");
         if (DriverDetailsVC.SettingDriverDestination.settingDriverDestination == false) {
            
             DriverDetailsVC.SettingDriverDestination.settingDriverDestination = true;
@@ -54,22 +54,35 @@ class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         //dataConnection.appendData(data)
         dataConnection = data;
         let output = NSString(data: data, encoding: NSUTF8StringEncoding);
-        println(data)
-        println(output)
+        //println(data)
+        //println(output)
         var new:[String] = output?.componentsSeparatedByString(",") as! [String];
     }
     
     func connectionDidFinishLoading(connection: NSURLConnection) {
         var valuesDict: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataConnection, options: nil, error: nil) as! NSDictionary;
         reports = valuesDict.objectForKey("result_data") as! NSArray
-        println(reports)
+        //println(reports)
         self.reportsTable.reloadData();
         reportsTable.estimatedRowHeight = 44.0;
         reportsTable.rowHeight = UITableViewAutomaticDimension;
         // Alternative workaround for crash!!
         //dataConnection = NSMutableData();
     }
-   
+    override func viewWillAppear(animated: Bool) {
+        let allReportsUrl:NSURL?=NSURL(string:"\(ConnectionString.holder.URL)/getAllDriverReports?driverUserName=" + DriverBean.driverHolder.driverUsername!);
+        //println(allReportsUrl);
+        let urlReq:NSURLRequest=NSURLRequest(URL: allReportsUrl!, cachePolicy: .ReloadIgnoringLocalCacheData, timeoutInterval: 5);
+        let connection:NSURLConnection?=NSURLConnection(request: urlReq, delegate: self, startImmediately: true);
+        reportsTable.reloadData();
+        
+        var lat:Double = (driverdash.dashboard[0].valueForKey("driver_currentLat") as! NSString).doubleValue;
+        var lon:Double = (driverdash.dashboard[0].valueForKey("driver_currentLon") as! NSString).doubleValue
+        ;
+        lblDriverLocation.text = String((((lat as! NSString) as String) + ", " + ((lon as! NSString) as String)) as! String);
+        lblDriverLocation.sizeToFit();
+        lblBatteryStatus.text = (driverdash.dashboard[0].valueForKey("report_battaryStatus") as! String) + "%";
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         var nib = UINib(nibName: "DriverReportCustomCell", bundle: nil);
@@ -77,22 +90,12 @@ class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         self.reportsTable.registerNib(nib, forCellReuseIdentifier: "reportCustomCell");
         
         lblDriverName.text = DriverBean.driverHolder.driverUsername;
+        println("Driver's username from driver details: \(DriverBean.driverHolder.driverUsername)")
         lblDriverName.sizeToFit();
         lblDriverEmail.text = DriverBean.driverHolder.driverEmail;
         lblDriverEmail.sizeToFit();
         driverImage.image = UIImage(named:"chauffer");
-        let allReportsUrl:NSURL?=NSURL(string:"\(ConnectionString.holder.URL)/getAllDriverReports?driverUserName=" + DriverBean.driverHolder.driverUsername!);
-        println(allReportsUrl);
-        let urlReq:NSURLRequest=NSURLRequest(URL: allReportsUrl!, cachePolicy: .ReloadIgnoringLocalCacheData, timeoutInterval: 5);
-        let connection:NSURLConnection?=NSURLConnection(request: urlReq, delegate: self, startImmediately: true);
-//        var lat:Double = (driverdash.dashboard[0].valueForKey("driver_currentLat") as! NSString).doubleValue;
-//        var lon:Double = (driverdash.dashboard[0].valueForKey("driver_currentLon") as! NSString).doubleValue
-//        ;
-//        lblDriverLocation.text = String((((lat as! NSString) as String) + ", " + ((lon as! NSString) as String)) as! String);
-//        lblDriverLocation.sizeToFit();
-//        lblBatteryStatus.text = (driverdash.dashboard[0].valueForKey("report_battaryStatus") as! String) + "%";
-
-        reportsTable.reloadData();
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -105,11 +108,13 @@ class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         self.presentViewController(notifyNewDestinationSet, animated: true, completion: nil);
         DriverDetailsVC.SettingDriverDestination.settingDriverDestination = false;
         }
-        println(driverdash.dashboard);
+        //println(driverdash.dashboard);
                 if DriverDetailsVC.SettingDriverDestination.settingDriverDestination == true {
             println("\(DriverDetailsVC.SettingDriverDestination.getSentDriverLatLong())");
         }
         
+        
+
     }
     
     

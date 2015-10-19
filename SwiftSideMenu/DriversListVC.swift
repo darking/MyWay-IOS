@@ -59,7 +59,7 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
         println(valuesDict);
         drivers = valuesDict.objectForKey("result_data") as! NSArray
         
-        println(drivers);
+        //println(drivers);
         self.tableView.reloadData();
         tableView.estimatedRowHeight = 44.0;
         tableView.rowHeight = UITableViewAutomaticDimension;
@@ -73,9 +73,9 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
         super.viewDidLoad()
         var driverSetDes:DriverSetDestinationDao = DriverSetDestinationDao();
         //driverSetDest
-        var thisUser:String = "ahmed"
+        var thisUser:String = NSUserDefaults.standardUserDefaults().valueForKey("username") as! String;
         let allDriversUrl:NSURL?=NSURL(string:ConnectionString.holder.URL + "/getUserDrivers?parentUserName=" + thisUser);
-        println(allDriversUrl);
+        //println(allDriversUrl);
         let urlReq:NSURLRequest=NSURLRequest(URL:allDriversUrl!);
         let connection:NSURLConnection?=NSURLConnection(request: urlReq, delegate: self, startImmediately: true);
 
@@ -104,7 +104,7 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
         }
         else {
             var tmp = drivers[indexPath.row]["driver_username"] as! String;
-            println(tmp)
+            //println(tmp)
             cell.textLabel?.text = "";
             cell.driverName.text = drivers[indexPath.row]["driver_username"] as! String;
             cell.driverName.sizeToFit();

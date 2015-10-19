@@ -163,13 +163,15 @@ class GetLocationVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDele
         //MARK: sending the coordinates to the server
         if (DriverDetailsVC.SettingDriverDestination.settingDriverDestination == true) {
             println("SENDING: Driver's coordinates!!!!");
-            DriverDetailsVC.SettingDriverDestination.lat = DriverDetailsVC.holder.driverLat as? CLLocationDegrees;
-            DriverDetailsVC.SettingDriverDestination.long = DriverDetailsVC.holder.driverLong as? CLLocationDegrees;
+            
             var submitDest:DriverSetDestinationDao = DriverSetDestinationDao();
-            var lon:String = "\(DriverDetailsVC.holder.driverLong)";
-            var lat:String = "\(DriverDetailsVC.holder.driverLat)";
-            var requestBody = "userName=omar&lat=" + lat + "&lon=" + lon //+ self.userInput!.text;
-            var requestUrl = "\(ConnectionString.holder.URL)/setDriverDestination"
+            var lon = ("\(coordinate.longitude)");
+            var lat = ("\(coordinate.latitude)");
+            var driverName = DriverBean.driverHolder.driverUsername
+            var setLatLon = "&lat=" + (lat as String) + "&lon=" + (lon as String)
+            
+            var requestBody = "userName=" + driverName! + setLatLon //+ self.userInput!.text;
+            var requestUrl = ConnectionString.holder.URL + "/setDriverDestination"
             submitDest.request(requestBody, url: requestUrl, completionHandler: {
                 
                 responseData in
