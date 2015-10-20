@@ -60,8 +60,8 @@ class DriversListVC: UITableViewController , UITableViewDataSource, ENSideMenuDe
          var valuesDict: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataConnection, options: nil, error: nil) as! NSDictionary;
         println(valuesDict);
         drivers = valuesDict.objectForKey("result_data") as! NSArray
-        println("here i will print drivers");
-        println(drivers);
+        
+        //println(drivers);
         self.tableView.reloadData();
         tableView.estimatedRowHeight = 44.0;
         tableView.rowHeight = UITableViewAutomaticDimension;

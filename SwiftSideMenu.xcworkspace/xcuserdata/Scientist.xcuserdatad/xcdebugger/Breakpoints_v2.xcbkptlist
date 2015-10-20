@@ -195,5 +195,98 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftSideMenu/GetLocationVC.swift"
+            timestampString = "466970027.006007"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "GetLocationVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyWay.GetLocationVC.latKey.getter : Swift.String"
+                  moduleName = "MyWay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Scientist/Desktop/mshmom%20ver/MyWay-IOS/SwiftSideMenu/GetLocationVC.swift"
+                  timestampString = "466969910.714368"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyWay.GetLocationVC.latKey.setter : Swift.String"
+                  moduleName = "MyWay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Scientist/Desktop/mshmom%20ver/MyWay-IOS/SwiftSideMenu/GetLocationVC.swift"
+                  timestampString = "466969910.7216"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyWay.GetLocationVC.latKey.materializeForSet : Swift.String"
+                  moduleName = "MyWay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Scientist/Desktop/mshmom%20ver/MyWay-IOS/SwiftSideMenu/GetLocationVC.swift"
+                  timestampString = "466969910.721831"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyWay.GetLocationVC.init (MyWay.GetLocationVC.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; MyWay.GetLocationVC"
+                  moduleName = "MyWay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Scientist/Desktop/mshmom%20ver/MyWay-IOS/SwiftSideMenu/GetLocationVC.swift"
+                  timestampString = "466969910.721983"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyWay.GetLocationVC.init (MyWay.GetLocationVC.Type)(coder : ObjectiveC.NSCoder) -&gt; MyWay.GetLocationVC"
+                  moduleName = "MyWay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Scientist/Desktop/mshmom%20ver/MyWay-IOS/SwiftSideMenu/GetLocationVC.swift"
+                  timestampString = "466969910.72213"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
