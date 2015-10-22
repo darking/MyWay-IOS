@@ -81,7 +81,7 @@ class MenuManager {
         
         //
         item = MenuItem();
-        item.itemTitle = "Points of Interest";
+        item.itemTitle = "Near By";
         item.itemVCIdentifier = "poiVC";
         item.storyBoardName = "POI";
         MenuItem.all.menuItems.addObject(item);

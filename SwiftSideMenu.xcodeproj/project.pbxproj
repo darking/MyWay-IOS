@@ -44,6 +44,8 @@
 		0787800B1BBD1F9F00B7CF93 /* KhalidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078780081BBD1F9F00B7CF93 /* KhalidViewController.swift */; };
 		0787800C1BBD1F9F00B7CF93 /* KhalidMapTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078780091BBD1F9F00B7CF93 /* KhalidMapTasks.swift */; };
 		0793071F1BC27D0700F24080 /* ListAllReports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0793071E1BC27D0700F24080 /* ListAllReports.swift */; };
+		07AF9E241BD771A80015A5F5 /* DriverMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07AF9E231BD771A80015A5F5 /* DriverMapController.swift */; };
+		07AF9E261BD7724C0015A5F5 /* DriverLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07AF9E251BD7724C0015A5F5 /* DriverLocation.storyboard */; };
 		141092691B8CB71F00CD3114 /* POI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 141092681B8CB71F00CD3114 /* POI.storyboard */; };
 		141092721B8CB76300CD3114 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410926A1B8CB76300CD3114 /* MapViewController.swift */; };
 		141092731B8CB76300CD3114 /* TypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410926B1B8CB76300CD3114 /* TypesTableViewController.swift */; };
@@ -247,6 +249,8 @@
 		078780081BBD1F9F00B7CF93 /* KhalidViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KhalidViewController.swift; sourceTree = "<group>"; };
 		078780091BBD1F9F00B7CF93 /* KhalidMapTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KhalidMapTasks.swift; sourceTree = "<group>"; };
 		0793071E1BC27D0700F24080 /* ListAllReports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAllReports.swift; sourceTree = "<group>"; };
+		07AF9E231BD771A80015A5F5 /* DriverMapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverMapController.swift; sourceTree = "<group>"; };
+		07AF9E251BD7724C0015A5F5 /* DriverLocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DriverLocation.storyboard; sourceTree = "<group>"; };
 		141092681B8CB71F00CD3114 /* POI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = POI.storyboard; sourceTree = "<group>"; };
 		1410926A1B8CB76300CD3114 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1410926B1B8CB76300CD3114 /* TypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypesTableViewController.swift; sourceTree = "<group>"; };
@@ -815,6 +819,8 @@
 				143615701B8F1CC3003FD356 /* GetLocationVC.swift */,
 				6CE9A26D1B84AE2900BE4004 /* ShowOnMapVC.swift */,
 				6CE9A26E1B84AE2900BE4004 /* reqLocaiton.storyboard */,
+				07AF9E231BD771A80015A5F5 /* DriverMapController.swift */,
+				07AF9E251BD7724C0015A5F5 /* DriverLocation.storyboard */,
 			);
 			name = MapIntegration;
 			sourceTree = "<group>";
@@ -979,6 +985,7 @@
 				5C132590198E2A9A00CA49BE /* Images.xcassets in Resources */,
 				077919581BBBF46200AB0DB1 /* other.png in Resources */,
 				BF4A79FB1BCA39B6000170A9 /* Team2.storyboard in Resources */,
+				07AF9E261BD7724C0015A5F5 /* DriverLocation.storyboard in Resources */,
 				0779194A1BBBF46200AB0DB1 /* OnRoad.png in Resources */,
 				0770A98F1BC4EEB8007080F1 /* OnMapH.png in Resources */,
 				0779194F1BBBF46200AB0DB1 /* MinorG.png in Resources */,
@@ -1126,6 +1133,7 @@
 				1429137D19D97A4F0025188A /* MyMenuTableViewController.swift in Sources */,
 				49A961FD1BC18F7500622F8D /* RetrieveFavoritesInterface.swift in Sources */,
 				143615711B8F1CC3003FD356 /* GetLocationVC.swift in Sources */,
+				07AF9E241BD771A80015A5F5 /* DriverMapController.swift in Sources */,
 				0779197E1BBBF4EB00AB0DB1 /* otherVC.swift in Sources */,
 				BF4A7A031BCA39B6000170A9 /* UserProfileViewController.swift in Sources */,
 				BF4A7A001BCA39B6000170A9 /* LoginViewController.swift in Sources */,

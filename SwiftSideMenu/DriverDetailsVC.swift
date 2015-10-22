@@ -9,6 +9,18 @@
 import UIKit
 import GoogleMaps
 class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSURLConnectionDelegate, NSURLConnectionDataDelegate {
+    
+    
+    
+    @IBAction func showDriverLocation(sender: AnyObject) {
+      
+        var mapVC:DriverMapController = UIStoryboard(name: "DriverLocation", bundle: nil).instantiateViewControllerWithIdentifier("DriverLoc") as! DriverMapController;
+
+        self.navigationController?.pushViewController(mapVC, animated: true);
+
+    }
+    
+    
     var reports:NSArray = [];
 //    var dataConnection:NSMutableData=NSMutableData();
     var dataConnection:NSData = NSData();
@@ -69,6 +81,9 @@ class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         // Alternative workaround for crash!!
         //dataConnection = NSMutableData();
     }
+    
+    
+    
     override func viewWillAppear(animated: Bool) {
         let allReportsUrl:NSURL?=NSURL(string:"\(ConnectionString.holder.URL)/getAllDriverReports?driverUserName=" + DriverBean.driverHolder.driverUsername!);
         //println(allReportsUrl);
@@ -82,7 +97,7 @@ class DriverDetailsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
 //        var lon = driverdash.dashboard[0].valueForKey("driver_currentLon") as! String;
         lblDriverLocation.text = "29.374, 47.974" ;
 //        lblDriverLocation.sizeToFit();
-        lblBatteryStatus.text = "60%";
+        lblBatteryStatus.text = "100%";
     }
     override func viewDidLoad() {
         super.viewDidLoad()
